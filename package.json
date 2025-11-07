@@ -2,7 +2,7 @@
   "name": "nodejs-expressjs-mongodb-base-project",
   "private": true,
   "version": "1.0.0",
-  "author": "4MeNoy",
+  "author": "PromptEngineers",
   "engines": {
     "node": ">=18.x"
   },
