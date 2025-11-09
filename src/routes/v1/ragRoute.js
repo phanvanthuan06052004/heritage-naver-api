@@ -106,6 +106,30 @@ Router.post(
 )
 
 /**
+ * Lấy danh sách tất cả collections
+ * GET /api/v1/rag/collections
+ * Requires: Admin authentication
+ */
+Router.get(
+  '/collections',
+  // authMiddleware.verifyToken, // Uncomment để bật auth
+  // authMiddleware.isAdmin,      // Uncomment để chỉ admin
+  ragController.listCollectionsHandler
+)
+
+/**
+ * Lấy thông tin chi tiết của collection
+ * GET /api/v1/rag/collection/:collectionName/info
+ * Requires: Admin authentication
+ */
+Router.get(
+  '/collection/:collectionName/info',
+  // authMiddleware.verifyToken, // Uncomment để bật auth
+  // authMiddleware.isAdmin,      // Uncomment để chỉ admin
+  ragController.getCollectionInfoHandler
+)
+
+/**
  * Xóa collection (Admin only - CẨNH THẬN!)
  * DELETE /api/v1/rag/collection/:collectionName
  * Requires: Admin authentication

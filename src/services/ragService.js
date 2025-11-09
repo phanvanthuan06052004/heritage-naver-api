@@ -6,6 +6,10 @@
 import { env } from '~/config/environment'
 import { semanticChunk, semanticChunkWithMetadata } from '~/utils/chunkUtils'
 import { v4 as uuidv4 } from 'uuid'
+import { ChromaClient } from 'chromadb'
+
+// Khởi tạo ChromaDB client
+const chromaClient = new ChromaClient({ path: env.CHROMA_URL })
 
 /**
  * Gọi Naver Cloud AI API để tạo embedding cho các chunks
@@ -89,6 +93,12 @@ export const saveToChroma = async (chunksWithMetadata, embeddings, collectionNam
       throw new Error('Chunks and embeddings arrays must have the same length')
     }
 
+    // Lấy hoặc tạo collection
+    const collection = await chromaClient.getOrCreateCollection({
+      name: collectionName,
+      metadata: { description: 'Heritage documents for RAG system' }
+    })
+
     // Chuẩn bị dữ liệu cho Chroma
     const ids = chunksWithMetadata.map(() => uuidv4())
     const documents = chunksWithMetadata.map(chunk => chunk.content)
@@ -97,24 +107,13 @@ export const saveToChroma = async (chunksWithMetadata, embeddings, collectionNam
       return metadata
     })
 
-    // Gọi Chroma API để lưu
-    const response = await fetch(`${env.CHROMA_URL}/collections/${collectionName}/add`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        ids: ids,
-        embeddings: embeddings,
-        documents: documents,
-        metadatas: metadatas
-      })
+    // Thêm documents vào collection
+    await collection.add({
+      ids: ids,
+      embeddings: embeddings,
+      documents: documents,
+      metadatas: metadatas
     })
-
-    if (!response.ok) {
-      const errorData = await response.text()
-      throw new Error(`Chroma API error: ${response.status} - ${errorData}`)
-    }
 
     return {
       success: true,
@@ -131,42 +130,17 @@ export const saveToChroma = async (chunksWithMetadata, embeddings, collectionNam
 /**
  * Đảm bảo collection tồn tại trong Chroma
  * @param {string} collectionName - Tên collection
- * @returns {Promise<boolean>} True nếu collection tồn tại hoặc được tạo thành công
+ * @returns {Promise<Object>} Collection object
  */
 export const ensureCollection = async (collectionName = 'heritage_documents') => {
   try {
-    // Kiểm tra collection có tồn tại không
-    const checkResponse = await fetch(`${env.CHROMA_URL}/collections/${collectionName}`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json'
-      }
+    // Lấy hoặc tạo collection (getOrCreateCollection tự động xử lý)
+    const collection = await chromaClient.getOrCreateCollection({
+      name: collectionName,
+      metadata: { description: 'Heritage documents for RAG system' }
     })
 
-    if (checkResponse.ok) {
-      return true
-    }
-
-    // Nếu không tồn tại, tạo mới collection
-    const createResponse = await fetch(`${env.CHROMA_URL}/collections`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        name: collectionName,
-        metadata: {
-          description: 'Heritage documents for RAG system'
-        }
-      })
-    })
-
-    if (!createResponse.ok) {
-      const errorData = await createResponse.text()
-      throw new Error(`Failed to create collection: ${createResponse.status} - ${errorData}`)
-    }
-
-    return true
+    return collection
   } catch (error) {
     console.error('Error in ensureCollection:', error)
     throw error
@@ -225,32 +199,22 @@ export const queryRAG = async (question, topK = 5, collectionName = 'heritage_do
  */
 const queryChroma = async (embedding, topK, collectionName) => {
   try {
-    // Đảm bảo collection tồn tại
+    // check collection tồn tại
     await ensureCollection(collectionName)
-    // Gọi Chroma query API
-    const response = await fetch(`${env.CHROMA_URL}/collections/${collectionName}/query`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        query_embeddings: [embedding],
-        n_results: topK,
-        include: ['documents', 'metadatas', 'distances']
-      })
+    // Lấy collection
+    const collection = await chromaClient.getCollection({ name: collectionName })
+    console.log("collection: ", collection)
+    // Query collection với embedding
+    const results = await collection.query({
+      queryEmbeddings: [embedding],
+      nResults: topK,
+      include: ['documents', 'metadatas', 'distances']
     })
 
-    if (!response.ok) {
-      const errorData = await response.text()
-      throw new Error(`Chroma query error: ${response.status} - ${errorData}`)
-    }
-
-    const data = await response.json()
-    
     // Chroma trả về dạng nested arrays
-    const documents = data.documents?.[0] || []
-    const metadatas = data.metadatas?.[0] || []
-    const distances = data.distances?.[0] || []
+    const documents = results.documents?.[0] || []
+    const metadatas = results.metadatas?.[0] || []
+    const distances = results.distances?.[0] || []
 
     return documents.map((doc, index) => ({
       document: doc,
@@ -259,6 +223,10 @@ const queryChroma = async (embedding, topK, collectionName) => {
     }))
   } catch (error) {
     console.error('Error querying Chroma:', error)
+    // Nếu collection không tồn tại, trả về mảng rỗng
+    if (error.message?.includes('not found') || error.message?.includes('does not exist')) {
+      return []
+    }
     throw error
   }
 }
@@ -297,8 +265,7 @@ Trả lời bằng tiếng Việt một cách chính xác và dễ hiểu.`
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'X-NCP-CLOVASTUDIO-API-KEY': env.NAVER_API_KEY,
-        'X-NCP-APIGW-API-KEY': env.NAVER_APIGW_API_KEY,
+        'Authorization': `Bearer ${env.NAVER_API_KEY}`,
         'X-NCP-CLOVASTUDIO-REQUEST-ID': uuidv4()
       },
       body: JSON.stringify({
@@ -353,8 +320,7 @@ Trả lời bằng tiếng Việt.`
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'X-NCP-CLOVASTUDIO-API-KEY': env.NAVER_API_KEY,
-        'X-NCP-APIGW-API-KEY': env.NAVER_APIGW_API_KEY,
+        'Authorization': `Bearer ${env.NAVER_API_KEY}`,
         'X-NCP-CLOVASTUDIO-REQUEST-ID': uuidv4()
       },
       body: JSON.stringify({
@@ -444,21 +410,49 @@ export const processDocument = async (fileContent, metadata = {}, collectionName
  */
 export const deleteCollection = async (collectionName = 'heritage_documents') => {
   try {
-    const response = await fetch(`${env.CHROMA_URL}/collections/${collectionName}`, {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-
-    if (!response.ok && response.status !== 404) {
-      const errorData = await response.text()
-      throw new Error(`Failed to delete collection: ${response.status} - ${errorData}`)
-    }
-
+    await chromaClient.deleteCollection({ name: collectionName })
     return true
   } catch (error) {
     console.error('Error in deleteCollection:', error)
+    // Nếu collection không tồn tại, vẫn coi như thành công
+    if (error.message?.includes('not found') || error.message?.includes('does not exist')) {
+      return true
+    }
+    throw error
+  }
+}
+
+/**
+ * Lấy danh sách tất cả collections
+ * @returns {Promise<Array>} Danh sách collections
+ */
+export const listCollections = async () => {
+  try {
+    const collections = await chromaClient.listCollections()
+    return collections
+  } catch (error) {
+    console.error('Error listing collections:', error)
+    throw error
+  }
+}
+
+/**
+ * Lấy thông tin chi tiết của một collection
+ * @param {string} collectionName - Tên collection
+ * @returns {Promise<Object>} Thông tin collection
+ */
+export const getCollectionInfo = async (collectionName = 'heritage_documents') => {
+  try {
+    const collection = await chromaClient.getCollection({ name: collectionName })
+    const count = await collection.count()
+    
+    return {
+      name: collectionName,
+      count: count,
+      metadata: collection.metadata
+    }
+  } catch (error) {
+    console.error('Error getting collection info:', error)
     throw error
   }
 }

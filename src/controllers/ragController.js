@@ -4,7 +4,7 @@
  */
 
 import { StatusCodes } from 'http-status-codes'
-import { processDocument, queryRAG, deleteCollection } from '~/services/ragService'
+import { processDocument, queryRAG, deleteCollection, listCollections, getCollectionInfo } from '~/services/ragService'
 import fs from 'fs/promises'
 import path from 'path'
 
@@ -256,11 +256,61 @@ const uploadBatchDocuments = async (req, res, next) => {
   }
 }
 
+/**
+ * Lấy danh sách tất cả collections
+ * GET /api/v1/rag/collections
+ */
+const listCollectionsHandler = async (req, res, next) => {
+  try {
+    const collections = await listCollections()
+
+    return res.status(StatusCodes.OK).json({
+      success: true,
+      data: {
+        count: collections.length,
+        collections: collections
+      }
+    })
+  } catch (error) {
+    console.error('Error in listCollectionsHandler:', error)
+    next(error)
+  }
+}
+
+/**
+ * Lấy thông tin chi tiết của một collection
+ * GET /api/v1/rag/collection/:collectionName/info
+ */
+const getCollectionInfoHandler = async (req, res, next) => {
+  try {
+    const { collectionName } = req.params
+
+    if (!collectionName) {
+      return res.status(StatusCodes.BAD_REQUEST).json({
+        success: false,
+        message: 'Collection name is required'
+      })
+    }
+
+    const info = await getCollectionInfo(collectionName)
+
+    return res.status(StatusCodes.OK).json({
+      success: true,
+      data: info
+    })
+  } catch (error) {
+    console.error('Error in getCollectionInfoHandler:', error)
+    next(error)
+  }
+}
+
 export const ragController = {
   uploadDocument,
   uploadText,
   query,
   deleteCollectionHandler,
   healthCheck,
-  uploadBatchDocuments
+  uploadBatchDocuments,
+  listCollectionsHandler,
+  getCollectionInfoHandler
 }

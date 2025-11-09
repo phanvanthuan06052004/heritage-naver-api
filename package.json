@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.22.10",
+    "@chroma-core/default-embed": "^0.1.8",
     "async-exit-hook": "^2.0.1",
     "bcryptjs": "^3.0.2",
     "chromadb": "^3.1.1",
