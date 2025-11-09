@@ -144,7 +144,7 @@ const splitLongSentence = (sentence, maxChunkSize, overlapSize) => {
  * @param {number} overlapSize - Độ chồng lấp giữa các chunk
  * @returns {Array<Object>} Mảng các chunks với metadata
  */
-export const semanticChunkWithMetadata = (text, metadata = {}, maxChunkSize = 1000, overlapSize = 200) => {
+export const semanticChunkWithMetadata = (text, metadata = {}, maxChunkSize = 450, overlapSize = 120) => {
   const chunks = semanticChunk(text, maxChunkSize, overlapSize)
   
   return chunks.map((chunk, index) => ({

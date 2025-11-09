@@ -158,7 +158,6 @@ export const queryRAG = async (question, topK = 5, collectionName = 'heritage_do
   try {
     // Bước 1: Tạo embedding cho câu hỏi
     const questionEmbedding = await callNaverEmbeddingAPI(question)
-
     // Bước 2: Tìm kiếm top-k documents trong Chroma
     const relevantDocs = await queryChroma(questionEmbedding, topK, collectionName)
 
@@ -313,7 +312,7 @@ const generateGeneralAnswer = async (question) => {
   try {
     const systemPrompt = `Bạn là một trợ lý AI chuyên về di sản văn hóa Việt Nam.
 Trả lời câu hỏi một cách thân thiện và hữu ích.
-Nếu câu hỏi không liên quan đến di sản văn hóa, hãy hướng dẫn người dùng về các chủ đề bạn có thể hỗ trợ.
+Nếu câu hỏi không liên quan đến di sản văn hóa thì bạn hãy trả lời xin lỗi một cách lịch sự, hãy hướng dẫn người dùng về các chủ đề bạn có thể hỗ trợ.
 Trả lời bằng tiếng Việt.`
 
     const response = await fetch(env.NAVER_CHAT_API_URL, {
