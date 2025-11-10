@@ -3,7 +3,7 @@ import { ObjectId } from 'mongodb'
 import { OBJECT_ID_RULE, OBJECT_ID_RULE_MESSAGE } from '~/utils/validators'
 import { GET_DB } from '~/config/mongodb'
 
-const HERITAGE_COLLECTION_NAME = 'HistoryHeritage'
+const HERITAGE_COLLECTION_NAME = 'HistoryHeritageEn'
 const INVALID_UPDATE_FIELDS = ['_id', 'createdAt']
 const HERITAGE_COLLECTION_SCHEMA = Joi.object({
   name: Joi.string().required().min(3).max(100).trim(),
