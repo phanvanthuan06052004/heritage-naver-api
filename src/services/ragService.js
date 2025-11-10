@@ -11,8 +11,31 @@ import { ChromaClient } from 'chromadb'
 // Khởi tạo ChromaDB client
 const chromaClient = new ChromaClient({ path: env.CHROMA_URL })
 
+// Rate limiting configuration (can be adjusted based on your API limits)
+const RATE_LIMIT_CONFIG = {
+  delayBetweenRequests: 1500, // 1.5 seconds delay between requests
+  maxRetries: 5, // Retry up to 5 times
+  retryDelay: 3000, // 3 seconds delay before first retry
+  batchSize: 3, // Process 3 chunks at a time (conservative to avoid 429)
+  batchDelay: 5000 // 5 seconds delay between batches
+}
+
 /**
- * Gọi Naver Cloud AI API để tạo embedding cho các chunks
+ * Update rate limit configuration (useful for testing or adjusting limits)
+ * @param {Object} config - New configuration
+ */
+export const updateRateLimitConfig = (config) => {
+  Object.assign(RATE_LIMIT_CONFIG, config)
+  console.log('📝 Rate limit config updated:', RATE_LIMIT_CONFIG)
+}
+
+/**
+ * Sleep helper function
+ */
+const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms))
+
+/**
+ * Gọi Naver Cloud AI API để tạo embedding cho các chunks với rate limiting
  * @param {Array<string>} chunks - Mảng các văn bản cần embedding
  * @returns {Promise<Array<Array<number>>>} Mảng các vectors
  */
@@ -23,16 +46,68 @@ export const embedChunks = async (chunks) => {
     }
 
     const embeddings = []
+    const totalChunks = chunks.length
 
-    // Xử lý từng chunk (có thể batch để tối ưu)
-    for (const chunk of chunks) {
-      const embedding = await callNaverEmbeddingAPI(chunk)
-      embeddings.push(embedding)
+    console.log(`🔄 Processing ${totalChunks} chunks with rate limiting...`)
+
+    // Process chunks in batches to avoid rate limits
+    for (let i = 0; i < chunks.length; i += RATE_LIMIT_CONFIG.batchSize) {
+      const batch = chunks.slice(i, i + RATE_LIMIT_CONFIG.batchSize)
+      const batchNumber = Math.floor(i / RATE_LIMIT_CONFIG.batchSize) + 1
+      const totalBatches = Math.ceil(totalChunks / RATE_LIMIT_CONFIG.batchSize)
+
+      console.log(`   📦 Batch ${batchNumber}/${totalBatches} (${batch.length} chunks)`)
+
+      // Process each chunk in the batch sequentially with delay
+      for (let j = 0; j < batch.length; j++) {
+        const chunkIndex = i + j + 1
+        console.log(`      [${chunkIndex}/${totalChunks}] Embedding chunk...`)
+
+        const embedding = await callNaverEmbeddingAPIWithRetry(batch[j])
+        embeddings.push(embedding)
+
+        // Add delay between requests (except for the last chunk)
+        if (chunkIndex < totalChunks) {
+          await sleep(RATE_LIMIT_CONFIG.delayBetweenRequests)
+        }
+      }
+
+      // Add extra delay between batches
+      if (i + RATE_LIMIT_CONFIG.batchSize < chunks.length) {
+        console.log(`   ⏳ Waiting ${RATE_LIMIT_CONFIG.batchDelay / 1000}s before next batch...`)
+        await sleep(RATE_LIMIT_CONFIG.batchDelay)
+      }
     }
 
+    console.log(`✅ All ${totalChunks} chunks embedded successfully`)
     return embeddings
   } catch (error) {
     console.error('Error in embedChunks:', error)
+    throw error
+  }
+}
+
+/**
+ * Gọi Naver Embedding API với retry logic
+ * @param {string} text - Văn bản cần embedding
+ * @param {number} retryCount - Số lần đã retry
+ * @returns {Promise<Array<number>>} Vector embedding
+ */
+const callNaverEmbeddingAPIWithRetry = async (text, retryCount = 0) => {
+  try {
+    const embedding = await callNaverEmbeddingAPI(text)
+    return embedding
+  } catch (error) {
+    // Check if it's a rate limit error (429)
+    if (error.message.includes('429') && retryCount < RATE_LIMIT_CONFIG.maxRetries) {
+      const waitTime = RATE_LIMIT_CONFIG.retryDelay * (retryCount + 1) // Exponential backoff
+      console.log(`      ⚠️  Rate limit hit, retrying in ${waitTime / 1000}s... (Attempt ${retryCount + 1}/${RATE_LIMIT_CONFIG.maxRetries})`)
+      
+      await sleep(waitTime)
+      return callNaverEmbeddingAPIWithRetry(text, retryCount + 1)
+    }
+    
+    // If not rate limit error or max retries reached, throw
     throw error
   }
 }
