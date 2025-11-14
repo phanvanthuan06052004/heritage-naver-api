@@ -1,0 +1,219 @@
+{
+  "info": {
+    "name": "Heritage RAG API",
+    "description": "Collection for Vietnamese Heritage RAG System - Upload, Query, Benchmark",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Upload Document (File)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "heritage_documents_prepared.txt",
+              "description": "Select the prepared text file"
+            },
+            {
+              "key": "collectionName",
+              "value": "heritage_documents",
+              "type": "text",
+              "description": "Name of the Chroma collection"
+            },
+            {
+              "key": "category",
+              "value": "heritage",
+              "type": "text",
+              "description": "Document category (optional)"
+            },
+            {
+              "key": "title",
+              "value": "Vietnamese Heritage Database",
+              "type": "text",
+              "description": "Document title (optional)"
+            },
+            {
+              "key": "description",
+              "value": "UNESCO heritage sites in Vietnam",
+              "type": "text",
+              "description": "Document description (optional)"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/v1/rag/upload",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "v1", "rag", "upload"]
+        },
+        "description": "Upload a text file containing heritage documents. The system will chunk, embed, and store in Chroma."
+      },
+      "response": []
+    },
+    {
+      "name": "2. Upload Text (Direct)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"text\": \"Heritage Site: Ho Dynasty Citadel\\n\\nDescription:\\nHo Dynasty Citadel, located in district Vinh Loc, province Thanh Hoa, is a massive and unique stone structure, built in 1397 under the reign Ho Dynasty. Not only is it a historical relic, Ho Dynasty Citadel is also a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese. The relic was designated as a World Cultural Heritage by UNESCO in 2011.\\n\\nLocation: District Vinh Loc, province Thanh Hoa\\n\\nCoordinates: 20°8′49″B, 105°36′17″Đ\",\n  \"metadata\": {\n    \"title\": \"Ho Dynasty Citadel\",\n    \"category\": \"unesco_heritage\",\n    \"location\": \"Thanh Hoa\"\n  },\n  \"collectionName\": \"heritage_documents\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/v1/rag/upload-text",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "v1", "rag", "upload-text"]
+        },
+        "description": "Upload text directly without file. Good for testing or small texts."
+      },
+      "response": []
+    },
+    {
+      "name": "3. Query RAG",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"question\": \"Where is the Ho Dynasty Citadel located?\",\n  \"topK\": 5,\n  \"collectionName\": \"heritage_documents\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/v1/rag/query",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "v1", "rag", "query"]
+        },
+        "description": "Ask a question about Vietnamese heritage. The system will retrieve relevant documents and generate an answer using Naver Chat API."
+      },
+      "response": []
+    },
+    {
+      "name": "4. List All Collections",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/v1/rag/collections",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "v1", "rag", "collections"]
+        },
+        "description": "Get a list of all Chroma collections."
+      },
+      "response": []
+    },
+    {
+      "name": "5. Get Collection Info",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/v1/rag/collection/heritage_documents/info",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "v1", "rag", "collection", "heritage_documents", "info"]
+        },
+        "description": "Get detailed information about a specific collection (name, count, metadata)."
+      },
+      "response": []
+    },
+    {
+      "name": "6. Delete Collection (⚠️ Careful!)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/v1/rag/collection/heritage_documents",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "v1", "rag", "collection", "heritage_documents"]
+        },
+        "description": "Delete an entire collection. ⚠️ WARNING: This will remove all documents!"
+      },
+      "response": []
+    },
+    {
+      "name": "7. Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/v1/rag/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "v1", "rag", "health"]
+        },
+        "description": "Check if RAG system is running and configured properly."
+      },
+      "response": []
+    },
+    {
+      "name": "8. Upload Batch Documents",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "files",
+              "type": "file",
+              "src": "heritage_part1.txt",
+              "description": "First file"
+            },
+            {
+              "key": "files",
+              "type": "file",
+              "src": "heritage_part2.txt",
+              "description": "Second file (use same key name 'files')"
+            },
+            {
+              "key": "files",
+              "type": "file",
+              "src": "heritage_part3.txt",
+              "description": "Third file (use same key name 'files')"
+            },
+            {
+              "key": "collectionName",
+              "value": "heritage_documents",
+              "type": "text",
+              "description": "Collection name"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/v1/rag/upload-batch",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "v1", "rag", "upload-batch"]
+        },
+        "description": "Upload multiple files at once. Use the same key 'files' for each file."
+      },
+      "response": []
+    }
+  ]
+}

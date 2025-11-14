@@ -1,0 +1,72 @@
+[
+  {
+    "id": "q1",
+    "question": "Where is the Ho Dynasty Citadel located?",
+    "ground_truth": "The Ho Dynasty Citadel is located in Vinh Loc district, Thanh Hoa province, and was built in 1397 during the Ho Dynasty reign.",
+    "related_docs": ["ho_dynasty_citadel_001", "ho_dynasty_citadel_002"],
+    "expected_context": "heritage sites in Thanh Hoa"
+  },
+  {
+    "id": "q2",
+    "question": "What is special about the Central Thang Long Imperial Citadel in Hanoi?",
+    "ground_truth": "The Central Thang Long Imperial Citadel is an archaeological and historical site associated with the Thang Long capital through many dynasties (Ly, Tran, Le, Nguyen). It was recognized by UNESCO as a World Cultural Heritage site in 2010.",
+    "related_docs": ["thang_long_citadel_001", "thang_long_citadel_002"],
+    "expected_context": "imperial citadels in Hanoi"
+  },
+  {
+    "id": "q3",
+    "question": "When was the Ho Dynasty Citadel built and what materials were used?",
+    "ground_truth": "The Ho Dynasty Citadel was built in 1397 using massive limestone blocks. It is a unique stone structure demonstrating remarkable creativity and construction techniques of ancient Vietnamese.",
+    "related_docs": ["ho_dynasty_citadel_001"],
+    "expected_context": "construction and architecture of Vietnamese heritage"
+  },
+  {
+    "id": "q4",
+    "question": "Which UNESCO World Heritage site is located in Ba Dinh district, Hanoi?",
+    "ground_truth": "The Central Thang Long Imperial Citadel is located in Ba Dinh district, Hanoi. It consists of archaeological sites at 18 Hoang Dieu and relics such as Doan Mon Gate, Kinh Thien Palace, and the Flagpole.",
+    "related_docs": ["thang_long_citadel_001", "thang_long_citadel_002"],
+    "expected_context": "UNESCO heritage sites in Hanoi"
+  },
+  {
+    "id": "q5",
+    "question": "What geographical features surround the Ho Dynasty Citadel?",
+    "ground_truth": "The Ho Dynasty Citadel is surrounded by the Buoi River to the north and west, and the Ma Tuong River to the east, creating a strong natural defense system. Magnificent limestone mountains surround the city, enhancing natural beauty and forming strong walls.",
+    "related_docs": ["ho_dynasty_citadel_001"],
+    "expected_context": "geographical location and natural defenses"
+  },
+  {
+    "id": "q6",
+    "question": "When did UNESCO recognize the Ho Dynasty Citadel as a World Cultural Heritage site?",
+    "ground_truth": "UNESCO designated the Ho Dynasty Citadel as a World Cultural Heritage site in 2011.",
+    "related_docs": ["ho_dynasty_citadel_001"],
+    "expected_context": "UNESCO recognition dates"
+  },
+  {
+    "id": "q7",
+    "question": "What is the historical significance of Thang Long Imperial Citadel?",
+    "ground_truth": "Thang Long Imperial Citadel served as the political center of Vietnam continuously through 13 centuries, from the 11th to the 19th century, under the Ly, Tran, Le, and Nguyen dynasties.",
+    "related_docs": ["thang_long_citadel_001", "thang_long_citadel_002"],
+    "expected_context": "historical significance of Vietnamese imperial citadels"
+  },
+  {
+    "id": "q8",
+    "question": "What architectural structures can be found at the Central Thang Long Imperial Citadel?",
+    "ground_truth": "The Central Thang Long Imperial Citadel contains important architectural structures including Doan Mon Gate, Kinh Thien Palace, the Flagpole, and various archaeological artifacts at the 18 Hoang Dieu site.",
+    "related_docs": ["thang_long_citadel_001", "thang_long_citadel_002"],
+    "expected_context": "architectural features of imperial citadels"
+  },
+  {
+    "id": "q9",
+    "question": "Who was responsible for building the Ho Dynasty Citadel?",
+    "ground_truth": "Ho Quy Ly, an ambitious reformer who established the Ho Dynasty in 1400, was responsible for building the Ho Dynasty Citadel. He decided to move the capital from Thang Long (today's Hanoi) to Tay Do (Vinh Loc, Thanh Hoa).",
+    "related_docs": ["ho_dynasty_citadel_001"],
+    "expected_context": "Ho Dynasty history and leadership"
+  },
+  {
+    "id": "q10",
+    "question": "What was the original name of the Ho Dynasty Citadel's location?",
+    "ground_truth": "The Ho Dynasty Citadel was built at Tay Do, which is now known as Vinh Loc in Thanh Hoa province. It served as the capital after Ho Quy Ly moved it from Thang Long.",
+    "related_docs": ["ho_dynasty_citadel_001"],
+    "expected_context": "historical place names in Vietnam"
+  }
+]
