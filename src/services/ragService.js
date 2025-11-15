@@ -7,6 +7,8 @@ import { env } from '~/config/environment'
 import { semanticChunk, semanticChunkWithMetadata } from '~/utils/chunkUtils'
 import { v4 as uuidv4 } from 'uuid'
 import { ChromaClient } from 'chromadb'
+import { filterQuestion } from './questionFilterService.js'
+import { rerankDocuments, getRerankingConfig } from './rerankingService.js'
 
 // Khởi tạo ChromaDB client
 const chromaClient = new ChromaClient({ path: env.CHROMA_URL })
@@ -223,30 +225,63 @@ export const ensureCollection = async (collectionName = 'heritage_documents') =>
 }
 
 /**
- * Query RAG: embedding câu hỏi → tìm top-k documents → gọi Naver Chat API
+ * Query RAG: filter → embedding câu hỏi → tìm top-k documents → rerank → gọi Naver Chat API
  * @param {string} question - Câu hỏi của người dùng
- * @param {number} topK - Số lượng documents liên quan nhất cần lấy
+ * @param {number} topK - Số lượng documents liên quan nhất cần lấy (default: 5 sau reranking)
  * @param {string} collectionName - Tên collection trong Chroma
  * @returns {Promise<Object>} Kết quả RAG với answer và sources
  */
 export const queryRAG = async (question, topK = 5, collectionName = 'heritage_documents') => {
   try {
-    // Bước 1: Tạo embedding cho câu hỏi
-    const questionEmbedding = await callNaverEmbeddingAPI(question)
-    // Bước 2: Tìm kiếm top-k documents trong Chroma
-    const relevantDocs = await queryChroma(questionEmbedding, topK, collectionName)
-
-    // Bước 3: Kiểm tra xem có documents liên quan không
-    if (!relevantDocs || relevantDocs.length === 0) {
-      // Không tìm thấy documents → trả lời general
-      return await generateGeneralAnswer(question)
+    // Bước 1: Filter câu hỏi (validate, check relevance)
+    const filterResult = filterQuestion(question)
+    
+    if (!filterResult.passed) {
+      return {
+        success: false,
+        error: 'QUESTION_REJECTED',
+        message: filterResult.reason,
+        suggestions: filterResult.suggestions || [],
+        metadata: filterResult.metadata
+      }
     }
 
-    // Bước 4: Xây dựng context từ documents
+    const cleanedQuestion = filterResult.cleaned
+
+    // Bước 2: Tạo embedding cho câu hỏi
+    const questionEmbedding = await callNaverEmbeddingAPI(cleanedQuestion)
+    
+    // Bước 3: Retrieve larger set of documents (topK * 4 for reranking)
+    const rerankingConfig = getRerankingConfig()
+    const retrievalTopK = rerankingConfig.enabled ? rerankingConfig.retrievalTopK : topK
+    
+    let relevantDocs = await queryChroma(questionEmbedding, retrievalTopK, collectionName)
+
+    // Bước 4: Kiểm tra xem có documents liên quan không
+    if (!relevantDocs || relevantDocs.length === 0) {
+
+      return await generateGeneralAnswer(cleanedQuestion)
+    }
+
+
+    // Bước 5: Rerank documents nếu enabled
+    if (rerankingConfig.enabled && relevantDocs.length > topK) {
+
+      relevantDocs = await rerankDocuments(cleanedQuestion, relevantDocs, {
+        finalTopN: topK
+      })
+
+    } else {
+      // Không rerank, chỉ lấy top K
+      relevantDocs = relevantDocs.slice(0, topK)
+
+    }
+
+    // Bước 6: Xây dựng context từ documents
     const context = buildContext(relevantDocs)
 
-    // Bước 5: Gọi Naver Chat API với context và question
-    const answer = await callNaverChatAPI(question, context)
+    // Bước 7: Gọi Naver Chat API với context và question
+    const answer = await callNaverChatAPI(cleanedQuestion, context)
 
     return {
       success: true,
@@ -254,8 +289,15 @@ export const queryRAG = async (question, topK = 5, collectionName = 'heritage_do
       sources: relevantDocs.map(doc => ({
         content: doc.document,
         metadata: doc.metadata,
-        score: doc.distance
+        score: doc.distance || 0,
+        rerankScore: doc.scores?.final || null
       })),
+      metadata: {
+        questionMetadata: filterResult.metadata,
+        documentsRetrieved: retrievalTopK,
+        documentsUsed: relevantDocs.length,
+        rerankingEnabled: rerankingConfig.enabled
+      },
       mode: 'rag' // Chế độ RAG
     }
   } catch (error) {

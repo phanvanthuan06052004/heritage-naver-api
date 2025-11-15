@@ -7,6 +7,8 @@ import { StatusCodes } from 'http-status-codes'
 import { processDocument, queryRAG, deleteCollection, listCollections, getCollectionInfo } from '~/services/ragService'
 import fs from 'fs/promises'
 import path from 'path'
+import { getAllConfigs, updateConfig } from '../config/ragConfig.js'
+import { filterQuestion } from '../services/questionFilterService.js'
 
 /**
  * Upload và xử lý tài liệu (Admin only)
@@ -125,6 +127,16 @@ const query = async (req, res, next) => {
       topK || 5,
       collectionName || 'heritage_documents'
     )
+
+    // Check if question was rejected by filter
+    if (!result.success && result.error === 'QUESTION_REJECTED') {
+      return res.status(StatusCodes.BAD_REQUEST).json({
+        success: false,
+        message: result.message,
+        suggestions: result.suggestions,
+        metadata: result.metadata
+      })
+    }
 
     return res.status(StatusCodes.OK).json({
       success: true,
@@ -304,6 +316,81 @@ const getCollectionInfoHandler = async (req, res, next) => {
   }
 }
 
+/**
+ * Test question filter
+ * POST /api/v1/rag/test-filter
+ */
+const testFilter = async (req, res, next) => {
+  try {
+    const { question } = req.body
+
+    if (!question) {
+      return res.status(StatusCodes.BAD_REQUEST).json({
+        success: false,
+        message: 'Question is required'
+      })
+    }
+
+    // Import filter service
+    const result = filterQuestion(question)
+
+    return res.status(StatusCodes.OK).json({
+      success: true,
+      data: result
+    })
+  } catch (error) {
+    console.error('Error in testFilter:', error)
+    next(error)
+  }
+}
+
+/**
+ * Get current RAG configuration
+ * GET /api/v1/rag/config
+ */
+const getConfig = async (req, res, next) => {
+  try {
+    const config = getAllConfigs()
+
+    return res.status(StatusCodes.OK).json({
+      success: true,
+      data: config
+    })
+  } catch (error) {
+    console.error('Error in getConfig:', error)
+    next(error)
+  }
+}
+
+/**
+ * Update RAG configuration
+ * PUT /api/v1/rag/config/:section
+ */
+const updateConfigHandler = async (req, res, next) => {
+  try {
+    const { section } = req.params
+    const newConfig = req.body
+
+    
+    const updated = updateConfig(section, newConfig)
+
+    if (!updated) {
+      return res.status(StatusCodes.BAD_REQUEST).json({
+        success: false,
+        message: `Invalid config section: ${section}. Valid sections: questionFilter, reranking, bm25, pipeline, rateLimit`
+      })
+    }
+
+    return res.status(StatusCodes.OK).json({
+      success: true,
+      message: `Configuration section '${section}' updated successfully`
+    })
+  } catch (error) {
+    console.error('Error in updateConfigHandler:', error)
+    next(error)
+  }
+}
+
 export const ragController = {
   uploadDocument,
   uploadText,
@@ -312,5 +399,8 @@ export const ragController = {
   healthCheck,
   uploadBatchDocuments,
   listCollectionsHandler,
-  getCollectionInfoHandler
+  getCollectionInfoHandler,
+  testFilter,
+  getConfig,
+  updateConfigHandler
 }

@@ -142,4 +142,38 @@ Router.delete(
   ragController.deleteCollectionHandler
 )
 
+/**
+ * Test question filter (Debug/Development)
+ * POST /api/v1/rag/test-filter
+ * Public (for testing)
+ * Body: { question }
+ */
+Router.post('/test-filter', ragController.testFilter)
+
+/**
+ * Get current RAG configuration
+ * GET /api/v1/rag/config
+ * Requires: Admin authentication
+ */
+Router.get(
+  '/config',
+  // authMiddleware.verifyToken, // Uncomment để bật auth
+  // authMiddleware.isAdmin,      // Uncomment để chỉ admin
+  ragController.getConfig
+)
+
+/**
+ * Update RAG configuration
+ * PUT /api/v1/rag/config/:section
+ * Requires: Admin authentication
+ * Params: section (questionFilter, reranking, bm25, pipeline, rateLimit)
+ * Body: config object
+ */
+Router.put(
+  '/config/:section',
+  // authMiddleware.verifyToken, // Uncomment để bật auth
+  // authMiddleware.isAdmin,      // Uncomment để chỉ admin
+  ragController.updateConfigHandler
+)
+
 export const ragRoute = Router
