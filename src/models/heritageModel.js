@@ -3,7 +3,13 @@ import { ObjectId } from 'mongodb'
 import { OBJECT_ID_RULE, OBJECT_ID_RULE_MESSAGE } from '~/utils/validators'
 import { GET_DB } from '~/config/mongodb'
 
-const HERITAGE_COLLECTION_NAME = 'HistoryHeritageEn'
+// Collection names for different languages
+const HERITAGE_COLLECTIONS = {
+  en: 'HistoryHeritageEn',
+  vi: 'HistoryHeritagev2'
+}
+
+const HERITAGE_COLLECTION_NAME = 'HistoryHeritageEn' // Default collection
 const INVALID_UPDATE_FIELDS = ['_id', 'createdAt']
 const HERITAGE_COLLECTION_SCHEMA = Joi.object({
   name: Joi.string().required().min(3).max(100).trim(),
@@ -61,63 +67,64 @@ const HERITAGE_COLLECTION_SCHEMA = Joi.object({
   updatedAt: Joi.date().timestamp('javascript').default(null)
 })
 
-// Hàm lấy collection object để thao tác với DB
-const getCollection = () => {
-  return GET_DB().collection(HERITAGE_COLLECTION_NAME)
+// Hàm lấy collection object theo ngôn ngữ
+const getCollection = (language = 'en') => {
+  const collectionName = HERITAGE_COLLECTIONS[language] || HERITAGE_COLLECTIONS.en
+  return GET_DB().collection(collectionName)
 }
 
 // --- Các hàm thao tác với Database ---
 
 // Tạo mới một di tích
-const createNew = async (data) => {
+const createNew = async (data, language = 'en') => {
   try {
     // Validate dữ liệu trước khi insert
     const validatedData = await HERITAGE_COLLECTION_SCHEMA.validateAsync(data, { abortEarly: false })
-    const result = await getCollection().insertOne(validatedData) // Dùng validatedData đã được validate và áp dụng default
+    const result = await getCollection(language).insertOne(validatedData) // Dùng validatedData đã được validate và áp dụng default
     return result
   } catch (error) { throw new Error(error) }
 }
 
 // Tìm một di tích theo ID
-const findOneById = async (heritageId) => {
+const findOneById = async (heritageId, language = 'en') => {
   try {
     // Cần chuyển heritageId thành ObjectId
-    const result = await getCollection().findOne({ _id: new ObjectId(heritageId) })
+    const result = await getCollection(language).findOne({ _id: new ObjectId(heritageId) })
     return result
   } catch (error) { throw new Error(error) }
 }
 
-const findOneBySlug = async (nameSlug) => {
+const findOneBySlug = async (nameSlug, language = 'en') => {
   try {
     // Cần chuyển heritageId thành ObjectId
-    const result = await getCollection().findOne({ nameSlug: nameSlug })
+    const result = await getCollection(language).findOne({ nameSlug: nameSlug })
     return result
   } catch (error) { throw new Error(error) }
 }
 
 // Lấy danh sách di tích với bộ lọc, sắp xếp và phân trang
-const findListHeritages = async ({ filter, sort, skip, limit }) => {
+const findListHeritages = async ({ filter, sort, skip, limit, language = 'en' }) => {
   try {
-    const listHeritages = getCollection().find(filter)
+    const listHeritages = getCollection(language).find(filter)
       .sort(sort)
       .skip(skip)
       .limit(limit)
     // Lấy kết quả dạng Mảng
     const results = await listHeritages.toArray()
     // Đếm tổng số bản ghi khớp với filter (không tính limit, skip)
-    const totalCount = await getCollection().countDocuments(filter)
+    const totalCount = await getCollection(language).countDocuments(filter)
     return { results, totalCount }
   } catch (error) { throw new Error(error) }
 }
 
 // Cập nhật một di tích
-const updateOneById = async (id, dataUpdate) => {
+const updateOneById = async (id, dataUpdate, language = 'en') => {
   try {
     Object.keys(dataUpdate).forEach(fieldname => {
       if (INVALID_UPDATE_FIELDS.includes(fieldname))
         delete dataUpdate[fieldname]
     })
-    const result = await getCollection().findOneAndUpdate(
+    const result = await getCollection(language).findOneAndUpdate(
       { _id: new ObjectId(id) },
       { $set: dataUpdate },
       { returnDocument: 'after' }
@@ -127,17 +134,17 @@ const updateOneById = async (id, dataUpdate) => {
 }
 
 // Xóa một di tích
-const deleteOneById = async (id) => {
+const deleteOneById = async (id, language = 'en') => {
   try {
-    const result = await getCollection().deleteOne({ _id: new ObjectId(id) })
+    const result = await getCollection(language).deleteOne({ _id: new ObjectId(id) })
     return result
   } catch (error) { throw new Error(error) }
 }
 
 // Lấy chi tiết một di tích
-const getDetailById = async (id) => {
+const getDetailById = async (id, language = 'en') => {
   try {
-    const result = await getCollection().findOne({
+    const result = await getCollection(language).findOne({
       _id: new ObjectId(id),
       _destroy: { $ne: true }
     })
@@ -145,9 +152,9 @@ const getDetailById = async (id) => {
   } catch (error) { throw new Error(error) }
 }
 
-const getAllHerritageName = async () => {
+const getAllHerritageName = async (language = 'en') => {
   try {
-    const result = await getCollection().find(
+    const result = await getCollection(language).find(
       { _destroy: { $ne: true } },
       { projection: { _id: 1, name: 1 } }
     ).toArray()
@@ -159,6 +166,7 @@ const getAllHerritageName = async () => {
 // --- Export Model ---
 export const heritageModel = {
   HERITAGE_COLLECTION_NAME,
+  HERITAGE_COLLECTIONS,
   HERITAGE_COLLECTION_SCHEMA,
   createNew,
   findOneById,

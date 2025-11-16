@@ -77,7 +77,8 @@ const getByUserId = async (req, res, next) => {
 
   const queryCondition = Joi.object({
     page: Joi.number().integer().min(1).default(1),
-    limit: Joi.number().integer().min(5).max(50).default(20)
+    limit: Joi.number().integer().min(5).max(50).default(20),
+    language: Joi.string().valid('en', 'vi').default('en')
   })
 
   try {

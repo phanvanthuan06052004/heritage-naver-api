@@ -134,7 +134,7 @@ const findAll = async ({ page, limit, sort, order }) => {
 //     )
 // }
 
-const findByUserIdAndPagination = async ({ userId, page, limit }) => {
+const findByUserIdAndPagination = async ({ userId, page, limit, language = 'en' }) => {
   try {
     const skip = (page - 1) * limit
 
@@ -171,8 +171,9 @@ const findByUserIdAndPagination = async ({ userId, page, limit }) => {
       }
     }
 
-    // Bước 4: Lấy chi tiết heritage từ bảng HistoryHeritageEn
-    const heritages = await db.collection(heritageModel.HERITAGE_COLLECTION_NAME)
+    // Bước 4: Lấy chi tiết heritage từ collection theo ngôn ngữ
+    const collectionName = heritageModel.HERITAGE_COLLECTIONS[language] || heritageModel.HERITAGE_COLLECTIONS.en
+    const heritages = await db.collection(collectionName)
       .find({ _id: { $in: heritageIds }, _destroy: { $ne: true } })
       .project({ _id: 1, name: 1, description: 1, images: 1, nameSlug: 1 })
       .toArray()

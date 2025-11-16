@@ -7,10 +7,10 @@ const Router = express.Router()
 
 
 Router.route('/explore')
-  .get(heritageController.getNearestHeritages)
+  .get(heritageValidation.getNearestHeritages, heritageController.getNearestHeritages)
 
 Router.route('/all-name')
-  .get(heritageController.getAllHeritageNames)
+  .get(heritageValidation.getAllHeritageNames, heritageController.getAllHeritageNames)
 
 Router.route('/')
   .get(heritageValidation.getHeritages, heritageController.getHeritages)
