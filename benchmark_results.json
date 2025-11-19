@@ -1,18 +1,18 @@
 {
   "metadata": {
     "totalQuestions": 10,
-    "timestamp": "2025-11-10T15:19:12.367Z",
+    "timestamp": "2025-11-13T10:17:23.233Z",
     "benchmarkVersion": "1.0.0"
   },
   "summary": {
     "totalQuestions": 10,
     "successfulQuestions": 10,
     "failedQuestions": 0,
-    "avgBLEU": 0.12832,
-    "avgROUGEL": 0.2952,
-    "avgCosineTFIDF": 0.6337300000000001,
-    "avgCosineSemantic": 0.9955666666666665,
-    "avgExecutionTime": 6331.7,
+    "avgBLEU": 0.11046,
+    "avgROUGEL": 0.26779000000000003,
+    "avgCosineTFIDF": 0.5909599999999999,
+    "avgCosineSemantic": 0.995488888888889,
+    "avgExecutionTime": 6651.1,
     "avgSourcesRetrieved": 0,
     "qualityDistribution": {
       "Excellent": 0,
@@ -27,22 +27,22 @@
       "id": "q1",
       "question": "Where is the Ho Dynasty Citadel located?",
       "ground_truth": "The Ho Dynasty Citadel is located in Vinh Loc district, Thanh Hoa province, and was built in 1397 during the Ho Dynasty reign.",
-      "generated_answer": "The Ho Dynasty Citadel is located in District Vinh Loc, Province Thanh Hoa, Vietnam. \n\nThis information can be found in Document 1 which states \"Ho Dynasty Citadel, located in district Vinh Loc, province Thanh Hoa, is a massive and unique stone structure, built in 1397 under the reign Ho Dynasty.\" It is mentioned as a historical relic and cultural icon, showcasing the creativity and construction techniques of the ancient Vietnamese. Additionally, Document 2 provides further details about its geographical location and designation as a World Cultural Heritage by UNESCO in 2011. However, the primary source for its location is Document 1.",
-      "context_used": "[Document 1] Heritage Site: Ho Dynasty Citadel Description: Ho Dynasty Citadel, located in district Vinh Loc, province Thanh Hoa, is a massive and unique stone structure, built in 1397 under the reign Ho Dynasty. Not only is it a historical relic, Ho Dynasty Citadel is also a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese.\n\n[Document 2] a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese. The relic was designated as a World Cultural Heritage by UNESCO in 2011. Ho Dynasty Citadel is located in a highly geographical location. To the north and west are the Buoi River, to the east are the Ma Tuong River, creating a strong natural defense system.\n\n[Document 3] and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism. Location: City Tu Son, province Bac Ninh Coordinates: 21°06′26″B, 105°57′37″Đ Tags: Di tích lịch sử --- Heritage Site: The ancient capital Hoa Lu Description: The ancient capital Hoa Lu (Ninh Binh) was the first capital of the feudal state to exercise Dai Co Viet power under the Dinh dynasty and Tien Le (the end of the 15th century – the beginning of the 11th century).\n\n[Document 4] in the 19th century – early XX; and is also the cultural, religious and historical center of the central region. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism.\n\n[Document 5] and ideology of the Chairman Ho Chi Minh, and is also the place where national ceremonial activities take place. This area has great historical, cultural and educational value, is strictly protected and serves research and propaganda on the history of revolution. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism.",
+      "generated_answer": "The Ho Dynasty Citadel is located in District Vinh Loc, Province Thanh Hoa, Vietnam. \n\nThis information can be found in Document 1 which states \"Ho Dynasty Citadel, located in district Vinh Loc, province Thanh Hoa, is a massive and unique stone structure...\". It's worth noting that this citadel is not only a historical relic but also a cultural icon representing the creativity and construction techniques of the ancient Vietnamese. Furthermore, it was designated as a World Cultural Heritage by UNESCO in 2011, as mentioned in Document 2. Its strategic geographical location, surrounded by rivers, adds to its historical significance. As per Document 3, it served as a cultural, religious, and historical center in the central region during the 19th century until the early 20th century. Today, it is managed and preserved following regulations set by authorities for research, education, and cultural tourism. In addition, Document 4 highlights its importance in commemorating the ideology of Ho Chi Minh and serving as a venue for national ceremonial activities. Lastly, Document 5 connects the Ho Dynasty Citadel to the legendary figure An Duong Vuong and emphasizes its role in studying ancient history and understanding Vietnamese folk beliefs.",
+      "context_used": "[Document 1] Heritage Site: Ho Dynasty Citadel Description: Ho Dynasty Citadel, located in district Vinh Loc, province Thanh Hoa, is a massive and unique stone structure, built in 1397 under the reign Ho Dynasty. Not only is it a historical relic, Ho Dynasty Citadel is also a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese.\n\n[Document 2] a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese. The relic was designated as a World Cultural Heritage by UNESCO in 2011. Ho Dynasty Citadel is located in a highly geographical location. To the north and west are the Buoi River, to the east are the Ma Tuong River, creating a strong natural defense system.\n\n[Document 3] in the 19th century – early XX; and is also the cultural, religious and historical center of the central region. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism.\n\n[Document 4] and ideology of the Chairman Ho Chi Minh, and is also the place where national ceremonial activities take place. This area has great historical, cultural and educational value, is strictly protected and serves research and propaganda on the history of revolution. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism.\n\n[Document 5] associated with the legend An Duong Vuong and history into Co Loa - a military political center dating back to the An Duong Vuong era (the 3rd century BC according to legend and layers of archaeological culture). The relics include the system of earthen ramparts, temples, and archaeological artifacts; playing an important role in the study of ancient history and folk beliefs Vietnam.",
       "sources": [
         {
           "content": "Heritage Site: Ho Dynasty Citadel Description: Ho Dynasty Citadel, located in district Vinh Loc, province Thanh Hoa, is a massive and unique stone structure, built in 1397 under the reign Ho Dynasty. Not only is it a historical relic, Ho Dynasty Citadel is also a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese.",
           "metadata": {
-            "mimeType": "text/plain",
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "category": "heritage",
-            "filename": "heritage_documents_prepared.txt",
-            "totalChunks": 65,
-            "description": "UNESCO heritage sites in Vietnam",
-            "title": "Vietnamese Heritage Database",
-            "fileSize": 17315,
+            "totalChunks": 66,
+            "title": "heritage_documents_prepared.txt",
             "chunkIndex": 0,
-            "uploadedBy": "admin"
+            "filename": "heritage_documents_prepared.txt",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "category": "'Vietnamese Heritage Database'",
+            "uploadedBy": "admin",
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "fileSize": 17315,
+            "mimeType": "text/plain"
           },
           "distance": 16.45118,
           "relevanceScore": -15.45118
@@ -50,50 +50,33 @@
         {
           "content": "a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese. The relic was designated as a World Cultural Heritage by UNESCO in 2011. Ho Dynasty Citadel is located in a highly geographical location. To the north and west are the Buoi River, to the east are the Ma Tuong River, creating a strong natural defense system.",
           "metadata": {
-            "title": "Vietnamese Heritage Database",
-            "mimeType": "text/plain",
-            "description": "UNESCO heritage sites in Vietnam",
-            "fileSize": 17315,
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "category": "'Vietnamese Heritage Database'",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "title": "heritage_documents_prepared.txt",
             "uploadedBy": "admin",
-            "filename": "heritage_documents_prepared.txt",
+            "mimeType": "text/plain",
+            "fileSize": 17315,
             "chunkIndex": 1,
-            "category": "heritage",
-            "totalChunks": 65,
-            "uploadedAt": "2025-11-10T14:13:37.380Z"
+            "totalChunks": 66,
+            "filename": "heritage_documents_prepared.txt"
           },
           "distance": 20.332043,
           "relevanceScore": -19.332043
         },
         {
-          "content": "and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism. Location: City Tu Son, province Bac Ninh Coordinates: 21°06′26″B, 105°57′37″Đ Tags: Di tích lịch sử --- Heritage Site: The ancient capital Hoa Lu Description: The ancient capital Hoa Lu (Ninh Binh) was the first capital of the feudal state to exercise Dai Co Viet power under the Dinh dynasty and Tien Le (the end of the 15th century – the beginning of the 11th century).",
-          "metadata": {
-            "uploadedBy": "admin",
-            "filename": "heritage_documents_prepared.txt",
-            "fileSize": 17315,
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "mimeType": "text/plain",
-            "totalChunks": 65,
-            "category": "heritage",
-            "description": "UNESCO heritage sites in Vietnam",
-            "title": "Vietnamese Heritage Database",
-            "chunkIndex": 39
-          },
-          "distance": 22.717602,
-          "relevanceScore": -21.717602
-        },
-        {
           "content": "in the 19th century – early XX; and is also the cultural, religious and historical center of the central region. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism.",
           "metadata": {
-            "category": "heritage",
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
+            "chunkIndex": 50,
             "fileSize": 17315,
-            "filename": "heritage_documents_prepared.txt",
-            "description": "UNESCO heritage sites in Vietnam",
             "uploadedBy": "admin",
-            "chunkIndex": 49,
-            "title": "Vietnamese Heritage Database",
-            "mimeType": "text/plain",
-            "totalChunks": 65
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "title": "heritage_documents_prepared.txt",
+            "totalChunks": 66,
+            "category": "'Vietnamese Heritage Database'",
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "filename": "heritage_documents_prepared.txt",
+            "mimeType": "text/plain"
           },
           "distance": 24.769348,
           "relevanceScore": -23.769348
@@ -101,156 +84,173 @@
         {
           "content": "and ideology of the Chairman Ho Chi Minh, and is also the place where national ceremonial activities take place. This area has great historical, cultural and educational value, is strictly protected and serves research and propaganda on the history of revolution. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism.",
           "metadata": {
-            "description": "UNESCO heritage sites in Vietnam",
-            "title": "Vietnamese Heritage Database",
-            "mimeType": "text/plain",
-            "category": "heritage",
+            "category": "'Vietnamese Heritage Database'",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
             "filename": "heritage_documents_prepared.txt",
             "uploadedBy": "admin",
-            "totalChunks": 65,
             "chunkIndex": 36,
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "fileSize": 17315
+            "title": "heritage_documents_prepared.txt",
+            "mimeType": "text/plain",
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "fileSize": 17315,
+            "totalChunks": 66
           },
           "distance": 24.92775,
           "relevanceScore": -23.92775
+        },
+        {
+          "content": "associated with the legend An Duong Vuong and history into Co Loa - a military political center dating back to the An Duong Vuong era (the 3rd century BC according to legend and layers of archaeological culture). The relics include the system of earthen ramparts, temples, and archaeological artifacts; playing an important role in the study of ancient history and folk beliefs Vietnam.",
+          "metadata": {
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "uploadedBy": "admin",
+            "filename": "heritage_documents_prepared.txt",
+            "chunkIndex": 61,
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "mimeType": "text/plain",
+            "fileSize": 17315,
+            "category": "'Vietnamese Heritage Database'",
+            "title": "heritage_documents_prepared.txt",
+            "totalChunks": 66
+          },
+          "distance": 25.878084,
+          "relevanceScore": -24.878084
         }
       ],
       "metrics": {
-        "bleu": 0.0867,
-        "rouge_l_precision": 0.1881,
+        "bleu": 0.0441,
+        "rouge_l_precision": 0.0974,
         "rouge_l_recall": 0.8261,
-        "rouge_l_f1": 0.3065,
-        "cosine_tfidf": 0.8311,
-        "cosine_semantic": 0.9971
+        "rouge_l_f1": 0.1743,
+        "cosine_tfidf": 0.7691,
+        "cosine_semantic": 0.9955
       },
-      "execution_time_ms": 7289,
-      "timestamp": "2025-11-10T15:18:11.233Z"
+      "execution_time_ms": 8349,
+      "timestamp": "2025-11-13T10:16:19.970Z"
     },
     {
       "id": "q2",
       "question": "What is special about the Central Thang Long Imperial Citadel in Hanoi?",
       "ground_truth": "The Central Thang Long Imperial Citadel is an archaeological and historical site associated with the Thang Long capital through many dynasties (Ly, Tran, Le, Nguyen). It was recognized by UNESCO as a World Cultural Heritage site in 2010.",
-      "generated_answer": "The Central Thang Long Imperial Citadel in Hanoi is special because it is an archaeological and historical relic associated with the capital Thang Long through many dynasties, namely the Ly, Tran, Le, and Nguyen. It is located in the district of Dong Anh, within the city of Hanoi. The central area of the citadel was recognized by UNESCO as a World Cultural Heritage in 2010, consisting of archaeological sites like 18 Hoang Dieu and notable relics such as Doan Mon Gate, Kinh Thien Palace, and the Flagpole. This site holds significant importance in Vietnamese history, culture, and architecture, reflecting the urban system of feudal palaces, artistic decorations, and rituals during the 19th century to early 20th century. Additionally, it serves as a cultural, religious, and historical center for the central region of Vietnam.",
-      "context_used": "[Document 1] Ly decided to move the capital from Thang Long (Hanoi today) to Tay Do (Vinh Loc, Thanh Hoa) and build House Ho City. Location: District Vinh Loc, province Thanh Hoa Coordinates: 20°4′40″B, 105°36′17″Đ Tags: Di tích lịch sử, kiến trúc nghệ thuật, khảo cổ --- Heritage Site: Central Thang Long Imperial Citadel - Hanoi Description: The central area Thang Long Imperial Citadel in Hanoi is an archaeological and historical relic associated with the capital Thang Long through many dynasties (Ly, Tran, Le, Nguyen).\n\n[Document 2] and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism. Location: District Dong Anh, city Hanoi Coordinates: 21. 113408°B, 105.\n\n[Document 3] and historical relic associated with the capital Thang Long through many dynasties (Ly, Tran, Le, Nguyen). The central area recognized by UNESCO as a World Cultural Heritage (2010), consists of archaeological sites 18 Hoang Dieu and relics such as Doan Mon Gate, Kinh Thien Palace, Flagpole.\n\n[Document 4] of Hanoi, has a prominent historical and cultural position associated with the legend Le Loi return of the sword. The area around the lake is densely populated with relics such as Ngoc Son Temple on Ngoc Island, Turtle Tower, and The Huc bridge; this is the important landscape, religion and living space of the Capital.\n\n[Document 5] including the Capital, the Imperial City, the Nguyen Dynasty mausoleum, temples, temples, and royal architecture. The population reflects the urban system of feudal palaces, architectural arts, decorations and rituals of Vietnam in the 19th century – early XX; and is also the cultural, religious and historical center of the central region.",
+      "generated_answer": "The Central Thang Long Imperial Citadel in Hanoi is special because it is an archaeological and historical relic associated with the capital Thang Long through many dynasties, including the Ly, Tran, Le, and Nguyen. It is recognized by UNESCO as a World Cultural Heritage since 2010 and consists of archaeological sites like 18 Hoang Dieu and various relics such as Doan Mon Gate, Kinh Thien Palace, and Flagpole. This citadel holds significant importance in Vietnamese history, culture, and architecture, showcasing the development and evolution of the country's imperial structures over time. Additionally, it serves as a valuable testament to the creativity and construction techniques of ancient Vietnamese civilization.",
+      "context_used": "[Document 1] The central area Thang Long Imperial Citadel in Hanoi is an archaeological and historical relic associated with the capital Thang Long through many dynasties (Ly, Tran, Le, Nguyen). The central area recognized by UNESCO as a World Cultural Heritage (2010), consists of archaeological sites 18 Hoang Dieu and relics such as Doan Mon Gate, Kinh Thien Palace, Flagpole.\n\n[Document 2] Ly decided to move the capital from Thang Long (Hanoi today) to Tay Do (Vinh Loc, Thanh Hoa) and build House Ho City. Location: District Vinh Loc, province Thanh Hoa Coordinates: 20°4′40″B, 105°36′17″Đ Tags: Di tích lịch sử, kiến trúc nghệ thuật, khảo cổ --- Heritage Site: Central Thang Long Imperial Citadel - Hanoi Description: The central area Thang Long Imperial Citadel in Hanoi is an archaeological and historical relic associated with the\n\n[Document 3] located in the center of Hanoi, has a prominent historical and cultural position associated with the legend Le Loi return of the sword. The area around the lake is densely populated with relics such as Ngoc Son Temple on Ngoc Island, Turtle Tower, and The Huc bridge; this is the important landscape, religion and living space of the Capital.\n\n[Document 4] including the Capital, the Imperial City, the Nguyen Dynasty mausoleum, temples, temples, and royal architecture. The population reflects the urban system of feudal palaces, architectural arts, decorations and rituals of Vietnam in the 19th century – early XX; and is also the cultural, religious and historical center of the central region.\n\n[Document 5] Heritage Site: Ho Dynasty Citadel Description: Ho Dynasty Citadel, located in district Vinh Loc, province Thanh Hoa, is a massive and unique stone structure, built in 1397 under the reign Ho Dynasty. Not only is it a historical relic, Ho Dynasty Citadel is also a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese.",
       "sources": [
         {
-          "content": "Ly decided to move the capital from Thang Long (Hanoi today) to Tay Do (Vinh Loc, Thanh Hoa) and build House Ho City. Location: District Vinh Loc, province Thanh Hoa Coordinates: 20°4′40″B, 105°36′17″Đ Tags: Di tích lịch sử, kiến trúc nghệ thuật, khảo cổ --- Heritage Site: Central Thang Long Imperial Citadel - Hanoi Description: The central area Thang Long Imperial Citadel in Hanoi is an archaeological and historical relic associated with the capital Thang Long through many dynasties (Ly, Tran, Le, Nguyen).",
+          "content": "The central area Thang Long Imperial Citadel in Hanoi is an archaeological and historical relic associated with the capital Thang Long through many dynasties (Ly, Tran, Le, Nguyen). The central area recognized by UNESCO as a World Cultural Heritage (2010), consists of archaeological sites 18 Hoang Dieu and relics such as Doan Mon Gate, Kinh Thien Palace, Flagpole.",
           "metadata": {
-            "chunkIndex": 5,
-            "fileSize": 17315,
-            "filename": "heritage_documents_prepared.txt",
-            "category": "heritage",
-            "totalChunks": 65,
-            "title": "Vietnamese Heritage Database",
-            "uploadedBy": "admin",
-            "description": "UNESCO heritage sites in Vietnam",
+            "category": "'Vietnamese Heritage Database'",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "totalChunks": 66,
             "mimeType": "text/plain",
-            "uploadedAt": "2025-11-10T14:13:37.380Z"
-          },
-          "distance": 14.775963,
-          "relevanceScore": -13.775963
-        },
-        {
-          "content": "and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism. Location: District Dong Anh, city Hanoi Coordinates: 21. 113408°B, 105.",
-          "metadata": {
-            "category": "heritage",
-            "mimeType": "text/plain",
-            "fileSize": 17315,
-            "chunkIndex": 61,
+            "title": "heritage_documents_prepared.txt",
             "uploadedBy": "admin",
-            "totalChunks": 65,
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "filename": "heritage_documents_prepared.txt",
-            "title": "Vietnamese Heritage Database",
-            "description": "UNESCO heritage sites in Vietnam"
-          },
-          "distance": 17.129147,
-          "relevanceScore": -16.129147
-        },
-        {
-          "content": "and historical relic associated with the capital Thang Long through many dynasties (Ly, Tran, Le, Nguyen). The central area recognized by UNESCO as a World Cultural Heritage (2010), consists of archaeological sites 18 Hoang Dieu and relics such as Doan Mon Gate, Kinh Thien Palace, Flagpole.",
-          "metadata": {
             "chunkIndex": 6,
-            "title": "Vietnamese Heritage Database",
-            "uploadedBy": "admin",
-            "description": "UNESCO heritage sites in Vietnam",
-            "mimeType": "text/plain",
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "filename": "heritage_documents_prepared.txt",
             "fileSize": 17315,
-            "category": "heritage",
-            "totalChunks": 65
+            "filename": "heritage_documents_prepared.txt"
           },
-          "distance": 17.327663,
-          "relevanceScore": -16.327663
+          "distance": 11.174646,
+          "relevanceScore": -10.174646
         },
         {
-          "content": "of Hanoi, has a prominent historical and cultural position associated with the legend Le Loi return of the sword. The area around the lake is densely populated with relics such as Ngoc Son Temple on Ngoc Island, Turtle Tower, and The Huc bridge; this is the important landscape, religion and living space of the Capital.",
+          "content": "Ly decided to move the capital from Thang Long (Hanoi today) to Tay Do (Vinh Loc, Thanh Hoa) and build House Ho City. Location: District Vinh Loc, province Thanh Hoa Coordinates: 20°4′40″B, 105°36′17″Đ Tags: Di tích lịch sử, kiến trúc nghệ thuật, khảo cổ --- Heritage Site: Central Thang Long Imperial Citadel - Hanoi Description: The central area Thang Long Imperial Citadel in Hanoi is an archaeological and historical relic associated with the",
+          "metadata": {
+            "mimeType": "text/plain",
+            "uploadedBy": "admin",
+            "category": "'Vietnamese Heritage Database'",
+            "chunkIndex": 5,
+            "title": "heritage_documents_prepared.txt",
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "filename": "heritage_documents_prepared.txt",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "totalChunks": 66,
+            "fileSize": 17315
+          },
+          "distance": 14.213128,
+          "relevanceScore": -13.213128
+        },
+        {
+          "content": "located in the center of Hanoi, has a prominent historical and cultural position associated with the legend Le Loi return of the sword. The area around the lake is densely populated with relics such as Ngoc Son Temple on Ngoc Island, Turtle Tower, and The Huc bridge; this is the important landscape, religion and living space of the Capital.",
           "metadata": {
             "chunkIndex": 15,
-            "fileSize": 17315,
-            "category": "heritage",
-            "title": "Vietnamese Heritage Database",
+            "description": "`UNESCO heritage sites in Vietnam`",
             "mimeType": "text/plain",
+            "category": "'Vietnamese Heritage Database'",
+            "fileSize": 17315,
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
             "uploadedBy": "admin",
-            "totalChunks": 65,
+            "title": "heritage_documents_prepared.txt",
             "filename": "heritage_documents_prepared.txt",
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "description": "UNESCO heritage sites in Vietnam"
+            "totalChunks": 66
           },
-          "distance": 18.083275,
-          "relevanceScore": -17.083275
+          "distance": 17.253256,
+          "relevanceScore": -16.253256
         },
         {
           "content": "including the Capital, the Imperial City, the Nguyen Dynasty mausoleum, temples, temples, and royal architecture. The population reflects the urban system of feudal palaces, architectural arts, decorations and rituals of Vietnam in the 19th century – early XX; and is also the cultural, religious and historical center of the central region.",
           "metadata": {
-            "chunkIndex": 48,
-            "uploadedBy": "admin",
-            "totalChunks": 65,
-            "category": "heritage",
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "title": "Vietnamese Heritage Database",
-            "description": "UNESCO heritage sites in Vietnam",
-            "fileSize": 17315,
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "mimeType": "text/plain",
+            "chunkIndex": 49,
             "filename": "heritage_documents_prepared.txt",
-            "mimeType": "text/plain"
+            "uploadedBy": "admin",
+            "totalChunks": 66,
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "fileSize": 17315,
+            "title": "heritage_documents_prepared.txt",
+            "category": "'Vietnamese Heritage Database'"
           },
           "distance": 18.612568,
           "relevanceScore": -17.612568
+        },
+        {
+          "content": "Heritage Site: Ho Dynasty Citadel Description: Ho Dynasty Citadel, located in district Vinh Loc, province Thanh Hoa, is a massive and unique stone structure, built in 1397 under the reign Ho Dynasty. Not only is it a historical relic, Ho Dynasty Citadel is also a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese.",
+          "metadata": {
+            "filename": "heritage_documents_prepared.txt",
+            "title": "heritage_documents_prepared.txt",
+            "totalChunks": 66,
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "uploadedBy": "admin",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "mimeType": "text/plain",
+            "chunkIndex": 0,
+            "category": "'Vietnamese Heritage Database'",
+            "fileSize": 17315
+          },
+          "distance": 18.794912,
+          "relevanceScore": -17.794912
         }
       ],
       "metrics": {
-        "bleu": 0.1566,
-        "rouge_l_precision": 0.2632,
-        "rouge_l_recall": 0.9211,
-        "rouge_l_f1": 0.4094,
-        "cosine_tfidf": 0.6371,
-        "cosine_semantic": 0.9962
+        "bleu": 0.1781,
+        "rouge_l_precision": 0.3028,
+        "rouge_l_recall": 0.8684,
+        "rouge_l_f1": 0.449,
+        "cosine_tfidf": 0.7201,
+        "cosine_semantic": 0.9968
       },
-      "execution_time_ms": 6918,
-      "timestamp": "2025-11-10T15:18:18.666Z"
+      "execution_time_ms": 5833,
+      "timestamp": "2025-11-13T10:16:26.307Z"
     },
     {
       "id": "q3",
       "question": "When was the Ho Dynasty Citadel built and what materials were used?",
       "ground_truth": "The Ho Dynasty Citadel was built in 1397 using massive limestone blocks. It is a unique stone structure demonstrating remarkable creativity and construction techniques of ancient Vietnamese.",
       "generated_answer": "The Ho Dynasty Citadel was built in 1397. The materials used in its construction were stones, demonstrating the remarkable creativity and construction techniques of the ancient Vietnamese. \n\nReference(s):\n[Document 1] Heritage Site: Ho Dynasty Citadel Description: Ho Dynasty Citadel, located in district Vinh Loc, province Thanh Hoa, is a massive and unique stone structure, built in 1397 under the reign Ho Dynasty. Not only is it a historical relic, Ho Dynasty Citadel is also a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese.",
-      "context_used": "[Document 1] Heritage Site: Ho Dynasty Citadel Description: Ho Dynasty Citadel, located in district Vinh Loc, province Thanh Hoa, is a massive and unique stone structure, built in 1397 under the reign Ho Dynasty. Not only is it a historical relic, Ho Dynasty Citadel is also a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese.\n\n[Document 2] a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese. The relic was designated as a World Cultural Heritage by UNESCO in 2011. Ho Dynasty Citadel is located in a highly geographical location. To the north and west are the Buoi River, to the east are the Ma Tuong River, creating a strong natural defense system.\n\n[Document 3] and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism. Location: City Tu Son, province Bac Ninh Coordinates: 21°06′26″B, 105°57′37″Đ Tags: Di tích lịch sử --- Heritage Site: The ancient capital Hoa Lu Description: The ancient capital Hoa Lu (Ninh Binh) was the first capital of the feudal state to exercise Dai Co Viet power under the Dinh dynasty and Tien Le (the end of the 15th century – the beginning of the 11th century).\n\n[Document 4] the site for the construction of the capital, ensuring both safety and conducive to trade and economic development. To better understand Lake City, we need to learn about its historical background. By the end of the 14th century, Tran Dynasty had weakened, the country was in a state of crisis. Ho Quy Ly, an ambitious reformer, came to power and established the Ho Dynasty in 1400.\n\n[Document 5] dating back to the An Duong Vuong era (the 3rd century BC according to legend and layers of archaeological culture). The relics include the system of earthen ramparts, temples, and archaeological artifacts; playing an important role in the study of ancient history and folk beliefs Vietnam. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism.",
+      "context_used": "[Document 1] Heritage Site: Ho Dynasty Citadel Description: Ho Dynasty Citadel, located in district Vinh Loc, province Thanh Hoa, is a massive and unique stone structure, built in 1397 under the reign Ho Dynasty. Not only is it a historical relic, Ho Dynasty Citadel is also a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese.\n\n[Document 2] a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese. The relic was designated as a World Cultural Heritage by UNESCO in 2011. Ho Dynasty Citadel is located in a highly geographical location. To the north and west are the Buoi River, to the east are the Ma Tuong River, creating a strong natural defense system.\n\n[Document 3] the site for the construction of the capital, ensuring both safety and conducive to trade and economic development. To better understand Lake City, we need to learn about its historical background. By the end of the 14th century, Tran Dynasty had weakened, the country was in a state of crisis. Ho Quy Ly, an ambitious reformer, came to power and established the Ho Dynasty in 1400.\n\n[Document 4] associated with the legend An Duong Vuong and history into Co Loa - a military political center dating back to the An Duong Vuong era (the 3rd century BC according to legend and layers of archaeological culture). The relics include the system of earthen ramparts, temples, and archaeological artifacts; playing an important role in the study of ancient history and folk beliefs Vietnam.\n\n[Document 5] are relics associated with the king Ly Dynasty (XII century), including worship, tombs, and memorial facilities. These relics reflect the beliefs, court rituals, and architectural art, Ly dynasty sculpture; they are an important source of research on medieval history and culture in Vietnam. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism.",
       "sources": [
         {
           "content": "Heritage Site: Ho Dynasty Citadel Description: Ho Dynasty Citadel, located in district Vinh Loc, province Thanh Hoa, is a massive and unique stone structure, built in 1397 under the reign Ho Dynasty. Not only is it a historical relic, Ho Dynasty Citadel is also a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese.",
           "metadata": {
-            "description": "UNESCO heritage sites in Vietnam",
-            "filename": "heritage_documents_prepared.txt",
-            "fileSize": 17315,
+            "description": "`UNESCO heritage sites in Vietnam`",
             "mimeType": "text/plain",
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "uploadedBy": "admin",
-            "category": "heritage",
-            "totalChunks": 65,
-            "title": "Vietnamese Heritage Database",
-            "chunkIndex": 0
+            "title": "heritage_documents_prepared.txt",
+            "chunkIndex": 0,
+            "category": "'Vietnamese Heritage Database'",
+            "totalChunks": 66,
+            "filename": "heritage_documents_prepared.txt",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "fileSize": 17315,
+            "uploadedBy": "admin"
           },
           "distance": 15.303715,
           "relevanceScore": -14.303715
@@ -258,70 +258,70 @@
         {
           "content": "a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese. The relic was designated as a World Cultural Heritage by UNESCO in 2011. Ho Dynasty Citadel is located in a highly geographical location. To the north and west are the Buoi River, to the east are the Ma Tuong River, creating a strong natural defense system.",
           "metadata": {
-            "chunkIndex": 1,
+            "title": "heritage_documents_prepared.txt",
             "fileSize": 17315,
-            "title": "Vietnamese Heritage Database",
-            "filename": "heritage_documents_prepared.txt",
-            "mimeType": "text/plain",
-            "description": "UNESCO heritage sites in Vietnam",
-            "category": "heritage",
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "totalChunks": 66,
             "uploadedBy": "admin",
-            "totalChunks": 65
+            "mimeType": "text/plain",
+            "chunkIndex": 1,
+            "filename": "heritage_documents_prepared.txt",
+            "category": "'Vietnamese Heritage Database'"
           },
           "distance": 17.023647,
           "relevanceScore": -16.023647
         },
         {
-          "content": "and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism. Location: City Tu Son, province Bac Ninh Coordinates: 21°06′26″B, 105°57′37″Đ Tags: Di tích lịch sử --- Heritage Site: The ancient capital Hoa Lu Description: The ancient capital Hoa Lu (Ninh Binh) was the first capital of the feudal state to exercise Dai Co Viet power under the Dinh dynasty and Tien Le (the end of the 15th century – the beginning of the 11th century).",
-          "metadata": {
-            "fileSize": 17315,
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "chunkIndex": 39,
-            "title": "Vietnamese Heritage Database",
-            "description": "UNESCO heritage sites in Vietnam",
-            "filename": "heritage_documents_prepared.txt",
-            "category": "heritage",
-            "mimeType": "text/plain",
-            "totalChunks": 65,
-            "uploadedBy": "admin"
-          },
-          "distance": 20.278687,
-          "relevanceScore": -19.278687
-        },
-        {
           "content": "the site for the construction of the capital, ensuring both safety and conducive to trade and economic development. To better understand Lake City, we need to learn about its historical background. By the end of the 14th century, Tran Dynasty had weakened, the country was in a state of crisis. Ho Quy Ly, an ambitious reformer, came to power and established the Ho Dynasty in 1400.",
           "metadata": {
-            "title": "Vietnamese Heritage Database",
-            "chunkIndex": 3,
-            "category": "heritage",
-            "fileSize": 17315,
             "filename": "heritage_documents_prepared.txt",
-            "description": "UNESCO heritage sites in Vietnam",
-            "mimeType": "text/plain",
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
+            "category": "'Vietnamese Heritage Database'",
+            "title": "heritage_documents_prepared.txt",
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "fileSize": 17315,
+            "chunkIndex": 3,
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
             "uploadedBy": "admin",
-            "totalChunks": 65
+            "mimeType": "text/plain",
+            "totalChunks": 66
           },
           "distance": 22.033539,
           "relevanceScore": -21.033539
         },
         {
-          "content": "dating back to the An Duong Vuong era (the 3rd century BC according to legend and layers of archaeological culture). The relics include the system of earthen ramparts, temples, and archaeological artifacts; playing an important role in the study of ancient history and folk beliefs Vietnam. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism.",
+          "content": "associated with the legend An Duong Vuong and history into Co Loa - a military political center dating back to the An Duong Vuong era (the 3rd century BC according to legend and layers of archaeological culture). The relics include the system of earthen ramparts, temples, and archaeological artifacts; playing an important role in the study of ancient history and folk beliefs Vietnam.",
           "metadata": {
-            "totalChunks": 65,
-            "description": "UNESCO heritage sites in Vietnam",
-            "category": "heritage",
-            "mimeType": "text/plain",
-            "chunkIndex": 60,
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "fileSize": 17315,
-            "filename": "heritage_documents_prepared.txt",
+            "title": "heritage_documents_prepared.txt",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
             "uploadedBy": "admin",
-            "title": "Vietnamese Heritage Database"
+            "totalChunks": 66,
+            "category": "'Vietnamese Heritage Database'",
+            "chunkIndex": 61,
+            "filename": "heritage_documents_prepared.txt",
+            "fileSize": 17315,
+            "mimeType": "text/plain",
+            "description": "`UNESCO heritage sites in Vietnam`"
           },
-          "distance": 22.32789,
-          "relevanceScore": -21.32789
+          "distance": 22.26025,
+          "relevanceScore": -21.26025
+        },
+        {
+          "content": "are relics associated with the king Ly Dynasty (XII century), including worship, tombs, and memorial facilities. These relics reflect the beliefs, court rituals, and architectural art, Ly dynasty sculpture; they are an important source of research on medieval history and culture in Vietnam. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism.",
+          "metadata": {
+            "fileSize": 17315,
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "chunkIndex": 38,
+            "category": "'Vietnamese Heritage Database'",
+            "title": "heritage_documents_prepared.txt",
+            "uploadedBy": "admin",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "mimeType": "text/plain",
+            "totalChunks": 66,
+            "filename": "heritage_documents_prepared.txt"
+          },
+          "distance": 22.44692,
+          "relevanceScore": -21.44692
         }
       ],
       "metrics": {
@@ -332,63 +332,80 @@
         "cosine_tfidf": 0.6498,
         "cosine_semantic": 0.9972
       },
-      "execution_time_ms": 5620,
-      "timestamp": "2025-11-10T15:18:24.792Z"
+      "execution_time_ms": 5279,
+      "timestamp": "2025-11-13T10:16:32.094Z"
     },
     {
       "id": "q4",
       "question": "Which UNESCO World Heritage site is located in Ba Dinh district, Hanoi?",
       "ground_truth": "The Central Thang Long Imperial Citadel is located in Ba Dinh district, Hanoi. It consists of archaeological sites at 18 Hoang Dieu and relics such as Doan Mon Gate, Kinh Thien Palace, and the Flagpole.",
-      "generated_answer": "Based on the provided documents, there is no UNESCO World Heritage site specifically mentioned to be located in Ba Dinh district, Hanoi. However, Document 2 mentions \"The Chairman's Monument Ho Chi Minh at Phu Chu chairman,\" which is situated in Hanoi but does not specify a particular district. \n\nTo confirm the exact location of this monument within Ba Dinh district or any other district in Hanoi, further research or documentation would be required.",
-      "context_used": "[Document 1] and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism. Location: District Dong Anh, city Hanoi Coordinates: 21. 113408°B, 105.\n\n[Document 2] with the regulations of the authorities and are an important destination for scientific research and cultural tourism. Location: District Bo Trach and district Minh Hoa, province Quang Binh Coordinates: 17°30′0″B, 106°10′30″Đ Tags: Di tích lịch sử, danh lam thắng cảnh --- Heritage Site: The Chairman's monument Ho Chi Minh at Phu Chu chairman Description: The monument and collection area Phu Chu the chairman (Hanoi) includes Phu Chu the chairman's Ho Chi Minh, the chairman's Lang Uncle Ho, the floor Uncle Ho, the garden, and auxiliary structures.\n\n[Document 3] an independent Vietnam state after the Northern period, as well as religious architectural value and natural scenery. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism. Location: City Hoa Lu, province Ninh Binh Coordinates: 20. 2816137°B, 105.\n\n[Document 4] Cultural Heritage; the relic has great historical, religious and cultural value to the Vietnamese ethnic community. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism. Location: City Viet Tri, district Lam Thao, district Phu Ninh, province Phu Tho Coordinates: 21. 0307°B, 105.\n\n[Document 5] and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism. Location: Town Quang Yen, city Uong Bi, province Quang Ninh Coordinates: 20. 8442°B, 106.",
+      "generated_answer": "Based on the provided documents, there is no UNESCO World Heritage site specifically located in Ba Dinh district, Hanoi. However, there are other significant sites mentioned in the context, such as:\n\n1. [Document 2]: Located in the center of Hanoi, it has a prominent historical and cultural position associated with the legend Le Loi returning the sword. This area contains various relics like Ngoc Son Temple on Ngoc Island, Turtle Tower, and The Huc Bridge, making it an important landscape, religion, and living space of the capital.\n\n2. [Document 4]: This site represents an independent Vietnam state after the Northern period and holds religious architectural value and natural scenery. It is situated in Hoa Lu, province Ninh Binh.\n\nTo find the specific UNESCO World Heritage site located in Ba Dinh district, further research or additional information would be required.",
+      "context_used": "[Document 1] and archaeological artifacts; playing an important role in the study of ancient history and folk beliefs Vietnam. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism. Location: District Dong Anh, city Hanoi Coordinates: 21. 113408°B, 105.\n\n[Document 2] located in the center of Hanoi, has a prominent historical and cultural position associated with the legend Le Loi return of the sword. The area around the lake is densely populated with relics such as Ngoc Son Temple on Ngoc Island, Turtle Tower, and The Huc bridge; this is the important landscape, religion and living space of the Capital.\n\n[Document 3] with the regulations of the authorities and are an important destination for scientific research and cultural tourism. Location: District Bo Trach and district Minh Hoa, province Quang Binh Coordinates: 17°30′0″B, 106°10′30″Đ Tags: Di tích lịch sử, danh lam thắng cảnh --- Heritage Site: The Chairman's monument Ho Chi Minh at Phu Chu chairman Description: The monument and collection area Phu Chu the chairman (Hanoi) includes Phu Chu the chairman's\n\n[Document 4] an independent Vietnam state after the Northern period, as well as religious architectural value and natural scenery. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism. Location: City Hoa Lu, province Ninh Binh Coordinates: 20. 2816137°B, 105.\n\n[Document 5] Cultural Heritage; the relic has great historical, religious and cultural value to the Vietnamese ethnic community. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism. Location: City Viet Tri, district Lam Thao, district Phu Ninh, province Phu Tho Coordinates: 21. 0307°B, 105.",
       "sources": [
         {
-          "content": "and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism. Location: District Dong Anh, city Hanoi Coordinates: 21. 113408°B, 105.",
+          "content": "and archaeological artifacts; playing an important role in the study of ancient history and folk beliefs Vietnam. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism. Location: District Dong Anh, city Hanoi Coordinates: 21. 113408°B, 105.",
           "metadata": {
+            "description": "`UNESCO heritage sites in Vietnam`",
             "filename": "heritage_documents_prepared.txt",
-            "title": "Vietnamese Heritage Database",
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
+            "category": "'Vietnamese Heritage Database'",
+            "title": "heritage_documents_prepared.txt",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "uploadedBy": "admin",
             "mimeType": "text/plain",
-            "chunkIndex": 61,
-            "description": "UNESCO heritage sites in Vietnam",
-            "category": "heritage",
-            "totalChunks": 65,
-            "fileSize": 17315,
-            "uploadedBy": "admin"
+            "chunkIndex": 62,
+            "totalChunks": 66,
+            "fileSize": 17315
           },
-          "distance": 15.082735,
-          "relevanceScore": -14.082735
+          "distance": 19.046953,
+          "relevanceScore": -18.046953
         },
         {
-          "content": "with the regulations of the authorities and are an important destination for scientific research and cultural tourism. Location: District Bo Trach and district Minh Hoa, province Quang Binh Coordinates: 17°30′0″B, 106°10′30″Đ Tags: Di tích lịch sử, danh lam thắng cảnh --- Heritage Site: The Chairman's monument Ho Chi Minh at Phu Chu chairman Description: The monument and collection area Phu Chu the chairman (Hanoi) includes Phu Chu the chairman's Ho Chi Minh, the chairman's Lang Uncle Ho, the floor Uncle Ho, the garden, and auxiliary structures.",
+          "content": "located in the center of Hanoi, has a prominent historical and cultural position associated with the legend Le Loi return of the sword. The area around the lake is densely populated with relics such as Ngoc Son Temple on Ngoc Island, Turtle Tower, and The Huc bridge; this is the important landscape, religion and living space of the Capital.",
           "metadata": {
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "category": "heritage",
+            "uploadedBy": "admin",
+            "title": "heritage_documents_prepared.txt",
             "mimeType": "text/plain",
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
             "filename": "heritage_documents_prepared.txt",
             "fileSize": 17315,
-            "title": "Vietnamese Heritage Database",
-            "totalChunks": 65,
-            "chunkIndex": 34,
-            "uploadedBy": "admin",
-            "description": "UNESCO heritage sites in Vietnam"
+            "chunkIndex": 15,
+            "category": "'Vietnamese Heritage Database'",
+            "totalChunks": 66
           },
-          "distance": 19.783548,
-          "relevanceScore": -18.783548
+          "distance": 20.139027,
+          "relevanceScore": -19.139027
+        },
+        {
+          "content": "with the regulations of the authorities and are an important destination for scientific research and cultural tourism. Location: District Bo Trach and district Minh Hoa, province Quang Binh Coordinates: 17°30′0″B, 106°10′30″Đ Tags: Di tích lịch sử, danh lam thắng cảnh --- Heritage Site: The Chairman's monument Ho Chi Minh at Phu Chu chairman Description: The monument and collection area Phu Chu the chairman (Hanoi) includes Phu Chu the chairman's",
+          "metadata": {
+            "totalChunks": 66,
+            "uploadedBy": "admin",
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "category": "'Vietnamese Heritage Database'",
+            "fileSize": 17315,
+            "filename": "heritage_documents_prepared.txt",
+            "mimeType": "text/plain",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "title": "heritage_documents_prepared.txt",
+            "chunkIndex": 34
+          },
+          "distance": 21.077492,
+          "relevanceScore": -20.077492
         },
         {
           "content": "an independent Vietnam state after the Northern period, as well as religious architectural value and natural scenery. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism. Location: City Hoa Lu, province Ninh Binh Coordinates: 20. 2816137°B, 105.",
           "metadata": {
-            "filename": "heritage_documents_prepared.txt",
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "uploadedBy": "admin",
-            "chunkIndex": 41,
-            "totalChunks": 65,
-            "category": "heritage",
             "mimeType": "text/plain",
-            "title": "Vietnamese Heritage Database",
-            "description": "UNESCO heritage sites in Vietnam",
-            "fileSize": 17315
+            "category": "'Vietnamese Heritage Database'",
+            "chunkIndex": 41,
+            "fileSize": 17315,
+            "filename": "heritage_documents_prepared.txt",
+            "totalChunks": 66,
+            "title": "heritage_documents_prepared.txt",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "uploadedBy": "admin",
+            "description": "`UNESCO heritage sites in Vietnam`"
           },
           "distance": 21.097584,
           "relevanceScore": -20.097584
@@ -396,68 +413,51 @@
         {
           "content": "Cultural Heritage; the relic has great historical, religious and cultural value to the Vietnamese ethnic community. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism. Location: City Viet Tri, district Lam Thao, district Phu Ninh, province Phu Tho Coordinates: 21. 0307°B, 105.",
           "metadata": {
-            "category": "heritage",
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "totalChunks": 65,
-            "mimeType": "text/plain",
-            "filename": "heritage_documents_prepared.txt",
             "fileSize": 17315,
+            "chunkIndex": 56,
             "uploadedBy": "admin",
-            "description": "UNESCO heritage sites in Vietnam",
-            "chunkIndex": 55,
-            "title": "Vietnamese Heritage Database"
+            "filename": "heritage_documents_prepared.txt",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "mimeType": "text/plain",
+            "totalChunks": 66,
+            "category": "'Vietnamese Heritage Database'",
+            "title": "heritage_documents_prepared.txt"
           },
           "distance": 21.757181,
           "relevanceScore": -20.757181
-        },
-        {
-          "content": "and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism. Location: Town Quang Yen, city Uong Bi, province Quang Ninh Coordinates: 20. 8442°B, 106.",
-          "metadata": {
-            "totalChunks": 65,
-            "category": "heritage",
-            "fileSize": 17315,
-            "description": "UNESCO heritage sites in Vietnam",
-            "mimeType": "text/plain",
-            "filename": "heritage_documents_prepared.txt",
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "uploadedBy": "admin",
-            "title": "Vietnamese Heritage Database",
-            "chunkIndex": 46
-          },
-          "distance": 21.792706,
-          "relevanceScore": -20.792706
         }
       ],
       "metrics": {
-        "bleu": 0.0699,
-        "rouge_l_precision": 0.1351,
-        "rouge_l_recall": 0.2857,
-        "rouge_l_f1": 0.1835,
-        "cosine_tfidf": 0.1457,
-        "cosine_semantic": 0.9888
+        "bleu": 0.0462,
+        "rouge_l_precision": 0.0935,
+        "rouge_l_recall": 0.3714,
+        "rouge_l_f1": 0.1494,
+        "cosine_tfidf": 0.164,
+        "cosine_semantic": 0.9903
       },
-      "execution_time_ms": 3750,
-      "timestamp": "2025-11-10T15:18:29.044Z"
+      "execution_time_ms": 6470,
+      "timestamp": "2025-11-13T10:16:39.078Z"
     },
     {
       "id": "q5",
       "question": "What geographical features surround the Ho Dynasty Citadel?",
       "ground_truth": "The Ho Dynasty Citadel is surrounded by the Buoi River to the north and west, and the Ma Tuong River to the east, creating a strong natural defense system. Magnificent limestone mountains surround the city, enhancing natural beauty and forming strong walls.",
-      "generated_answer": "The Ho Dynasty Citadel is surrounded by the Buoi River to the north and west, and the Ma Tuong River to the east. These geographical features create a strong natural defense system around the citadel. Additionally, surrounding the city are magnificent limestone mountains, which both enhance the natural beauty and form strong walls. This strategic positioning demonstrates the vision of Ho Quy Ly in selecting the site for the construction of the capital, ensuring both safety and conducive to trade and economic development.",
-      "context_used": "[Document 1] Heritage Site: Ho Dynasty Citadel Description: Ho Dynasty Citadel, located in district Vinh Loc, province Thanh Hoa, is a massive and unique stone structure, built in 1397 under the reign Ho Dynasty. Not only is it a historical relic, Ho Dynasty Citadel is also a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese.\n\n[Document 2] a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese. The relic was designated as a World Cultural Heritage by UNESCO in 2011. Ho Dynasty Citadel is located in a highly geographical location. To the north and west are the Buoi River, to the east are the Ma Tuong River, creating a strong natural defense system.\n\n[Document 3] and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism. Location: City Tu Son, province Bac Ninh Coordinates: 21°06′26″B, 105°57′37″Đ Tags: Di tích lịch sử --- Heritage Site: The ancient capital Hoa Lu Description: The ancient capital Hoa Lu (Ninh Binh) was the first capital of the feudal state to exercise Dai Co Viet power under the Dinh dynasty and Tien Le (the end of the 15th century – the beginning of the 11th century).\n\n[Document 4] and historical relic associated with the capital Thang Long through many dynasties (Ly, Tran, Le, Nguyen). The central area recognized by UNESCO as a World Cultural Heritage (2010), consists of archaeological sites 18 Hoang Dieu and relics such as Doan Mon Gate, Kinh Thien Palace, Flagpole.\n\n[Document 5] To the north and west are the Buoi River, to the east are the Ma Tuong River, creating a strong natural defense system. Surrounding the city are magnificent limestone mountains, which both enhance the natural beauty and form strong walls. This position shows the strategic vision of Ho Quy Ly in selecting the site for the construction of the capital, ensuring both safety and conducive to trade and economic development.",
+      "generated_answer": "The geographical features that surround the Ho Dynasty Citadel include the Buoi River to the north and west, and the Ma Tuong River to the east. These rivers create a strong natural defense system around the citadel. Additionally, surrounding the city are magnificent limestone mountains, which both enhance the natural beauty and form strong walls. This strategic positioning demonstrates the vision of Ho Quy Ly in selecting the site for the construction of the capital, ensuring both safety and conducive to trade and economic development.",
+      "context_used": "[Document 1] Heritage Site: Ho Dynasty Citadel Description: Ho Dynasty Citadel, located in district Vinh Loc, province Thanh Hoa, is a massive and unique stone structure, built in 1397 under the reign Ho Dynasty. Not only is it a historical relic, Ho Dynasty Citadel is also a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese.\n\n[Document 2] a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese. The relic was designated as a World Cultural Heritage by UNESCO in 2011. Ho Dynasty Citadel is located in a highly geographical location. To the north and west are the Buoi River, to the east are the Ma Tuong River, creating a strong natural defense system.\n\n[Document 3] To the north and west are the Buoi River, to the east are the Ma Tuong River, creating a strong natural defense system. Surrounding the city are magnificent limestone mountains, which both enhance the natural beauty and form strong walls. This position shows the strategic vision of Ho Quy Ly in selecting the site for the construction of the capital, ensuring both safety and conducive to trade and economic development.\n\n[Document 4] in the 19th century – early XX; and is also the cultural, religious and historical center of the central region. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism.\n\n[Document 5] associated with the legend An Duong Vuong and history into Co Loa - a military political center dating back to the An Duong Vuong era (the 3rd century BC according to legend and layers of archaeological culture). The relics include the system of earthen ramparts, temples, and archaeological artifacts; playing an important role in the study of ancient history and folk beliefs Vietnam.",
       "sources": [
         {
           "content": "Heritage Site: Ho Dynasty Citadel Description: Ho Dynasty Citadel, located in district Vinh Loc, province Thanh Hoa, is a massive and unique stone structure, built in 1397 under the reign Ho Dynasty. Not only is it a historical relic, Ho Dynasty Citadel is also a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese.",
           "metadata": {
-            "fileSize": 17315,
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "description": "UNESCO heritage sites in Vietnam",
+            "description": "`UNESCO heritage sites in Vietnam`",
             "chunkIndex": 0,
-            "mimeType": "text/plain",
-            "title": "Vietnamese Heritage Database",
-            "totalChunks": 65,
-            "category": "heritage",
             "filename": "heritage_documents_prepared.txt",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "mimeType": "text/plain",
+            "title": "heritage_documents_prepared.txt",
+            "fileSize": 17315,
+            "category": "'Vietnamese Heritage Database'",
+            "totalChunks": 66,
             "uploadedBy": "admin"
           },
           "distance": 14.399752,
@@ -466,103 +466,103 @@
         {
           "content": "a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese. The relic was designated as a World Cultural Heritage by UNESCO in 2011. Ho Dynasty Citadel is located in a highly geographical location. To the north and west are the Buoi River, to the east are the Ma Tuong River, creating a strong natural defense system.",
           "metadata": {
-            "description": "UNESCO heritage sites in Vietnam",
-            "chunkIndex": 1,
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "title": "Vietnamese Heritage Database",
-            "totalChunks": 65,
-            "mimeType": "text/plain",
             "fileSize": 17315,
+            "category": "'Vietnamese Heritage Database'",
+            "mimeType": "text/plain",
             "filename": "heritage_documents_prepared.txt",
             "uploadedBy": "admin",
-            "category": "heritage"
+            "totalChunks": 66,
+            "chunkIndex": 1,
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "title": "heritage_documents_prepared.txt"
           },
           "distance": 15.775297,
           "relevanceScore": -14.775297
         },
         {
-          "content": "and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism. Location: City Tu Son, province Bac Ninh Coordinates: 21°06′26″B, 105°57′37″Đ Tags: Di tích lịch sử --- Heritage Site: The ancient capital Hoa Lu Description: The ancient capital Hoa Lu (Ninh Binh) was the first capital of the feudal state to exercise Dai Co Viet power under the Dinh dynasty and Tien Le (the end of the 15th century – the beginning of the 11th century).",
-          "metadata": {
-            "uploadedBy": "admin",
-            "filename": "heritage_documents_prepared.txt",
-            "chunkIndex": 39,
-            "title": "Vietnamese Heritage Database",
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "mimeType": "text/plain",
-            "totalChunks": 65,
-            "fileSize": 17315,
-            "description": "UNESCO heritage sites in Vietnam",
-            "category": "heritage"
-          },
-          "distance": 19.905102,
-          "relevanceScore": -18.905102
-        },
-        {
-          "content": "and historical relic associated with the capital Thang Long through many dynasties (Ly, Tran, Le, Nguyen). The central area recognized by UNESCO as a World Cultural Heritage (2010), consists of archaeological sites 18 Hoang Dieu and relics such as Doan Mon Gate, Kinh Thien Palace, Flagpole.",
-          "metadata": {
-            "category": "heritage",
-            "filename": "heritage_documents_prepared.txt",
-            "title": "Vietnamese Heritage Database",
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "chunkIndex": 6,
-            "description": "UNESCO heritage sites in Vietnam",
-            "mimeType": "text/plain",
-            "uploadedBy": "admin",
-            "fileSize": 17315,
-            "totalChunks": 65
-          },
-          "distance": 21.038933,
-          "relevanceScore": -20.038933
-        },
-        {
           "content": "To the north and west are the Buoi River, to the east are the Ma Tuong River, creating a strong natural defense system. Surrounding the city are magnificent limestone mountains, which both enhance the natural beauty and form strong walls. This position shows the strategic vision of Ho Quy Ly in selecting the site for the construction of the capital, ensuring both safety and conducive to trade and economic development.",
           "metadata": {
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "title": "Vietnamese Heritage Database",
+            "description": "`UNESCO heritage sites in Vietnam`",
             "uploadedBy": "admin",
-            "category": "heritage",
-            "chunkIndex": 2,
-            "totalChunks": 65,
-            "description": "UNESCO heritage sites in Vietnam",
-            "fileSize": 17315,
             "filename": "heritage_documents_prepared.txt",
-            "mimeType": "text/plain"
+            "chunkIndex": 2,
+            "totalChunks": 66,
+            "mimeType": "text/plain",
+            "category": "'Vietnamese Heritage Database'",
+            "fileSize": 17315,
+            "title": "heritage_documents_prepared.txt",
+            "uploadedAt": "2025-11-13T09:16:06.135Z"
           },
           "distance": 21.195679,
           "relevanceScore": -20.195679
+        },
+        {
+          "content": "in the 19th century – early XX; and is also the cultural, religious and historical center of the central region. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism.",
+          "metadata": {
+            "title": "heritage_documents_prepared.txt",
+            "mimeType": "text/plain",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "fileSize": 17315,
+            "totalChunks": 66,
+            "uploadedBy": "admin",
+            "chunkIndex": 50,
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "filename": "heritage_documents_prepared.txt",
+            "category": "'Vietnamese Heritage Database'"
+          },
+          "distance": 21.601784,
+          "relevanceScore": -20.601784
+        },
+        {
+          "content": "associated with the legend An Duong Vuong and history into Co Loa - a military political center dating back to the An Duong Vuong era (the 3rd century BC according to legend and layers of archaeological culture). The relics include the system of earthen ramparts, temples, and archaeological artifacts; playing an important role in the study of ancient history and folk beliefs Vietnam.",
+          "metadata": {
+            "uploadedBy": "admin",
+            "mimeType": "text/plain",
+            "totalChunks": 66,
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "fileSize": 17315,
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "category": "'Vietnamese Heritage Database'",
+            "title": "heritage_documents_prepared.txt",
+            "chunkIndex": 61,
+            "filename": "heritage_documents_prepared.txt"
+          },
+          "distance": 21.65393,
+          "relevanceScore": -20.65393
         }
       ],
       "metrics": {
-        "bleu": 0.3544,
-        "rouge_l_precision": 0.4458,
-        "rouge_l_recall": 0.881,
-        "rouge_l_f1": 0.592,
-        "cosine_tfidf": 0.8996,
-        "cosine_semantic": 0.9974
+        "bleu": 0.2915,
+        "rouge_l_precision": 0.4,
+        "rouge_l_recall": 0.8095,
+        "rouge_l_f1": 0.5354,
+        "cosine_tfidf": 0.7866,
+        "cosine_semantic": 0.9969
       },
-      "execution_time_ms": 3855,
-      "timestamp": "2025-11-10T15:18:33.403Z"
+      "execution_time_ms": 3946,
+      "timestamp": "2025-11-13T10:16:43.533Z"
     },
     {
       "id": "q6",
       "question": "When did UNESCO recognize the Ho Dynasty Citadel as a World Cultural Heritage site?",
       "ground_truth": "UNESCO designated the Ho Dynasty Citadel as a World Cultural Heritage site in 2011.",
-      "generated_answer": "UNESCO recognized the Ho Dynasty Citadel as a World Cultural Heritage site in 2011. \n\nThis information can be found in Document 2 which states, \"The relic was designated as a World Cultural Heritage by UNESCO in 2011.\" The Ho Dynasty Citadel, located in district Vinh Loc, province Thanh Hoa, is a significant historical and cultural monument showcasing the creativity and construction techniques of ancient Vietnamese. Its recognition by UNESCO highlights its importance globally as a representative example of Vietnamese heritage.",
-      "context_used": "[Document 1] Heritage Site: Ho Dynasty Citadel Description: Ho Dynasty Citadel, located in district Vinh Loc, province Thanh Hoa, is a massive and unique stone structure, built in 1397 under the reign Ho Dynasty. Not only is it a historical relic, Ho Dynasty Citadel is also a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese.\n\n[Document 2] a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese. The relic was designated as a World Cultural Heritage by UNESCO in 2011. Ho Dynasty Citadel is located in a highly geographical location. To the north and west are the Buoi River, to the east are the Ma Tuong River, creating a strong natural defense system.\n\n[Document 3] and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism. Location: City Tu Son, province Bac Ninh Coordinates: 21°06′26″B, 105°57′37″Đ Tags: Di tích lịch sử --- Heritage Site: The ancient capital Hoa Lu Description: The ancient capital Hoa Lu (Ninh Binh) was the first capital of the feudal state to exercise Dai Co Viet power under the Dinh dynasty and Tien Le (the end of the 15th century – the beginning of the 11th century).\n\n[Document 4] and ideology of the Chairman Ho Chi Minh, and is also the place where national ceremonial activities take place. This area has great historical, cultural and educational value, is strictly protected and serves research and propaganda on the history of revolution. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism.\n\n[Document 5] and cultural tourism. Location: Town Quang Yen, city Uong Bi, province Quang Ninh Coordinates: 20. 8442°B, 106. 6317°Đ Tags: Di tích lịch sử --- Heritage Site: Historic population Hue Imperial City Description: Historic population Hue Imperial City (Thua Thien – Hue) is a World Heritage Site (UNESCO, 1993), including the Capital, the Imperial City, the Nguyen Dynasty mausoleum, temples, temples, and royal architecture.",
+      "generated_answer": "UNESCO recognized the Ho Dynasty Citadel as a World Cultural Heritage site in 2011. \n\nThis information can be found in Document 2 which states, \"The relic was designated as a World Cultural Heritage by UNESCO in 2011.\" The Ho Dynasty Citadel, located in district Vinh Loc, province Thanh Hoa, is a significant historical and cultural monument showcasing the creativity and construction techniques of ancient Vietnamese. Its strategic geographical position, surrounded by rivers, adds to its historical importance. It's used for research, education, and cultural tourism purposes, reflecting the preservation efforts made by the authorities. Furthermore, it holds cultural significance due to its association with the Chairman Ho Chi Minh's ideology and serves as a venue for national ceremonial activities. Despite its rich history, the citadel continues to be carefully managed and preserved according to established regulations while also providing opportunities for research, education, and cultural exploration.",
+      "context_used": "[Document 1] Heritage Site: Ho Dynasty Citadel Description: Ho Dynasty Citadel, located in district Vinh Loc, province Thanh Hoa, is a massive and unique stone structure, built in 1397 under the reign Ho Dynasty. Not only is it a historical relic, Ho Dynasty Citadel is also a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese.\n\n[Document 2] a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese. The relic was designated as a World Cultural Heritage by UNESCO in 2011. Ho Dynasty Citadel is located in a highly geographical location. To the north and west are the Buoi River, to the east are the Ma Tuong River, creating a strong natural defense system.\n\n[Document 3] and ideology of the Chairman Ho Chi Minh, and is also the place where national ceremonial activities take place. This area has great historical, cultural and educational value, is strictly protected and serves research and propaganda on the history of revolution. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism.\n\n[Document 4] and cultural tourism. Location: Town Quang Yen, city Uong Bi, province Quang Ninh Coordinates: 20. 8442°B, 106. 6317°Đ Tags: Di tích lịch sử --- Heritage Site: Historic population Hue Imperial City Description: Historic population Hue Imperial City (Thua Thien – Hue) is a World Heritage Site (UNESCO, 1993), including the Capital, the Imperial City, the Nguyen Dynasty mausoleum, temples, temples, and royal architecture.\n\n[Document 5] in the 19th century – early XX; and is also the cultural, religious and historical center of the central region. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism.",
       "sources": [
         {
           "content": "Heritage Site: Ho Dynasty Citadel Description: Ho Dynasty Citadel, located in district Vinh Loc, province Thanh Hoa, is a massive and unique stone structure, built in 1397 under the reign Ho Dynasty. Not only is it a historical relic, Ho Dynasty Citadel is also a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese.",
           "metadata": {
-            "uploadedBy": "admin",
             "chunkIndex": 0,
             "fileSize": 17315,
-            "title": "Vietnamese Heritage Database",
             "filename": "heritage_documents_prepared.txt",
-            "category": "heritage",
-            "mimeType": "text/plain",
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "totalChunks": 65,
-            "description": "UNESCO heritage sites in Vietnam"
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "uploadedBy": "admin",
+            "totalChunks": 66,
+            "title": "heritage_documents_prepared.txt",
+            "category": "'Vietnamese Heritage Database'",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "mimeType": "text/plain"
           },
           "distance": 18.922535,
           "relevanceScore": -17.922535
@@ -570,50 +570,33 @@
         {
           "content": "a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese. The relic was designated as a World Cultural Heritage by UNESCO in 2011. Ho Dynasty Citadel is located in a highly geographical location. To the north and west are the Buoi River, to the east are the Ma Tuong River, creating a strong natural defense system.",
           "metadata": {
-            "fileSize": 17315,
-            "filename": "heritage_documents_prepared.txt",
-            "category": "heritage",
             "mimeType": "text/plain",
-            "description": "UNESCO heritage sites in Vietnam",
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "totalChunks": 65,
+            "totalChunks": 66,
+            "title": "heritage_documents_prepared.txt",
+            "filename": "heritage_documents_prepared.txt",
+            "chunkIndex": 1,
+            "category": "'Vietnamese Heritage Database'",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
             "uploadedBy": "admin",
-            "title": "Vietnamese Heritage Database",
-            "chunkIndex": 1
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "fileSize": 17315
           },
           "distance": 19.178623,
           "relevanceScore": -18.178623
         },
         {
-          "content": "and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism. Location: City Tu Son, province Bac Ninh Coordinates: 21°06′26″B, 105°57′37″Đ Tags: Di tích lịch sử --- Heritage Site: The ancient capital Hoa Lu Description: The ancient capital Hoa Lu (Ninh Binh) was the first capital of the feudal state to exercise Dai Co Viet power under the Dinh dynasty and Tien Le (the end of the 15th century – the beginning of the 11th century).",
-          "metadata": {
-            "mimeType": "text/plain",
-            "filename": "heritage_documents_prepared.txt",
-            "uploadedBy": "admin",
-            "description": "UNESCO heritage sites in Vietnam",
-            "fileSize": 17315,
-            "chunkIndex": 39,
-            "category": "heritage",
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "title": "Vietnamese Heritage Database",
-            "totalChunks": 65
-          },
-          "distance": 21.89281,
-          "relevanceScore": -20.89281
-        },
-        {
           "content": "and ideology of the Chairman Ho Chi Minh, and is also the place where national ceremonial activities take place. This area has great historical, cultural and educational value, is strictly protected and serves research and propaganda on the history of revolution. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism.",
           "metadata": {
-            "filename": "heritage_documents_prepared.txt",
-            "description": "UNESCO heritage sites in Vietnam",
-            "uploadedBy": "admin",
-            "category": "heritage",
             "fileSize": 17315,
-            "totalChunks": 65,
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "mimeType": "text/plain",
+            "description": "`UNESCO heritage sites in Vietnam`",
             "chunkIndex": 36,
-            "title": "Vietnamese Heritage Database"
+            "totalChunks": 66,
+            "title": "heritage_documents_prepared.txt",
+            "mimeType": "text/plain",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "category": "'Vietnamese Heritage Database'",
+            "uploadedBy": "admin",
+            "filename": "heritage_documents_prepared.txt"
           },
           "distance": 21.971214,
           "relevanceScore": -20.971214
@@ -621,172 +604,189 @@
         {
           "content": "and cultural tourism. Location: Town Quang Yen, city Uong Bi, province Quang Ninh Coordinates: 20. 8442°B, 106. 6317°Đ Tags: Di tích lịch sử --- Heritage Site: Historic population Hue Imperial City Description: Historic population Hue Imperial City (Thua Thien – Hue) is a World Heritage Site (UNESCO, 1993), including the Capital, the Imperial City, the Nguyen Dynasty mausoleum, temples, temples, and royal architecture.",
           "metadata": {
-            "category": "heritage",
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "chunkIndex": 48,
             "filename": "heritage_documents_prepared.txt",
-            "title": "Vietnamese Heritage Database",
-            "fileSize": 17315,
-            "description": "UNESCO heritage sites in Vietnam",
-            "uploadedBy": "admin",
-            "totalChunks": 65,
             "mimeType": "text/plain",
-            "chunkIndex": 47
+            "uploadedBy": "admin",
+            "title": "heritage_documents_prepared.txt",
+            "category": "'Vietnamese Heritage Database'",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "totalChunks": 66,
+            "fileSize": 17315
           },
           "distance": 22.671314,
           "relevanceScore": -21.671314
+        },
+        {
+          "content": "in the 19th century – early XX; and is also the cultural, religious and historical center of the central region. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism.",
+          "metadata": {
+            "uploadedBy": "admin",
+            "mimeType": "text/plain",
+            "title": "heritage_documents_prepared.txt",
+            "fileSize": 17315,
+            "category": "'Vietnamese Heritage Database'",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "totalChunks": 66,
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "chunkIndex": 50,
+            "filename": "heritage_documents_prepared.txt"
+          },
+          "distance": 23.233156,
+          "relevanceScore": -22.233156
         }
       ],
       "metrics": {
-        "bleu": 0.1382,
-        "rouge_l_precision": 0.1625,
+        "bleu": 0.0741,
+        "rouge_l_precision": 0.0878,
         "rouge_l_recall": 0.9286,
-        "rouge_l_f1": 0.2766,
-        "cosine_tfidf": 0.9086,
-        "cosine_semantic": 0.9948
+        "rouge_l_f1": 0.1605,
+        "cosine_tfidf": 0.8343,
+        "cosine_semantic": 0.9943
       },
-      "execution_time_ms": 5012,
-      "timestamp": "2025-11-10T15:18:38.928Z"
+      "execution_time_ms": 6078,
+      "timestamp": "2025-11-13T10:16:50.125Z"
     },
     {
       "id": "q7",
       "question": "What is the historical significance of Thang Long Imperial Citadel?",
       "ground_truth": "Thang Long Imperial Citadel served as the political center of Vietnam continuously through 13 centuries, from the 11th to the 19th century, under the Ly, Tran, Le, and Nguyen dynasties.",
-      "generated_answer": "The Thang Long Imperial Citadel holds significant historical importance as it has been associated with the capital of Vietnam through various dynasties, namely the Ly, Tran, Le, and Nguyen. It is situated in the present-day city of Hanoi and encompasses archaeological sites like 18 Hoang Dieu and notable relics such as Doan Mon Gate, Kinh Thien Palace, and the Flagpole. \n\nAs mentioned in Document 3, the citadel played a crucial role in the history of Vietnam when King Ly decided to move the capital from Thang Long to Tay Do and built House Ho City. However, the Thang Long Imperial Citadel remained an essential part of the nation's history even after the capital shift.\n\nDocument 4 highlights that the imperial city, along with other structures like the Nguyen Dynasty mausoleum, temples, and royal architecture, represent the urban system, architectural arts, decorations, and rituals of Vietnam during the 19th and early 20th centuries. This makes the Thang Long Imperial Citadel not only a historical site but also a cultural, religious, and historical center of the central region.\n\nFurthermore, the citadel's impressive design and construction techniques showcase the creativity of ancient Vietnamese civilizations, earning it the designation as a World Cultural Heritage by UNESCO in 2010 (as stated in Document 1). Its strategic geographical location, surrounded by the Buoi and Ma Tuong rivers, contributed to its strength and natural defense system.\n\nIn summary, the historical significance of the Thang Long Imperial Citadel lies in its association with multiple dynasties, its representation of Vietnam's architectural and cultural heritage, and its role as a vital historical, religious, and cultural center throughout the nation's history.",
-      "context_used": "[Document 1] and historical relic associated with the capital Thang Long through many dynasties (Ly, Tran, Le, Nguyen). The central area recognized by UNESCO as a World Cultural Heritage (2010), consists of archaeological sites 18 Hoang Dieu and relics such as Doan Mon Gate, Kinh Thien Palace, Flagpole.\n\n[Document 2] are relics associated with the king Ly Dynasty (XII century), including worship, tombs, and memorial facilities. These relics reflect the beliefs, court rituals, and architectural art, Ly dynasty sculpture; they are an important source of research on medieval history and culture in Vietnam. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism.\n\n[Document 3] Ly decided to move the capital from Thang Long (Hanoi today) to Tay Do (Vinh Loc, Thanh Hoa) and build House Ho City. Location: District Vinh Loc, province Thanh Hoa Coordinates: 20°4′40″B, 105°36′17″Đ Tags: Di tích lịch sử, kiến trúc nghệ thuật, khảo cổ --- Heritage Site: Central Thang Long Imperial Citadel - Hanoi Description: The central area Thang Long Imperial Citadel in Hanoi is an archaeological and historical relic associated with the capital Thang Long through many dynasties (Ly, Tran, Le, Nguyen).\n\n[Document 4] including the Capital, the Imperial City, the Nguyen Dynasty mausoleum, temples, temples, and royal architecture. The population reflects the urban system of feudal palaces, architectural arts, decorations and rituals of Vietnam in the 19th century – early XX; and is also the cultural, religious and historical center of the central region.\n\n[Document 5] a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese. The relic was designated as a World Cultural Heritage by UNESCO in 2011. Ho Dynasty Citadel is located in a highly geographical location. To the north and west are the Buoi River, to the east are the Ma Tuong River, creating a strong natural defense system.",
+      "generated_answer": "The Thang Long Imperial Citadel holds significant historical importance due to its association with various dynasties in Vietnam, particularly the Ly, Tran, Le, and Nguyen dynasties. It served as the capital city of these dynasties and witnessed numerous changes in politics, architecture, and cultural practices.\n\nAccording to Document 1, the central area of the Thang Long Imperial Citadel, recognized as a World Cultural Heritage by UNESCO in 2010, contains archaeological sites like 18 Hoang Dieu and notable relics such as the Doan Mon Gate, Kinh Thien Palace, and Flagpole. This area provides valuable insights into the architectural styles, daily life, and social customs of different periods during the mentioned dynasties.\n\nDocument 2 mentions that King Ly decided to move the capital from Thang Long to Tay Do and built House Ho City. However, the Thang Long Imperial Citadel remained an essential part of Vietnamese history even after the capital's relocation.\n\nDocument 3 highlights that the relics associated with the Ly Dynasty (XII century) offer valuable information about the beliefs, court rituals, and architectural art of that period. These relics serve as an important source of research for understanding medieval history and culture in Vietnam.\n\nDocument 4 emphasizes the connection of the Thang Long Imperial Citadel with the legend of An Duong Vuong and the history of Co Loa, a military-political center dating back to the 3rd century BC. The relics within this area contribute significantly to the study of ancient history and folk beliefs in Vietnam.\n\nLastly, Document 5 states that the Thang Long Imperial Citadel was home to various structures representing the Capital, the Imperial City, the Nguyen Dynasty mausoleum, temples, and royal architecture. Its population reflected the urban system of feudal palaces, architectural arts, decorations, and rituals of Vietnam during the 19th century to early 20th century. Furthermore, it served as a cultural, religious, and historical center for the central region.\n\nIn summary, the historical significance of the Thang Long Imperial Citadel lies in its role as the capital city for several prominent dynasties, its rich archaeological and historical content, and its contribution to our understanding of Vietnamese history, culture, and architectural evolution over time.",
+      "context_used": "[Document 1] The central area Thang Long Imperial Citadel in Hanoi is an archaeological and historical relic associated with the capital Thang Long through many dynasties (Ly, Tran, Le, Nguyen). The central area recognized by UNESCO as a World Cultural Heritage (2010), consists of archaeological sites 18 Hoang Dieu and relics such as Doan Mon Gate, Kinh Thien Palace, Flagpole.\n\n[Document 2] Ly decided to move the capital from Thang Long (Hanoi today) to Tay Do (Vinh Loc, Thanh Hoa) and build House Ho City. Location: District Vinh Loc, province Thanh Hoa Coordinates: 20°4′40″B, 105°36′17″Đ Tags: Di tích lịch sử, kiến trúc nghệ thuật, khảo cổ --- Heritage Site: Central Thang Long Imperial Citadel - Hanoi Description: The central area Thang Long Imperial Citadel in Hanoi is an archaeological and historical relic associated with the\n\n[Document 3] are relics associated with the king Ly Dynasty (XII century), including worship, tombs, and memorial facilities. These relics reflect the beliefs, court rituals, and architectural art, Ly dynasty sculpture; they are an important source of research on medieval history and culture in Vietnam. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism.\n\n[Document 4] associated with the legend An Duong Vuong and history into Co Loa - a military political center dating back to the An Duong Vuong era (the 3rd century BC according to legend and layers of archaeological culture). The relics include the system of earthen ramparts, temples, and archaeological artifacts; playing an important role in the study of ancient history and folk beliefs Vietnam.\n\n[Document 5] including the Capital, the Imperial City, the Nguyen Dynasty mausoleum, temples, temples, and royal architecture. The population reflects the urban system of feudal palaces, architectural arts, decorations and rituals of Vietnam in the 19th century – early XX; and is also the cultural, religious and historical center of the central region.",
       "sources": [
         {
-          "content": "and historical relic associated with the capital Thang Long through many dynasties (Ly, Tran, Le, Nguyen). The central area recognized by UNESCO as a World Cultural Heritage (2010), consists of archaeological sites 18 Hoang Dieu and relics such as Doan Mon Gate, Kinh Thien Palace, Flagpole.",
+          "content": "The central area Thang Long Imperial Citadel in Hanoi is an archaeological and historical relic associated with the capital Thang Long through many dynasties (Ly, Tran, Le, Nguyen). The central area recognized by UNESCO as a World Cultural Heritage (2010), consists of archaeological sites 18 Hoang Dieu and relics such as Doan Mon Gate, Kinh Thien Palace, Flagpole.",
           "metadata": {
             "uploadedBy": "admin",
-            "totalChunks": 65,
-            "title": "Vietnamese Heritage Database",
-            "category": "heritage",
-            "chunkIndex": 6,
-            "fileSize": 17315,
-            "description": "UNESCO heritage sites in Vietnam",
+            "title": "heritage_documents_prepared.txt",
             "mimeType": "text/plain",
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "filename": "heritage_documents_prepared.txt"
+            "fileSize": 17315,
+            "totalChunks": 66,
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "filename": "heritage_documents_prepared.txt",
+            "chunkIndex": 6,
+            "category": "'Vietnamese Heritage Database'"
           },
-          "distance": 15.410595,
-          "relevanceScore": -14.410595
+          "distance": 14.953257,
+          "relevanceScore": -13.953257
+        },
+        {
+          "content": "Ly decided to move the capital from Thang Long (Hanoi today) to Tay Do (Vinh Loc, Thanh Hoa) and build House Ho City. Location: District Vinh Loc, province Thanh Hoa Coordinates: 20°4′40″B, 105°36′17″Đ Tags: Di tích lịch sử, kiến trúc nghệ thuật, khảo cổ --- Heritage Site: Central Thang Long Imperial Citadel - Hanoi Description: The central area Thang Long Imperial Citadel in Hanoi is an archaeological and historical relic associated with the",
+          "metadata": {
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "category": "'Vietnamese Heritage Database'",
+            "chunkIndex": 5,
+            "totalChunks": 66,
+            "filename": "heritage_documents_prepared.txt",
+            "fileSize": 17315,
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "uploadedBy": "admin",
+            "mimeType": "text/plain",
+            "title": "heritage_documents_prepared.txt"
+          },
+          "distance": 17.224731,
+          "relevanceScore": -16.224731
         },
         {
           "content": "are relics associated with the king Ly Dynasty (XII century), including worship, tombs, and memorial facilities. These relics reflect the beliefs, court rituals, and architectural art, Ly dynasty sculpture; they are an important source of research on medieval history and culture in Vietnam. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism.",
           "metadata": {
-            "chunkIndex": 38,
-            "uploadedBy": "admin",
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "title": "Vietnamese Heritage Database",
-            "description": "UNESCO heritage sites in Vietnam",
-            "mimeType": "text/plain",
+            "description": "`UNESCO heritage sites in Vietnam`",
             "fileSize": 17315,
+            "mimeType": "text/plain",
+            "totalChunks": 66,
+            "title": "heritage_documents_prepared.txt",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
             "filename": "heritage_documents_prepared.txt",
-            "totalChunks": 65,
-            "category": "heritage"
+            "category": "'Vietnamese Heritage Database'",
+            "uploadedBy": "admin",
+            "chunkIndex": 38
           },
           "distance": 17.529217,
           "relevanceScore": -16.529217
         },
         {
-          "content": "Ly decided to move the capital from Thang Long (Hanoi today) to Tay Do (Vinh Loc, Thanh Hoa) and build House Ho City. Location: District Vinh Loc, province Thanh Hoa Coordinates: 20°4′40″B, 105°36′17″Đ Tags: Di tích lịch sử, kiến trúc nghệ thuật, khảo cổ --- Heritage Site: Central Thang Long Imperial Citadel - Hanoi Description: The central area Thang Long Imperial Citadel in Hanoi is an archaeological and historical relic associated with the capital Thang Long through many dynasties (Ly, Tran, Le, Nguyen).",
+          "content": "associated with the legend An Duong Vuong and history into Co Loa - a military political center dating back to the An Duong Vuong era (the 3rd century BC according to legend and layers of archaeological culture). The relics include the system of earthen ramparts, temples, and archaeological artifacts; playing an important role in the study of ancient history and folk beliefs Vietnam.",
           "metadata": {
-            "fileSize": 17315,
-            "mimeType": "text/plain",
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "filename": "heritage_documents_prepared.txt",
-            "title": "Vietnamese Heritage Database",
-            "totalChunks": 65,
-            "description": "UNESCO heritage sites in Vietnam",
-            "chunkIndex": 5,
             "uploadedBy": "admin",
-            "category": "heritage"
+            "title": "heritage_documents_prepared.txt",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "fileSize": 17315,
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "chunkIndex": 61,
+            "totalChunks": 66,
+            "filename": "heritage_documents_prepared.txt",
+            "category": "'Vietnamese Heritage Database'",
+            "mimeType": "text/plain"
           },
-          "distance": 17.5952,
-          "relevanceScore": -16.5952
+          "distance": 17.930882,
+          "relevanceScore": -16.930882
         },
         {
           "content": "including the Capital, the Imperial City, the Nguyen Dynasty mausoleum, temples, temples, and royal architecture. The population reflects the urban system of feudal palaces, architectural arts, decorations and rituals of Vietnam in the 19th century – early XX; and is also the cultural, religious and historical center of the central region.",
           "metadata": {
-            "title": "Vietnamese Heritage Database",
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
             "fileSize": 17315,
-            "totalChunks": 65,
             "uploadedBy": "admin",
             "filename": "heritage_documents_prepared.txt",
-            "category": "heritage",
-            "description": "UNESCO heritage sites in Vietnam",
-            "chunkIndex": 48,
+            "chunkIndex": 49,
+            "category": "'Vietnamese Heritage Database'",
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "totalChunks": 66,
+            "title": "heritage_documents_prepared.txt",
             "mimeType": "text/plain"
           },
           "distance": 18.007053,
           "relevanceScore": -17.007053
-        },
-        {
-          "content": "a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese. The relic was designated as a World Cultural Heritage by UNESCO in 2011. Ho Dynasty Citadel is located in a highly geographical location. To the north and west are the Buoi River, to the east are the Ma Tuong River, creating a strong natural defense system.",
-          "metadata": {
-            "fileSize": 17315,
-            "mimeType": "text/plain",
-            "chunkIndex": 1,
-            "totalChunks": 65,
-            "filename": "heritage_documents_prepared.txt",
-            "title": "Vietnamese Heritage Database",
-            "uploadedBy": "admin",
-            "category": "heritage",
-            "description": "UNESCO heritage sites in Vietnam",
-            "uploadedAt": "2025-11-10T14:13:37.380Z"
-          },
-          "distance": 18.934505,
-          "relevanceScore": -17.934505
         }
       ],
       "metrics": {
-        "bleu": 0.0323,
-        "rouge_l_precision": 0.0582,
-        "rouge_l_recall": 0.5333,
-        "rouge_l_f1": 0.1049,
-        "cosine_tfidf": 0.3659
+        "bleu": 0.0321,
+        "rouge_l_precision": 0.0501,
+        "rouge_l_recall": 0.6,
+        "rouge_l_f1": 0.0925,
+        "cosine_tfidf": 0.417
       },
-      "execution_time_ms": 11072,
-      "timestamp": "2025-11-10T15:18:50.506Z"
+      "execution_time_ms": 11755,
+      "timestamp": "2025-11-13T10:17:02.389Z"
     },
     {
       "id": "q8",
       "question": "What architectural structures can be found at the Central Thang Long Imperial Citadel?",
       "ground_truth": "The Central Thang Long Imperial Citadel contains important architectural structures including Doan Mon Gate, Kinh Thien Palace, the Flagpole, and various archaeological artifacts at the 18 Hoang Dieu site.",
-      "generated_answer": "The Central Thang Long Imperial Citadel, recognized by UNESCO as a World Cultural Heritage site, contains several notable architectural structures. These include:\n\n1. Doan Mon Gate: This gate served as the entrance to the citadel and symbolizes the power and prestige of the ruling dynasty.\n\n2. Kinh Thien Palace: Located within the citadel, this palace was the residence of the emperor and his family. It showcases traditional Vietnamese architectural styles and materials.\n\n3. Archaeological sites 18 Hoang Dieu: This site includes various remnants of the different dynasties that ruled over Thang Long, such as the Ly, Tran, Le, and Nguyen dynasties. It provides insight into the architectural, cultural, and historical development of the city throughout its history.\n\n4. Flagpole: A prominent feature of the citadel, the flagpole stands tall and serves as a symbol of authority and power. \n\nThese are just some of the key architectural structures found within the Central Thang Long Imperial Citadel, which showcase the rich cultural heritage and history of Vietnam.",
-      "context_used": "[Document 1] and historical relic associated with the capital Thang Long through many dynasties (Ly, Tran, Le, Nguyen). The central area recognized by UNESCO as a World Cultural Heritage (2010), consists of archaeological sites 18 Hoang Dieu and relics such as Doan Mon Gate, Kinh Thien Palace, Flagpole.\n\n[Document 2] are relics associated with the king Ly Dynasty (XII century), including worship, tombs, and memorial facilities. These relics reflect the beliefs, court rituals, and architectural art, Ly dynasty sculpture; they are an important source of research on medieval history and culture in Vietnam. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism.\n\n[Document 3] including the Capital, the Imperial City, the Nguyen Dynasty mausoleum, temples, temples, and royal architecture. The population reflects the urban system of feudal palaces, architectural arts, decorations and rituals of Vietnam in the 19th century – early XX; and is also the cultural, religious and historical center of the central region.\n\n[Document 4] a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese. The relic was designated as a World Cultural Heritage by UNESCO in 2011. Ho Dynasty Citadel is located in a highly geographical location. To the north and west are the Buoi River, to the east are the Ma Tuong River, creating a strong natural defense system.\n\n[Document 5] dating back to the An Duong Vuong era (the 3rd century BC according to legend and layers of archaeological culture). The relics include the system of earthen ramparts, temples, and archaeological artifacts; playing an important role in the study of ancient history and folk beliefs Vietnam. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism.",
+      "generated_answer": "At the Central Thang Long Imperial Citadel in Hanoi, several architectural structures can be found, including:\n\n1. Doan Mon Gate: This gate served as the entrance to the citadel and symbolized the power and authority of the ruling dynasty.\n\n2. Kinh Thien Palace: Located within the central area of the Thang Long Imperial Citadel, this palace was used by the emperor for official ceremonies and receptions.\n\n3. Flagpole: A prominent feature of the Thang Long Imperial Citadel, the flagpole held the national flag, representing the unity and sovereignty of the Vietnamese people.\n\nThese architectural structures, along with other archaeological sites like 18 Hoang Dieu, contribute to the rich history and cultural heritage of the Thang Long Imperial Citadel, which has been recognized as a World Cultural Heritage site by UNESCO since 2010.",
+      "context_used": "[Document 1] The central area Thang Long Imperial Citadel in Hanoi is an archaeological and historical relic associated with the capital Thang Long through many dynasties (Ly, Tran, Le, Nguyen). The central area recognized by UNESCO as a World Cultural Heritage (2010), consists of archaeological sites 18 Hoang Dieu and relics such as Doan Mon Gate, Kinh Thien Palace, Flagpole.\n\n[Document 2] are relics associated with the king Ly Dynasty (XII century), including worship, tombs, and memorial facilities. These relics reflect the beliefs, court rituals, and architectural art, Ly dynasty sculpture; they are an important source of research on medieval history and culture in Vietnam. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism.\n\n[Document 3] including the Capital, the Imperial City, the Nguyen Dynasty mausoleum, temples, temples, and royal architecture. The population reflects the urban system of feudal palaces, architectural arts, decorations and rituals of Vietnam in the 19th century – early XX; and is also the cultural, religious and historical center of the central region.\n\n[Document 4] a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese. The relic was designated as a World Cultural Heritage by UNESCO in 2011. Ho Dynasty Citadel is located in a highly geographical location. To the north and west are the Buoi River, to the east are the Ma Tuong River, creating a strong natural defense system.\n\n[Document 5] associated with the legend An Duong Vuong and history into Co Loa - a military political center dating back to the An Duong Vuong era (the 3rd century BC according to legend and layers of archaeological culture). The relics include the system of earthen ramparts, temples, and archaeological artifacts; playing an important role in the study of ancient history and folk beliefs Vietnam.",
       "sources": [
         {
-          "content": "and historical relic associated with the capital Thang Long through many dynasties (Ly, Tran, Le, Nguyen). The central area recognized by UNESCO as a World Cultural Heritage (2010), consists of archaeological sites 18 Hoang Dieu and relics such as Doan Mon Gate, Kinh Thien Palace, Flagpole.",
+          "content": "The central area Thang Long Imperial Citadel in Hanoi is an archaeological and historical relic associated with the capital Thang Long through many dynasties (Ly, Tran, Le, Nguyen). The central area recognized by UNESCO as a World Cultural Heritage (2010), consists of archaeological sites 18 Hoang Dieu and relics such as Doan Mon Gate, Kinh Thien Palace, Flagpole.",
           "metadata": {
-            "mimeType": "text/plain",
-            "filename": "heritage_documents_prepared.txt",
-            "chunkIndex": 6,
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
             "uploadedBy": "admin",
-            "category": "heritage",
-            "description": "UNESCO heritage sites in Vietnam",
-            "title": "Vietnamese Heritage Database",
-            "totalChunks": 65,
-            "fileSize": 17315
+            "totalChunks": 66,
+            "filename": "heritage_documents_prepared.txt",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "fileSize": 17315,
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "mimeType": "text/plain",
+            "category": "'Vietnamese Heritage Database'",
+            "title": "heritage_documents_prepared.txt",
+            "chunkIndex": 6
           },
-          "distance": 14.763611,
-          "relevanceScore": -13.763611
+          "distance": 14.768218,
+          "relevanceScore": -13.768218
         },
         {
           "content": "are relics associated with the king Ly Dynasty (XII century), including worship, tombs, and memorial facilities. These relics reflect the beliefs, court rituals, and architectural art, Ly dynasty sculpture; they are an important source of research on medieval history and culture in Vietnam. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism.",
           "metadata": {
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "fileSize": 17315,
-            "filename": "heritage_documents_prepared.txt",
-            "description": "UNESCO heritage sites in Vietnam",
-            "mimeType": "text/plain",
-            "title": "Vietnamese Heritage Database",
-            "category": "heritage",
-            "chunkIndex": 38,
             "uploadedBy": "admin",
-            "totalChunks": 65
+            "category": "'Vietnamese Heritage Database'",
+            "fileSize": 17315,
+            "chunkIndex": 38,
+            "totalChunks": 66,
+            "filename": "heritage_documents_prepared.txt",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "title": "heritage_documents_prepared.txt",
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "mimeType": "text/plain"
           },
           "distance": 16.609858,
           "relevanceScore": -15.609858
@@ -794,16 +794,16 @@
         {
           "content": "including the Capital, the Imperial City, the Nguyen Dynasty mausoleum, temples, temples, and royal architecture. The population reflects the urban system of feudal palaces, architectural arts, decorations and rituals of Vietnam in the 19th century – early XX; and is also the cultural, religious and historical center of the central region.",
           "metadata": {
-            "uploadedBy": "admin",
-            "category": "heritage",
-            "filename": "heritage_documents_prepared.txt",
-            "description": "UNESCO heritage sites in Vietnam",
+            "chunkIndex": 49,
+            "description": "`UNESCO heritage sites in Vietnam`",
             "mimeType": "text/plain",
-            "title": "Vietnamese Heritage Database",
-            "chunkIndex": 48,
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "fileSize": 17315,
-            "totalChunks": 65
+            "title": "heritage_documents_prepared.txt",
+            "category": "'Vietnamese Heritage Database'",
+            "totalChunks": 66,
+            "uploadedBy": "admin",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "filename": "heritage_documents_prepared.txt",
+            "fileSize": 17315
           },
           "distance": 16.651255,
           "relevanceScore": -15.651254999999999
@@ -811,69 +811,69 @@
         {
           "content": "a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese. The relic was designated as a World Cultural Heritage by UNESCO in 2011. Ho Dynasty Citadel is located in a highly geographical location. To the north and west are the Buoi River, to the east are the Ma Tuong River, creating a strong natural defense system.",
           "metadata": {
-            "fileSize": 17315,
-            "description": "UNESCO heritage sites in Vietnam",
             "chunkIndex": 1,
-            "category": "heritage",
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
+            "title": "heritage_documents_prepared.txt",
             "uploadedBy": "admin",
-            "title": "Vietnamese Heritage Database",
-            "mimeType": "text/plain",
+            "fileSize": 17315,
             "filename": "heritage_documents_prepared.txt",
-            "totalChunks": 65
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "category": "'Vietnamese Heritage Database'",
+            "mimeType": "text/plain",
+            "totalChunks": 66
           },
           "distance": 17.04359,
           "relevanceScore": -16.04359
         },
         {
-          "content": "dating back to the An Duong Vuong era (the 3rd century BC according to legend and layers of archaeological culture). The relics include the system of earthen ramparts, temples, and archaeological artifacts; playing an important role in the study of ancient history and folk beliefs Vietnam. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism.",
+          "content": "associated with the legend An Duong Vuong and history into Co Loa - a military political center dating back to the An Duong Vuong era (the 3rd century BC according to legend and layers of archaeological culture). The relics include the system of earthen ramparts, temples, and archaeological artifacts; playing an important role in the study of ancient history and folk beliefs Vietnam.",
           "metadata": {
-            "chunkIndex": 60,
-            "category": "heritage",
-            "mimeType": "text/plain",
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "totalChunks": 65,
-            "title": "Vietnamese Heritage Database",
             "uploadedBy": "admin",
-            "filename": "heritage_documents_prepared.txt",
-            "description": "UNESCO heritage sites in Vietnam",
-            "fileSize": 17315
+            "title": "heritage_documents_prepared.txt",
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "mimeType": "text/plain",
+            "fileSize": 17315,
+            "totalChunks": 66,
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "chunkIndex": 61,
+            "category": "'Vietnamese Heritage Database'",
+            "filename": "heritage_documents_prepared.txt"
           },
-          "distance": 17.847715,
-          "relevanceScore": -16.847715
+          "distance": 17.870665,
+          "relevanceScore": -16.870665
         }
       ],
       "metrics": {
-        "bleu": 0.0556,
-        "rouge_l_precision": 0.1333,
-        "rouge_l_recall": 0.7586,
-        "rouge_l_f1": 0.2268,
-        "cosine_tfidf": 0.6566,
-        "cosine_semantic": 0.9959
+        "bleu": 0.071,
+        "rouge_l_precision": 0.1742,
+        "rouge_l_recall": 0.7931,
+        "rouge_l_f1": 0.2857,
+        "cosine_tfidf": 0.4177,
+        "cosine_semantic": 0.9957
       },
-      "execution_time_ms": 7500,
-      "timestamp": "2025-11-10T15:18:58.516Z"
+      "execution_time_ms": 5610,
+      "timestamp": "2025-11-13T10:17:08.516Z"
     },
     {
       "id": "q9",
       "question": "Who was responsible for building the Ho Dynasty Citadel?",
       "ground_truth": "Ho Quy Ly, an ambitious reformer who established the Ho Dynasty in 1400, was responsible for building the Ho Dynasty Citadel. He decided to move the capital from Thang Long (today's Hanoi) to Tay Do (Vinh Loc, Thanh Hoa).",
-      "generated_answer": "Ho Quy Ly was responsible for building the Ho Dynasty Citadel. He was an ambitious reformer who came to power in 1400 and established the Ho Dynasty. In order to consolidate power and implement his reforms, he decided to move the capital from Thang Long (Hanoi today) to Tay Do (Vinh Loc, Thanh Hoa) and commissioned the construction of House Ho City, which later became known as the Ho Dynasty Citadel. \n\nThe citadel was built in 1397 during the reign of the Ho Dynasty and serves as a historical relic and cultural icon, showcasing the remarkable creativity and construction techniques of the ancient Vietnamese. It was designated as a World Cultural Heritage by UNESCO in 2011. Its strategic location, surrounded by the Buoi River and Ma Tuong River, further contributed to its role as a strong natural defense system.",
-      "context_used": "[Document 1] Heritage Site: Ho Dynasty Citadel Description: Ho Dynasty Citadel, located in district Vinh Loc, province Thanh Hoa, is a massive and unique stone structure, built in 1397 under the reign Ho Dynasty. Not only is it a historical relic, Ho Dynasty Citadel is also a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese.\n\n[Document 2] a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese. The relic was designated as a World Cultural Heritage by UNESCO in 2011. Ho Dynasty Citadel is located in a highly geographical location. To the north and west are the Buoi River, to the east are the Ma Tuong River, creating a strong natural defense system.\n\n[Document 3] was in a state of crisis. Ho Quy Ly, an ambitious reformer, came to power and established the Ho Dynasty in 1400. To consolidate power and implement its reforms, Ho Quy Ly decided to move the capital from Thang Long (Hanoi today) to Tay Do (Vinh Loc, Thanh Hoa) and build House Ho City.\n\n[Document 4] the site for the construction of the capital, ensuring both safety and conducive to trade and economic development. To better understand Lake City, we need to learn about its historical background. By the end of the 14th century, Tran Dynasty had weakened, the country was in a state of crisis. Ho Quy Ly, an ambitious reformer, came to power and established the Ho Dynasty in 1400.\n\n[Document 5] and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism. Location: City Tu Son, province Bac Ninh Coordinates: 21°06′26″B, 105°57′37″Đ Tags: Di tích lịch sử --- Heritage Site: The ancient capital Hoa Lu Description: The ancient capital Hoa Lu (Ninh Binh) was the first capital of the feudal state to exercise Dai Co Viet power under the Dinh dynasty and Tien Le (the end of the 15th century – the beginning of the 11th century).",
+      "generated_answer": "Ho Quy Ly was responsible for building the Ho Dynasty Citadel. He was an ambitious reformer who came to power in 1400 and established the Ho Dynasty. In order to consolidate his power and implement reforms, he decided to move the capital from Thang Long (Hanoi today) to Tay Do (Vinh Loc, Thanh Hoa) and commissioned the construction of House Ho City, which later became known as the Ho Dynasty Citadel. \n\nThe citadel's construction began in 1397 during the reign of the Ho Dynasty and showcases the remarkable creativity and construction techniques of the ancient Vietnamese. It holds significant historical, cultural, and educational value, earning recognition as a World Cultural Heritage by UNESCO in 2011. Its strategic location along the Buoi and Ma Tuong rivers further enhanced its natural defense system. Overall, Ho Quy Ly's vision and leadership played a crucial role in the establishment and development of the Ho Dynasty Citadel.",
+      "context_used": "[Document 1] Heritage Site: Ho Dynasty Citadel Description: Ho Dynasty Citadel, located in district Vinh Loc, province Thanh Hoa, is a massive and unique stone structure, built in 1397 under the reign Ho Dynasty. Not only is it a historical relic, Ho Dynasty Citadel is also a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese.\n\n[Document 2] a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese. The relic was designated as a World Cultural Heritage by UNESCO in 2011. Ho Dynasty Citadel is located in a highly geographical location. To the north and west are the Buoi River, to the east are the Ma Tuong River, creating a strong natural defense system.\n\n[Document 3] was in a state of crisis. Ho Quy Ly, an ambitious reformer, came to power and established the Ho Dynasty in 1400. To consolidate power and implement its reforms, Ho Quy Ly decided to move the capital from Thang Long (Hanoi today) to Tay Do (Vinh Loc, Thanh Hoa) and build House Ho City.\n\n[Document 4] the site for the construction of the capital, ensuring both safety and conducive to trade and economic development. To better understand Lake City, we need to learn about its historical background. By the end of the 14th century, Tran Dynasty had weakened, the country was in a state of crisis. Ho Quy Ly, an ambitious reformer, came to power and established the Ho Dynasty in 1400.\n\n[Document 5] and ideology of the Chairman Ho Chi Minh, and is also the place where national ceremonial activities take place. This area has great historical, cultural and educational value, is strictly protected and serves research and propaganda on the history of revolution. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism.",
       "sources": [
         {
           "content": "Heritage Site: Ho Dynasty Citadel Description: Ho Dynasty Citadel, located in district Vinh Loc, province Thanh Hoa, is a massive and unique stone structure, built in 1397 under the reign Ho Dynasty. Not only is it a historical relic, Ho Dynasty Citadel is also a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese.",
           "metadata": {
-            "filename": "heritage_documents_prepared.txt",
-            "chunkIndex": 0,
-            "mimeType": "text/plain",
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "uploadedBy": "admin",
-            "description": "UNESCO heritage sites in Vietnam",
-            "category": "heritage",
             "fileSize": 17315,
-            "title": "Vietnamese Heritage Database",
-            "totalChunks": 65
+            "mimeType": "text/plain",
+            "chunkIndex": 0,
+            "title": "heritage_documents_prepared.txt",
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "totalChunks": 66,
+            "uploadedBy": "admin",
+            "category": "'Vietnamese Heritage Database'",
+            "filename": "heritage_documents_prepared.txt",
+            "uploadedAt": "2025-11-13T09:16:06.135Z"
           },
           "distance": 22.911062,
           "relevanceScore": -21.911062
@@ -881,15 +881,15 @@
         {
           "content": "a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese. The relic was designated as a World Cultural Heritage by UNESCO in 2011. Ho Dynasty Citadel is located in a highly geographical location. To the north and west are the Buoi River, to the east are the Ma Tuong River, creating a strong natural defense system.",
           "metadata": {
-            "totalChunks": 65,
-            "description": "UNESCO heritage sites in Vietnam",
+            "title": "heritage_documents_prepared.txt",
             "mimeType": "text/plain",
-            "chunkIndex": 1,
-            "category": "heritage",
-            "title": "Vietnamese Heritage Database",
-            "filename": "heritage_documents_prepared.txt",
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
+            "totalChunks": 66,
             "uploadedBy": "admin",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "chunkIndex": 1,
+            "category": "'Vietnamese Heritage Database'",
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "filename": "heritage_documents_prepared.txt",
             "fileSize": 17315
           },
           "distance": 24.79004,
@@ -899,15 +899,15 @@
           "content": "was in a state of crisis. Ho Quy Ly, an ambitious reformer, came to power and established the Ho Dynasty in 1400. To consolidate power and implement its reforms, Ho Quy Ly decided to move the capital from Thang Long (Hanoi today) to Tay Do (Vinh Loc, Thanh Hoa) and build House Ho City.",
           "metadata": {
             "filename": "heritage_documents_prepared.txt",
-            "chunkIndex": 4,
-            "category": "heritage",
-            "description": "UNESCO heritage sites in Vietnam",
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "fileSize": 17315,
-            "title": "Vietnamese Heritage Database",
             "uploadedBy": "admin",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "title": "heritage_documents_prepared.txt",
+            "fileSize": 17315,
+            "description": "`UNESCO heritage sites in Vietnam`",
             "mimeType": "text/plain",
-            "totalChunks": 65
+            "chunkIndex": 4,
+            "category": "'Vietnamese Heritage Database'",
+            "totalChunks": 66
           },
           "distance": 25.484676,
           "relevanceScore": -24.484676
@@ -915,69 +915,69 @@
         {
           "content": "the site for the construction of the capital, ensuring both safety and conducive to trade and economic development. To better understand Lake City, we need to learn about its historical background. By the end of the 14th century, Tran Dynasty had weakened, the country was in a state of crisis. Ho Quy Ly, an ambitious reformer, came to power and established the Ho Dynasty in 1400.",
           "metadata": {
-            "title": "Vietnamese Heritage Database",
-            "filename": "heritage_documents_prepared.txt",
-            "chunkIndex": 3,
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "totalChunks": 65,
+            "title": "heritage_documents_prepared.txt",
             "fileSize": 17315,
-            "category": "heritage",
-            "mimeType": "text/plain",
             "uploadedBy": "admin",
-            "description": "UNESCO heritage sites in Vietnam"
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "chunkIndex": 3,
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "totalChunks": 66,
+            "category": "'Vietnamese Heritage Database'",
+            "mimeType": "text/plain",
+            "filename": "heritage_documents_prepared.txt"
           },
           "distance": 25.946419,
           "relevanceScore": -24.946419
         },
         {
-          "content": "and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism. Location: City Tu Son, province Bac Ninh Coordinates: 21°06′26″B, 105°57′37″Đ Tags: Di tích lịch sử --- Heritage Site: The ancient capital Hoa Lu Description: The ancient capital Hoa Lu (Ninh Binh) was the first capital of the feudal state to exercise Dai Co Viet power under the Dinh dynasty and Tien Le (the end of the 15th century – the beginning of the 11th century).",
+          "content": "and ideology of the Chairman Ho Chi Minh, and is also the place where national ceremonial activities take place. This area has great historical, cultural and educational value, is strictly protected and serves research and propaganda on the history of revolution. Currently, the location is managed and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism.",
           "metadata": {
-            "filename": "heritage_documents_prepared.txt",
-            "chunkIndex": 39,
-            "category": "heritage",
-            "uploadedBy": "admin",
-            "fileSize": 17315,
-            "title": "Vietnamese Heritage Database",
             "mimeType": "text/plain",
-            "totalChunks": 65,
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "description": "UNESCO heritage sites in Vietnam"
+            "fileSize": 17315,
+            "chunkIndex": 36,
+            "title": "heritage_documents_prepared.txt",
+            "category": "'Vietnamese Heritage Database'",
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "uploadedBy": "admin",
+            "filename": "heritage_documents_prepared.txt",
+            "totalChunks": 66
           },
-          "distance": 26.744686,
-          "relevanceScore": -25.744686
+          "distance": 27.042906,
+          "relevanceScore": -26.042906
         }
       ],
       "metrics": {
-        "bleu": 0.2018,
-        "rouge_l_precision": 0.2086,
+        "bleu": 0.1831,
+        "rouge_l_precision": 0.1883,
         "rouge_l_recall": 0.725,
-        "rouge_l_f1": 0.324,
-        "cosine_tfidf": 0.6672,
-        "cosine_semantic": 0.9966
+        "rouge_l_f1": 0.299,
+        "cosine_tfidf": 0.6639,
+        "cosine_semantic": 0.9965
       },
-      "execution_time_ms": 6201,
-      "timestamp": "2025-11-10T15:19:05.227Z"
+      "execution_time_ms": 6735,
+      "timestamp": "2025-11-13T10:17:15.753Z"
     },
     {
       "id": "q10",
       "question": "What was the original name of the Ho Dynasty Citadel's location?",
       "ground_truth": "The Ho Dynasty Citadel was built at Tay Do, which is now known as Vinh Loc in Thanh Hoa province. It served as the capital after Ho Quy Ly moved it from Thang Long.",
-      "generated_answer": "The original name of the Ho Dynasty Citadel's location is \"Hoa Lu.\" \n\nThis information can be found in Document 3, which states, \"Heritage Site: The ancient capital Hoa Lu Description: The ancient capital Hoa Lu (Ninh Binh) was the first capital of the feudal state to exercise Dai Co Viet power under the Dinh dynasty and Tien Le (the end of the 15th century – the beginning of the 11th century).\" The Ho Dynasty Citadel is located within the Hoa Lu complex.",
-      "context_used": "[Document 1] Heritage Site: Ho Dynasty Citadel Description: Ho Dynasty Citadel, located in district Vinh Loc, province Thanh Hoa, is a massive and unique stone structure, built in 1397 under the reign Ho Dynasty. Not only is it a historical relic, Ho Dynasty Citadel is also a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese.\n\n[Document 2] a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese. The relic was designated as a World Cultural Heritage by UNESCO in 2011. Ho Dynasty Citadel is located in a highly geographical location. To the north and west are the Buoi River, to the east are the Ma Tuong River, creating a strong natural defense system.\n\n[Document 3] and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism. Location: City Tu Son, province Bac Ninh Coordinates: 21°06′26″B, 105°57′37″Đ Tags: Di tích lịch sử --- Heritage Site: The ancient capital Hoa Lu Description: The ancient capital Hoa Lu (Ninh Binh) was the first capital of the feudal state to exercise Dai Co Viet power under the Dinh dynasty and Tien Le (the end of the 15th century – the beginning of the 11th century).\n\n[Document 4] the site for the construction of the capital, ensuring both safety and conducive to trade and economic development. To better understand Lake City, we need to learn about its historical background. By the end of the 14th century, Tran Dynasty had weakened, the country was in a state of crisis. Ho Quy Ly, an ambitious reformer, came to power and established the Ho Dynasty in 1400.\n\n[Document 5] of Hanoi, has a prominent historical and cultural position associated with the legend Le Loi return of the sword. The area around the lake is densely populated with relics such as Ngoc Son Temple on Ngoc Island, Turtle Tower, and The Huc bridge; this is the important landscape, religion and living space of the Capital.",
+      "generated_answer": "The original name of the Ho Dynasty Citadel's location is Vinh Loc. This information can be found in Document 1, which states \"Ho Dynasty Citadel, located in district Vinh Loc, province Thanh Hoa...\". \n\nVinh Loc is the district where the Ho Dynasty Citadel is situated within the Thanh Hoa province in Vietnam. It holds significant historical and cultural value as a representation of the creativity and construction techniques of the ancient Vietnamese. Furthermore, the citadel was recognized as a World Cultural Heritage by UNESCO in 2011, showcasing its importance globally. Its strategic placement along the Buoi and Ma Tuong rivers provides a strong natural defense system, contributing to its significance as a historical monument. Additionally, the Ho Dynasty, founded by Ho Quy Ly, played a crucial role in stabilizing the country during a time of crisis following the weakening of the Tran Dynasty. Thus, the Ho Dynasty Citadel stands as a symbol of both national and cultural heritage.",
+      "context_used": "[Document 1] Heritage Site: Ho Dynasty Citadel Description: Ho Dynasty Citadel, located in district Vinh Loc, province Thanh Hoa, is a massive and unique stone structure, built in 1397 under the reign Ho Dynasty. Not only is it a historical relic, Ho Dynasty Citadel is also a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese.\n\n[Document 2] a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese. The relic was designated as a World Cultural Heritage by UNESCO in 2011. Ho Dynasty Citadel is located in a highly geographical location. To the north and west are the Buoi River, to the east are the Ma Tuong River, creating a strong natural defense system.\n\n[Document 3] the site for the construction of the capital, ensuring both safety and conducive to trade and economic development. To better understand Lake City, we need to learn about its historical background. By the end of the 14th century, Tran Dynasty had weakened, the country was in a state of crisis. Ho Quy Ly, an ambitious reformer, came to power and established the Ho Dynasty in 1400.\n\n[Document 4] and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism. Location: City Tu Son, province Bac Ninh Coordinates: 21°06′26″B, 105°57′37″Đ Tags: Di tích lịch sử --- Heritage Site: The ancient capital Hoa Lu Description: The ancient capital Hoa Lu (Ninh Binh) was the first capital of the feudal state to exercise Dai Co Viet power under the Dinh dynasty and Tien Le (the end of the 15th\n\n[Document 5] located in the center of Hanoi, has a prominent historical and cultural position associated with the legend Le Loi return of the sword. The area around the lake is densely populated with relics such as Ngoc Son Temple on Ngoc Island, Turtle Tower, and The Huc bridge; this is the important landscape, religion and living space of the Capital.",
       "sources": [
         {
           "content": "Heritage Site: Ho Dynasty Citadel Description: Ho Dynasty Citadel, located in district Vinh Loc, province Thanh Hoa, is a massive and unique stone structure, built in 1397 under the reign Ho Dynasty. Not only is it a historical relic, Ho Dynasty Citadel is also a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese.",
           "metadata": {
-            "description": "UNESCO heritage sites in Vietnam",
-            "filename": "heritage_documents_prepared.txt",
-            "mimeType": "text/plain",
             "uploadedBy": "admin",
-            "fileSize": 17315,
-            "totalChunks": 65,
+            "title": "heritage_documents_prepared.txt",
+            "category": "'Vietnamese Heritage Database'",
+            "totalChunks": 66,
             "chunkIndex": 0,
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "category": "heritage",
-            "title": "Vietnamese Heritage Database"
+            "mimeType": "text/plain",
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "filename": "heritage_documents_prepared.txt",
+            "fileSize": 17315
           },
           "distance": 16.033566,
           "relevanceScore": -15.033566
@@ -985,82 +985,82 @@
         {
           "content": "a cultural icon, a demonstration of the remarkable creativity and construction techniques of the ancient Vietnamese. The relic was designated as a World Cultural Heritage by UNESCO in 2011. Ho Dynasty Citadel is located in a highly geographical location. To the north and west are the Buoi River, to the east are the Ma Tuong River, creating a strong natural defense system.",
           "metadata": {
-            "description": "UNESCO heritage sites in Vietnam",
-            "category": "heritage",
-            "fileSize": 17315,
-            "title": "Vietnamese Heritage Database",
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "totalChunks": 66,
             "mimeType": "text/plain",
             "chunkIndex": 1,
-            "filename": "heritage_documents_prepared.txt",
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "totalChunks": 65,
-            "uploadedBy": "admin"
+            "fileSize": 17315,
+            "uploadedBy": "admin",
+            "title": "heritage_documents_prepared.txt",
+            "category": "'Vietnamese Heritage Database'",
+            "filename": "heritage_documents_prepared.txt"
           },
           "distance": 18.812416,
           "relevanceScore": -17.812416
         },
         {
-          "content": "and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism. Location: City Tu Son, province Bac Ninh Coordinates: 21°06′26″B, 105°57′37″Đ Tags: Di tích lịch sử --- Heritage Site: The ancient capital Hoa Lu Description: The ancient capital Hoa Lu (Ninh Binh) was the first capital of the feudal state to exercise Dai Co Viet power under the Dinh dynasty and Tien Le (the end of the 15th century – the beginning of the 11th century).",
-          "metadata": {
-            "totalChunks": 65,
-            "mimeType": "text/plain",
-            "description": "UNESCO heritage sites in Vietnam",
-            "fileSize": 17315,
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "filename": "heritage_documents_prepared.txt",
-            "chunkIndex": 39,
-            "title": "Vietnamese Heritage Database",
-            "uploadedBy": "admin",
-            "category": "heritage"
-          },
-          "distance": 20.648542,
-          "relevanceScore": -19.648542
-        },
-        {
           "content": "the site for the construction of the capital, ensuring both safety and conducive to trade and economic development. To better understand Lake City, we need to learn about its historical background. By the end of the 14th century, Tran Dynasty had weakened, the country was in a state of crisis. Ho Quy Ly, an ambitious reformer, came to power and established the Ho Dynasty in 1400.",
           "metadata": {
-            "description": "UNESCO heritage sites in Vietnam",
             "chunkIndex": 3,
             "mimeType": "text/plain",
-            "totalChunks": 65,
-            "filename": "heritage_documents_prepared.txt",
-            "title": "Vietnamese Heritage Database",
             "uploadedBy": "admin",
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "category": "heritage",
-            "fileSize": 17315
+            "title": "heritage_documents_prepared.txt",
+            "filename": "heritage_documents_prepared.txt",
+            "totalChunks": 66,
+            "category": "'Vietnamese Heritage Database'",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "fileSize": 17315,
+            "description": "`UNESCO heritage sites in Vietnam`"
           },
           "distance": 23.452213,
           "relevanceScore": -22.452213
         },
         {
-          "content": "of Hanoi, has a prominent historical and cultural position associated with the legend Le Loi return of the sword. The area around the lake is densely populated with relics such as Ngoc Son Temple on Ngoc Island, Turtle Tower, and The Huc bridge; this is the important landscape, religion and living space of the Capital.",
+          "content": "and preserved in accordance with the regulations of the authorities and for research, education and cultural tourism. Location: City Tu Son, province Bac Ninh Coordinates: 21°06′26″B, 105°57′37″Đ Tags: Di tích lịch sử --- Heritage Site: The ancient capital Hoa Lu Description: The ancient capital Hoa Lu (Ninh Binh) was the first capital of the feudal state to exercise Dai Co Viet power under the Dinh dynasty and Tien Le (the end of the 15th",
           "metadata": {
-            "totalChunks": 65,
-            "category": "heritage",
-            "uploadedAt": "2025-11-10T14:13:37.380Z",
-            "uploadedBy": "admin",
             "mimeType": "text/plain",
-            "title": "Vietnamese Heritage Database",
+            "title": "heritage_documents_prepared.txt",
+            "uploadedAt": "2025-11-13T09:16:06.135Z",
+            "description": "`UNESCO heritage sites in Vietnam`",
             "filename": "heritage_documents_prepared.txt",
-            "chunkIndex": 15,
-            "description": "UNESCO heritage sites in Vietnam",
-            "fileSize": 17315
+            "chunkIndex": 39,
+            "totalChunks": 66,
+            "uploadedBy": "admin",
+            "fileSize": 17315,
+            "category": "'Vietnamese Heritage Database'"
           },
-          "distance": 23.601511,
-          "relevanceScore": -22.601511
+          "distance": 23.583725,
+          "relevanceScore": -22.583725
+        },
+        {
+          "content": "located in the center of Hanoi, has a prominent historical and cultural position associated with the legend Le Loi return of the sword. The area around the lake is densely populated with relics such as Ngoc Son Temple on Ngoc Island, Turtle Tower, and The Huc bridge; this is the important landscape, religion and living space of the Capital.",
+          "metadata": {
+            "totalChunks": 66,
+            "uploadedBy": "admin",
+            "description": "`UNESCO heritage sites in Vietnam`",
+            "filename": "heritage_documents_prepared.txt",
+            "fileSize": 17315,
+            "title": "heritage_documents_prepared.txt",
+            "category": "'Vietnamese Heritage Database'",
+            "mimeType": "text/plain",
+            "chunkIndex": 15,
+            "uploadedAt": "2025-11-13T09:16:06.135Z"
+          },
+          "distance": 23.805008,
+          "relevanceScore": -22.805008
         }
       ],
       "metrics": {
-        "bleu": 0.0362,
-        "rouge_l_precision": 0.122,
-        "rouge_l_recall": 0.2941,
-        "rouge_l_f1": 0.1724,
-        "cosine_tfidf": 0.5757,
-        "cosine_semantic": 0.9961
+        "bleu": 0.0329,
+        "rouge_l_precision": 0.1069,
+        "rouge_l_recall": 0.5,
+        "rouge_l_f1": 0.1762,
+        "cosine_tfidf": 0.4871,
+        "cosine_semantic": 0.9962
       },
-      "execution_time_ms": 6100,
-      "timestamp": "2025-11-10T15:19:11.837Z"
+      "execution_time_ms": 6456,
+      "timestamp": "2025-11-13T10:17:22.710Z"
     }
   ]
 }

@@ -11,57 +11,71 @@
  * @returns {Array<string>} Mảng các chunks
  */
 export const semanticChunk = (text, maxChunkSize = 1000, overlapSize = 200) => {
-  if (!text || typeof text !== 'string') {
-    return []
+  if (!text || typeof text !== "string") {
+    return [];
   }
 
   // Loại bỏ khoảng trắng thừa
-  const cleanedText = text.trim().replace(/\s+/g, ' ')
+  const cleanedText = text.trim().replace(/\s+/g, " ");
 
   // Nếu văn bản nhỏ hơn maxChunkSize, trả về nguyên văn bản
   if (cleanedText.length <= maxChunkSize) {
-    return [cleanedText]
+    return [cleanedText];
   }
 
-  const chunks = []
-  const sentences = splitIntoSentences(cleanedText)
-  
-  let currentChunk = ''
-  let previousChunk = ''
+  const chunks = [];
+  const sentences = splitIntoSentences(cleanedText);
+  let currentChunk = "";
+  let previousChunk = "";
 
   for (let i = 0; i < sentences.length; i++) {
-    const sentence = sentences[i]
-    const potentialChunk = currentChunk + (currentChunk ? ' ' : '') + sentence
+    const sentence = sentences[i];
+    const potentialChunk = currentChunk + (currentChunk ? " " : "") + sentence;
 
     // Nếu thêm câu này vẫn nhỏ hơn maxChunkSize, tiếp tục thêm
     if (potentialChunk.length <= maxChunkSize) {
-      currentChunk = potentialChunk
+      currentChunk = potentialChunk;
     } else {
       // Nếu vượt quá maxChunkSize
       if (currentChunk) {
         // Lưu chunk hiện tại
-        chunks.push(currentChunk)
-        previousChunk = currentChunk
+        chunks.push(currentChunk);
+        previousChunk = currentChunk;
 
         // Bắt đầu chunk mới với overlap
-        const overlapText = getOverlapText(currentChunk, overlapSize)
-        currentChunk = overlapText + (overlapText ? ' ' : '') + sentence
+        const overlapText = getOverlapText(currentChunk, overlapSize);
+        if ((overlapText + " " + sentence).length > maxChunkSize) {
+          const textToSplit = overlapText + (overlapText ? " " : "") + sentence;
+          const subChunks = splitLongSentence(
+            textToSplit,
+            maxChunkSize,
+            overlapSize
+          );
+          currentChunk = subChunks[subChunks.length - 1];
+          chunks.push(...subChunks.slice(0, -1));
+        } else {
+          currentChunk = overlapText + " " + sentence;
+        }
       } else {
         // Trường hợp câu đơn lẻ quá dài, chia nhỏ câu đó
-        const subChunks = splitLongSentence(sentence, maxChunkSize, overlapSize)
-        chunks.push(...subChunks.slice(0, -1))
-        currentChunk = subChunks[subChunks.length - 1]
+        const subChunks = splitLongSentence(
+          sentence,
+          maxChunkSize,
+          overlapSize
+        );
+        chunks.push(...subChunks.slice(0, -1));
+        currentChunk = subChunks[subChunks.length - 1];
       }
     }
   }
 
   // Thêm chunk cuối cùng
   if (currentChunk) {
-    chunks.push(currentChunk)
+    chunks.push(currentChunk);
   }
 
-  return chunks.filter(chunk => chunk.trim().length > 0)
-}
+  return chunks.filter((chunk) => chunk.trim().length > 0);
+};
 
 /**
  * Chia văn bản thành các câu dựa trên dấu câu
@@ -71,11 +85,11 @@ export const semanticChunk = (text, maxChunkSize = 1000, overlapSize = 200) => {
 const splitIntoSentences = (text) => {
   // Regex để chia câu dựa trên dấu chấm, chấm hỏi, chấm than
   // Hỗ trợ cả tiếng Việt và tiếng Anh
-  const sentenceRegex = /[^.!?。！？]+[.!?。！？]+|[^.!?。！？]+$/g
-  const sentences = text.match(sentenceRegex) || []
-  
-  return sentences.map(s => s.trim()).filter(s => s.length > 0)
-}
+  const sentenceRegex = /[^.!?。！？]+[.!?。！？]+|[^.!?。！？]+$/g;
+  const sentences = text.match(sentenceRegex) || [];
+
+  return sentences.map((s) => s.trim()).filter((s) => s.length > 0);
+};
 
 /**
  * Lấy phần overlap từ cuối chunk
@@ -85,19 +99,19 @@ const splitIntoSentences = (text) => {
  */
 const getOverlapText = (chunk, overlapSize) => {
   if (chunk.length <= overlapSize) {
-    return chunk
+    return chunk;
   }
 
   // Lấy overlapSize ký tự cuối và cố gắng cắt tại ranh giới từ
-  const overlapText = chunk.slice(-overlapSize)
-  const firstSpaceIndex = overlapText.indexOf(' ')
-  
+  const overlapText = chunk.slice(-overlapSize);
+  const firstSpaceIndex = overlapText.indexOf(" ");
+
   if (firstSpaceIndex !== -1 && firstSpaceIndex < overlapSize * 0.3) {
-    return overlapText.slice(firstSpaceIndex + 1)
+    return overlapText.slice(firstSpaceIndex + 1);
   }
-  
-  return overlapText
-}
+
+  return overlapText;
+};
 
 /**
  * Chia câu dài thành các chunks nhỏ hơn
@@ -107,34 +121,34 @@ const getOverlapText = (chunk, overlapSize) => {
  * @returns {Array<string>} Mảng các chunks
  */
 const splitLongSentence = (sentence, maxChunkSize, overlapSize) => {
-  const words = sentence.split(' ')
-  const chunks = []
-  let currentChunk = ''
+  const words = sentence.split(" ");
+  const chunks = [];
+  let currentChunk = "";
 
   for (const word of words) {
-    const potentialChunk = currentChunk + (currentChunk ? ' ' : '') + word
+    const potentialChunk = currentChunk + (currentChunk ? " " : "") + word;
 
     if (potentialChunk.length <= maxChunkSize) {
-      currentChunk = potentialChunk
+      currentChunk = potentialChunk;
     } else {
       if (currentChunk) {
-        chunks.push(currentChunk)
-        const overlapText = getOverlapText(currentChunk, overlapSize)
-        currentChunk = overlapText + (overlapText ? ' ' : '') + word
+        chunks.push(currentChunk);
+        const overlapText = getOverlapText(currentChunk, overlapSize);
+        currentChunk = overlapText + (overlapText ? " " : "") + word;
       } else {
         // Từ đơn lẻ quá dài, cắt cứng
-        chunks.push(word.slice(0, maxChunkSize))
-        currentChunk = word.slice(maxChunkSize)
+        chunks.push(word.slice(0, maxChunkSize));
+        currentChunk = word.slice(maxChunkSize);
       }
     }
   }
 
   if (currentChunk) {
-    chunks.push(currentChunk)
+    chunks.push(currentChunk);
   }
 
-  return chunks
-}
+  return chunks;
+};
 
 /**
  * Chia văn bản thành chunks với metadata bổ sung
@@ -144,13 +158,17 @@ const splitLongSentence = (sentence, maxChunkSize, overlapSize) => {
  * @param {number} overlapSize - Độ chồng lấp giữa các chunk
  * @returns {Array<Object>} Mảng các chunks với metadata
  */
-export const semanticChunkWithMetadata = (text, metadata = {}, maxChunkSize = 450, overlapSize = 120) => {
-  const chunks = semanticChunk(text, maxChunkSize, overlapSize)
-  
+export const semanticChunkWithMetadata = (
+  text,
+  metadata = {},
+  maxChunkSize = 450,
+  overlapSize = 120
+) => {
+  const chunks = semanticChunk(text, maxChunkSize, overlapSize);
+
   return chunks.map((chunk, index) => ({
     content: chunk,
     chunkIndex: index,
-    totalChunks: chunks.length,
-    ...metadata
-  }))
-}
+    ...metadata,
+  }));
+};

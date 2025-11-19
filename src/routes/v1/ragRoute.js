@@ -1,58 +1,65 @@
-import express from 'express'
-import multer from 'multer'
-import path from 'path'
-import { ragController } from '~/controllers/ragController'
-import { ragValidation } from '~/validations/ragValidation'
+import express from "express";
+import multer from "multer";
+import path from "path";
+import { ragController } from "~/controllers/ragController";
+import { ragValidation } from "~/validations/ragValidation";
 // import { authMiddleware } from '~/middlewares/authMiddeware' // Uncomment nếu cần auth
 
-const Router = express.Router()
+const Router = express.Router();
 
 // Cấu hình multer để upload files
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     // Lưu vào thư mục Uploads/rag-documents
-    cb(null, 'Uploads/rag-documents')
+    cb(null, "Uploads/rag-documents");
   },
   filename: (req, file, cb) => {
     // Tạo tên file unique với timestamp
-    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
-    const ext = path.extname(file.originalname)
-    const nameWithoutExt = path.basename(file.originalname, ext)
-    cb(null, `${nameWithoutExt}-${uniqueSuffix}${ext}`)
-  }
-})
+    const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9); //EX: 1633036800000-123456789
+    const ext = path.extname(file.originalname); //EX: .txt
+    const nameWithoutExt = path.basename(file.originalname, ext); //EX: filename
+    cb(null, `${nameWithoutExt}-${uniqueSuffix}${ext}`);
+  },
+});
 
 // File filter - chỉ chấp nhận text files
 const fileFilter = (req, file, cb) => {
   const allowedMimes = [
-    'text/plain',
-    'text/markdown',
-    'application/json',
-    'text/html',
-    'text/csv'
-  ]
-  
-  if (allowedMimes.includes(file.mimetype)) {
-    cb(null, true)
+    "text/plain",
+    "text/markdown",
+    "application/json",
+    "text/html",
+    "text/csv",
+  ];
+
+  if (
+    allowedMimes.includes(
+      file.mimetype // Kiểm tra MIME type của file
+    )
+  ) {
+    cb(null, true);
   } else {
-    cb(new Error('Only text-based files are allowed (txt, md, json, html, csv)'), false)
+    cb(
+      new Error("Only text-based files are allowed (txt, md, json, html, csv)"),
+      false
+    );
   }
-}
+};
 
 const upload = multer({
   storage: storage,
   fileFilter: fileFilter,
   limits: {
-    fileSize: 10 * 1024 * 1024 // 10MB limit
-  }
-})
+    fileSize: 10 * 1024 * 1024, // 10MB limit
+  },
+});
 
 /**
  * Health check endpoint
  * GET /api/v1/rag/health
  * Public
  */
-Router.get('/health', ragController.healthCheck)
+Router.get("/health", ragController.healthCheck);
 
 /**
  * Query RAG - Người dùng đặt câu hỏi
@@ -60,7 +67,7 @@ Router.get('/health', ragController.healthCheck)
  * Public hoặc Authenticated
  * Body: { question, topK?, collectionName? }
  */
-Router.post('/query', ragValidation.query, ragController.query)
+Router.post("/query", ragValidation.query, ragController.query);
 
 /**
  * Upload tài liệu từ file (Admin only)
@@ -69,13 +76,13 @@ Router.post('/query', ragValidation.query, ragController.query)
  * Body: multipart/form-data with file, category?, title?, description?, collectionName?
  */
 Router.post(
-  '/upload',
+  "/upload",
   // authMiddleware.verifyToken, // Uncomment để bật auth
   // authMiddleware.isAdmin,      // Uncomment để chỉ admin
-  upload.single('file'),
+  upload.single("file"),
   ragValidation.uploadDocument,
   ragController.uploadDocument
-)
+);
 
 /**
  * Upload tài liệu từ text trực tiếp (Admin only)
@@ -84,12 +91,12 @@ Router.post(
  * Body: { text, metadata?, collectionName? }
  */
 Router.post(
-  '/upload-text',
+  "/upload-text",
   // authMiddleware.verifyToken, // Uncomment để bật auth
   // authMiddleware.isAdmin,      // Uncomment để chỉ admin
   ragValidation.uploadText,
   ragController.uploadText
-)
+);
 
 /**
  * Upload nhiều tài liệu cùng lúc (Admin only)
@@ -98,12 +105,12 @@ Router.post(
  * Body: multipart/form-data with multiple files
  */
 Router.post(
-  '/upload-batch',
+  "/upload-batch",
   // authMiddleware.verifyToken, // Uncomment để bật auth
   // authMiddleware.isAdmin,      // Uncomment để chỉ admin
-  upload.array('files', 10), // Max 10 files
+  upload.array("files", 10), // Max 10 files
   ragController.uploadBatchDocuments
-)
+);
 
 /**
  * Lấy danh sách tất cả collections
@@ -111,11 +118,11 @@ Router.post(
  * Requires: Admin authentication
  */
 Router.get(
-  '/collections',
+  "/collections",
   // authMiddleware.verifyToken, // Uncomment để bật auth
   // authMiddleware.isAdmin,      // Uncomment để chỉ admin
   ragController.listCollectionsHandler
-)
+);
 
 /**
  * Lấy thông tin chi tiết của collection
@@ -123,11 +130,11 @@ Router.get(
  * Requires: Admin authentication
  */
 Router.get(
-  '/collection/:collectionName/info',
+  "/collection/:collectionName/info",
   // authMiddleware.verifyToken, // Uncomment để bật auth
   // authMiddleware.isAdmin,      // Uncomment để chỉ admin
   ragController.getCollectionInfoHandler
-)
+);
 
 /**
  * Xóa collection (Admin only - CẨNH THẬN!)
@@ -135,11 +142,11 @@ Router.get(
  * Requires: Admin authentication
  */
 Router.delete(
-  '/collection/:collectionName',
+  "/collection/:collectionName",
   // authMiddleware.verifyToken, // Uncomment để bật auth
   // authMiddleware.isAdmin,      // Uncomment để chỉ admin
   ragValidation.deleteCollection,
   ragController.deleteCollectionHandler
-)
+);
 
-export const ragRoute = Router
+export const ragRoute = Router;

@@ -3,10 +3,16 @@
  * Xử lý các API requests cho hệ thống RAG
  */
 
-import { StatusCodes } from 'http-status-codes'
-import { processDocument, queryRAG, deleteCollection, listCollections, getCollectionInfo } from '~/services/ragService'
-import fs from 'fs/promises'
-import path from 'path'
+import { StatusCodes } from "http-status-codes";
+import {
+  processDocument,
+  queryRAG,
+  deleteCollection,
+  listCollections,
+  getCollectionInfo,
+} from "~/services/ragService";
+import fs from "fs/promises";
+import path from "path";
 
 /**
  * Upload và xử lý tài liệu (Admin only)
@@ -18,49 +24,49 @@ const uploadDocument = async (req, res, next) => {
     if (!req.file) {
       return res.status(StatusCodes.BAD_REQUEST).json({
         success: false,
-        message: 'No file uploaded'
-      })
+        message: "No file uploaded",
+      });
     }
 
     // Đọc nội dung file
-    const filePath = req.file.path
-    const fileContent = await fs.readFile(filePath, 'utf-8')
+    const filePath = req.file.path;
+    const fileContent = await fs.readFile(filePath, "utf-8");
 
     // Metadata từ request body
     const metadata = {
       filename: req.file.originalname,
-      uploadedBy: req.user?.userId || 'admin', // Giả sử có middleware auth
+      uploadedBy: req.user?.userId || "admin", // Giả sử có middleware auth
       uploadedAt: new Date().toISOString(),
       fileSize: req.file.size,
       mimeType: req.file.mimetype,
-      category: req.body.category || 'general',
+      category: req.body.category || "general",
       title: req.body.title || req.file.originalname,
-      description: req.body.description || ''
-    }
+      description: req.body.description || "",
+    };
 
     // Collection name từ request hoặc mặc định
-    const collectionName = req.body.collectionName || 'heritage_documents'
+    const collectionName = req.body.collectionName || "heritage_documents";
 
     // Xử lý document: chunk → embed → save to Chroma
-    const result = await processDocument(fileContent, metadata, collectionName)
+    const result = await processDocument(fileContent, metadata, collectionName);
 
     // Xóa file tạm sau khi xử lý (optional)
     try {
-      await fs.unlink(filePath)
+      await fs.unlink(filePath);
     } catch (unlinkError) {
-      console.error('Error deleting temp file:', unlinkError)
+      console.error("Error deleting temp file:", unlinkError);
     }
 
     return res.status(StatusCodes.OK).json({
       success: true,
-      message: 'Document uploaded and processed successfully',
-      data: result
-    })
+      message: "Document uploaded and processed successfully",
+      data: result,
+    });
   } catch (error) {
-    console.error('Error in uploadDocument:', error)
-    next(error)
+    console.error("Error in uploadDocument:", error);
+    next(error);
   }
-}
+};
 
 /**
  * Upload tài liệu từ text trực tiếp (không qua file)
@@ -68,73 +74,91 @@ const uploadDocument = async (req, res, next) => {
  */
 const uploadText = async (req, res, next) => {
   try {
-    const { text, metadata, collectionName } = req.body
+    const { text, metadata, collectionName } = req.body;
 
     // Validate input
-    if (!text || typeof text !== 'string' || text.trim().length === 0) {
+    if (!text || typeof text !== "string" || text.trim().length === 0) {
       return res.status(StatusCodes.BAD_REQUEST).json({
         success: false,
-        message: 'Text content is required'
-      })
+        message: "Text content is required",
+      });
     }
 
     // Metadata mặc định
     const documentMetadata = {
-      uploadedBy: req.user?.userId || 'admin',
+      uploadedBy: req.user?.userId || "admin",
       uploadedAt: new Date().toISOString(),
-      ...metadata
-    }
+      ...metadata,
+    };
 
     // Xử lý document
     const result = await processDocument(
       text,
       documentMetadata,
-      collectionName || 'heritage_documents'
-    )
+      collectionName || "heritage_documents"
+    );
 
     return res.status(StatusCodes.OK).json({
       success: true,
-      message: 'Text uploaded and processed successfully',
-      data: result
-    })
+      message: "Text uploaded and processed successfully",
+      data: result,
+    });
   } catch (error) {
-    console.error('Error in uploadText:', error)
-    next(error)
+    console.error("Error in uploadText:", error);
+    next(error);
   }
-}
+};
 
 /**
  * Query RAG - người dùng đặt câu hỏi
  * POST /api/v1/rag/query
+ * Body: {
+ *   question: string (required),
+ *   heritageId: string (optional - filter theo di tích cụ thể),
+ *   topK: number (optional),
+ *   collectionName: string (optional)
+ * }
  */
 const query = async (req, res, next) => {
   try {
-    const { question, topK, collectionName } = req.body
+    const { question, heritageId, topK, collectionName } = req.body;
 
     // Validate input
-    if (!question || typeof question !== 'string' || question.trim().length === 0) {
+    if (
+      !question ||
+      typeof question !== "string" ||
+      question.trim().length === 0
+    ) {
       return res.status(StatusCodes.BAD_REQUEST).json({
         success: false,
-        message: 'Question is required'
-      })
+        message: "Question is required",
+      });
     }
 
-    // Thực hiện RAG query
+    // Log query context
+    if (heritageId) {
+      console.log(`🔍 RAG Query with heritageId filter: ${heritageId}`);
+    } else {
+      console.log("🔍 RAG Query without filter (search all)");
+    }
+
+    // Thực hiện RAG query (có hoặc không có filter)
     const result = await queryRAG(
       question.trim(),
       topK || 5,
-      collectionName || 'heritage_documents'
-    )
+      collectionName || "heritage_documents",
+      heritageId || null
+    );
 
     return res.status(StatusCodes.OK).json({
       success: true,
-      data: result
-    })
+      data: result,
+    });
   } catch (error) {
-    console.error('Error in query:', error)
-    next(error)
+    console.error("Error in query:", error);
+    next(error);
   }
-}
+};
 
 /**
  * Xóa toàn bộ collection (Admin only - cẩn thận!)
@@ -142,26 +166,26 @@ const query = async (req, res, next) => {
  */
 const deleteCollectionHandler = async (req, res, next) => {
   try {
-    const { collectionName } = req.params
+    const { collectionName } = req.params;
 
     if (!collectionName) {
       return res.status(StatusCodes.BAD_REQUEST).json({
         success: false,
-        message: 'Collection name is required'
-      })
+        message: "Collection name is required",
+      });
     }
 
-    await deleteCollection(collectionName)
+    await deleteCollection(collectionName);
 
     return res.status(StatusCodes.OK).json({
       success: true,
-      message: `Collection '${collectionName}' deleted successfully`
-    })
+      message: `Collection '${collectionName}' deleted successfully`,
+    });
   } catch (error) {
-    console.error('Error in deleteCollectionHandler:', error)
-    next(error)
+    console.error("Error in deleteCollectionHandler:", error);
+    next(error);
   }
-}
+};
 
 /**
  * Health check cho RAG system
@@ -174,19 +198,19 @@ const healthCheck = async (req, res, next) => {
     const checks = {
       chromaConfigured: !!process.env.CHROMA_URL,
       naverApiKeyConfigured: !!process.env.NAVER_API_KEY,
-      timestamp: new Date().toISOString()
-    }
+      timestamp: new Date().toISOString(),
+    };
 
     return res.status(StatusCodes.OK).json({
       success: true,
-      message: 'RAG system is running',
-      checks: checks
-    })
+      message: "RAG system is running",
+      checks: checks,
+    });
   } catch (error) {
-    console.error('Error in healthCheck:', error)
-    next(error)
+    console.error("Error in healthCheck:", error);
+    next(error);
   }
-}
+};
 
 /**
  * Upload batch documents (nhiều files cùng lúc)
@@ -198,63 +222,67 @@ const uploadBatchDocuments = async (req, res, next) => {
     if (!req.files || req.files.length === 0) {
       return res.status(StatusCodes.BAD_REQUEST).json({
         success: false,
-        message: 'No files uploaded'
-      })
+        message: "No files uploaded",
+      });
     }
 
-    const collectionName = req.body.collectionName || 'heritage_documents'
-    const results = []
-    const errors = []
+    const collectionName = req.body.collectionName || "heritage_documents";
+    const results = [];
+    const errors = [];
 
     // Xử lý từng file
     for (const file of req.files) {
       try {
-        const fileContent = await fs.readFile(file.path, 'utf-8')
-        
+        const fileContent = await fs.readFile(file.path, "utf-8");
+
         const metadata = {
           filename: file.originalname,
-          uploadedBy: req.user?.userId || 'admin',
+          uploadedBy: req.user?.userId || "admin",
           uploadedAt: new Date().toISOString(),
           fileSize: file.size,
-          mimeType: file.mimetype
-        }
+          mimeType: file.mimetype,
+        };
 
-        const result = await processDocument(fileContent, metadata, collectionName)
+        const result = await processDocument(
+          fileContent,
+          metadata,
+          collectionName
+        );
         results.push({
           filename: file.originalname,
           success: true,
-          ...result
-        })
+          ...result,
+        });
 
         // Xóa file tạm
         try {
-          await fs.unlink(file.path)
+          await fs.unlink(file.path);
         } catch (unlinkError) {
-          console.error('Error deleting temp file:', unlinkError)
+          console.error("Error deleting temp file:", unlinkError);
         }
       } catch (error) {
         errors.push({
           filename: file.originalname,
-          error: error.message
-        })
+          error: error.message,
+        });
       }
     }
 
     return res.status(StatusCodes.OK).json({
       success: true,
-      message: 'Batch upload completed',
+      message: "Batch upload completed",
       data: {
         successful: results.length,
         failed: errors.length,
         results: results,
-        errors: errors
-      }
-    })
+        errors: errors,
+      },
+    });
   } catch (error) {
-    console.error('Error in uploadBatchDocuments:', error)
-    next(error)
+    console.error("Error in uploadBatchDocuments:", error);
+    next(error);
   }
-}
+};
 
 /**
  * Lấy danh sách tất cả collections
@@ -262,20 +290,20 @@ const uploadBatchDocuments = async (req, res, next) => {
  */
 const listCollectionsHandler = async (req, res, next) => {
   try {
-    const collections = await listCollections()
+    const collections = await listCollections();
 
     return res.status(StatusCodes.OK).json({
       success: true,
       data: {
         count: collections.length,
-        collections: collections
-      }
-    })
+        collections: collections,
+      },
+    });
   } catch (error) {
-    console.error('Error in listCollectionsHandler:', error)
-    next(error)
+    console.error("Error in listCollectionsHandler:", error);
+    next(error);
   }
-}
+};
 
 /**
  * Lấy thông tin chi tiết của một collection
@@ -283,26 +311,26 @@ const listCollectionsHandler = async (req, res, next) => {
  */
 const getCollectionInfoHandler = async (req, res, next) => {
   try {
-    const { collectionName } = req.params
+    const { collectionName } = req.params;
 
     if (!collectionName) {
       return res.status(StatusCodes.BAD_REQUEST).json({
         success: false,
-        message: 'Collection name is required'
-      })
+        message: "Collection name is required",
+      });
     }
 
-    const info = await getCollectionInfo(collectionName)
+    const info = await getCollectionInfo(collectionName);
 
     return res.status(StatusCodes.OK).json({
       success: true,
-      data: info
-    })
+      data: info,
+    });
   } catch (error) {
-    console.error('Error in getCollectionInfoHandler:', error)
-    next(error)
+    console.error("Error in getCollectionInfoHandler:", error);
+    next(error);
   }
-}
+};
 
 export const ragController = {
   uploadDocument,
@@ -312,5 +340,5 @@ export const ragController = {
   healthCheck,
   uploadBatchDocuments,
   listCollectionsHandler,
-  getCollectionInfoHandler
-}
+  getCollectionInfoHandler,
+};
