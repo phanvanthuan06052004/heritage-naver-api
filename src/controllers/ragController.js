@@ -136,11 +136,11 @@ const query = async (req, res, next) => {
     }
 
     // Log query context
-    if (heritageId) {
-      console.log(`🔍 RAG Query with heritageId filter: ${heritageId}`);
-    } else {
-      console.log("🔍 RAG Query without filter (search all)");
-    }
+    // if (heritageId) {
+    //   console.log(`🔍 RAG Query with heritageId filter: ${heritageId}`);
+    // } else {
+    //   console.log("🔍 RAG Query without filter (search all)");
+    // }
 
     // Thực hiện RAG query (có hoặc không có filter)
     const result = await queryRAG(

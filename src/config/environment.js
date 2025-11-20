@@ -26,4 +26,7 @@ export const env = {
   QDRANT_URL: process.env.QDRANT_URL || "http://localhost:6333",
   QDRANT_API_KEY: process.env.QDRANT_API_KEY,
   NAVER_RERANKER_API_URL: process.env.NAVER_RERANKER_API_URL,
+
+  // Hugging Face Configuration
+  HUGGINGFACE_API_KEY: process.env.HUGGINGFACE_API_KEY,
 };

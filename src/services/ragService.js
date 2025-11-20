@@ -4,7 +4,7 @@
  */
 
 import { env } from "~/config/environment";
-import { semanticChunk, semanticChunkWithMetadata } from "~/utils/chunkUtils";
+import { semanticChunkWithMetadata } from "~/utils/chunkUtils";
 import { v4 as uuidv4 } from "uuid";
 import { QdrantClient } from "@qdrant/js-client-rest";
 
@@ -155,10 +155,10 @@ const callNaverEmbeddingAPI = async (text) => {
     }
 
     const data = await response.json();
+    // console.log("✅ Embedding API response received", data);
 
-    // Naver API trả về embedding trong trường 'result.embedding' hoặc 'embedding'
-    // Điều chỉnh theo cấu trúc response thực tế
-    return data.result?.embedding || data.embedding || [];
+    // Naver API trả về embedding trong trường 'result.embedding'
+    return data.result?.embedding || [];
   } catch (error) {
     console.error("Error calling Naver Embedding API:", error);
     throw error;
@@ -291,6 +291,153 @@ export const ensureCollection = async (
 };
 
 /**
+ * Classify câu hỏi sử dụng Hugging Face Zero-Shot Classification
+ * Model: facebook/bart-large-mnli (tốt hơn mDeBERTa cho tiếng Anh)
+ * @param {string} question - Câu hỏi của người dùng
+ * @returns {Promise<Object>} { isRelevant: boolean, confidence: number, reason: string }
+ */
+const classifyQuestionIntent = async (question) => {
+  try {
+    // Hugging Face Inference API endpoint
+    // Try BART model - better for zero-shot classification
+    const HF_API_URL =
+      "https://router.huggingface.co/hf-inference/models/facebook/bart-large-mnli";
+
+    const response = await fetch(HF_API_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${env.HUGGINGFACE_API_KEY}`,
+      },
+      body: JSON.stringify({
+        inputs: question,
+        parameters: {
+          candidate_labels: [
+            "historical heritage and cultural monuments",
+            "unrelated topics",
+          ],
+          multi_label: false,
+        },
+      }),
+    });
+
+    if (!response.ok) {
+      // const errorText = await response.text();
+      // console.warn(
+      //   `⚠️ Hugging Face classification failed: ${response.status} - ${errorText}`
+      // );
+      // Fallback to keyword-based classification
+      return fallbackKeywordClassification(question);
+    }
+
+    const data = await response.json();
+
+    // data format: [{ label: "...", score: 0.9 }, { label: "...", score: 0.1 }]
+    // Sorted by score descending
+    const heritageLabel = "historical heritage and cultural monuments";
+    const heritageResult = data.find((item) => item.label === heritageLabel);
+    const heritageScore = heritageResult ? heritageResult.score : 0;
+
+    const isRelevant = heritageScore > 0.5; // Threshold 50%
+    const confidence = Math.min(Math.max(heritageScore, 0.5), 0.95); // Clamp between 0.5-0.95
+
+    const reason = isRelevant
+      ? `Heritage-related (score: ${heritageScore.toFixed(2)})`
+      : `Not heritage-related (score: ${heritageScore.toFixed(2)})`;
+
+    // console.log(
+    //   `🎯 HuggingFace Classification: ${
+    //     isRelevant ? "RELEVANT" : "NOT RELEVANT"
+    //   } (confidence: ${confidence.toFixed(2)})`
+    // );
+
+    return { isRelevant, confidence, reason };
+  } catch (error) {
+    // console.error("Error in classifyQuestionIntent:", error);
+    // Fallback to keyword-based classification
+    return fallbackKeywordClassification(question);
+  }
+};
+
+/**
+ * Fallback keyword-based classification khi HuggingFace API fail
+ * @param {string} question - Câu hỏi
+ * @returns {Object} Classification result
+ */
+const fallbackKeywordClassification = (question) => {
+  const lowerQ = question.toLowerCase();
+
+  // Heritage keywords
+  const heritageKeywords = [
+    "heritage",
+    "monument",
+    "temple",
+    "pagoda",
+    "citadel",
+    "palace",
+    "historical",
+    "history",
+    "ancient",
+    "culture",
+    "relic",
+    "unesco",
+    "imperial",
+    "dynasty",
+    "architecture",
+    "when",
+    "where",
+    "built",
+    "founded",
+    "constructed",
+  ];
+
+  // Non-heritage keywords
+  const nonHeritageKeywords = [
+    "weather",
+    "food",
+    "recipe",
+    "cook",
+    "joke",
+    "game",
+    "sport",
+    "movie",
+    "music",
+    "shopping",
+    "hotel",
+    "restaurant",
+    "sex",
+  ];
+
+  const hasHeritageKeyword = heritageKeywords.some((kw) => lowerQ.includes(kw));
+  const hasNonHeritageKeyword = nonHeritageKeywords.some((kw) =>
+    lowerQ.includes(kw)
+  );
+
+  if (hasHeritageKeyword) {
+    return {
+      isRelevant: true,
+      confidence: 0.85,
+      reason: "Contains heritage keywords (fallback)",
+    };
+  }
+
+  if (hasNonHeritageKeyword) {
+    return {
+      isRelevant: false,
+      confidence: 0.85,
+      reason: "Contains non-heritage keywords (fallback)",
+    };
+  }
+
+  // Default: assume relevant with low confidence
+  return {
+    isRelevant: true,
+    confidence: 0.6,
+    reason: "No clear keywords, assuming relevant (fallback)",
+  };
+};
+
+/**
  * Query RAG: embedding câu hỏi → tìm top-k documents → gọi Naver Chat API
  * @param {string} question - Câu hỏi của người dùng
  * @param {number} topK - Số lượng documents liên quan nhất cần lấy
@@ -305,6 +452,21 @@ export const queryRAG = async (
   heritageId = null
 ) => {
   try {
+    // Bước 0: Classify intent trước khi gọi RAG
+    // const intentResult = await classifyQuestionIntent(question);
+
+    // // Nếu câu hỏi không liên quan và confidence cao, trả lời general luôn
+    // if (!intentResult.isRelevant && intentResult.confidence >= 0.7) {
+    //   // console.log(
+    //   //   `❌ Question not relevant to heritage (confidence: ${intentResult.confidence}): ${intentResult.reason}`
+    //   // );
+    //   return await generateGeneralAnswer(question);
+    // }
+
+    // console.log(
+    //   `✅ Question classified as relevant (confidence: ${intentResult.confidence}): ${intentResult.reason}`
+    // );
+
     // Bước 1: Tạo embedding cho câu hỏi
     const questionEmbedding = await callNaverEmbeddingAPI(question);
 
@@ -328,10 +490,10 @@ export const queryRAG = async (
       collectionName,
       filter
     );
-    console.log(
-      `🔍 Found ${candidateDocs.length} candidate documents from Qdrant`,
-      candidateDocs
-    );
+    // console.log(
+    //   `🔍 Found ${candidateDocs.length} candidate documents from Qdrant`,
+    //   candidateDocs
+    // );
 
     // Bước 3.5: Kiểm tra xem có documents liên quan không
     if (!candidateDocs || candidateDocs.length === 0) {
@@ -340,16 +502,20 @@ export const queryRAG = async (
     }
 
     // Bước 4: Re-rank documents sử dụng Naver Reranker API
-    console.log(
-      `🔄 Re-ranking ${candidateDocs.length} candidate documents with Naver Reranker...`
-    );
+    // console.log(
+    //   `🔄 Re-ranking ${candidateDocs.length} candidate documents with Naver Reranker...`
+    // );
     const rerankedDocs = await rerankDocuments(question, candidateDocs);
+
+    //
+    if (!rerankedDocs || rerankedDocs.length === 0)
+      return await generateGeneralAnswer(question);
 
     // Chỉ lấy top-k documents sau re-ranking
     const relevantDocs = rerankedDocs.slice(0, topK);
-    console.log(
-      `✅ Selected top ${relevantDocs.length} documents after re-ranking`
-    );
+    // console.log(
+    //   `✅ Selected top ${relevantDocs.length} documents after re-ranking`
+    // );
 
     // Bước 5: Xây dựng context từ documents
     const context = buildContext(relevantDocs);
@@ -392,7 +558,7 @@ const queryQdrant = async (embedding, topK, collectionName, filter = null) => {
     );
 
     if (!exists) {
-      console.log(`⚠️  Collection "${collectionName}" does not exist`);
+      // console.log(`⚠️  Collection "${collectionName}" does not exist`);
       return [];
     }
 
@@ -406,7 +572,7 @@ const queryQdrant = async (embedding, topK, collectionName, filter = null) => {
     // Thêm filter nếu có
     if (filter) {
       searchParams.filter = filter;
-      console.log("🔍 Filtering with:", JSON.stringify(filter));
+      // console.log("🔍 Filtering with:", JSON.stringify(filter));
     }
 
     // Search trong Qdrant
@@ -414,7 +580,7 @@ const queryQdrant = async (embedding, topK, collectionName, filter = null) => {
       collectionName,
       searchParams
     );
-
+    // console.log(`✅ Qdrant search returned  results`, searchResult);
     // Format kết quả
     return searchResult.map((result) => ({
       document: result.payload.content,
@@ -468,29 +634,33 @@ const rerankDocuments = async (question, documents) => {
       body: JSON.stringify({
         documents: rerankerDocs,
         query: question,
-        maxTokens: 2048,
+        maxTokens: 1024,
       }),
     });
 
     if (!response.ok) {
       const errorData = await response.text();
-      console.error(`Reranker API error: ${response.status} - ${errorData}`);
+      // console.error(`Reranker API error: ${response.status} - ${errorData}`);
       // Fallback: trả về documents gốc với vector score
       return documents;
     }
 
     const data = await response.json();
-    console.log("✅ Reranker API response received", data);
+    // console.log("✅ Reranker API response received", data);
 
     // Lấy cited documents (những documents được reranker chọn)
-    const citedDocuments = data.result?.citedDocuments || [];
+    const citedDocuments = data.result?.citedDocuments;
+    // console.log(
+    //   `🔍 Reranker found ${citedDocuments.length} cited documents`,
+    //   citedDocuments
+    // );
 
     if (citedDocuments.length === 0) {
       // Nếu không có cited documents, giữ nguyên thứ tự vector search
-      console.log(
-        "⚠️  Reranker found no relevant documents, using vector search order"
-      );
-      return documents;
+      // console.log(
+      //   "⚠️  Reranker found no relevant documents, using vector search order"
+      // );
+      return [];
     }
 
     // Map cited documents về original documents và thêm rerank score
@@ -507,9 +677,9 @@ const rerankDocuments = async (question, documents) => {
       };
     });
 
-    console.log(
-      `✅ Reranker selected ${rerankedDocs.length}/${documents.length} documents`
-    );
+    // console.log(
+    //   `✅ Reranker selected ${rerankedDocs.length}/${documents.length} documents`
+    // );
 
     return rerankedDocs;
   } catch (error) {
@@ -586,7 +756,6 @@ Respond in English in an accurate and understandable manner.`;
 
     const data = await response.json();
 
-    // Điều chỉnh theo cấu trúc response thực tế của Naver Chat API
     return (
       data.result?.message?.content ||
       data.content ||
