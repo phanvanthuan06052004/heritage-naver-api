@@ -1,11 +1,32 @@
-import 'dotenv/config'
+import "dotenv/config";
 
 export const env = {
-    MONGODB_URI: process.env.MONGODB_URI,
-    DATABASE_NAME: process.env.DATABASE_NAME,
-    LOCAL_APP_HOST: process.env.LOCAL_APP_HOST,
-    LOCAL_APP_PORT: process.env.LOCAL_APP_PORT,
-    BUILD_MODE: process.env.BUILD_MODE,
-    ACCESS_TOKEN_SECRET_SIGNATURE: process.env.ACCESS_TOKEN_SECRET_SIGNATURE,
-    REFRESH_TOKEN_SECRET_SIGNATURE: process.env.REFRESH_TOKEN_SECRET_SIGNATURE
-}
+  MONGODB_URI: process.env.MONGODB_URI,
+  DATABASE_NAME: process.env.DATABASE_NAME,
+  LOCAL_APP_HOST: process.env.LOCAL_APP_HOST,
+  LOCAL_APP_PORT: process.env.LOCAL_APP_PORT,
+  BUILD_MODE: process.env.BUILD_MODE,
+  ACCESS_TOKEN_SECRET_SIGNATURE: process.env.ACCESS_TOKEN_SECRET_SIGNATURE,
+  REFRESH_TOKEN_SECRET_SIGNATURE: process.env.REFRESH_TOKEN_SECRET_SIGNATURE,
+
+  // RAG System Configuration
+  NAVER_API_KEY: process.env.NAVER_API_KEY,
+  NAVER_APIGW_API_KEY: process.env.NAVER_APIGW_API_KEY,
+  NAVER_EMBEDDING_API_URL:
+    process.env.NAVER_EMBEDDING_API_URL ||
+    "https://clovastudio.stream.ntruss.com/v1/api-tools/embedding/clir-emb-dolphin",
+  NAVER_CHAT_API_URL:
+    process.env.NAVER_CHAT_API_URL ||
+    "https://clovastudio.stream.ntruss.com/testapp/v1/chat-completions/HCX-DASH-001",
+  NAVER_RERANKER_API_URL:
+    process.env.NAVER_RERANKER_API_URL ||
+    "https://clovastudio.stream.ntruss.com/v1/api-tools/reranker",
+
+  // Qdrant Configuration
+  QDRANT_URL: process.env.QDRANT_URL || "http://localhost:6333",
+  QDRANT_API_KEY: process.env.QDRANT_API_KEY,
+  NAVER_RERANKER_API_URL: process.env.NAVER_RERANKER_API_URL,
+
+  // Hugging Face Configuration
+  HUGGINGFACE_API_KEY: process.env.HUGGINGFACE_API_KEY,
+};

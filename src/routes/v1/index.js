@@ -8,6 +8,7 @@ import { mailRoute } from './mailRoute'
 import { favoriteRoute } from './favoriteRoute'
 import { discussRoute } from './discussRoute'
 import { commentRoute } from './commentRoute'
+import { ragRoute } from './ragRoute'
 
 
 const Router = express.Router()
@@ -40,5 +41,8 @@ Router.use('/discuss', discussRoute)
 
 // comment APIs
 Router.use('/comments', commentRoute)
+
+// RAG APIs
+Router.use('/rag', ragRoute)
 
 export const APIs_V1 = Router

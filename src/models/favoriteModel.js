@@ -3,6 +3,7 @@ import { ObjectId } from 'mongodb'
 import { GET_DB } from '~/config/mongodb'
 import { OBJECT_ID_RULE_MESSAGE } from '~/utils/validators'
 import { OBJECT_ID_RULE } from '~/utils/validators'
+import { heritageModel } from './heritageModel'
 
 // Define Collection (name & schema)
 const FAVORITE_COLLECTION_NAME = 'Favorite'
@@ -170,8 +171,8 @@ const findByUserIdAndPagination = async ({ userId, page, limit }) => {
       }
     }
 
-    // Bước 4: Lấy chi tiết heritage từ bảng HistoryHeritage
-    const heritages = await db.collection('HistoryHeritage')
+    // Bước 4: Lấy chi tiết heritage từ bảng HistoryHeritageEn
+    const heritages = await db.collection(heritageModel.HERITAGE_COLLECTION_NAME)
       .find({ _id: { $in: heritageIds }, _destroy: { $ne: true } })
       .project({ _id: 1, name: 1, description: 1, images: 1, nameSlug: 1 })
       .toArray()
