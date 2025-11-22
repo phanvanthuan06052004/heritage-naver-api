@@ -122,6 +122,12 @@ const uploadText = async (req, res, next) => {
 const query = async (req, res, next) => {
   try {
     const { question, heritageId, topK, collectionName } = req.body;
+    console.log("RAG Query received:", {
+      question,
+      heritageId,
+      topK,
+      collectionName,
+    });
 
     // Validate input
     if (

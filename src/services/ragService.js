@@ -300,24 +300,15 @@ const classifyQuestionIntent = async (question) => {
   try {
     // Hugging Face Inference API endpoint
     // Try BART model - better for zero-shot classification
-    const HF_API_URL =
-      "https://router.huggingface.co/hf-inference/models/facebook/bart-large-mnli";
+    const HF_API_URL = "http://localhost:3000/classify";
 
     const response = await fetch(HF_API_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${env.HUGGINGFACE_API_KEY}`,
       },
       body: JSON.stringify({
-        inputs: question,
-        parameters: {
-          candidate_labels: [
-            "historical heritage and cultural monuments",
-            "unrelated topics",
-          ],
-          multi_label: false,
-        },
+        text: question,
       }),
     });
 
@@ -331,27 +322,10 @@ const classifyQuestionIntent = async (question) => {
     }
 
     const data = await response.json();
+    const heritageLabel = "heritage";
+    const isRelevant = data.label === heritageLabel ? true : false;
 
-    // data format: [{ label: "...", score: 0.9 }, { label: "...", score: 0.1 }]
-    // Sorted by score descending
-    const heritageLabel = "historical heritage and cultural monuments";
-    const heritageResult = data.find((item) => item.label === heritageLabel);
-    const heritageScore = heritageResult ? heritageResult.score : 0;
-
-    const isRelevant = heritageScore > 0.5; // Threshold 50%
-    const confidence = Math.min(Math.max(heritageScore, 0.5), 0.95); // Clamp between 0.5-0.95
-
-    const reason = isRelevant
-      ? `Heritage-related (score: ${heritageScore.toFixed(2)})`
-      : `Not heritage-related (score: ${heritageScore.toFixed(2)})`;
-
-    // console.log(
-    //   `🎯 HuggingFace Classification: ${
-    //     isRelevant ? "RELEVANT" : "NOT RELEVANT"
-    //   } (confidence: ${confidence.toFixed(2)})`
-    // );
-
-    return { isRelevant, confidence, reason };
+    return isRelevant;
   } catch (error) {
     // console.error("Error in classifyQuestionIntent:", error);
     // Fallback to keyword-based classification
@@ -413,28 +387,8 @@ const fallbackKeywordClassification = (question) => {
     lowerQ.includes(kw)
   );
 
-  if (hasHeritageKeyword) {
-    return {
-      isRelevant: true,
-      confidence: 0.85,
-      reason: "Contains heritage keywords (fallback)",
-    };
-  }
-
-  if (hasNonHeritageKeyword) {
-    return {
-      isRelevant: false,
-      confidence: 0.85,
-      reason: "Contains non-heritage keywords (fallback)",
-    };
-  }
-
-  // Default: assume relevant with low confidence
-  return {
-    isRelevant: true,
-    confidence: 0.6,
-    reason: "No clear keywords, assuming relevant (fallback)",
-  };
+  if (hasNonHeritageKeyword) return false;
+  return true;
 };
 
 /**
@@ -453,19 +407,15 @@ export const queryRAG = async (
 ) => {
   try {
     // Bước 0: Classify intent trước khi gọi RAG
-    // const intentResult = await classifyQuestionIntent(question);
+    const intentResult = await classifyQuestionIntent(question);
 
-    // // Nếu câu hỏi không liên quan và confidence cao, trả lời general luôn
-    // if (!intentResult.isRelevant && intentResult.confidence >= 0.7) {
-    //   // console.log(
-    //   //   `❌ Question not relevant to heritage (confidence: ${intentResult.confidence}): ${intentResult.reason}`
-    //   // );
-    //   return await generateGeneralAnswer(question);
-    // }
-
-    // console.log(
-    //   `✅ Question classified as relevant (confidence: ${intentResult.confidence}): ${intentResult.reason}`
-    // );
+    // Nếu câu hỏi không liên quan, trả lời general luôn
+    if (!intentResult) {
+      console.log(
+        `❌ Question classified as non-heritage related, returning general answer`
+      );
+      return await generateGeneralAnswer(question);
+    }
 
     // Bước 1: Tạo embedding cho câu hỏi
     const questionEmbedding = await callNaverEmbeddingAPI(question);
@@ -508,8 +458,30 @@ export const queryRAG = async (
     const rerankedDocs = await rerankDocuments(question, candidateDocs);
 
     //
-    if (!rerankedDocs || rerankedDocs.length === 0)
-      return await generateGeneralAnswer(question);
+    if (!rerankedDocs || rerankedDocs.length === 0) {
+      // console.log(
+      //   `⚠️  Reranker returned no relevant documents, falling back to general answer`
+      // );
+      const fallbackPrompt = `
+You are an AI assistant specialized in Vietnamese historical heritage sites.
+
+The user's question is related to a heritage site, but the website/database does not have specific information about it yet.
+
+Your rules:
+1. Do NOT invent or guess any historical facts, names, dynasties, dates, or numbers about the site or historical figures. 
+2. If exact data is unavailable, simply acknowledge that the specific information is not available. 
+3. Provide only general context about ancient Vietnamese fortresses, military practices, or the era in general, without referencing specific dynasties or historical figures. 
+4. Politely mention that the website currently does not have detailed information on this site.
+5. Offer suggestions such as:
+   - asking the user if they want to know about a different heritage site,
+   - explaining general background of the era or region,
+   - explaining why detailed information might not exist.
+6. Keep the answer polite, concise, and educational.
+7. Respond in English.
+`.trim();
+
+      return await generateGeneralAnswer(question, fallbackPrompt);
+    }
 
     // Chỉ lấy top-k documents sau re-ranking
     const relevantDocs = rerankedDocs.slice(0, topK);
@@ -650,6 +622,7 @@ const rerankDocuments = async (question, documents) => {
 
     // Lấy cited documents (những documents được reranker chọn)
     const citedDocuments = data.result?.citedDocuments;
+    // console.log("Console result", data.result);
     // console.log(
     //   `🔍 Reranker found ${citedDocuments.length} cited documents`,
     //   citedDocuments
@@ -657,9 +630,9 @@ const rerankDocuments = async (question, documents) => {
 
     if (citedDocuments.length === 0) {
       // Nếu không có cited documents, giữ nguyên thứ tự vector search
-      // console.log(
-      //   "⚠️  Reranker found no relevant documents, using vector search order"
-      // );
+      console.log(
+        "⚠️  Reranker found no relevant documents, using vector search order"
+      );
       return [];
     }
 
@@ -712,12 +685,34 @@ const buildContext = (documents) => {
  */
 const callNaverChatAPI = async (question, context) => {
   try {
-    const systemPrompt = `You are an AI assistant specializing in Vietnamese cultural heritage. 
-Answer questions based on the information provided in the context.
-If the information is insufficient to answer, clearly state that.
-Respond in English in an accurate and understandable manner.`;
+    const systemPrompt =
+      `You are an AI assistant specializing in Vietnamese cultural heritage.
+You will receive some background reference information, but you must NOT mention or refer to it directly.
 
-    const userPrompt = `Context:\n${context}\n\nQuestion: ${question}\n\nAnswer:`;
+STRICT RULES:
+1. Do NOT say phrases such as:
+   - "Based on the information provided"
+   - "According to the documents"
+   - "From the context"
+   - "Document 1, Document 2"
+   - "The context says"
+   - or any similar meta statements.
+2. Do NOT mention or imply that you were given documents, sources, or context.
+3. Answer naturally as if you already know the information.
+4. If the reference information is incomplete, simply state that the available historical information is limited—without mentioning documents or context.
+5. Do NOT invent dates, numbers, or historical facts.
+6. Keep your answer clear, accurate, and friendly.
+7. Respond in English.
+`.trim();
+
+    const userPrompt = `Here is some reference information that may help:
+
+${context}
+
+User question: ${question}
+
+Please answer naturally using the information above, without mentioning that it came from references or documents.
+If the information is incomplete, politely say that detailed information is limited.`.trim();
 
     const response = await fetch(env.NAVER_CHAT_API_URL, {
       method: "POST",
@@ -772,12 +767,22 @@ Respond in English in an accurate and understandable manner.`;
  * @param {string} question - Câu hỏi
  * @returns {Promise<Object>} Câu trả lời general
  */
-const generateGeneralAnswer = async (question) => {
+const generateGeneralAnswer = async (question, fallbackPrompt = null) => {
   try {
-    const systemPrompt = `You are an AI assistant specializing in Vietnamese cultural heritage.
-Answer questions in a friendly and helpful manner.
-If the question is not related to cultural heritage, politely apologize and guide the user on topics you can assist with.
-Respond in English.`;
+    // console.log("fallback", fallbackPrompt);
+    const systemPrompt = fallbackPrompt
+      ? fallbackPrompt
+      : `You are an AI assistant specialized in Vietnamese historical heritage.
+
+The user's question is outside your area of expertise and does not relate to heritage sites.
+
+Your rules:
+1. Politely acknowledge that the question is outside your main area of expertise, mentioning that you are a heritage assistant.
+2. Provide a helpful answer to the user's question using general, widely-known knowledge.
+3. Keep the tone friendly, concise, and educational.
+4. Do NOT invent historical facts or fabricate information about heritage sites.
+5. Respond in English.
+`.trim();
 
     const response = await fetch(env.NAVER_CHAT_API_URL, {
       method: "POST",
