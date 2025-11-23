@@ -12,7 +12,8 @@ const getHeritages = async (req, res, next) => {
 
 const createHeritage = async (req, res, next) => {
   try {
-    const result = await heritageService.createHeritage(req.body)
+    const language = req.query.language || req.body.language || 'en'
+    const result = await heritageService.createHeritage(req.body, language)
     res.status(StatusCodes.CREATED).json(result)
   } catch (error) {
     next(error)
@@ -21,7 +22,8 @@ const createHeritage = async (req, res, next) => {
 
 const updateHeritage = async (req, res, next) => {
   try {
-    const result = await heritageService.updateHeritage(req.params.id, req.body)
+    const language = req.query.language || req.body.language || 'en'
+    const result = await heritageService.updateHeritage(req.params.id, req.body, language)
     res.status(StatusCodes.OK).json(result)
   } catch (error) {
     next(error)
@@ -30,7 +32,8 @@ const updateHeritage = async (req, res, next) => {
 
 const deleteHeritage = async (req, res, next) => {
   try {
-    const result = await heritageService.deleteHeritage(req.params.id)
+    const language = req.query.language || 'en'
+    const result = await heritageService.deleteHeritage(req.params.id, language)
     res.status(StatusCodes.OK).json(result)
   } catch (error) {
     next(error)
@@ -39,7 +42,8 @@ const deleteHeritage = async (req, res, next) => {
 
 const getHeritageDetail = async (req, res, next) => {
   try {
-    const result = await heritageService.getHeritageDetail(req.params.id)
+    const language = req.query.language || 'en'
+    const result = await heritageService.getHeritageDetail(req.params.id, language)
     res.status(StatusCodes.OK).json(result)
   } catch (error) {
     next(error)
@@ -48,7 +52,8 @@ const getHeritageDetail = async (req, res, next) => {
 
 const getHeritageBySlug = async (req, res, next) => {
   try {
-    const result = await heritageService.getHeritageBySlug(req.params.nameSlug)
+    const language = req.query.language || 'en'
+    const result = await heritageService.getHeritageBySlug(req.params.nameSlug, language)
     res.status(StatusCodes.OK).json(result)
   } catch (error) {
     next(error)
@@ -57,8 +62,8 @@ const getHeritageBySlug = async (req, res, next) => {
 
 const getNearestHeritages = async (req, res, next) => {
   try {
-    const { latitude, longitude, limit } = req.query
-    const result = await heritageService.getNearestHeritages(latitude, longitude, limit)
+    const { latitude, longitude, limit, language = 'en' } = req.query
+    const result = await heritageService.getNearestHeritages(latitude, longitude, limit, language)
     res.status(StatusCodes.OK).json(result)
   } catch (error) {
     next(error)
@@ -68,7 +73,8 @@ const getNearestHeritages = async (req, res, next) => {
 
 const getAllHeritageNames = async (req, res, next) => {
   try {
-    const result = await heritageService.getAllHeritageNames(req.params.nameSlug)
+    const language = req.query.language || 'en'
+    const result = await heritageService.getAllHeritageNames(language)
     res.status(StatusCodes.OK).json(result)
   } catch (error) {
     next(error)

@@ -37,6 +37,10 @@ const getHeritages = async (req, res, next) => {
     status: Joi.string().valid('ACTIVE', 'INACTIVE', 'ALL').default('ACTIVE').messages({
       'string.base': 'Status must be a string',
       'any.only': 'Status must be one of ACTIVE, INACTIVE, ALL'
+    }),
+    language: Joi.string().valid('vi', 'en').default('en').messages({
+      'string.base': 'Language must be a string',
+      'any.only': 'Language must be either vi or en'
     })
   })
 
@@ -50,12 +54,21 @@ const getHeritages = async (req, res, next) => {
 }
 
 const getHeritageById = async (req, res, next) => {
-  const correctCondition = Joi.object({
+  const paramsCondition  = Joi.object({
     id: Joi.string().required().pattern(OBJECT_ID_RULE).message(OBJECT_ID_RULE_MESSAGE)
   })
 
+  const queryCondition = Joi.object({
+    language: Joi.string().valid('vi', 'en').default('en').messages({
+      'string.base': 'Language must be a string',
+      'any.only': 'Language must be either vi or en'
+    })
+  })
+
   try {
-    await correctCondition.validateAsync(req.params, { abortEarly: false })
+    await paramsCondition.validateAsync(req.params, { abortEarly: false })
+    const validatedQuery = await queryCondition.validateAsync(req.query, { abortEarly: false })
+    req.query = validatedQuery
     next()
   } catch (error) {
     next(new ApiError(StatusCodes.BAD_REQUEST, new Error(error).message))
@@ -63,12 +76,21 @@ const getHeritageById = async (req, res, next) => {
 }
 
 const getHeritageBySlug = async (req, res, next) => {
-  const correctCondition = Joi.object({
+  const paramsCondition  = Joi.object({
     nameSlug: Joi.string().required()
   })
 
+  const queryCondition = Joi.object({
+    language: Joi.string().valid('vi', 'en').default('en').messages({
+      'string.base': 'Language must be a string',
+      'any.only': 'Language must be either vi or en'
+    })
+  })
+
   try {
-    await correctCondition.validateAsync(req.params, { abortEarly: false })
+    await paramsCondition.validateAsync(req.params, { abortEarly: false })
+    const validatedQuery = await queryCondition.validateAsync(req.query, { abortEarly: false })
+    req.query = validatedQuery
     next()
   } catch (error) {
     next(new ApiError(StatusCodes.BAD_REQUEST, new Error(error).message))
@@ -76,6 +98,13 @@ const getHeritageBySlug = async (req, res, next) => {
 }
 
 const createHeritage = async (req, res, next) => {
+  const queryCondition = Joi.object({
+    language: Joi.string().valid('vi', 'en').default('en').messages({
+      'string.base': 'Language must be a string',
+      'any.only': 'Language must be either vi or en'
+    })
+  })
+
   const correctCondition = Joi.object({
     name: Joi.string().required().min(3).max(100).trim().strict().messages({
       'any.required': 'Tên di tích là bắt buộc',
@@ -137,6 +166,8 @@ const createHeritage = async (req, res, next) => {
   })
 
   try {
+    const validatedQuery = await queryCondition.validateAsync(req.query, { abortEarly: false })
+    req.query = validatedQuery
     await correctCondition.validateAsync(req.body, { abortEarly: false, allowUnknown: true })
     next()
   } catch (error) {
@@ -147,6 +178,13 @@ const createHeritage = async (req, res, next) => {
 const updateHeritage = async (req, res, next) => {
   const idCondition = Joi.object({
     id: Joi.string().required().pattern(OBJECT_ID_RULE).message(OBJECT_ID_RULE_MESSAGE)
+  })
+
+  const queryCondition = Joi.object({
+    language: Joi.string().valid('vi', 'en').default('en').messages({
+      'string.base': 'Language must be a string',
+      'any.only': 'Language must be either vi or en'
+    })
   })
 
   const bodyCondition = Joi.object({
@@ -211,6 +249,8 @@ const updateHeritage = async (req, res, next) => {
 
   try {
     await idCondition.validateAsync(req.params, { abortEarly: false })
+    const validatedQuery = await queryCondition.validateAsync(req.query, { abortEarly: false })
+    req.query = validatedQuery
     await bodyCondition.validateAsync(req.body, { abortEarly: false, allowUnknown: true })
     next()
   } catch (error) {
@@ -223,8 +263,65 @@ const deleteHeritage = async (req, res, next) => {
     id: Joi.string().required().pattern(OBJECT_ID_RULE).message(OBJECT_ID_RULE_MESSAGE)
   })
 
+  const queryCondition = Joi.object({
+    language: Joi.string().valid('vi', 'en').default('en').messages({
+      'string.base': 'Language must be a string',
+      'any.only': 'Language must be either vi or en'
+    })
+  })
+
   try {
     await idCondition.validateAsync(req.params, { abortEarly: false })
+    const validatedQuery = await queryCondition.validateAsync(req.query, { abortEarly: false })
+    req.query = validatedQuery
+    next()
+  } catch (error) {
+    next(new ApiError(StatusCodes.BAD_REQUEST, new Error(error).message))
+  }
+}
+
+const getNearestHeritages = async (req, res, next) => {
+  const queryCondition = Joi.object({
+    latitude: Joi.number().required().messages({
+      'any.required': 'Latitude is required',
+      'number.base': 'Latitude must be a number'
+    }),
+    longitude: Joi.number().required().messages({
+      'any.required': 'Longitude is required',
+      'number.base': 'Longitude must be a number'
+    }),
+    limit: Joi.number().integer().min(1).max(50).default(5).messages({
+      'number.base': 'Limit must be a number',
+      'number.integer': 'Limit must be an integer',
+      'number.min': 'Limit must be at least 1',
+      'number.max': 'Limit must be at most 50'
+    }),
+    language: Joi.string().valid('vi', 'en').default('en').messages({
+      'string.base': 'Language must be a string',
+      'any.only': 'Language must be either vi or en'
+    })
+  })
+
+  try {
+    const validatedQuery = await queryCondition.validateAsync(req.query, { abortEarly: false })
+    req.query = validatedQuery
+    next()
+  } catch (error) {
+    next(new ApiError(StatusCodes.BAD_REQUEST, new Error(error).message))
+  }
+}
+
+const getAllHeritageNames = async (req, res, next) => {
+  const queryCondition = Joi.object({
+    language: Joi.string().valid('vi', 'en').default('en').messages({
+      'string.base': 'Language must be a string',
+      'any.only': 'Language must be either vi or en'
+    })
+  })
+
+  try {
+    const validatedQuery = await queryCondition.validateAsync(req.query, { abortEarly: false })
+    req.query = validatedQuery
     next()
   } catch (error) {
     next(new ApiError(StatusCodes.BAD_REQUEST, new Error(error).message))
@@ -237,5 +334,7 @@ export const heritageValidation = {
   createHeritage,
   updateHeritage,
   deleteHeritage,
-  getHeritageBySlug
+  getHeritageBySlug,
+  getNearestHeritages,
+  getAllHeritageNames
 }

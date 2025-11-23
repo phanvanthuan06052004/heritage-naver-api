@@ -7,7 +7,7 @@ import { createSlug } from '~/utils/validators'
 const getHeritages = async (queryParams) => {
   try {
     // Loại bỏ các giá trị default ở đây vì queryParams đã được validation xử lý
-    const { page, limit, name, location, tags, sort, order, status } = queryParams
+    const { page, limit, name, location, tags, sort, order, status, language = 'en' } = queryParams
     // Tính toán skip
     const skip = (page - 1) * limit
 
@@ -33,7 +33,8 @@ const getHeritages = async (queryParams) => {
       filter,
       sort: sortOptions,
       skip,
-      limit
+      limit,
+      language
     })
 
     // Tính toán tổng số trang
@@ -53,7 +54,7 @@ const getHeritages = async (queryParams) => {
   }
 }
 
-const createHeritage = async (data) => {
+const createHeritage = async (data, language = 'en') => {
   try {
     // Tạo slug cho các trường cần thiết
     // Tạo slug cho các trường cần thiết
@@ -70,8 +71,8 @@ const createHeritage = async (data) => {
       tagsSlug
     }
 
-    const createdHeritage = await heritageModel.createNew(dataWithSlug)
-    const getNewHeritage = await heritageModel.findOneById(createdHeritage.insertedId)
+    const createdHeritage = await heritageModel.createNew(dataWithSlug, language)
+    const getNewHeritage = await heritageModel.findOneById(createdHeritage.insertedId, language)
     await chatRoomModel.createNew({
       name: 'Phòng chat ' + getNewHeritage.name,
       heritageId: getNewHeritage._id.toString()
@@ -82,9 +83,9 @@ const createHeritage = async (data) => {
   }
 }
 
-const updateHeritage = async (id, data) => {
+const updateHeritage = async (id, data, language = 'en') => {
   try {
-    const existingHeritage = await heritageModel.findOneById(id)
+    const existingHeritage = await heritageModel.findOneById(id, language)
     if (!existingHeritage)
       throw new ApiError(StatusCodes.NOT_FOUND, 'The specified heritage site could not be found.')
     const { name, location, popularTags, ...rest } = data
@@ -95,25 +96,25 @@ const updateHeritage = async (id, data) => {
       locationSlug: location ? createSlug(location.replace(/,/g, ', ')) : undefined,
       tagsSlug: popularTags ? popularTags.map(tag => createSlug(tag || '')) : []
     }
-    const updatedHeritage = await heritageModel.updateOneById(id, dataUpdate)
+    const updatedHeritage = await heritageModel.updateOneById(id, dataUpdate, language)
     return updatedHeritage
   } catch (error) {
     throw error
   }
 }
 
-const deleteHeritage = async (id) => {
+const deleteHeritage = async (id, language = 'en') => {
   try {
-    await heritageModel.deleteOneById(id)
+    await heritageModel.deleteOneById(id, language)
     return { deletedResult: 'Heritage was deleted' }
   } catch (error) {
     throw error
   }
 }
 
-const getHeritageDetail = async (id) => {
+const getHeritageDetail = async (id, language = 'en') => {
   try {
-    const result = await heritageModel.getDetailById(id)
+    const result = await heritageModel.getDetailById(id, language)
     if (!result)
       throw new ApiError(StatusCodes.NOT_FOUND, 'The specified heritage site could not be found.')
     return result
@@ -122,9 +123,9 @@ const getHeritageDetail = async (id) => {
   }
 }
 
-const getHeritageBySlug = async (nameSlug) => {
+const getHeritageBySlug = async (nameSlug, language = 'en') => {
   try {
-    const result = await heritageModel.findOneBySlug(nameSlug)
+    const result = await heritageModel.findOneBySlug(nameSlug, language)
     if (!result)
       throw new ApiError(StatusCodes.NOT_FOUND, 'The specified heritage site could not be found.')
     return result
@@ -147,7 +148,7 @@ const haversineDistance = (lat1, lon1, lat2, lon2) => {
 }
 
 
-const getNearestHeritages = async (latitude, longitude, limit = 5) => {
+const getNearestHeritages = async (latitude, longitude, limit = 5, language = 'en') => {
   try {
     // Validate tọa độ đầu vào
     if (!latitude || !longitude || isNaN(latitude) || isNaN(longitude)) {
@@ -159,7 +160,8 @@ const getNearestHeritages = async (latitude, longitude, limit = 5) => {
       filter: { status: 'ACTIVE' },
       sort: {},
       skip: 0,
-      limit: 0 // Lấy tất cả để tính khoảng cách
+      limit: 0, // Lấy tất cả để tính khoảng cách
+      language
     })
 
     // Tính khoảng cách từ điểm đầu vào đến từng di tích
@@ -184,9 +186,9 @@ const getNearestHeritages = async (latitude, longitude, limit = 5) => {
   }
 }
 
-const getAllHeritageNames = async () => {
+const getAllHeritageNames = async (language = 'en') => {
   try {
-    const heritageList = await heritageModel.getAllHerritageName()
+    const heritageList = await heritageModel.getAllHerritageName(language)
     return heritageList
   } catch (error) {
     throw error
