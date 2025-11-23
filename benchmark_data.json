@@ -1,72 +1,349 @@
 [
   {
-    "id": "q1",
-    "question": "Where is the Ho Dynasty Citadel located?",
-    "ground_truth": "The Ho Dynasty Citadel is located in Vinh Loc district, Thanh Hoa province, and was built in 1397 during the Ho Dynasty reign.",
-    "related_docs": ["ho_dynasty_citadel_001", "ho_dynasty_citadel_002"],
-    "expected_context": "heritage sites in Thanh Hoa"
+    "id": "q29",
+    "question": "Where is the Vinh Nghiem Pagoda located?",
+    "ground_truth": "The Vinh Nghiem Pagoda is located in the middle of Duc La village, Tri Yen commune, Bac Giang city, Bac Giang province, Vietnam.",
+    "source_url": [
+      "https://chuavinhnghiem-ducla.vn/gioi-thieu/",
+      "https://vietnamtourism.gov.vn/post/28282"
+    ],
+    "related_docs": [
+      "02a4a5c3-f344-426f-ae6c-f8244d2096c6",
+      "5e1db45b-13d0-483c-844d-3c8d3888f62e",
+      "8e196a8b-abce-41a8-a061-67d9248a84d7",
+      "d01c62c8-2373-4498-9f2d-2c7579352899"
+    ]
   },
   {
-    "id": "q2",
-    "question": "What is special about the Central Thang Long Imperial Citadel in Hanoi?",
-    "ground_truth": "The Central Thang Long Imperial Citadel is an archaeological and historical site associated with the Thang Long capital through many dynasties (Ly, Tran, Le, Nguyen). It was recognized by UNESCO as a World Cultural Heritage site in 2010.",
-    "related_docs": ["thang_long_citadel_001", "thang_long_citadel_002"],
-    "expected_context": "imperial citadels in Hanoi"
+    "id": "q28",
+    "question": "What is the traditional architectural style of the Vinh Nghiem Pagoda?",
+    "ground_truth": "The Vinh Nghiem Pagoda is built in the traditional Vietnamese pagoda style, featuring a curved roof, symmetrical structures, and five main architectural combinations including Tam Quan, Tam Bao, Nha To De Nhat, the bell tower, and Nha To De Nhi.",
+    "source_url": [
+      "https://chuavinhnghiem-ducla.vn/gioi-thieu/",
+      "https://vietnamtourism.gov.vn/post/28282"
+    ],
+    "related_docs": [
+      "1759f76c-dbd7-4536-90fa-2cc452595881",
+      "ba0fc89a-5d3e-49d3-986a-926995829b83"
+    ]
   },
   {
-    "id": "q3",
-    "question": "When was the Ho Dynasty Citadel built and what materials were used?",
-    "ground_truth": "The Ho Dynasty Citadel was built in 1397 using massive limestone blocks. It is a unique stone structure demonstrating remarkable creativity and construction techniques of ancient Vietnamese.",
-    "related_docs": ["ho_dynasty_citadel_001"],
-    "expected_context": "construction and architecture of Vietnamese heritage"
+    "id": "q27",
+    "question": "When is the Vinh Nghiem Pagoda Festival usually held?",
+    "ground_truth": "The Vinh Nghiem Pagoda Festival is usually held on February 14 of the lunar calendar every year.",
+    "source_url": [
+      "https://chuavinhnghiem-ducla.vn/gioi-thieu/",
+      "https://vietnamtourism.gov.vn/post/28282"
+    ],
+    "related_docs": ["75c7ebbb-cf05-4990-b20c-a849b88228af"]
   },
   {
-    "id": "q4",
-    "question": "Which UNESCO World Heritage site is located in Ba Dinh district, Hanoi?",
-    "ground_truth": "The Central Thang Long Imperial Citadel is located in Ba Dinh district, Hanoi. It consists of archaeological sites at 18 Hoang Dieu and relics such as Doan Mon Gate, Kinh Thien Palace, and the Flagpole.",
-    "related_docs": ["thang_long_citadel_001", "thang_long_citadel_002"],
-    "expected_context": "UNESCO heritage sites in Hanoi"
+    "id": "q26",
+    "question": "Who was the first abbot of Vinh Nghiem Pagoda in Ho Chi Minh City?",
+    "ground_truth": "Our website does not currently have information about the first abbot of Vinh Nghiem Pagoda.",
+    "source_url": [],
+    "related_docs": []
   },
   {
-    "id": "q5",
-    "question": "What geographical features surround the Ho Dynasty Citadel?",
-    "ground_truth": "The Ho Dynasty Citadel is surrounded by the Buoi River to the north and west, and the Ma Tuong River to the east, creating a strong natural defense system. Magnificent limestone mountains surround the city, enhancing natural beauty and forming strong walls.",
-    "related_docs": ["ho_dynasty_citadel_001"],
-    "expected_context": "geographical location and natural defenses"
+    "id": "q25",
+    "question": "Hello",
+    "ground_truth": "Hello! I hope you're doing well. It seems like you have a question, but it appears to be outside my area of expertise as a heritage assistant. I am primarily focused on providing information about cultural heritage sites, history, and related topics. However, I can certainly help you with some general knowledge if you'd like. Just let me know what you're looking for, and I'll do my best to provide a helpful response based on my understanding. Remember, I'm always here to assist you in any way I can!",
+    "source_url": [],
+    "related_docs": []
   },
   {
-    "id": "q6",
-    "question": "When did UNESCO recognize the Ho Dynasty Citadel as a World Cultural Heritage site?",
-    "ground_truth": "UNESCO designated the Ho Dynasty Citadel as a World Cultural Heritage site in 2011.",
-    "related_docs": ["ho_dynasty_citadel_001"],
-    "expected_context": "UNESCO recognition dates"
+    "id": "q01",
+    "question": "hi",
+    "ground_truth": "I'm a heritage assistant and this question is outside my main area, but hello — I hope you're well. If you'd like general help, tell me what you need.",
+    "source_url": [],
+    "related_docs": []
   },
   {
-    "id": "q7",
-    "question": "What is the historical significance of Thang Long Imperial Citadel?",
-    "ground_truth": "Thang Long Imperial Citadel served as the political center of Vietnam continuously through 13 centuries, from the 11th to the 19th century, under the Ly, Tran, Le, and Nguyen dynasties.",
-    "related_docs": ["thang_long_citadel_001", "thang_long_citadel_002"],
-    "expected_context": "historical significance of Vietnamese imperial citadels"
+    "id": "q02",
+    "question": "How do I learn JavaScript quickly?",
+    "ground_truth": "I'm a heritage assistant and this is outside my main area, but generally you can learn JavaScript faster by practicing daily, building small projects, and following a structured tutorial.",
+    "source_url": [],
+    "related_docs": []
   },
   {
-    "id": "q8",
-    "question": "What architectural structures can be found at the Central Thang Long Imperial Citadel?",
-    "ground_truth": "The Central Thang Long Imperial Citadel contains important architectural structures including Doan Mon Gate, Kinh Thien Palace, the Flagpole, and various archaeological artifacts at the 18 Hoang Dieu site.",
-    "related_docs": ["thang_long_citadel_001", "thang_long_citadel_002"],
-    "expected_context": "architectural features of imperial citadels"
+    "id": "q03",
+    "question": "What is the best way to lose weight?",
+    "ground_truth": "I'm a heritage assistant and this topic is outside my specialty, but healthy weight loss usually involves balanced nutrition, regular exercise, and consistent habits.",
+    "source_url": [],
+    "related_docs": []
   },
   {
-    "id": "q9",
-    "question": "Who was responsible for building the Ho Dynasty Citadel?",
-    "ground_truth": "Ho Quy Ly, an ambitious reformer who established the Ho Dynasty in 1400, was responsible for building the Ho Dynasty Citadel. He decided to move the capital from Thang Long (today's Hanoi) to Tay Do (Vinh Loc, Thanh Hoa).",
-    "related_docs": ["ho_dynasty_citadel_001"],
-    "expected_context": "Ho Dynasty history and leadership"
+    "id": "q04",
+    "question": "Why is the sky blue?",
+    "ground_truth": "I'm a heritage assistant and this question is outside my core domain, but the sky appears blue because sunlight is scattered by the atmosphere (Rayleigh scattering).",
+    "source_url": [],
+    "related_docs": []
+  },
+  {
+    "id": "q05",
+    "question": "How can I improve my English speaking skills?",
+    "ground_truth": "I'm a heritage assistant and this is outside my main area, but improving English speaking typically involves daily practice, listening to native speakers, and speaking with others regularly.",
+    "source_url": [],
+    "related_docs": []
+  },
+  {
+    "id": "q06",
+    "question": "What's the capital of Japan?",
+    "ground_truth": "I'm a heritage assistant and this is outside my specialty, but the capital of Japan is Tokyo.",
+    "source_url": [],
+    "related_docs": []
+  },
+  {
+    "id": "q07",
+    "question": "How do airplanes fly?",
+    "ground_truth": "I'm a heritage assistant and this question lies outside my area, but airplanes fly because wings generate lift as air moves over them, combined with thrust from engines.",
+    "source_url": [],
+    "related_docs": []
+  },
+  {
+    "id": "q08",
+    "question": "What is AI?",
+    "ground_truth": "I'm a heritage assistant and this topic is outside my core focus, but AI refers to systems designed to perform tasks that normally require human intelligence.",
+    "source_url": [],
+    "related_docs": []
+  },
+  {
+    "id": "q09",
+    "question": "Should I buy a gaming laptop or a PC?",
+    "ground_truth": "I'm a heritage assistant and this question is outside my domain, but generally desktops offer more performance per dollar while laptops offer portability—choose based on your priorities.",
+    "source_url": [],
+    "related_docs": []
   },
   {
     "id": "q10",
-    "question": "What was the original name of the Ho Dynasty Citadel's location?",
-    "ground_truth": "The Ho Dynasty Citadel was built at Tay Do, which is now known as Vinh Loc in Thanh Hoa province. It served as the capital after Ho Quy Ly moved it from Thang Long.",
-    "related_docs": ["ho_dynasty_citadel_001"],
-    "expected_context": "historical place names in Vietnam"
+    "question": "What is the meaning of life?",
+    "ground_truth": "I'm a heritage assistant and this philosophical question is outside my specialty; many people find meaning through relationships, purpose, and personal growth.",
+    "source_url": [],
+    "related_docs": []
+  },
+  {
+    "id": "q11",
+    "question": "How do I cook fried rice?",
+    "ground_truth": "I'm a heritage assistant and this is outside my main area, but fried rice is commonly made by stir-frying cooked rice with vegetables, eggs, and seasonings.",
+    "source_url": [],
+    "related_docs": []
+  },
+  {
+    "id": "q12",
+    "question": "Why do we sleep?",
+    "ground_truth": "I'm a heritage assistant and this falls outside my expertise, but sleep allows the body and brain to rest, recover, and consolidate memory.",
+    "source_url": [],
+    "related_docs": []
+  },
+  {
+    "id": "q13",
+    "question": "How can I study more efficiently?",
+    "ground_truth": "I'm a heritage assistant and this is outside my focus, but effective study methods include spaced repetition, active recall, and minimizing distractions.",
+    "source_url": [],
+    "related_docs": []
+  },
+  {
+    "id": "q14",
+    "question": "What are some good movies to watch?",
+    "ground_truth": "I'm a heritage assistant and this is outside my specialty, but popular suggestions depend on taste—try a mix of drama, comedy, and a classic in a genre you like.",
+    "source_url": [],
+    "related_docs": []
+  },
+  {
+    "id": "q15",
+    "question": "How long does it take to learn coding?",
+    "ground_truth": "I'm a heritage assistant and this topic is outside my main area, but learning coding can take weeks to months for basics depending on practice and the language.",
+    "source_url": [],
+    "related_docs": []
+  },
+  {
+    "id": "q16",
+    "question": "What is blockchain?",
+    "ground_truth": "I'm a heritage assistant and this is outside my domain, but blockchain is a decentralized ledger technology used to record transactions securely.",
+    "source_url": [],
+    "related_docs": []
+  },
+  {
+    "id": "q17",
+    "question": "How do I take care of my mental health?",
+    "ground_truth": "I'm a heritage assistant and this falls outside my expertise, but mental health care often includes rest, supportive relationships, and healthy routines; consider professional help if needed.",
+    "source_url": [],
+    "related_docs": []
+  },
+  {
+    "id": "q18",
+    "question": "What should I do when I'm bored?",
+    "ground_truth": "I'm a heritage assistant and this question is outside my domain, but common suggestions include reading, learning a new skill, or exercising.",
+    "source_url": [],
+    "related_docs": []
+  },
+  {
+    "id": "q19",
+    "question": "How do I clean my computer?",
+    "ground_truth": "I'm a heritage assistant and this is outside my main area, but cleaning a computer usually involves removing dust, wiping surfaces, and organizing files and apps.",
+    "source_url": [],
+    "related_docs": []
+  },
+  {
+    "id": "q20",
+    "question": "What is the tallest mountain in the world?",
+    "ground_truth": "I'm a heritage assistant and this is outside my specialty, but the tallest mountain in the world is Mount Everest.",
+    "source_url": [],
+    "related_docs": []
+  },
+  {
+    "id": "q21",
+    "question": "Why do people celebrate New Year?",
+    "ground_truth": "I'm a heritage assistant and this cultural question is outside my main focus, but New Year celebrations mark the start of a new calendar cycle and are observed with traditions worldwide.",
+    "source_url": [],
+    "related_docs": []
+  },
+  {
+    "id": "q22",
+    "question": "How do magnets work?",
+    "ground_truth": "I'm a heritage assistant and this topic is outside my domain, but magnets work because of aligned magnetic domains and the behavior of moving electric charges.",
+    "source_url": [],
+    "related_docs": []
+  },
+  {
+    "id": "q23",
+    "question": "What should I eat for breakfast?",
+    "ground_truth": "I'm a heritage assistant and this is outside my primary area, but balanced breakfast options often include protein, whole grains, and fruit.",
+    "source_url": [],
+    "related_docs": []
+  },
+  {
+    "id": "q24",
+    "question": "Is it better to study in the morning or at night?",
+    "ground_truth": "I'm a heritage assistant and this is outside my expertise, but the best study time varies by person—choose a time when you can focus and stay consistent.",
+    "source_url": [],
+    "related_docs": []
+  },
+  {
+    "id": "q30",
+    "question": "What is the architectural highlight of the Mausoleum and Temple of the Ly Dynasty Kings?",
+    "ground_truth": "Visitors to Do Temple in Bac Ninh can expect to see its intricate architecture, along with various elements within the inner and outer cities. The inner city comprises structures like the harem palace, pavilions, beer houses, stables, and places for worshippers. Meanwhile, the outer city encompasses semicircular lakes, hydrologists, calligraphers, pavilions, stone alligators' temples, among other features. Additionally, the mausoleum area nearby houses significant tombs and valuable artifacts, such as gold-plated lacquerware, bronze cranes, and dragon-carved stone tablets. These sites showcase the rich history, artistry, and cultural heritage of the region, offering a glimpse into the life and traditions of the Ly Dynasty. However, please note that detailed information about specific exhibits might be limited due to the nature of historical and cultural relics.",
+    "source_url": [
+      "https://chuavinhnghiem-ducla.vn/gioi-thieu/",
+      "https://vietnamtourism.gov.vn/post/28282"
+    ],
+    "related_docs": [
+      "b6bb80cc-db3e-4932-b131-938fdc49507d",
+      "9b4ae7e5-0166-4be0-bce6-b6285067afd7",
+      "6d5e7fa9-ae7f-4a9c-b86c-38e0bbe71629"
+    ]
+  },
+  {
+    "id": "q31",
+    "question": "What can visitors expect to see at Do Temple in Bac Ninh?",
+    "ground_truth": "Visitors can explore a complex of pavilions, worship halls, courtyards, and traditional wooden structures displaying detailed artistic work. The temple area includes ritual spaces, symbolic gates, and decorative sculptures that highlight the cultural identity of the region. It is also a place where local traditions and ceremonies continue to be preserved.",
+    "source_url": [
+      "https://chuavinhnghiem-ducla.vn/gioi-thieu/",
+      "https://vietnamtourism.gov.vn/post/28282"
+    ],
+    "related_docs": [
+      "807a3dcd-8ecb-4572-92e7-ede8bf72b997",
+      "f39ec549-4714-4852-b7e3-05593283d4fc",
+      "6d5e7fa9-ae7f-4a9c-b86c-38e0bbe71629"
+    ]
+  },
+  {
+    "id": "q32",
+    "question": "What cultural activities are held at the heritage site of the Ly Dynasty kings?",
+    "ground_truth": "At the heritage site of the Ly Dynasty kings, particularly at Dinh Bang, several cultural activities take place throughout the year. There are three main festivals held annually: . Temple Festival on the 7th day of Lunar January according to the lunar calendar (giỗ Ms. Pham Thi). Communal House Festival on the 15th day of Lunar February also following the lunar calendar (this festival includes opening the holy festival and welcoming the festival with various folk games). Temple Festival on the 15th day of Lunar March, specifically held at Do temple, where the people consider this festival as the celebration of the coronation when the king of the Ly Dynasty ascends.Additionally, the site boasts a rich collection of national historical and cultural relics, featuring elaborate architecture, stone sculptures, wood carvings, and numerous intangible cultural values like worship, festivals, and customs associated with the Ly Dynasty. These elements contribute to the overall cultural experience offered at the heritage site. However, please note that detailed information about specific cultural activities during these events might be limited based on the available historical records.",
+    "source_url": [
+      "https://chuavinhnghiem-ducla.vn/gioi-thieu/",
+      "https://vietnamtourism.gov.vn/post/28282"
+    ],
+    "related_docs": [
+      "d8c24f8f-5e7d-48a8-add0-a5ea3b9338f1",
+      "360c0680-eed6-422f-aab9-89ffde7ecc43",
+      "6d5e7fa9-ae7f-4a9c-b86c-38e0bbe71629"
+    ]
+  },
+  {
+    "id": "q33",
+    "question": "Are there any royal gardens preserved at the Mausoleum and Temple of the Ly Dynasty Kings?",
+    "ground_truth": "Our website currently does not have detailed information on the presence of royal gardens at the Mausoleum and Temple of the Ly Dynasty Kings. However, during the Ly Dynasty in Vietnam, royal gardens were an integral part of the royal lifestyle and served as spaces for leisure, meditation, and rituals. These gardens often featured intricate water features, pavilions, and landscaping techniques reflecting the cultural and artistic values of the time. It would be worth exploring other heritage sites from the same era for more insights into these royal gardens.",
+    "source_url": [],
+    "related_docs": []
+  },
+  {
+    "id": "q34",
+    "question": "Why is Hoan Kiem Lake also called Sword Lake?",
+    "ground_truth": "Hoan Kiem Lake is also called Sword Lake due to the legend of King Le Thai To, who defeated the Ming army and subsequently returned his sword to a golden turtle that had appeared on the lake. According to this story, after the king handed over the sword, the turtle disappeared back into the water, hence giving rise to the name 'Sword Lake' or 'Hoan Kiem Lake'. This tale is deeply rooted in Vietnamese folklore and has been passed down through generations. Additionally, the presence of the Turtle Tower near the lake further emphasizes its connection to this legendary event.",
+    "source_url": [
+      "https://dsvh.gov.vn/di-tich-lich-su-va-danh-lam-thang-canh-ho-hoan-kiem-va-den-ngoc-son-2978",
+      "https://banqldtdthanoi.vn/di-tich-do-ban-quan-ly-truc-tiep/cum-di-tich-quoc-gia-dac-biet-ho-hoan-kiem-va-den-ngoc-son-di-tich-den-ba-kieu/"
+    ],
+    "related_docs": [
+      "f60ec3a6-5dfc-4a5f-87b3-93d1c8c9e285",
+      "5d06b3ee-acfa-4288-ba5f-142563f9dacd"
+    ]
+  },
+  {
+    "id": "q35",
+    "question": "What is notable about The Huc Bridge that leads to Ngoc Son Temple?",
+    "ground_truth": "The Huc Bridge leading to Ngoc Son Temple is notable for its distinctive curved shape, which is a unique combination of European architecture and traditional Vietnamese design elements. It spans across the lake, connecting Ngoc Island to the East Bank of the Lake. The bridge features a total of 15 beats and is painted red, adding to its visual appeal. Furthermore, this historic relic serves as a hub for various activities related to charity, education, patriotism, and anti-French propaganda, making it an important part of the cultural heritage of the region.",
+    "source_url": [
+      "https://dsvh.gov.vn/di-tich-lich-su-va-danh-lam-thang-canh-ho-hoan-kiem-va-den-ngoc-son-2978",
+      "https://banqldtdthanoi.vn/di-tich-do-ban-quan-ly-truc-tiep/cum-di-tich-quoc-gia-dac-biet-ho-hoan-kiem-va-den-ngoc-son-di-tich-den-ba-kieu/"
+    ],
+    "related_docs": [
+      "bc248449-ebaa-48fd-b5e0-27e1e2666d49",
+      "dfd1374c-4f06-428f-9117-f65ed4b133fb"
+    ]
+  },
+  {
+    "id": "q36",
+    "question": "Are there any royal ceremonies still performed at Ngoc Son Temple today?",
+    "ground_truth": "I apologize, but I must inform you that our website currently does not have detailed information on royal ceremonies being performed at Ngoc Son Temple today. However, I can provide you with some general context about the temple. Ngoc Son Temple, also known as the Turtle Tower Temple, is a significant religious complex located in Hanoi, Vietnam. It was originally built during the Ly Dynasty (****-**** AD) and has been restored and expanded multiple times throughout history. The temple is famous for its architectural style, which combines elements of traditional Vietnamese Buddhism and Confucianism with influences from other Asian cultures.Despite not having specific information on current royal ceremonies, exploring the rich history and cultural significance of Ngoc Son Temple can offer valuable insights into ancient Vietnamese heritage, architecture, and religious practices. You may consider visiting the site to experience its beauty and learn more about its role in Vietnamese history and culture.",
+    "source_url": [],
+    "related_docs": []
+  },
+  {
+    "id": "q37",
+    "question": "When did the legend of the king returning the sword to the turtle take place?",
+    "ground_truth": "The legend of the King returning the sword to the turtle is part of Vietnamese folklore and mythology, specifically related to the mythical kingdom of Champa (an ancient Southeast Asian kingdom located in present-day Vietnam). The story dates back to several centuries ago, but its exact timeline is difficult to pinpoint due to the lack of concrete historical records from that time period.In this tale, there was once a powerful king who had lost his precious sword during a battle. He searched for it everywhere but could not find it. One day, while riding on his elephant, he saw a turtle carrying the sword in its mouth. The king asked the turtle where he found the sword, and the turtle replied that it had been given to him by a divine being.To honor the turtle's kindness, the king decided to return the sword to its home. He built a boat and embarked on a journey to reach the turtle's underwater kingdom. Upon arriving, he presented the sword to the turtle and promised to protect it forever. After fulfilling his promise, the king returned to his kingdom with the grateful turtle following closely behind.While the exact date of when this legend took place is unknown, it represents the deep cultural connection between the people of Champa and their reverence for nature and animals. This story continues to be celebrated and retold in Vietnamese culture today.",
+    "source_url": [],
+    "related_docs": []
+  },
+  {
+    "id": "q38",
+    "question": "Where Phu Dong Temple?",
+    "ground_truth": "Phu Dong Temple is located in commune Phu Dong, district Gia Lam, Hanoi, Vietnam. It is associated with the legend of Thanh Giong, one of The Four Immortals' folk beliefs in Vietnam and a hero who helped end the An Dynasty's rule by swiftly defeating enemies like blowing wind and riding iron horses. \n\nThe architectural complex of Phu Dong Giong Temple features traditional elements characteristic of the Northern Delta region, including ditties, ritual grounds, enclosures, beer houses, Upper Temple, Ha Temple, Mau Temple, and Kien Sister Pagoda. These structures are constructed using wood, brick, and stone, featuring curved tile roofs, curved blade heads, sculptures of mascots, and ancient designs. Although there is extensive documentation about this temple, the exact location remains unchanged based on the existing records.",
+    "source_url": [
+      "https://dsvh.gov.vn/di-tich-lich-su-va-kien-truc-nghe-thuat-den-phu-dong-huyen-gia-lam-thanh-pho-ha-noi-2977"
+    ],
+    "related_docs": [
+      "ee14a468-51ef-4637-918c-c3c056895004",
+      "13e3a8d3-04f7-44bc-91c3-dc0d33c17d55"
+    ]
+  },
+  {
+    "id": "q39",
+    "question": "What is the historical significance of Phù Đổng Temple and who is it dedicated to?",
+    "ground_truth": "Phù Đổng Temple holds significant historical importance due to its association with the legend of Thanh Giong, one of The Four Immortals' folk beliefs in Vietnam. Thanh Giong is considered a hero who grew as fast as blowing and riding iron horses to chase away the An Dynasty's Sixth Hung King. As a result, this legend serves as the foundation for the formation of the temple's relic. Additionally, the temple complex consists of Upper Temple, Ha Temple, and Mau Temple, which were built centuries ago to commemorate Thanh Giong and his mother. These structures showcase the traditional architectural style while undergoing various remodels over time. Furthermore, the Phù Đổng Giong Festival, featuring performances reenacting Thanh Giong's journey to battle and other folk games, ceremonies, and community activities, has been recognized as Vietnam's Representative Intangible Cultural Heritage of Humanity by UNESCO, reflecting the nation's patriotic spirit and cultural identity.",
+    "source_url": [
+      "https://dsvh.gov.vn/di-tich-lich-su-va-kien-truc-nghe-thuat-den-phu-dong-huyen-gia-lam-thanh-pho-ha-noi-2977"
+    ],
+    "related_docs": [
+      "ee14a468-51ef-4637-918c-c3c056895004",
+      "b1e6bd9c-b11a-4606-b76c-a7b5f2e81c80",
+      "9c2840ad-5a99-4f97-8878-ac0f26d11998"
+    ]
+  },
+  {
+    "id": "q40",
+    "question": "Where is Phù Đổng Temple located and how can visitors access it?",
+    "ground_truth": "Phù Đổng Temple is situated in commune Phu Dong, district Gia Lam, Hanoi, which is the capital city of Vietnam. To access this historic site, visitors can travel to Hanoi and then head towards district Gia Lam, following the directions for commune Phu Dong. Once you arrive there, you'll find the temple nestled within the local community, offering a glimpse into its rich cultural heritage and connection to the legend of Thanh Giong, one of The Four Immortals' folk beliefs in Vietnam.",
+    "source_url": [
+      "https://dsvh.gov.vn/di-tich-lich-su-va-kien-truc-nghe-thuat-den-phu-dong-huyen-gia-lam-thanh-pho-ha-noi-2977"
+    ],
+    "related_docs": [
+      "ee14a468-51ef-4637-918c-c3c056895004",
+      "39a66664-2e22-49af-be37-9e23566d1ff5",
+      "13e3a8d3-04f7-44bc-91c3-dc0d33c17d55"
+    ]
   }
 ]

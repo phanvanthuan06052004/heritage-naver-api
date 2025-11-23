@@ -1,0 +1,438 @@
+
+🔍 Checking Qdrant collection: heritage_documents
+   ✅ Collection exists
+   📊 Vector count: 450
+   📏 Vector size: 1024
+📂 Loading benchmark data from: D:\heritage-naver-api\benchmark_data.json
+✅ Loaded 40 test cases
+
+
+🚀 Starting benchmark with 40 test cases
+   Collection: heritage_documents
+   Top-K: 5
+
+
+[1/40] Processing...
+
+📝 Test Case: q29
+   Question: Where is the Vinh Nghiem Pagoda located?
+   🤖 Mode: unknown
+   ⏱️  Total time: 6ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[2/40] Processing...
+
+📝 Test Case: q28
+   Question: What is the traditional architectural style of the Vinh Nghiem Pagoda?
+   🤖 Mode: unknown
+   ⏱️  Total time: 3ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[3/40] Processing...
+
+📝 Test Case: q27
+   Question: When is the Vinh Nghiem Pagoda Festival usually held?
+   🤖 Mode: unknown
+   ⏱️  Total time: 2ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[4/40] Processing...
+
+📝 Test Case: q26
+   Question: Who was the first abbot of Vinh Nghiem Pagoda in Ho Chi Minh City?
+   🤖 Mode: unknown
+   ⏱️  Total time: 2ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[5/40] Processing...
+
+📝 Test Case: q25
+   Question: Hello
+   🤖 Mode: unknown
+   ⏱️  Total time: 4ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[6/40] Processing...
+
+📝 Test Case: q01
+   Question: hi
+   🤖 Mode: unknown
+   ⏱️  Total time: 3ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[7/40] Processing...
+
+📝 Test Case: q02
+   Question: How do I learn JavaScript quickly?
+   🤖 Mode: unknown
+   ⏱️  Total time: 3ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[8/40] Processing...
+
+📝 Test Case: q03
+   Question: What is the best way to lose weight?
+   🤖 Mode: unknown
+   ⏱️  Total time: 4ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[9/40] Processing...
+
+📝 Test Case: q04
+   Question: Why is the sky blue?
+   🤖 Mode: unknown
+   ⏱️  Total time: 2ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[10/40] Processing...
+
+📝 Test Case: q05
+   Question: How can I improve my English speaking skills?
+   🤖 Mode: unknown
+   ⏱️  Total time: 3ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[11/40] Processing...
+
+📝 Test Case: q06
+   Question: What's the capital of Japan?
+   🤖 Mode: unknown
+   ⏱️  Total time: 3ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[12/40] Processing...
+
+📝 Test Case: q07
+   Question: How do airplanes fly?
+   🤖 Mode: unknown
+   ⏱️  Total time: 2ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[13/40] Processing...
+
+📝 Test Case: q08
+   Question: What is AI?
+   🤖 Mode: unknown
+   ⏱️  Total time: 2ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[14/40] Processing...
+
+📝 Test Case: q09
+   Question: Should I buy a gaming laptop or a PC?
+   🤖 Mode: unknown
+   ⏱️  Total time: 2ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[15/40] Processing...
+
+📝 Test Case: q10
+   Question: What is the meaning of life?
+   🤖 Mode: unknown
+   ⏱️  Total time: 2ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[16/40] Processing...
+
+📝 Test Case: q11
+   Question: How do I cook fried rice?
+   🤖 Mode: unknown
+   ⏱️  Total time: 2ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[17/40] Processing...
+
+📝 Test Case: q12
+   Question: Why do we sleep?
+   🤖 Mode: unknown
+   ⏱️  Total time: 2ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[18/40] Processing...
+
+📝 Test Case: q13
+   Question: How can I study more efficiently?
+   🤖 Mode: unknown
+   ⏱️  Total time: 2ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[19/40] Processing...
+
+📝 Test Case: q14
+   Question: What are some good movies to watch?
+   🤖 Mode: unknown
+   ⏱️  Total time: 3ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[20/40] Processing...
+
+📝 Test Case: q15
+   Question: How long does it take to learn coding?
+   🤖 Mode: unknown
+   ⏱️  Total time: 2ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[21/40] Processing...
+
+📝 Test Case: q16
+   Question: What is blockchain?
+   🤖 Mode: unknown
+   ⏱️  Total time: 3ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[22/40] Processing...
+
+📝 Test Case: q17
+   Question: How do I take care of my mental health?
+   🤖 Mode: unknown
+   ⏱️  Total time: 2ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[23/40] Processing...
+
+📝 Test Case: q18
+   Question: What should I do when I'm bored?
+   🤖 Mode: unknown
+   ⏱️  Total time: 2ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[24/40] Processing...
+
+📝 Test Case: q19
+   Question: How do I clean my computer?
+   🤖 Mode: unknown
+   ⏱️  Total time: 2ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[25/40] Processing...
+
+📝 Test Case: q20
+   Question: What is the tallest mountain in the world?
+   🤖 Mode: unknown
+   ⏱️  Total time: 2ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[26/40] Processing...
+
+📝 Test Case: q21
+   Question: Why do people celebrate New Year?
+   🤖 Mode: unknown
+   ⏱️  Total time: 3ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[27/40] Processing...
+
+📝 Test Case: q22
+   Question: How do magnets work?
+   🤖 Mode: unknown
+   ⏱️  Total time: 2ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[28/40] Processing...
+
+📝 Test Case: q23
+   Question: What should I eat for breakfast?
+   🤖 Mode: unknown
+   ⏱️  Total time: 2ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[29/40] Processing...
+
+📝 Test Case: q24
+   Question: Is it better to study in the morning or at night?
+   🤖 Mode: unknown
+   ⏱️  Total time: 2ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[30/40] Processing...
+
+📝 Test Case: q30
+   Question: What is the architectural highlight of the Mausoleum and Temple of the Ly Dynasty Kings?
+   🤖 Mode: unknown
+   ⏱️  Total time: 2ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[31/40] Processing...
+
+📝 Test Case: q31
+   Question: What can visitors expect to see at Do Temple in Bac Ninh?
+   🤖 Mode: unknown
+   ⏱️  Total time: 2ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[32/40] Processing...
+
+📝 Test Case: q32
+   Question: What cultural activities are held at the heritage site of the Ly Dynasty kings?
+   🤖 Mode: unknown
+   ⏱️  Total time: 2ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[33/40] Processing...
+
+📝 Test Case: q33
+   Question: Are there any royal gardens preserved at the Mausoleum and Temple of the Ly Dynasty Kings?
+   🤖 Mode: unknown
+   ⏱️  Total time: 3ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[34/40] Processing...
+
+📝 Test Case: q34
+   Question: Why is Hoan Kiem Lake also called Sword Lake?
+   🤖 Mode: unknown
+   ⏱️  Total time: 2ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[35/40] Processing...
+
+📝 Test Case: q35
+   Question: What is notable about The Huc Bridge that leads to Ngoc Son Temple?
+   🤖 Mode: unknown
+   ⏱️  Total time: 2ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[36/40] Processing...
+
+📝 Test Case: q36
+   Question: Are there any royal ceremonies still performed at Ngoc Son Temple today?
+   🤖 Mode: unknown
+   ⏱️  Total time: 2ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[37/40] Processing...
+
+📝 Test Case: q37
+   Question: When did the legend of the king returning the sword to the turtle take place?
+   🤖 Mode: unknown
+   ⏱️  Total time: 2ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[38/40] Processing...
+
+📝 Test Case: q38
+   Question: Where Phu Dong Temple?
+   🤖 Mode: unknown
+   ⏱️  Total time: 3ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[39/40] Processing...
+
+📝 Test Case: q39
+   Question: What is the historical significance of Phù Đổng Temple and who is it dedicated to?
+   🤖 Mode: unknown
+   ⏱️  Total time: 2ms
+   ⚠️  RAG query failed
+   ⏳ Waiting 2s before next test case...
+
+[40/40] Processing...
+
+📝 Test Case: q40
+   Question: Where is Phù Đổng Temple located and how can visitors access it?
+   🤖 Mode: unknown
+   ⏱️  Total time: 2ms
+   ⚠️  RAG query failed
+
+✅ Benchmark completed!
+
+============================================================
+📊 GENERATING BENCHMARK REPORT
+============================================================
+
+
+================================================================================
+📊 BENCHMARK SUMMARY REPORT
+================================================================================
+
+🎯 Overall Statistics:
+   Total Questions: 40
+   Successful: 40 ✅
+   Failed: 0 ❌
+   Average Execution Time: 0.00ms
+   Average Sources Retrieved: 0.00
+
+📈 Average Metrics:
+   BLEU Score:            0.0000 🔴
+   ROUGE-L F1:            0.0000 🔴
+   Cosine (TF-IDF):       0.0000 🔴
+
+🏆 Quality Distribution:
+
+================================================================================
+📋 DETAILED RESULTS
+================================================================================
+
++----+----------+------+---------+--------+---------+----------+
+| ID | Question | BLEU | ROUGE-L | Cosine | Quality | Time(ms) |
++----+----------+------+---------+--------+---------+----------+
++----+----------+------+---------+--------+---------+----------+
+
+================================================================================
+⚠️  WORST PERFORMING QUESTIONS
+================================================================================
+
+================================================================================
+💡 IMPROVEMENT SUGGESTIONS
+================================================================================
+
+1. [Retrieval]
+   ⚠️  Issue: Very few documents retrieved on average
+   💡 Suggestion: Consider increasing topK parameter or improving document indexing
+
+2. [Generation]
+   ⚠️  Issue: Low BLEU scores indicate poor word-level matching
+   💡 Suggestion: Review prompt engineering or consider fine-tuning the generation model
+
+3. [Generation]
+   ⚠️  Issue: Low ROUGE-L scores indicate poor sequence matching
+   💡 Suggestion: Generated answers may be too different from expected format. Review context quality.
+
+4. [Semantic]
+   ⚠️  Issue: Low cosine similarity indicates semantic mismatch
+   💡 Suggestion: Retrieved context may not be relevant. Improve embedding quality or document preprocessing.
+
+================================================================================
+
+✅ Report generation completed!
+
+
+💾 Saving results to: D:\heritage-naver-api\benchmark_results\benchmark_qdrant_2025-11-23T02-25-46-820Z.json
+✅ Results saved successfully!

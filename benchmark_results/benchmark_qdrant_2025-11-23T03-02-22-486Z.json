@@ -1,0 +1,1909 @@
+{
+  "metadata": {
+    "totalQuestions": 40,
+    "timestamp": "2025-11-23T03:02:22.487Z",
+    "benchmarkVersion": "1.0.0"
+  },
+  "summary": {
+    "totalQuestions": 40,
+    "successfulQuestions": 40,
+    "failedQuestions": 0,
+    "avgBLEU": 0.09969249999999999,
+    "avgROUGEL": 0.20917249999999998,
+    "avgCosineTFIDF": 0.3680224999999999,
+    "avgCosineSemantic": 0,
+    "avgExecutionTime": 0,
+    "avgSourcesRetrieved": 0,
+    "qualityDistribution": {
+      "Excellent": 0,
+      "Good": 4,
+      "Fair": 6,
+      "Poor": 5,
+      "Very Poor": 25
+    }
+  },
+  "results": [
+    {
+      "testCaseId": "q29",
+      "question": "Where is the Vinh Nghiem Pagoda located?",
+      "groundTruth": "The Vinh Nghiem Pagoda is located in the middle of Duc La village, Tri Yen commune, Bac Giang city, Bac Giang province, Vietnam.",
+      "generatedAnswer": "The Vinh Nghiem Pagoda is located in the city of Bac Giang, province of Bac Giang. Specifically, it can be found in the middle of Duc La village, commune Tri Yen. Additionally, there is another Vinh Nghiem Pagoda in Saigon (now known as Ho Chi Minh City) at 339 Nam Ky Khoi Nghia Street, Ward 7, District 3. Both pagodas hold significant importance in Vietnamese Buddhism and culture.",
+      "mode": "rag",
+      "sources": [
+        {
+          "content": "Heritage Name: The pagoda Vinh Nghiem Description: The pagoda Vinh Nghiem is an ancient pagoda located in the middle of Duc La village, commune Tri Yen, city Bac Giang, province Bac Giang. This temple",
+          "vectorScore": 0.9905115,
+          "metadata": {
+            "chunkIndex": 0,
+            "heritageId": "67f3edb13834bd66e6e1c681",
+            "name": "The pagoda Vinh Nghiem",
+            "nameSlug": "chua-vinh-nghiem",
+            "location": "City Bac Giang, province Bac Giang",
+            "locationSlug": "thanh-pho-bac-giang-tinh-bac-giang",
+            "latitude": "21°12′53″B",
+            "longitude": "106°19′25″Đ",
+            "tags": [
+              "Di tích lịch sử",
+              "kiến trúc nghệ thuật"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su",
+              "kien-truc-nghe-thuat"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "4",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:38:54.801Z",
+            "contentType": "overview"
+          }
+        },
+        {
+          "content": "The pagoda has a very beautiful location, yes, the feng shui land of the ancients \"painted knees, pedals on water\". In front of the pagoda is the junction of the Thuong and Luc Nam rivers, with their ",
+          "vectorScore": 0.9884629,
+          "metadata": {
+            "chunkIndex": 1,
+            "heritageId": "67f3edb13834bd66e6e1c681",
+            "name": "The pagoda Vinh Nghiem",
+            "nameSlug": "chua-vinh-nghiem",
+            "location": "City Bac Giang, province Bac Giang",
+            "locationSlug": "thanh-pho-bac-giang-tinh-bac-giang",
+            "latitude": "21°12′53″B",
+            "longitude": "106°19′25″Đ",
+            "tags": [
+              "Di tích lịch sử",
+              "kiến trúc nghệ thuật"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su",
+              "kien-truc-nghe-thuat"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "4",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:38:54.801Z",
+            "contentType": "overview"
+          }
+        },
+        {
+          "content": "Nghiem, and at the same time leading the management of the Buddhist Religious Committee Vietnam provincial Bac Giang. Location: City Bac Giang, province Bac Giang Coordinates: 21°12′53″B, 106°19′25″Đ",
+          "vectorScore": 0.9880898,
+          "metadata": {
+            "chunkIndex": 3,
+            "heritageId": "67f3edb13834bd66e6e1c681",
+            "name": "The pagoda Vinh Nghiem",
+            "nameSlug": "chua-vinh-nghiem",
+            "location": "City Bac Giang, province Bac Giang",
+            "locationSlug": "thanh-pho-bac-giang-tinh-bac-giang",
+            "latitude": "21°12′53″B",
+            "longitude": "106°19′25″Đ",
+            "tags": [
+              "Di tích lịch sử",
+              "kiến trúc nghệ thuật"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su",
+              "kien-truc-nghe-thuat"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "4",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:38:54.801Z",
+            "contentType": "overview"
+          }
+        },
+        {
+          "content": "Nghiem pagoda at Saigon (now the city Ho Chi Minh), located at 339 Nam Ky Khoi Nghia Street Street, Ward 7, District 3. This temple became famous, being an important religious and cultural center, att",
+          "vectorScore": 0.98806465,
+          "metadata": {
+            "chunkIndex": 4,
+            "heritageId": "67f3edb13834bd66e6e1c681",
+            "name": "The pagoda Vinh Nghiem",
+            "nameSlug": "chua-vinh-nghiem",
+            "location": "City Bac Giang, province Bac Giang",
+            "locationSlug": "thanh-pho-bac-giang-tinh-bac-giang",
+            "latitude": "21°12′53″B",
+            "longitude": "106°19′25″Đ",
+            "tags": [
+              "Di tích lịch sử",
+              "kiến trúc nghệ thuật"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su",
+              "kien-truc-nghe-thuat"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "4",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:38:54.801Z",
+            "contentType": "history"
+          }
+        },
+        {
+          "content": "School was born and flourished at the temple Vinh Nghiem, with an important contribution of Thien Su Truc Lam Hao Kien. During the development of Buddhism Vietnam, some monks from the North moved sout",
+          "vectorScore": 0.9877894,
+          "metadata": {
+            "chunkIndex": 3,
+            "heritageId": "67f3edb13834bd66e6e1c681",
+            "name": "The pagoda Vinh Nghiem",
+            "nameSlug": "chua-vinh-nghiem",
+            "location": "City Bac Giang, province Bac Giang",
+            "locationSlug": "thanh-pho-bac-giang-tinh-bac-giang",
+            "latitude": "21°12′53″B",
+            "longitude": "106°19′25″Đ",
+            "tags": [
+              "Di tích lịch sử",
+              "kiến trúc nghệ thuật"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su",
+              "kien-truc-nghe-thuat"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "4",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:38:54.801Z",
+            "contentType": "history"
+          }
+        }
+      ],
+      "metrics": {
+        "bleu": 0.21,
+        "rouge_l_precision": 0.2353,
+        "rouge_l_recall": 0.6957,
+        "rouge_l_f1": 0.3516,
+        "cosine_tfidf": 0.6953,
+        "precision": 0.8,
+        "recall": 1,
+        "f1": 0.888888888888889,
+        "totalTime": 10340,
+        "mode": "rag"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q28",
+      "question": "What is the traditional architectural style of the Vinh Nghiem Pagoda?",
+      "groundTruth": "The Vinh Nghiem Pagoda is built in the traditional Vietnamese pagoda style, featuring a curved roof, symmetrical structures, and five main architectural combinations including Tam Quan, Tam Bao, Nha To De Nhat, the bell tower, and Nha To De Nhi.",
+      "generatedAnswer": "The traditional architectural style of the Vinh Nghiem Pagoda features its characteristic curved roof, symmetrical structures, and adheres to ancient norms. This style can be observed through the five main architectural combinations present within the pagoda, namely Tam Quan, Tam Bao, Nha To De Nhat, bell tower, and Nha To De Nhi, each serving specific functions in the religious life and practices of Buddhists. Furthermore, the stunning location of the pagoda, nestled between the Thuong and Luc Nam rivers and backed by Co Tien mountain, enhances its aesthetic appeal while maintaining a harmonious balance with its surroundings. Overall, the Vinh Nghiem Pagoda's traditional architectural style reflects both reverence for ancient norms and a focus on creating a visually striking and spiritually meaningful space for its visitors.",
+      "mode": "rag",
+      "sources": [
+        {
+          "content": "Architecture of The pagoda Vinh Nghiem: The pagoda Vinh Nghiem is one of the representative pagodas of the traditional architecture Vietnam, located on a campus of about 1 hectares with a harmonious a",
+          "vectorScore": 0.99150854,
+          "metadata": {
+            "chunkIndex": 0,
+            "heritageId": "67f3edb13834bd66e6e1c681",
+            "name": "The pagoda Vinh Nghiem",
+            "nameSlug": "chua-vinh-nghiem",
+            "location": "City Bac Giang, province Bac Giang",
+            "locationSlug": "thanh-pho-bac-giang-tinh-bac-giang",
+            "latitude": "21°12′53″B",
+            "longitude": "106°19′25″Đ",
+            "tags": [
+              "Di tích lịch sử",
+              "kiến trúc nghệ thuật"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su",
+              "kien-truc-nghe-thuat"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "4",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:38:54.801Z",
+            "contentType": "architecture"
+          }
+        },
+        {
+          "content": "style of pagoda architecture, featuring its characteristic curved roof, symmetrical structures and ancient norms. The pagoda consists of 5 main architectural combinations: Tam Quan, Tam Bao, Nha To De",
+          "vectorScore": 0.98970556,
+          "metadata": {
+            "chunkIndex": 1,
+            "heritageId": "67f3edb13834bd66e6e1c681",
+            "name": "The pagoda Vinh Nghiem",
+            "nameSlug": "chua-vinh-nghiem",
+            "location": "City Bac Giang, province Bac Giang",
+            "locationSlug": "thanh-pho-bac-giang-tinh-bac-giang",
+            "latitude": "21°12′53″B",
+            "longitude": "106°19′25″Đ",
+            "tags": [
+              "Di tích lịch sử",
+              "kiến trúc nghệ thuật"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su",
+              "kien-truc-nghe-thuat"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "4",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:38:54.801Z",
+            "contentType": "architecture"
+          }
+        },
+        {
+          "content": "North-South symmetrical axes. Pho Minh Pagoda: Three bays, two floors of four roofs; 27x9m rectangular courtyard, 19. 51m high square tower; 'Cong' type main pagoda, consisting of front road, incense ",
+          "vectorScore": 0.9877534,
+          "metadata": {
+            "chunkIndex": 3,
+            "heritageId": "67f3edb13834bd66e6e1c67c",
+            "name": "Tran Temple and Pho Minh Pagoda",
+            "nameSlug": "den-tran-va-chua-pho-minh",
+            "location": "Nam Dinh city, provincial Nam Dinh",
+            "locationSlug": "thanh-pho-nam-dinh-tinh-nam-dinh",
+            "latitude": "20.4554335°B",
+            "longitude": "106.1659867°Đ",
+            "tags": [
+              "Di tích lịch sử",
+              "kiến trúc nghệ thuật"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su",
+              "kien-truc-nghe-thuat"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "2",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:34:07.260Z",
+            "contentType": "architecture"
+          }
+        },
+        {
+          "content": "The pagoda has a very beautiful location, yes, the feng shui land of the ancients \"painted knees, pedals on water\". In front of the pagoda is the junction of the Thuong and Luc Nam rivers, with their ",
+          "vectorScore": 0.98742914,
+          "metadata": {
+            "chunkIndex": 1,
+            "heritageId": "67f3edb13834bd66e6e1c681",
+            "name": "The pagoda Vinh Nghiem",
+            "nameSlug": "chua-vinh-nghiem",
+            "location": "City Bac Giang, province Bac Giang",
+            "locationSlug": "thanh-pho-bac-giang-tinh-bac-giang",
+            "latitude": "21°12′53″B",
+            "longitude": "106°19′25″Đ",
+            "tags": [
+              "Di tích lịch sử",
+              "kiến trúc nghệ thuật"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su",
+              "kien-truc-nghe-thuat"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "4",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:38:54.801Z",
+            "contentType": "overview"
+          }
+        }
+      ],
+      "metrics": {
+        "bleu": 0.1695,
+        "rouge_l_precision": 0.2205,
+        "rouge_l_recall": 0.7,
+        "rouge_l_f1": 0.3353,
+        "cosine_tfidf": 0.6112,
+        "precision": 0.5,
+        "recall": 1,
+        "f1": 0.6666666666666666,
+        "totalTime": 11655,
+        "mode": "rag"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q27",
+      "question": "When is the Vinh Nghiem Pagoda Festival usually held?",
+      "groundTruth": "The Vinh Nghiem Pagoda Festival is usually held on February 14 of the lunar calendar every year.",
+      "generatedAnswer": "The Vinh Nghiem Pagoda Festival is usually held on February 14 of the lunar calendar every year. This event attracts a significant number of locals and tourists from home and abroad. It's also associated with the religion Truc Lam Yen Tu, which has a rich history in Vietnam and holds great cultural significance. In 2013, the festival was recognized as part of the National Intangible Cultural Heritage, further emphasizing its importance to both national and international audiences.",
+      "mode": "rag",
+      "sources": [
+        {
+          "content": "Cultural Festival at The pagoda Vinh Nghiem: The festival at the Pagoda Vinh Nghiem is usually held on February 14 of the lunar calendar every year. The festival attracts a large number of locals alon",
+          "vectorScore": 0.99578935,
+          "metadata": {
+            "chunkIndex": 0,
+            "heritageId": "67f3edb13834bd66e6e1c681",
+            "name": "The pagoda Vinh Nghiem",
+            "nameSlug": "chua-vinh-nghiem",
+            "location": "City Bac Giang, province Bac Giang",
+            "locationSlug": "thanh-pho-bac-giang-tinh-bac-giang",
+            "latitude": "21°12′53″B",
+            "longitude": "106°19′25″Đ",
+            "tags": [
+              "Di tích lịch sử",
+              "kiến trúc nghệ thuật"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su",
+              "kien-truc-nghe-thuat"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "4",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:38:54.801Z",
+            "contentType": "festival"
+          }
+        },
+        {
+          "content": "on Buddhism and culture Vietnam. The Pagoda Festival Vinh Nghiem is associated with the religion Truc Lam Yen Tu. Over the past 700 years, this religion has undergone many events and is associated wit",
+          "vectorScore": 0.99254113,
+          "metadata": {
+            "chunkIndex": 2,
+            "heritageId": "67f3edb13834bd66e6e1c681",
+            "name": "The pagoda Vinh Nghiem",
+            "nameSlug": "chua-vinh-nghiem",
+            "location": "City Bac Giang, province Bac Giang",
+            "locationSlug": "thanh-pho-bac-giang-tinh-bac-giang",
+            "latitude": "21°12′53″B",
+            "longitude": "106°19′25″Đ",
+            "tags": [
+              "Di tích lịch sử",
+              "kiến trúc nghệ thuật"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su",
+              "kien-truc-nghe-thuat"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "4",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:38:54.801Z",
+            "contentType": "festival"
+          }
+        },
+        {
+          "content": "and ideology of this meditation stream still being cultivated and practiced by monks and nuns throughout Vietnam. In 2013, the Pagoda Festival Vinh Nghiem was included in the National Intangible Cultu",
+          "vectorScore": 0.99312156,
+          "metadata": {
+            "chunkIndex": 3,
+            "heritageId": "67f3edb13834bd66e6e1c681",
+            "name": "The pagoda Vinh Nghiem",
+            "nameSlug": "chua-vinh-nghiem",
+            "location": "City Bac Giang, province Bac Giang",
+            "locationSlug": "thanh-pho-bac-giang-tinh-bac-giang",
+            "latitude": "21°12′53″B",
+            "longitude": "106°19′25″Đ",
+            "tags": [
+              "Di tích lịch sử",
+              "kiến trúc nghệ thuật"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su",
+              "kien-truc-nghe-thuat"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "4",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:38:54.801Z",
+            "contentType": "festival"
+          }
+        }
+      ],
+      "metrics": {
+        "bleu": 0.2021,
+        "rouge_l_precision": 0.2179,
+        "rouge_l_recall": 1,
+        "rouge_l_f1": 0.3579,
+        "cosine_tfidf": 0.8995,
+        "precision": 0.3333333333333333,
+        "recall": 1,
+        "f1": 0.5,
+        "totalTime": 9020,
+        "mode": "rag"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q26",
+      "question": "Who was the first abbot of Vinh Nghiem Pagoda in Ho Chi Minh City?",
+      "groundTruth": "Our website does not currently have information about the first abbot of Vinh Nghiem Pagoda.",
+      "generatedAnswer": "Our website currently does not have detailed information on the first abbot of Vinh Nghiem Pagoda in Ho Chi Minh City. However, we can provide some general context about the pagoda and its history. \n\nVinh Nghiem Pagoda, also known as the Reclining Buddha Pagoda, is a prominent Buddhist temple located in central Ho Chi Minh City, Vietnam. It was built in the early 19th century during the reign of King Minh Mang of the Nguyen Dynasty. The pagoda is famous for its large statue of the reclining Buddha and its stunning architecture influenced by traditional Vietnamese architectural styles.\n\nThroughout its long history, Vinh Nghiem Pagoda has been home to several abbots who have guided the temple's spiritual community and contributed to its preservation and development. Unfortunately, without specific information on the first abbot, we cannot provide your requested details at this time.",
+      "mode": "general",
+      "sources": [],
+      "metrics": {
+        "bleu": 0.0509,
+        "rouge_l_precision": 0.0909,
+        "rouge_l_recall": 0.8667,
+        "rouge_l_f1": 0.1646,
+        "cosine_tfidf": 0.6149,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "totalTime": 8839,
+        "mode": "general"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q25",
+      "question": "Hello",
+      "groundTruth": "Hello! I hope you're doing well. It seems like you have a question, but it appears to be outside my area of expertise as a heritage assistant. I am primarily focused on providing information about cultural heritage sites, history, and related topics. However, I can certainly help you with some general knowledge if you'd like. Just let me know what you're looking for, and I'll do my best to provide a helpful response based on my understanding. Remember, I'm always here to assist you in any way I can!",
+      "generatedAnswer": "Hello! It seems like you have a question that falls outside my area of expertise as a heritage assistant. While I can provide some general knowledge on various topics, I am unable to directly answer your inquiry. \n\nIf you're interested in learning about Vietnamese history, culture, or heritage, feel free to ask any related questions, and I'll do my best to assist you within my capabilities. However, if your question pertains to specific heritage sites, monuments, or events, it would be more appropriate to consult with a professional in the field of cultural heritage or tourism.\n\nIn the meantime, I hope you find some useful information from the resources available online or through other trusted sources. Remember, always strive to learn from reputable sources to ensure accuracy in your research.",
+      "mode": "general",
+      "sources": [],
+      "metrics": {
+        "bleu": 0.2084,
+        "rouge_l_precision": 0.2803,
+        "rouge_l_recall": 0.3936,
+        "rouge_l_f1": 0.3274,
+        "cosine_tfidf": 0.4954,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "totalTime": 3859,
+        "mode": "general"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q01",
+      "question": "hi",
+      "groundTruth": "I'm a heritage assistant and this question is outside my main area, but hello — I hope you're well. If you'd like general help, tell me what you need.",
+      "generatedAnswer": "Hello! It seems like your question is related to a topic outside of my primary area of expertise, which is focused on Vietnamese historical heritage sites. However, I can still provide you with some helpful information based on my general knowledge.\n\nIf you're curious about something else, such as languages, cultures, or travel tips, feel free to ask; I'll do my best to assist you with whatever you're looking for. Just keep in mind that my responses may not be specifically about heritage sites.\n\nRemember to always stay respectful and courteous when communicating with others, including me here on this platform. Have a great day!",
+      "mode": "general",
+      "sources": [],
+      "metrics": {
+        "bleu": 0,
+        "rouge_l_precision": 0.0926,
+        "rouge_l_recall": 0.3226,
+        "rouge_l_f1": 0.1439,
+        "cosine_tfidf": 0.288,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "totalTime": 2896,
+        "mode": "general"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q02",
+      "question": "How do I learn JavaScript quickly?",
+      "groundTruth": "I'm a heritage assistant and this is outside my main area, but generally you can learn JavaScript faster by practicing daily, building small projects, and following a structured tutorial.",
+      "generatedAnswer": "Learning JavaScript quickly can be a challenging but rewarding experience. Here are some tips to help you on your journey:\n\n1. Start with the basics: Begin by understanding the fundamentals of programming concepts such as variables, loops, conditionals, and functions. This will provide a strong foundation for learning JavaScript.\n\n2. Use interactive resources: Websites like Codecademy, W3Schools, and Mozilla Developer Network (MDN) offer interactive tutorials and exercises that allow you to practice coding right away. These resources are designed specifically for beginners and cover all aspects of JavaScript.\n\n3. Read and study documentation: MDN is a great resource for finding comprehensive documentation on JavaScript. It includes detailed explanations of syntax, methods, and events, along with examples and code snippets. Reading through this documentation will give you a solid understanding of the language.\n\n4. Work on projects: The best way to learn any programming language is by working on real-world projects. Choose small projects related to your interests or skills, and try to complete them step by step. This will help you apply what you've learned and understand how different parts of the language work together.\n\n5. Join online communities: There are many online communities dedicated to JavaScript, where you can find support, ask questions, and collaborate with others. Websites like Stack Overflow, GitHub, and Reddit's r/javascript subreddit are great places to start.\n\n6. Practice regularly: Like any skill, practicing regularly will help you improve your proficiency in JavaScript. Set aside time each day to work on your projects, solve coding challenges, and review your progress.\n\n7. Don't be afraid to make mistakes: Making errors is a natural part of the learning process. Instead of getting discouraged, use these mistakes as opportunities to learn from your mistakes and improve your understanding of the language.\n\n8. Stay motivated: Learning a new skill can be challenging, so it's important to stay motivated and focused. Set achievable goals for yourself, celebrate your progress, and remember that every little bit of effort counts towards becoming proficient in JavaScript.\n\nRemember, everyone learns at their own pace, so don't rush yourself. Be patient, persistent, and keep practicing, and you'll be well on your way to mastering JavaScript!",
+      "mode": "general",
+      "sources": [],
+      "metrics": {
+        "bleu": 0,
+        "rouge_l_precision": 0.0299,
+        "rouge_l_recall": 0.3667,
+        "rouge_l_f1": 0.0553,
+        "cosine_tfidf": 0.2089,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "totalTime": 9264,
+        "mode": "general"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q03",
+      "question": "What is the best way to lose weight?",
+      "groundTruth": "I'm a heritage assistant and this topic is outside my specialty, but healthy weight loss usually involves balanced nutrition, regular exercise, and consistent habits.",
+      "generatedAnswer": "Dear user,\n\nWhile I am primarily focused on providing information about Vietnamese heritage sites, I can certainly offer some general advice on how to lose weight. Losing weight effectively involves a combination of healthy eating habits, regular exercise, and managing stress levels.\n\nFirstly, it's crucial to maintain a balanced diet with plenty of fruits, vegetables, lean proteins, whole grains, and low-fat dairy products. Reducing processed foods, sugary drinks, and snacks high in calories will help control portion sizes and prevent overeating.\n\nSecondly, engaging in regular physical activity is key to losing weight. Aim for at least 150 minutes of moderate-intensity aerobic exercise or 75 minutes of vigorous-intensity aerobic exercise per week, along with muscle-strengthening activities twice a week. This can be achieved through activities like walking, jogging, swimming, cycling, or strength training exercises.\n\nLastly, managing stress plays a significant role in weight loss. High stress levels can lead to emotional eating and increase cortisol levels, which can contribute to weight gain. Practicing relaxation techniques such as deep breathing, meditation, or yoga can help manage stress levels and improve overall well-being.\n\nRemember, losing weight should be a gradual process and supported by a consistent effort towards maintaining a healthy lifestyle. It's important to consult with a healthcare professional before starting any weight loss program, especially if you have pre-existing health conditions or concerns.\n\nI hope this information helps you in your journey towards a healthier lifestyle. If you have any further questions related to Vietnamese heritage sites, please don't hesitate to ask.\n\nBest regards,\n[Your Name]\nHeritage Assistant.",
+      "mode": "general",
+      "sources": [],
+      "metrics": {
+        "bleu": 0.0001,
+        "rouge_l_precision": 0.0338,
+        "rouge_l_recall": 0.36,
+        "rouge_l_f1": 0.0619,
+        "cosine_tfidf": 0.1519,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "totalTime": 6875,
+        "mode": "general"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q04",
+      "question": "Why is the sky blue?",
+      "groundTruth": "I'm a heritage assistant and this question is outside my core domain, but the sky appears blue because sunlight is scattered by the atmosphere (Rayleigh scattering).",
+      "generatedAnswer": "I'm sorry, but your question falls outside my area of expertise as a heritage assistant. I specialize in Vietnamese historical heritage, not in the physical sciences like optics. However, I can provide you with a brief explanation based on widely-accepted scientific theories.\n\nThe color of the sky appears blue due to a phenomenon called Rayleigh scattering. As sunlight enters Earth's atmosphere, it encounters molecules such as nitrogen and oxygen, which cause the light to scatter in various directions. Blue light has shorter wavelengths than other colors, so it scatters more easily compared to red and orange light. This scattered blue light is what we see when we look up at the sky during the day. The combination of these scattered blue rays creates the appearance of a blue sky. \n\nIt's important to note that this explanation doesn't account for all aspects of why the sky appears blue, but it provides a basic understanding of the process behind this natural phenomenon.",
+      "mode": "general",
+      "sources": [],
+      "metrics": {
+        "bleu": 0.0293,
+        "rouge_l_precision": 0.0788,
+        "rouge_l_recall": 0.4815,
+        "rouge_l_f1": 0.1354,
+        "cosine_tfidf": 0.2566,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "totalTime": 4026,
+        "mode": "general"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q05",
+      "question": "How can I improve my English speaking skills?",
+      "groundTruth": "I'm a heritage assistant and this is outside my main area, but improving English speaking typically involves daily practice, listening to native speakers, and speaking with others regularly.",
+      "generatedAnswer": "Improving your English speaking skills involves a combination of practice, exposure, and conscious effort. Here are some helpful tips:\n\n1. Practice regularly: Set aside time each day to practice speaking English with friends, family, or language exchange partners. You can also try joining online conversation groups or finding a tutor for one-on-one sessions.\n\n2. Listen and repeat: Focus on listening to English spoken by native speakers as much as possible. Pay attention to pronunciation, intonation, and accent. Then, try repeating what you've heard after the speaker to improve your own pronunciation.\n\n3. Watch and speak: Watch English movies, TV shows, or podcasts and try to follow along without subtitles. Afterward, discuss the content with someone who understands English well. This will help you learn vocabulary and improve your comprehension.\n\n4. Read and speak: Read English books, articles, or blogs out loud. Try to understand the context and meaning behind the words. When you're ready, have someone review your reading aloud to provide feedback on pronunciation and fluency.\n\n5. Speak confidently: Don't be afraid to make mistakes when speaking English. Confidence is key! The more you speak, the better you'll become. Remember, it takes time and practice to improve, so be patient and keep working on it.\n\n6. Use resources: Utilize various English learning resources such as grammar books, online courses, apps, or podcasts to enhance your understanding of the language and improve your speaking skills.\n\n7. Be consistent: Consistency is crucial for improvement. Make sure to dedicate time every day to practicing your English speaking skills, even if it's just for a few minutes. Over time, these small efforts will add up and lead to significant progress.",
+      "mode": "general",
+      "sources": [],
+      "metrics": {
+        "bleu": 0,
+        "rouge_l_precision": 0.0387,
+        "rouge_l_recall": 0.3793,
+        "rouge_l_f1": 0.0703,
+        "cosine_tfidf": 0.2777,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "totalTime": 7860,
+        "mode": "general"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q06",
+      "question": "What's the capital of Japan?",
+      "groundTruth": "I'm a heritage assistant and this is outside my specialty, but the capital of Japan is Tokyo.",
+      "generatedAnswer": "I apologize, but your question is outside my area of expertise as I am focused on providing information about Vietnamese historical heritage. However, I can provide you with the relevant information for your inquiry. \n\nThe capital city of Japan is Tokyo. Tokyo is located in the Kanto region of Honshu, one of the four main islands of Japan. It is the country's largest metropolitan area and serves as both the political and economic center of Japan. The city hosts numerous national institutions, including the Japanese government's primary administrative building, the Imperial Palace. Additionally, Tokyo is home to some of the world's most famous landmarks, such as the Tokyo Tower, the Sensō-ji Temple, and the Tsukiji Fish Market.",
+      "mode": "general",
+      "sources": [],
+      "metrics": {
+        "bleu": 0.0327,
+        "rouge_l_precision": 0.0826,
+        "rouge_l_recall": 0.5556,
+        "rouge_l_f1": 0.1439,
+        "cosine_tfidf": 0.2573,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "totalTime": 3750,
+        "mode": "general"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q07",
+      "question": "How do airplanes fly?",
+      "groundTruth": "I'm a heritage assistant and this question lies outside my area, but airplanes fly because wings generate lift as air moves over them, combined with thrust from engines.",
+      "generatedAnswer": "While I am primarily focused on providing information about Vietnamese heritage sites, I can certainly share some basic knowledge about how airplanes fly.\n\nAirplanes achieve flight through four key principles: lift, thrust, drag, and weight. \n\n1. Lift: This is created by differences in air pressure between the top and bottom surfaces of the wings. As air flows over the top surface of the wing, it creates a low-pressure area, causing the wing to be lifted off the ground. The opposite happens on the bottom surface, which reduces the overall lift force. Airspeed plays a crucial role in generating lift; faster speeds result in more lift.\n\n2. Thrust: This is generated by the airplane's engines, which push air backward. The movement of this pushed air creates a high-pressure area behind the airplane, pushing it forward. Together with the lift force, thrust propels the airplane through the air.\n\n3. Drag: This occurs as air flows around the airplane's body, causing resistance. To minimize drag, airplane designers employ streamlined shapes and materials such as lightweight aluminum. Additionally, moving at higher speeds typically results in reduced drag.\n\n4. Weight: This refers to the mass of the airplane and its contents, including fuel for the engines. For an airplane to remain airborne, the combined lift force must be greater than the weight of the aircraft. If the lift force is equal to or less than the weight, the airplane will descend until either it gains enough altitude to generate sufficient lift or runs out of fuel.\n\nBy controlling these four forces, pilots can maneuver their airplanes in various ways, from simple takeoffs and landings to complex aerial maneuvers like loops, turns, and strafing. These principles form the basis of aerodynamics, the branch of physics that studies how air moves around objects, and they have greatly influenced the development of modern aviation technology.",
+      "mode": "general",
+      "sources": [],
+      "metrics": {
+        "bleu": 0,
+        "rouge_l_precision": 0.0354,
+        "rouge_l_recall": 0.3793,
+        "rouge_l_f1": 0.0647,
+        "cosine_tfidf": 0.2215,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "totalTime": 7669,
+        "mode": "general"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q08",
+      "question": "What is AI?",
+      "groundTruth": "I'm a heritage assistant and this topic is outside my core focus, but AI refers to systems designed to perform tasks that normally require human intelligence.",
+      "generatedAnswer": "AI, short for Artificial Intelligence, refers to the simulation of human intelligence in machines that are programmed to think and learn like humans. These machines use algorithms, statistical models, and machine learning techniques to perform tasks that typically require human cognitive abilities such as perception, reasoning, problem-solving, and decision-making. AI has numerous applications across various industries, including healthcare, finance, transportation, and entertainment, among others. It can assist with data analysis, automate routine tasks, and even make predictions based on patterns found in large datasets. However, it's important to note that AI systems are still tools developed by humans and may not always provide accurate or unbiased results, requiring continuous monitoring and improvement.",
+      "mode": "general",
+      "sources": [],
+      "metrics": {
+        "bleu": 0.0305,
+        "rouge_l_precision": 0.0783,
+        "rouge_l_recall": 0.3333,
+        "rouge_l_f1": 0.1268,
+        "cosine_tfidf": 0.2149,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "totalTime": 3087,
+        "mode": "general"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q09",
+      "question": "Should I buy a gaming laptop or a PC?",
+      "groundTruth": "I'm a heritage assistant and this question is outside my domain, but generally desktops offer more performance per dollar while laptops offer portability—choose based on your priorities.",
+      "generatedAnswer": "While I am a specialist in Vietnamese historical heritage, I can provide some general advice on choosing between a gaming laptop and a PC for gaming purposes.\n\nBoth gaming laptops and PCs have their own advantages and disadvantages. A gaming laptop is portable and designed specifically for gaming, with powerful hardware optimized for performance. They are easy to transport and ideal for playing games on the go. However, they tend to be more expensive than regular laptops and may not offer the same level of upgradability as a PC.\n\nA PC, on the other hand, offers more flexibility and customization options. You can choose components such as the CPU, GPU, RAM, and storage based on your specific needs and budget. Upgrading parts in a PC is also relatively easy, allowing you to improve performance over time. However, setting up and maintaining a PC requires more technical skills and effort compared to a gaming laptop.\n\nIn conclusion, if portability and ease of use are your primary concerns, a gaming laptop would be a better choice. If you prioritize customization, upgradability, and long-term performance, a PC might be more suitable. It ultimately depends on your personal preferences and priorities when considering a gaming computer.",
+      "mode": "general",
+      "sources": [],
+      "metrics": {
+        "bleu": 0.0001,
+        "rouge_l_precision": 0.064,
+        "rouge_l_recall": 0.4483,
+        "rouge_l_f1": 0.1121,
+        "cosine_tfidf": 0.1853,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "totalTime": 5165,
+        "mode": "general"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q10",
+      "question": "What is the meaning of life?",
+      "groundTruth": "I'm a heritage assistant and this philosophical question is outside my specialty; many people find meaning through relationships, purpose, and personal growth.",
+      "generatedAnswer": "The meaning of life is a complex philosophical question that has been debated and discussed by people throughout history. It is beyond the scope of my expertise as a heritage assistant to provide a definitive answer, as it involves personal beliefs, values, and experiences. However, I can offer some widely-known perspectives on this topic based on various philosophical, religious, and scientific viewpoints.\n\nFrom a philosophical perspective, existentialist thinkers such as Jean-Paul Sartre and Friedrich Nietzsche have explored the idea of \"existence precedes essence,\" suggesting that one's purpose and meaning in life are shaped by their individual choices and actions. They emphasize the importance of creating one's own meaning through freedom and responsibility.\n\nReligions also offer different interpretations of the meaning of life. For instance, in Christianity, the concept of salvation and living a virtuous life guided by divine love may be seen as the ultimate purpose. In Buddhism, the pursuit of enlightenment and liberation from suffering (nirvana) is considered the path to true meaning.\n\nScientific perspectives focus on the concept of evolution and adaptation, suggesting that life's purpose is to survive and reproduce. This view emphasizes the role of natural selection and survival of the fittest in shaping species and their behaviors.\n\nUltimately, the meaning of life is subjective and varies from person to person. It is important for individuals to reflect on their values, aspirations, and experiences to find their unique purpose and fulfillment in life. Exploring different perspectives and engaging in meaningful conversations with others can help broaden one's understanding and enrich one's personal journey.",
+      "mode": "general",
+      "sources": [],
+      "metrics": {
+        "bleu": 0.0001,
+        "rouge_l_precision": 0.0417,
+        "rouge_l_recall": 0.4783,
+        "rouge_l_f1": 0.0767,
+        "cosine_tfidf": 0.2241,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "totalTime": 6454,
+        "mode": "general"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q11",
+      "question": "How do I cook fried rice?",
+      "groundTruth": "I'm a heritage assistant and this is outside my main area, but fried rice is commonly made by stir-frying cooked rice with vegetables, eggs, and seasonings.",
+      "generatedAnswer": "Cooking fried rice is a simple process that involves combining cooked rice with various ingredients such as vegetables, meats, eggs, and seasonings. Here's a step-by-step guide on how to make fried rice:\n\nIngredients:\n- 2 cups cooked white or brown rice\n- 1 tablespoon vegetable oil (or other preferred cooking oil)\n- 1 onion, finely chopped\n- 3 cloves garlic, minced\n- 1 green bell pepper, diced\n- 1 cup frozen vegetables (e.g., peas, carrots, corn)\n- 4 oz cooked shrimp, chicken, beef, or tofu (optional)\n- 2 eggs, beaten\n- 2 tablespoons soy sauce\n- 1 teaspoon sesame oil\n- Salt and pepper, to taste\n\nInstructions:\n\n1. Heat the oil in a large non-stick frying pan over medium heat.\n\n2. Add the chopped onion and garlic, and sauté for about 2 minutes until the onion becomes translucent.\n\n3. Add the diced green bell pepper and frozen vegetables, and continue to sauté for another 2-3 minutes, stirring occasionally.\n\n4. If using cooked meat or seafood, add it to the pan now and mix well with the vegetables.\n\n5. Pour the beaten eggs into the pan and scramble them until they're cooked through but still slightly runny.\n\n6. Add the cooked rice to the pan, breaking up any clumps with a spatula. Stir fry the rice, egg, and vegetables together for about 2-3 minutes, allowing the flavors to combine.\n\n7. Season the fried rice with soy sauce, sesame oil, salt, and pepper according to your taste preferences. Continue to stir fry for another minute or two until the rice is heated through and the flavors are well-blended.\n\n8. Serve hot and enjoy your delicious fried rice!",
+      "mode": "general",
+      "sources": [],
+      "metrics": {
+        "bleu": 0.0002,
+        "rouge_l_precision": 0.0366,
+        "rouge_l_recall": 0.3571,
+        "rouge_l_f1": 0.0664,
+        "cosine_tfidf": 0.2877,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "totalTime": 7776,
+        "mode": "general"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q12",
+      "question": "Why do we sleep?",
+      "groundTruth": "I'm a heritage assistant and this falls outside my expertise, but sleep allows the body and brain to rest, recover, and consolidate memory.",
+      "generatedAnswer": "While I am a specialist in Vietnamese historical heritage, I can provide some general knowledge on the topic of sleep. Sleep is a natural biological function essential for human health and well-being. It serves several important functions, including:\n\n1. Restoration: During sleep, our bodies repair tissues, restore energy levels, and improve cognitive function. This process is known as homeostasis.\n\n2. Memory consolidation: Sleep plays a crucial role in consolidating memories from the day, helping us better retain and recall information.\n\n3. Emotional regulation: Sleep helps regulate emotions by processing negative experiences and promoting relaxation. Lack of sleep can lead to mood swings, irritability, and anxiety.\n\n4. Physical recovery: Sleep allows our body to heal and recover from injuries, illnesses, and other physical stressors. Deep sleep, specifically, is particularly beneficial for this process.\n\n5. Growth and development: Adequate sleep is necessary for growth and development, especially during childhood and adolescence. \n\nIn summary, sleep is vital for maintaining good health, learning, emotional regulation, and overall well-being. While it may not always be easy to get enough sleep, making sure to prioritize restful hours can significantly improve daily functioning and quality of life.",
+      "mode": "general",
+      "sources": [],
+      "metrics": {
+        "bleu": 0,
+        "rouge_l_precision": 0.0573,
+        "rouge_l_recall": 0.4583,
+        "rouge_l_f1": 0.1019,
+        "cosine_tfidf": 0.0638,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "totalTime": 5266,
+        "mode": "general"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q13",
+      "question": "How can I study more efficiently?",
+      "groundTruth": "I'm a heritage assistant and this is outside my focus, but effective study methods include spaced repetition, active recall, and minimizing distractions.",
+      "generatedAnswer": "Studying efficiently requires a combination of effective time management, focus, organization, and proper techniques. Here are some tips to help you study more efficiently:\n\n1. Set clear goals: Define what you want to achieve from your studies. This will help you stay focused and motivated.\n\n2. Plan your study sessions: Schedule dedicated study times and allocate enough time for each topic. Break tasks into smaller, manageable chunks to avoid feeling overwhelmed.\n\n3. Create a study environment: Find a quiet place with minimal distractions where you can concentrate on your studies. Make sure your workspace is comfortable and well-lit.\n\n4. Use active learning techniques: Engage with the material by actively participating in class, asking questions, and taking notes. Practice summarizing key points to retain information better.\n\n5. Take breaks: Regular breaks (10-15 minutes) can help refresh your mind and improve focus. Avoid cramming; instead, use these breaks to review and consolidate your knowledge.\n\n6. Stay organized: Organize your study materials, such as textbooks, notes, and assignments, in a systematic manner. This will make it easier to locate specific information when needed.\n\n7. Prioritize important topics: Focus on the most crucial subjects first, as they often carry higher grades or have greater impact on your overall performance.\n\n8. Review regularly: Periodically revisit previously studied material to reinforce your understanding and prevent forgetting. Consistent review helps build long-term memory.\n\n9. Get enough rest: Adequate sleep is essential for cognitive function and memory consolidation. Aim for 7-8 hours of sleep per night.\n\n10. Stay motivated: Celebrate small successes along the way and remind yourself of why you're studying. Encourage positive self-talk and maintain a growth mindset to overcome challenges.\n\nBy implementing these strategies, you'll be able to study more efficiently and effectively manage your academic workload.",
+      "mode": "general",
+      "sources": [],
+      "metrics": {
+        "bleu": 0,
+        "rouge_l_precision": 0.0234,
+        "rouge_l_recall": 0.3043,
+        "rouge_l_f1": 0.0435,
+        "cosine_tfidf": 0.1278,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "totalTime": 8151,
+        "mode": "general"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q14",
+      "question": "What are some good movies to watch?",
+      "groundTruth": "I'm a heritage assistant and this is outside my specialty, but popular suggestions depend on taste—try a mix of drama, comedy, and a classic in a genre you like.",
+      "generatedAnswer": "Hello! It seems like you're looking for movie recommendations. As a heritage assistant, my primary focus is on providing information about historical heritage sites and events, so I don't have personal preferences for movies. However, I can offer some suggestions based on popular genres and themes that many people enjoy watching.\n\nIf you're interested in drama, films such as \"The Shawshank Redemption,\" \"The Godfather,\" and \"Forrest Gump\" are highly acclaimed classics that explore themes of friendship, family, and overcoming adversity. For action and adventure, consider \"Indiana Jones,\" \"Die Hard,\" or \"The Lord of the Rings\" trilogy, which feature thrilling narratives and memorable characters. \n\nIf you prefer comedies, try \"The Big Lebowski,\" \"A Walk in the Woods,\" or \"The Princess Bride,\" which often combine humor with deeper life lessons. Sci-fi fans might enjoy \"Inception,\" \"The Matrix,\" or \"E.T. the Extra-Terrestrial.\" And if you want to feel inspired by real-life stories, check out documentaries like \"Man on Wire,\" \"March of the Penguins,\" or \"20 Feet from Stardom.\"\n\nRemember, everyone has different tastes in movies, so it's always a good idea to explore various genres and reviews to find something that resonates with you. Enjoy your movie-watching experience!",
+      "mode": "general",
+      "sources": [],
+      "metrics": {
+        "bleu": 0.0001,
+        "rouge_l_precision": 0.0588,
+        "rouge_l_recall": 0.3871,
+        "rouge_l_f1": 0.1021,
+        "cosine_tfidf": 0.1572,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "totalTime": 5911,
+        "mode": "general"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q15",
+      "question": "How long does it take to learn coding?",
+      "groundTruth": "I'm a heritage assistant and this topic is outside my main area, but learning coding can take weeks to months for basics depending on practice and the language.",
+      "generatedAnswer": "Learning coding can vary greatly depending on several factors such as the complexity of the programming language, the level of proficiency desired, and individual learning styles. In general, it takes anywhere from a few weeks to several years for someone to become proficient in coding. \n\nFor beginners, starting with a beginner-friendly programming language like Python or Scratch can help accelerate the learning process. These languages have simple syntax and plenty of resources available to guide learners through their journey. It's important to remember that practice makes perfect, so spending consistent time working on coding projects will help solidify understanding and improve skills over time.\n\nOn the other hand, advanced coders who want to master specific technologies or programming paradigms may need more time to acquire deep knowledge and proficiency. For example, learning complex frameworks like React or TensorFlow might require several months or even years of dedicated study and hands-on experience.\n\nRemember, everyone learns at their own pace, so don't be discouraged if progress seems slow. Stay persistent, keep practicing, and seek out additional resources (like online courses, tutorials, and forums) to continually expand your knowledge and skills.",
+      "mode": "general",
+      "sources": [],
+      "metrics": {
+        "bleu": 0.0002,
+        "rouge_l_precision": 0.0469,
+        "rouge_l_recall": 0.3103,
+        "rouge_l_f1": 0.0814,
+        "cosine_tfidf": 0.2377,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "totalTime": 4815,
+        "mode": "general"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q16",
+      "question": "What is blockchain?",
+      "groundTruth": "I'm a heritage assistant and this is outside my domain, but blockchain is a decentralized ledger technology used to record transactions securely.",
+      "generatedAnswer": "Blockchain is a distributed ledger technology (DLT) that records transactions across numerous computers on the internet. It was first introduced in 2008 as part of the development of the cryptocurrency Bitcoin. The concept behind blockchain is to create a secure, transparent, and tamper-proof system for storing and sharing data.\n\nEach block in a blockchain contains a group of transactions, along with a cryptographic hash of the previous block. When new transactions are added to the chain, they are verified by multiple participants (nodes) in the network before being recorded in the next block. This process ensures that once a transaction is included in a block, it cannot be altered or deleted without the consensus of the majority of nodes in the network.\n\nWhile initially developed for cryptocurrencies, blockchain technology has since been applied to various industries, such as supply chain management, voting systems, and digital identity verification. Its decentralized nature and ability to provide transparency and security make it a promising tool for future applications.\n\nHowever, it's important to note that while blockchain offers several benefits, it also comes with challenges related to scalability, energy consumption, and regulation. Nonetheless, its potential to revolutionize many aspects of our daily lives remains undeniable.",
+      "mode": "general",
+      "sources": [],
+      "metrics": {
+        "bleu": 0.0001,
+        "rouge_l_precision": 0.0345,
+        "rouge_l_recall": 0.3043,
+        "rouge_l_f1": 0.0619,
+        "cosine_tfidf": 0.319,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "totalTime": 5293,
+        "mode": "general"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q17",
+      "question": "How do I take care of my mental health?",
+      "groundTruth": "I'm a heritage assistant and this falls outside my expertise, but mental health care often includes rest, supportive relationships, and healthy routines; consider professional help if needed.",
+      "generatedAnswer": "Taking care of your mental health is crucial for overall well-being. Here are some general tips on how to maintain good mental health:\n\n1. Practice self-care: Make time for activities that bring you joy and relaxation, such as reading, listening to music, spending time with loved ones, or taking a relaxing bath.\n\n2. Get enough sleep: Aim for 7-8 hours of quality sleep each night to help your brain recharge and improve mood.\n\n3. Eat a balanced diet: Consuming nutritious foods can provide your body with the energy it needs to function properly, which can positively impact your mental health.\n\n4. Exercise regularly: Physical activity releases endorphins, natural mood boosters, that can help reduce stress and anxiety. Try engaging in activities like walking, jogging, yoga, or swimming.\n\n5. Manage stress: Identify sources of stress in your life and develop coping strategies to deal with them effectively. This could include deep breathing exercises, meditation, journaling, or seeking support from friends or a therapist.\n\n6. Connect with others: Social connections play a vital role in our mental health. Spend time with family and friends, join clubs or groups related to your interests, or consider volunteering to meet new people and strengthen your social network.\n\n7. Set realistic goals: Setting achievable goals can give you a sense of accomplishment and boost your confidence. Celebrate small wins along the way to reinforce positive thinking.\n\n8. Seek professional help if needed: If you're struggling with mental health issues, don't hesitate to seek help from a mental health professional, such as a psychologist or psychiatrist. They can provide guidance and support to help manage your symptoms.\n\nRemember, everyone's journey towards maintaining good mental health is unique. Be kind to yourself and remember that progress takes time and effort.",
+      "mode": "general",
+      "sources": [],
+      "metrics": {
+        "bleu": 0.0106,
+        "rouge_l_precision": 0.0369,
+        "rouge_l_recall": 0.3929,
+        "rouge_l_f1": 0.0675,
+        "cosine_tfidf": 0.2209,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "totalTime": 7650,
+        "mode": "general"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q18",
+      "question": "What should I do when I'm bored?",
+      "groundTruth": "I'm a heritage assistant and this question is outside my domain, but common suggestions include reading, learning a new skill, or exercising.",
+      "generatedAnswer": "When you're bored, there are several activities you can engage in to alleviate your boredom and improve your well-being. Here are some suggestions:\n\n1. Read: Reading is a great way to expand your knowledge and stimulate your mind. Choose a genre that interests you, such as fiction, non-fiction, or self-improvement books.\n\n2. Learn a new skill: Pick up a new hobby or skill, like painting, cooking, playing a musical instrument, or learning a new language. This will help you develop new abilities and keep your mind engaged.\n\n3. Exercise: Engaging in physical activity, such as going for a walk, jog, or practicing yoga, can help clear your mind and boost your mood.\n\n4. Listen to music: Music has a powerful effect on our emotions and can help lift your spirits when you're feeling bored. Choose your favorite songs or explore new genres to find something that resonates with you.\n\n5. Watch a movie or TV show: Select a film or TV show that captures your interest, whether it's a classic, a current release, or a documentary. This can provide entertainment and also allow you to learn more about different cultures and topics.\n\n6. Create art: Drawing, painting, or crafting can be a relaxing and enjoyable way to express yourself and unwind. Find materials and tools that inspire you and let your creativity flow.\n\n7. Connect with others: Spend time with friends, family, or loved ones. Chatting, sharing stories, or simply spending quality time together can help combat boredom and strengthen relationships.\n\n8. Practice meditation or deep breathing: Taking a few minutes to focus on your breath and relax can help calm your mind and reduce feelings of boredom. You can try guided meditations or apps specifically designed for relaxation.\n\n9. Learn a new language: Practicing speaking, listening, reading, and writing in a new language can be both challenging and rewarding. Consider signing up for a language class, downloading language learning apps, or finding online resources to help you get started.\n\n10. Plan out your day: Take a few minutes to organize your tasks and set achievable goals for the day. This can help prevent boredom by providing structure and purpose to your time.\n\nRemember, taking care of yourself and engaging in activities that bring joy and fulfillment is essential for maintaining good mental health and combating bored",
+      "mode": "general",
+      "sources": [],
+      "metrics": {
+        "bleu": 0.0001,
+        "rouge_l_precision": 0.0178,
+        "rouge_l_recall": 0.3043,
+        "rouge_l_f1": 0.0337,
+        "cosine_tfidf": 0,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "totalTime": 9818,
+        "mode": "general"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q19",
+      "question": "How do I clean my computer?",
+      "groundTruth": "I'm a heritage assistant and this is outside my main area, but cleaning a computer usually involves removing dust, wiping surfaces, and organizing files and apps.",
+      "generatedAnswer": "Cleaning your computer involves several steps to maintain its performance and protect against potential issues. Here's a general guide on how to clean your computer:\n\n1. Update software and drivers: Make sure your operating system and all installed software are up to date with the latest security patches and driver updates. This will help prevent vulnerabilities and ensure optimal performance.\n\n2. Delete unnecessary files: Regularly delete temporary files, cache, and other unnecessary data stored on your computer. You can use built-in tools like Disk Cleanup for Windows or System Information for macOS to identify and remove these files.\n\n3. Defragment and optimize hard drive space: Over time, your hard drive may become fragmented, causing slow performance. Use built-in disk defragmentation tools (e.g., Disk Defragmenter for Windows) to reorganize your files and improve speed.\n\n4. Run antivirus and anti-malware scans: Install and regularly run comprehensive antivirus and anti-malware programs to protect your computer from malware, viruses, and other online threats.\n\n5. Perform a system reset: If your computer is experiencing frequent crashes, freezes, or other performance issues, consider performing a system reset. This will erase all personal data but restore your computer to its factory settings, ensuring a clean start. Be careful when doing this, as it will erase all your files and settings.\n\n6. Clean your browser: Regularly clear your web browser's cache, cookies, and browsing history. This helps keep your computer cleaner and frees up storage space. Most browsers have built-in options to do this.\n\n7. Disconnect peripherals: When not in use, disconnect any external devices such as printers, scanners, or external hard drives. This prevents them from slowing down your computer by continuously running in the background.\n\n8. Optimize power settings: Adjust your computer's power settings to reduce energy consumption and improve performance. For example, you can turn off display brightness, disable screen savers, and lower processor and graphics settings during non-critical tasks.\n\n9. Maintain hardware: Ensure all hardware components, such as RAM, hard drive, and cooling system, are functioning correctly. Check for signs of wear and tear, and replace or repair any damaged parts as needed.\n\n10. Regularly update your computer: Keep your computer updated with the latest software and firmware releases. This ensures",
+      "mode": "general",
+      "sources": [],
+      "metrics": {
+        "bleu": 0,
+        "rouge_l_precision": 0.0239,
+        "rouge_l_recall": 0.3333,
+        "rouge_l_f1": 0.0446,
+        "cosine_tfidf": 0.1804,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "totalTime": 10031,
+        "mode": "general"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q20",
+      "question": "What is the tallest mountain in the world?",
+      "groundTruth": "I'm a heritage assistant and this is outside my specialty, but the tallest mountain in the world is Mount Everest.",
+      "generatedAnswer": "The tallest mountain in the world is Mount Everest. It stands at 8,848 meters (29,029 feet) above sea level. Located in the Mahalangur mountain range in the Himalayas, on the border between Nepal and Tibet, it is recognized as the highest point on Earth by various national measurement systems. The summit has been reached by numerous mountaineering expeditions from around the world since its first successful ascent in 1953 by Sir Edmund Hillary of New Zealand and Tenzing Norgay, a Sherpa from Nepal.",
+      "mode": "general",
+      "sources": [],
+      "metrics": {
+        "bleu": 0.0954,
+        "rouge_l_precision": 0.1059,
+        "rouge_l_recall": 0.4286,
+        "rouge_l_f1": 0.1698,
+        "cosine_tfidf": 0.15,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "totalTime": 3205,
+        "mode": "general"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q21",
+      "question": "Why do people celebrate New Year?",
+      "groundTruth": "I'm a heritage assistant and this cultural question is outside my main focus, but New Year celebrations mark the start of a new calendar cycle and are observed with traditions worldwide.",
+      "generatedAnswer": "I'm sorry, but celebrating New Year is not directly related to my area of expertise, which is focused on preserving and promoting Vietnamese historical heritage sites. However, I can provide you with some general information about why people celebrate New Year.\n\nNew Year celebrations have been observed by various cultures around the world for thousands of years. The primary reasons for celebrating New Year include marking the end of one year and the beginning of a new one, reflecting on personal achievements and failures, making resolutions for the upcoming year, and expressing gratitude for the past year. Additionally, many cultures believe that New Year brings good luck, prosperity, and opportunities for growth and renewal.\n\nDifferent cultures may have their own traditions and customs associated with New Year celebrations. For instance, in Western countries, it is common to exchange gifts, attend parties, watch fireworks, and ring in the new year with friends and family. In Eastern cultures like China, Japan, and Vietnam, traditional festivals, lantern releases, and ancestor worship are also part of the New Year celebrations.\n\nOverall, the celebration of New Year serves as a time for reflection, renewal, and looking forward to a brighter future.",
+      "mode": "general",
+      "sources": [],
+      "metrics": {
+        "bleu": 0.0002,
+        "rouge_l_precision": 0.066,
+        "rouge_l_recall": 0.4063,
+        "rouge_l_f1": 0.1135,
+        "cosine_tfidf": 0.2588,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "totalTime": 4869,
+        "mode": "general"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q22",
+      "question": "How do magnets work?",
+      "groundTruth": "I'm a heritage assistant and this topic is outside my domain, but magnets work because of aligned magnetic domains and the behavior of moving electric charges.",
+      "generatedAnswer": "I'm sorry, but as a heritage assistant, my primary focus is on providing information about historical heritage sites and related topics. However, I can provide you with some general knowledge about how magnets work.\n\nMagnets work due to the behavior of atomic particles called electrons. In magnetic materials, like iron, nickel, and cobalt, there are unpaired electrons which have a property called \"spin.\" These spins align themselves in a way that creates a magnetic field around the material. \n\nWhen two magnets are brought close to each other, their magnetic fields interact, causing the aligned spins to either attract or repel each other. This attraction or repulsion between magnets is what allows them to stick together or push away from each other. The strength of this interaction depends on the similarities in the magnetic properties of the materials involved.\n\nIn summary, magnets work by utilizing the alignment of electron spins within certain materials to create and interact with magnetic fields, resulting in attractive or repulsive forces between magnets.",
+      "mode": "general",
+      "sources": [],
+      "metrics": {
+        "bleu": 0.0003,
+        "rouge_l_precision": 0.0774,
+        "rouge_l_recall": 0.4815,
+        "rouge_l_f1": 0.1333,
+        "cosine_tfidf": 0.2674,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "totalTime": 4151,
+        "mode": "general"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q23",
+      "question": "What should I eat for breakfast?",
+      "groundTruth": "I'm a heritage assistant and this is outside my primary area, but balanced breakfast options often include protein, whole grains, and fruit.",
+      "generatedAnswer": "I'm sorry, but as a heritage assistant, my primary focus is on providing information about historic sites and cultural heritage. However, I can still offer some helpful advice on what to eat for breakfast based on general dietary guidelines and widely-known recommendations.\n\nA balanced breakfast typically includes protein, complex carbohydrates, healthy fats, and fiber. Some good options for breakfast include:\n\n1. Oatmeal with fruits and nuts: Oats provide sustained energy from their complex carbohydrates, while fruits and nuts add vitamins, minerals, and healthy fats.\n\n2. Greek yogurt with berries and granola: Greek yogurt is rich in protein and probiotics, while berries offer antioxidants and fiber, and granola provides additional nutrients like calcium and magnesium.\n\n3. Eggs (boiled, scrambled, or poached) with avocado and whole-grain toast: Eggs are a great source of high-quality protein, while avocado adds healthy fats and heart-healthy monounsaturated fats, and whole-grain toast supplies fiber and complex carbohydrates.\n\n4. Smoothie made with fresh fruits, yogurt, and almond milk: A smoothie packed with various fruits, yogurt, and almond milk offers a mix of vitamins, minerals, proteins, and healthy fats without the need for refined sugars.\n\n5. Protein pancakes or waffles with fruit and nut butter: These options provide protein from plant-based sources such as legumes, nuts, or seeds, along with complex carbohydrates, fiber, and healthy fats from the ingredients used in the pancakes or waffles.\n\nRemember to choose foods that cater to your individual nutritional needs and preferences, and always stay hydrated by drinking plenty of water throughout the day.",
+      "mode": "general",
+      "sources": [],
+      "metrics": {
+        "bleu": 0.0002,
+        "rouge_l_precision": 0.0581,
+        "rouge_l_recall": 0.6522,
+        "rouge_l_f1": 0.1068,
+        "cosine_tfidf": 0.3556,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "totalTime": 7400,
+        "mode": "general"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q24",
+      "question": "Is it better to study in the morning or at night?",
+      "groundTruth": "I'm a heritage assistant and this is outside my expertise, but the best study time varies by person—choose a time when you can focus and stay consistent.",
+      "generatedAnswer": "While I am primarily focused on providing information related to Vietnamese heritage sites, I can offer some insights into studying habits based on widely-known research and personal preferences. \n\nVarious studies suggest that people generally perform better academically in the morning than at night. This is partly due to the natural biological rhythm of the human body, which tends to be more alert and productive during the early hours of the day. Additionally, focusing on tasks in the morning allows for fresh starts and reduced distractions from activities earlier in the day.\n\nHowever, individual preferences and routines may vary. Some individuals find that they have greater concentration and productivity in the evening, particularly when working on creative or problem-solving tasks. It's important to experiment with different study times and evaluate what works best for your unique needs and schedule.\n\nIn conclusion, while there isn't one definitive answer regarding whether it's better to study in the morning or at night, considering factors such as your own biology, lifestyle, and learning style can help you determine which time of day suits you best for academic success.",
+      "mode": "general",
+      "sources": [],
+      "metrics": {
+        "bleu": 0,
+        "rouge_l_precision": 0.0532,
+        "rouge_l_recall": 0.3448,
+        "rouge_l_f1": 0.0922,
+        "cosine_tfidf": 0.0362,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "totalTime": 4499,
+        "mode": "general"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q30",
+      "question": "What is the architectural highlight of the Mausoleum and Temple of the Ly Dynasty Kings?",
+      "groundTruth": "Visitors to Do Temple in Bac Ninh can expect to see its intricate architecture, along with various elements within the inner and outer cities. The inner city comprises structures like the harem palace, pavilions, beer houses, stables, and places for worshippers. Meanwhile, the outer city encompasses semicircular lakes, hydrologists, calligraphers, pavilions, stone alligators' temples, among other features. Additionally, the mausoleum area nearby houses significant tombs and valuable artifacts, such as gold-plated lacquerware, bronze cranes, and dragon-carved stone tablets. These sites showcase the rich history, artistry, and cultural heritage of the region, offering a glimpse into the life and traditions of the Ly Dynasty. However, please note that detailed information about specific exhibits might be limited due to the nature of historical and cultural relics.",
+      "generatedAnswer": "The architectural highlight of the Mausoleum and Temple of the Ly Dynasty Kings lies in its combination of intricate stone sculptures, elaborate wood carvings, unique worship figures, and exquisite construction techniques. These elements create a harmonious yet mystical atmosphere, reflecting the advanced knowledge and creativity of the architects during that era. The complex comprises two main areas: the Do Temple and the Mausoleum Area, which houses the burial sites of the Ly Dynasty kings and their royal families along with valuable artifacts such as gold-plated lacquerware, bronze cranes, and dragon-carved stone tablets. Overall, this impressive structure showcases the sophistication and artistic mastery of its creators while preserving significant aspects of Vietnam's cultural heritage.",
+      "mode": "rag",
+      "sources": [
+        {
+          "content": "Architecture of Mausoleum and Temple of the Ly Dynasty Kings: Mausoleum and Temple of the Ly Dynasty Kings is a remarkable architecture with stone sculpture, wood sculpture, sculpture of worship and e",
+          "vectorScore": 0.99045223,
+          "metadata": {
+            "chunkIndex": 0,
+            "heritageId": "67f3edb13834bd66e6e1c680",
+            "name": "Mausoleum and Temple of the Ly Dynasty Kings",
+            "nameSlug": "khu-lang-mo-va-den-tho-cac-vi-vua-trieu-ly",
+            "location": "City Tu Son, province Bac Ninh",
+            "locationSlug": "thanh-pho-tu-son-tinh-bac-ninh",
+            "latitude": "21°06′26″B",
+            "longitude": "105°57′37″Đ",
+            "tags": [
+              "Di tích lịch sử"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "1",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:37:59.345Z",
+            "contentType": "architecture"
+          }
+        },
+        {
+          "content": "stone sculpture, wood, sculpture, and many intangible cultural values such as worship, festivals, customs. Do Temple has inner city, outer city, pentathlon, preceptor, harem, harem and breweries; Maus",
+          "vectorScore": 0.988904,
+          "metadata": {
+            "chunkIndex": 2,
+            "heritageId": "67f3edb13834bd66e6e1c680",
+            "name": "Mausoleum and Temple of the Ly Dynasty Kings",
+            "nameSlug": "khu-lang-mo-va-den-tho-cac-vi-vua-trieu-ly",
+            "location": "City Tu Son, province Bac Ninh",
+            "locationSlug": "thanh-pho-tu-son-tinh-bac-ninh",
+            "latitude": "21°06′26″B",
+            "longitude": "105°57′37″Đ",
+            "tags": [
+              "Di tích lịch sử"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "1",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:37:59.345Z",
+            "contentType": "overview"
+          }
+        },
+        {
+          "content": "of the nation with the influence of Western culture, creating a harmonious, magnificent but also mysterious space. This relic population reflects the sophistication in the building art and creativity ",
+          "vectorScore": 0.98765934,
+          "metadata": {
+            "chunkIndex": 3,
+            "heritageId": "67f3edb13834bd66e6e1c670",
+            "name": "Historic population Hue Imperial City",
+            "nameSlug": "quan-the-di-tich-co-do-hue",
+            "location": "City Hue, town Huong Thuy, town Huong Tra, district Phu Vang, province Thua Thien Hue",
+            "locationSlug": "thanh-pho-hue-thi-xa-huong-thuy-thi-xa-huong-tra-huyen-phu-vang-huyen-phu-loc-tinh-thua-thien-hue",
+            "latitude": "16°28′11″B",
+            "longitude": "107°34′40″Đ",
+            "tags": [
+              "Di tích lịch sử",
+              "kiến trúc nghệ thuật"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su",
+              "kien-truc-nghe-thuat"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "1",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:26:45.004Z",
+            "contentType": "history"
+          }
+        }
+      ],
+      "metrics": {
+        "bleu": 0.1731,
+        "rouge_l_precision": 0.3017,
+        "rouge_l_recall": 0.2778,
+        "rouge_l_f1": 0.2893,
+        "cosine_tfidf": 0.1071,
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "totalTime": 10692,
+        "mode": "rag"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q31",
+      "question": "What can visitors expect to see at Do Temple in Bac Ninh?",
+      "groundTruth": "Visitors can explore a complex of pavilions, worship halls, courtyards, and traditional wooden structures displaying detailed artistic work. The temple area includes ritual spaces, symbolic gates, and decorative sculptures that highlight the cultural identity of the region. It is also a place where local traditions and ceremonies continue to be preserved.",
+      "generatedAnswer": "Visitors to Do Temple in Bac Ninh can expect to see numerous important tombs and precious artifacts, such as gold-plated lacquerware, bronze cranes, and dragon-carved stone tablets. Additionally, they'll be able to witness traditional festivals like the Temple Festival, Communal House Festival, and Temple Ascension Festival held annually, which not only showcase the rich folk cultural values but also attract a large number of tourists. Furthermore, the surrounding Mausoleum Area with tombs of kings from the Ly Dynasty provides a glimpse into the architectural marvels and significant historical figures of that era. Overall, Do Temple offers a diverse experience showcasing both tangible and intangible cultural heritage elements of Vietnam. However, please note that detailed information about specific exhibits within the temple complex might be limited due to the nature of preservation and accessibility.",
+      "mode": "rag",
+      "sources": [
+        {
+          "content": "many important tombs and precious artifacts such as gold-plated lacquerware, bronze crane, dragon-carved stone tablets. There are traditional festivals every year: Temple Festival, Communal House Fest",
+          "vectorScore": 0.9914453,
+          "metadata": {
+            "chunkIndex": 3,
+            "heritageId": "67f3edb13834bd66e6e1c680",
+            "name": "Mausoleum and Temple of the Ly Dynasty Kings",
+            "nameSlug": "khu-lang-mo-va-den-tho-cac-vi-vua-trieu-ly",
+            "location": "City Tu Son, province Bac Ninh",
+            "locationSlug": "thanh-pho-tu-son-tinh-bac-ninh",
+            "latitude": "21°06′26″B",
+            "longitude": "105°57′37″Đ",
+            "tags": [
+              "Di tích lịch sử"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "1",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:37:59.345Z",
+            "contentType": "overview"
+          }
+        },
+        {
+          "content": "Phap Dien Tao Bi\", beer forehead touching bifurcation; beer house (right) similar, has \"Do temple restoration beer\". Mausoleum Area kings Ly Dynasty 800m away from Do temple, including King's tomb Ly ",
+          "vectorScore": 0.99047214,
+          "metadata": {
+            "chunkIndex": 6,
+            "heritageId": "67f3edb13834bd66e6e1c680",
+            "name": "Mausoleum and Temple of the Ly Dynasty Kings",
+            "nameSlug": "khu-lang-mo-va-den-tho-cac-vi-vua-trieu-ly",
+            "location": "City Tu Son, province Bac Ninh",
+            "locationSlug": "thanh-pho-tu-son-tinh-bac-ninh",
+            "latitude": "21°06′26″B",
+            "longitude": "105°57′37″Đ",
+            "tags": [
+              "Di tích lịch sử"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "1",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:37:59.345Z",
+            "contentType": "architecture"
+          }
+        },
+        {
+          "content": "Son, Bac Ninh, are special national historical and cultural relics that mark the development of Ly Dynasty (1009-1225). The relic site, consisting of Do Temple and Mausoleum Area kings Ly Dynasty, fea",
+          "vectorScore": 0.99021566,
+          "metadata": {
+            "chunkIndex": 1,
+            "heritageId": "67f3edb13834bd66e6e1c680",
+            "name": "Mausoleum and Temple of the Ly Dynasty Kings",
+            "nameSlug": "khu-lang-mo-va-den-tho-cac-vi-vua-trieu-ly",
+            "location": "City Tu Son, province Bac Ninh",
+            "locationSlug": "thanh-pho-tu-son-tinh-bac-ninh",
+            "latitude": "21°06′26″B",
+            "longitude": "105°57′37″Đ",
+            "tags": [
+              "Di tích lịch sử"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "1",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:37:59.345Z",
+            "contentType": "overview"
+          }
+        },
+        {
+          "content": "tower, and Nha To De Nhi, each of which has its own functions in the religious life and religious life of Buddhists. The temple space also retains many distinctive cultural values, including a six-sid",
+          "vectorScore": 0.98954713,
+          "metadata": {
+            "chunkIndex": 2,
+            "heritageId": "67f3edb13834bd66e6e1c681",
+            "name": "The pagoda Vinh Nghiem",
+            "nameSlug": "chua-vinh-nghiem",
+            "location": "City Bac Giang, province Bac Giang",
+            "locationSlug": "thanh-pho-bac-giang-tinh-bac-giang",
+            "latitude": "21°12′53″B",
+            "longitude": "106°19′25″Đ",
+            "tags": [
+              "Di tích lịch sử",
+              "kiến trúc nghệ thuật"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su",
+              "kien-truc-nghe-thuat"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "4",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:38:54.801Z",
+            "contentType": "architecture"
+          }
+        }
+      ],
+      "metrics": {
+        "bleu": 0,
+        "rouge_l_precision": 0.1029,
+        "rouge_l_recall": 0.2745,
+        "rouge_l_f1": 0.1497,
+        "cosine_tfidf": 0.2061,
+        "precision": 0.75,
+        "recall": 1,
+        "f1": 0.8571428571428571,
+        "totalTime": 15416,
+        "mode": "rag"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q32",
+      "question": "What cultural activities are held at the heritage site of the Ly Dynasty kings?",
+      "groundTruth": "At the heritage site of the Ly Dynasty kings, particularly at Dinh Bang, several cultural activities take place throughout the year. There are three main festivals held annually: . Temple Festival on the 7th day of Lunar January according to the lunar calendar (giỗ Ms. Pham Thi). Communal House Festival on the 15th day of Lunar February also following the lunar calendar (this festival includes opening the holy festival and welcoming the festival with various folk games). Temple Festival on the 15th day of Lunar March, specifically held at Do temple, where the people consider this festival as the celebration of the coronation when the king of the Ly Dynasty ascends.Additionally, the site boasts a rich collection of national historical and cultural relics, featuring elaborate architecture, stone sculptures, wood carvings, and numerous intangible cultural values like worship, festivals, and customs associated with the Ly Dynasty. These elements contribute to the overall cultural experience offered at the heritage site. However, please note that detailed information about specific cultural activities during these events might be limited based on the available historical records.",
+      "generatedAnswer": "At the heritage site of the Ly Dynasty kings, cultural activities primarily revolve around the Temple Festival held on the 7th day of Lunar January in the lunar calendar (giỗ Ms.). Additionally, the site includes the Do Temple, Mausoleum Area, Quan Thanh Temple, Chan Chao Pagoda, Tau Tien radio, and many lakes and gardens within the Imperial City. These locations showcase elaborate architecture, stone sculptures, wood carvings, and various intangible cultural values such as worship, festivals, and customs. Furthermore, Son and Bac Ninh, which are special national historical and cultural relics marking the development of the Ly Dynasty, contribute to these cultural activities by preserving the legacy of the dynasty's history and traditions. However, other specific cultural events might be held depending on the time of year and local celebrations. As for more detailed information, it is limited due to the nature of ancient dynasties and their rich cultural heritage.",
+      "mode": "rag",
+      "sources": [
+        {
+          "content": "Cultural Festival at Mausoleum and Temple of the Ly Dynasty Kings: Every year at Dinh Bang, there are 3 main festivals: Temple Festival on the 7th day of Lunar January the lunar calendar (giỗ Ms.",
+          "vectorScore": 0.9896636,
+          "metadata": {
+            "chunkIndex": 0,
+            "heritageId": "67f3edb13834bd66e6e1c680",
+            "name": "Mausoleum and Temple of the Ly Dynasty Kings",
+            "nameSlug": "khu-lang-mo-va-den-tho-cac-vi-vua-trieu-ly",
+            "location": "City Tu Son, province Bac Ninh",
+            "locationSlug": "thanh-pho-tu-son-tinh-bac-ninh",
+            "latitude": "21°06′26″B",
+            "longitude": "105°57′37″Đ",
+            "tags": [
+              "Di tích lịch sử"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "1",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:37:59.345Z",
+            "contentType": "festival"
+          }
+        },
+        {
+          "content": "Historical Event: Cultural works, beliefs, and transition period Ly Dynasty In addition to the palace, the kings Ly Dynasty also built many cultural and religious works such as Quan Thanh Temple, Chan",
+          "vectorScore": 0.991413,
+          "metadata": {
+            "chunkIndex": 0,
+            "heritageId": "67f3edb13834bd66e6e1c66d",
+            "name": "Thang Long Imperial Citadel Central Sector - Hanoi",
+            "nameSlug": "khu-trung-tam-hoang-thanh-thang-long-ha-noi",
+            "location": "District Ba Dinh, city Hanoi",
+            "locationSlug": "quan-ba-dinh-thanh-pho-ha-noi",
+            "latitude": "21°02′11″B",
+            "longitude": "105°50′35″Đ",
+            "tags": [
+              "Di tích lịch sử",
+              "khảo cổ"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su",
+              "khao-co"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "1",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:21:38.996Z",
+            "contentType": "history"
+          }
+        },
+        {
+          "content": "Son, Bac Ninh, are special national historical and cultural relics that mark the development of Ly Dynasty (1009-1225). The relic site, consisting of Do Temple and Mausoleum Area kings Ly Dynasty, fea",
+          "vectorScore": 0.9887818,
+          "metadata": {
+            "chunkIndex": 1,
+            "heritageId": "67f3edb13834bd66e6e1c680",
+            "name": "Mausoleum and Temple of the Ly Dynasty Kings",
+            "nameSlug": "khu-lang-mo-va-den-tho-cac-vi-vua-trieu-ly",
+            "location": "City Tu Son, province Bac Ninh",
+            "locationSlug": "thanh-pho-tu-son-tinh-bac-ninh",
+            "latitude": "21°06′26″B",
+            "longitude": "105°57′37″Đ",
+            "tags": [
+              "Di tích lịch sử"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "1",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:37:59.345Z",
+            "contentType": "overview"
+          }
+        }
+      ],
+      "metrics": {
+        "bleu": 0.2256,
+        "rouge_l_precision": 0.404,
+        "rouge_l_recall": 0.3389,
+        "rouge_l_f1": 0.3686,
+        "cosine_tfidf": 0.7016,
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "totalTime": 11039,
+        "mode": "rag"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q33",
+      "question": "Are there any royal gardens preserved at the Mausoleum and Temple of the Ly Dynasty Kings?",
+      "groundTruth": "Our website currently does not have detailed information on the presence of royal gardens at the Mausoleum and Temple of the Ly Dynasty Kings. However, during the Ly Dynasty in Vietnam, royal gardens were an integral part of the royal lifestyle and served as spaces for leisure, meditation, and rituals. These gardens often featured intricate water features, pavilions, and landscaping techniques reflecting the cultural and artistic values of the time. It would be worth exploring other heritage sites from the same era for more insights into these royal gardens.",
+      "generatedAnswer": "Our current database does not specifically mention any royal gardens preserved at the Mausoleum and Temple of the Ly Dynasty Kings. However, during the Ly Dynasty (****-**** AD) in Vietnam, royal gardens were an integral part of their architectural landscape design. These gardens served both practical and symbolic purposes, reflecting the cultural values and spiritual beliefs of the time. It would be helpful to consult other sources or explore local resources for more detailed information on the presence of royal gardens at this particular heritage site.",
+      "mode": "general",
+      "sources": [],
+      "metrics": {
+        "bleu": 0.4288,
+        "rouge_l_precision": 0.5529,
+        "rouge_l_recall": 0.5281,
+        "rouge_l_f1": 0.5402,
+        "cosine_tfidf": 0.7875,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "totalTime": 7287,
+        "mode": "general"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q34",
+      "question": "Why is Hoan Kiem Lake also called Sword Lake?",
+      "groundTruth": "Hoan Kiem Lake is also called Sword Lake due to the legend of King Le Thai To, who defeated the Ming army and subsequently returned his sword to a golden turtle that had appeared on the lake. According to this story, after the king handed over the sword, the turtle disappeared back into the water, hence giving rise to the name 'Sword Lake' or 'Hoan Kiem Lake'. This tale is deeply rooted in Vietnamese folklore and has been passed down through generations. Additionally, the presence of the Turtle Tower near the lake further emphasizes its connection to this legendary event.",
+      "generatedAnswer": "Hoan Kiem Lake is also called Sword Lake due to the legend of King Le Thai To, who supposedly defeated the Ming army and returned a sword to a golden turtle. According to this tale, after rowing on the lake, the king encountered the turtle, which retrieved the sword and disappeared beneath the water's surface. This event has led to the lake being named Hoan Kiem Lake, meaning \"Lake of Returned Sword,\" or Sword Lake in English. Additionally, the presence of the Turtle Tower near the lake further emphasizes its connection to this legendary story.",
+      "mode": "rag",
+      "sources": [
+        {
+          "content": "Historical Event: The legend of the king Le Thai To return the sword. After defeating the Ming army, the king Le Thai To rowed on the lake, the golden turtle emerged to reclaim his precious sword. The",
+          "vectorScore": 0.9885553,
+          "metadata": {
+            "chunkIndex": 0,
+            "heritageId": "67f3edb13834bd66e6e1c67f",
+            "name": "Hoan Kiem Lake and Ngoc Son Temple",
+            "nameSlug": "ho-hoan-kiem-va-den-ngoc-son",
+            "location": "District Hoan Kiem, city Hanoi",
+            "locationSlug": "quan-hoan-kiem-thanh-pho-ha-noi",
+            "latitude": "21.0307°B",
+            "longitude": "105.852°Đ",
+            "tags": [
+              "Di tích lịch sử",
+              "Danh lam thắng cảnh"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su",
+              "danh-lam-thang-canh"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "0",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:37:22.969Z",
+            "contentType": "history"
+          }
+        },
+        {
+          "content": "12 hectares, located in the middle of Hanoi center, surrounded by streets King Dinh Tien Hoang, Le Thai To, Hang Khay. The lake is the trace of the ancient Nhi Ha River, named folklore Sword Lake, rel",
+          "vectorScore": 0.9844004,
+          "metadata": {
+            "chunkIndex": 1,
+            "heritageId": "67f3edb13834bd66e6e1c67f",
+            "name": "Hoan Kiem Lake and Ngoc Son Temple",
+            "nameSlug": "ho-hoan-kiem-va-den-ngoc-son",
+            "location": "District Hoan Kiem, city Hanoi",
+            "locationSlug": "quan-hoan-kiem-thanh-pho-ha-noi",
+            "latitude": "21.0307°B",
+            "longitude": "105.852°Đ",
+            "tags": [
+              "Di tích lịch sử",
+              "Danh lam thắng cảnh"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su",
+              "danh-lam-thang-canh"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "0",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:37:22.969Z",
+            "contentType": "overview"
+          }
+        }
+      ],
+      "metrics": {
+        "bleu": 0.4913,
+        "rouge_l_precision": 0.6667,
+        "rouge_l_recall": 0.64,
+        "rouge_l_f1": 0.6531,
+        "cosine_tfidf": 0.8898,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "totalTime": 12471,
+        "mode": "rag"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q35",
+      "question": "What is notable about The Huc Bridge that leads to Ngoc Son Temple?",
+      "groundTruth": "The Huc Bridge leading to Ngoc Son Temple is notable for its distinctive curved shape, which is a unique combination of European architecture and traditional Vietnamese design elements. It spans across the lake, connecting Ngoc Island to the East Bank of the Lake. The bridge features a total of 15 beats and is painted red, adding to its visual appeal. Furthermore, this historic relic serves as a hub for various activities related to charity, education, patriotism, and anti-French propaganda, making it an important part of the cultural heritage of the region.",
+      "generatedAnswer": "The Huc Bridge leading to Ngoc Son Temple on Ngoc Island is notable for its distinctive curved shape, which is a unique combination of European architecture and traditional Vietnamese design. It spans across the East Bank of the lake and features a total of 15 beats with red paint railings. This architectural marvel not only connects the island to the shore but also serves as a significant relic within the complex, hosting various institutions like the Charity Association, mass education, and patriotic activities against French colonial rule. Additionally, the bridge contributes to the overall aesthetic appeal of the temple grounds, showcasing a harmonious blend of modern and traditional elements.",
+      "mode": "rag",
+      "sources": [
+        {
+          "content": "built from 1884 to 1886, combining European architecture and the curved roof Vietnam, is a familiar symbol of the lake. Ngoc Son Temple: Located on Ngoc Island, the place of worship Saint Tran Hung Da",
+          "vectorScore": 0.9886746,
+          "metadata": {
+            "chunkIndex": 2,
+            "heritageId": "67f3edb13834bd66e6e1c67f",
+            "name": "Hoan Kiem Lake and Ngoc Son Temple",
+            "nameSlug": "ho-hoan-kiem-va-den-ngoc-son",
+            "location": "District Hoan Kiem, city Hanoi",
+            "locationSlug": "quan-hoan-kiem-thanh-pho-ha-noi",
+            "latitude": "21.0307°B",
+            "longitude": "105.852°Đ",
+            "tags": [
+              "Di tích lịch sử",
+              "Danh lam thắng cảnh"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su",
+              "danh-lam-thang-canh"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "0",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:37:22.969Z",
+            "contentType": "overview"
+          }
+        },
+        {
+          "content": "Tran Ba family building, Tien Tiet's house; Central Hall; Left and Right Side Halls; Nhanhieu's house; Hau's house. The Huc Bridge connecting Ngoc Island to shore East Bank of the Lake, has a curved s",
+          "vectorScore": 0.98849946,
+          "metadata": {
+            "chunkIndex": 4,
+            "heritageId": "67f3edb13834bd66e6e1c67f",
+            "name": "Hoan Kiem Lake and Ngoc Son Temple",
+            "nameSlug": "ho-hoan-kiem-va-den-ngoc-son",
+            "location": "District Hoan Kiem, city Hanoi",
+            "locationSlug": "quan-hoan-kiem-thanh-pho-ha-noi",
+            "latitude": "21.0307°B",
+            "longitude": "105.852°Đ",
+            "tags": [
+              "Di tích lịch sử",
+              "Danh lam thắng cảnh"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su",
+              "danh-lam-thang-canh"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "0",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:37:22.969Z",
+            "contentType": "overview"
+          }
+        },
+        {
+          "content": "Located on Ngoc Island, the place of worship Saint Tran Hung Dao, Emperor Guan Yu and two martial arts generals. In 1864, Nguyen Van Sieu remodeling, maintaining the architectural scale, including: su",
+          "vectorScore": 0.9871253,
+          "metadata": {
+            "chunkIndex": 3,
+            "heritageId": "67f3edb13834bd66e6e1c67f",
+            "name": "Hoan Kiem Lake and Ngoc Son Temple",
+            "nameSlug": "ho-hoan-kiem-va-den-ngoc-son",
+            "location": "District Hoan Kiem, city Hanoi",
+            "locationSlug": "quan-hoan-kiem-thanh-pho-ha-noi",
+            "latitude": "21.0307°B",
+            "longitude": "105.852°Đ",
+            "tags": [
+              "Di tích lịch sử",
+              "Danh lam thắng cảnh"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su",
+              "danh-lam-thang-canh"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "0",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:37:22.969Z",
+            "contentType": "overview"
+          }
+        }
+      ],
+      "metrics": {
+        "bleu": 0.3871,
+        "rouge_l_precision": 0.5046,
+        "rouge_l_recall": 0.5978,
+        "rouge_l_f1": 0.5473,
+        "cosine_tfidf": 0.7595,
+        "precision": 0.6666666666666666,
+        "recall": 1,
+        "f1": 0.8,
+        "totalTime": 12191,
+        "mode": "rag"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q36",
+      "question": "Are there any royal ceremonies still performed at Ngoc Son Temple today?",
+      "groundTruth": "I apologize, but I must inform you that our website currently does not have detailed information on royal ceremonies being performed at Ngoc Son Temple today. However, I can provide you with some general context about the temple. Ngoc Son Temple, also known as the Turtle Tower Temple, is a significant religious complex located in Hanoi, Vietnam. It was originally built during the Ly Dynasty (****-**** AD) and has been restored and expanded multiple times throughout history. The temple is famous for its architectural style, which combines elements of traditional Vietnamese Buddhism and Confucianism with influences from other Asian cultures.Despite not having specific information on current royal ceremonies, exploring the rich history and cultural significance of Ngoc Son Temple can offer valuable insights into ancient Vietnamese heritage, architecture, and religious practices. You may consider visiting the site to experience its beauty and learn more about its role in Vietnamese history and culture.",
+      "generatedAnswer": "I apologize, but I do not have specific information regarding ongoing royal ceremonies at Ngoc Son Temple today. Our current database does not include details about contemporary events or activities at this heritage site. However, I can provide some general context about the temple and its significance in Vietnamese history.\n\nNgoc Son Temple, located in Hue, Vietnam, is one of the most important religious and cultural sites in the country. It was originally built during the reign of King Khai Dinh in the early 19th century and has since undergone several restorations over the years. The temple is dedicated to the worship of the Hindu goddess Guanyin and is known for its beautiful architecture, intricate carvings, and stunning murals.\n\nThroughout Vietnamese history, Ngoc Son Temple has played a significant role in various religious and cultural practices, including royal ceremonies and processions. These ceremonies often took place during important national events, such as coronations, weddings, and festivals. Unfortunately, due to changes in societal norms and modernization, many of these traditional rituals have been abandoned or greatly reduced in scale.\n\nIt would be best to consult with local authorities or organizations responsible for preserving and promoting Vietnamese heritage sites for up-to-date information on any ongoing royal ceremonies at Ngoc Son Temple. Alternatively, you may consider exploring other heritage sites in the region that still host similar cultural events.",
+      "mode": "general",
+      "sources": [],
+      "metrics": {
+        "bleu": 0.1345,
+        "rouge_l_precision": 0.25,
+        "rouge_l_recall": 0.375,
+        "rouge_l_f1": 0.3,
+        "cosine_tfidf": 0.3458,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "totalTime": 11750,
+        "mode": "general"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q37",
+      "question": "When did the legend of the king returning the sword to the turtle take place?",
+      "groundTruth": "The legend of the King returning the sword to the turtle is part of Vietnamese folklore and mythology, specifically related to the mythical kingdom of Champa (an ancient Southeast Asian kingdom located in present-day Vietnam). The story dates back to several centuries ago, but its exact timeline is difficult to pinpoint due to the lack of concrete historical records from that time period.In this tale, there was once a powerful king who had lost his precious sword during a battle. He searched for it everywhere but could not find it. One day, while riding on his elephant, he saw a turtle carrying the sword in its mouth. The king asked the turtle where he found the sword, and the turtle replied that it had been given to him by a divine being.To honor the turtle's kindness, the king decided to return the sword to its home. He built a boat and embarked on a journey to reach the turtle's underwater kingdom. Upon arriving, he presented the sword to the turtle and promised to protect it forever. After fulfilling his promise, the king returned to his kingdom with the grateful turtle following closely behind.While the exact date of when this legend took place is unknown, it represents the deep cultural connection between the people of Champa and their reverence for nature and animals. This story continues to be celebrated and retold in Vietnamese culture today.",
+      "generatedAnswer": "The legend of the King returning the sword to the turtle is not specific to a particular time or place within history. It is a mythological tale that has been passed down through various cultures and traditions around the world. \n\nIn Vietnam, this story is often associated with the Cham people, who were one of the earliest civilizations in Southeast Asia. The narrative involves a powerful king named Tran Quoc Khanh, who lost his magical sword during a battle against invaders. To retrieve it, he embarked on a journey across treacherous waters where he encountered a wise turtle. After defeating numerous sea monsters guarding the sword, the king was able to return it to the turtle, gaining great wisdom and strength in the process.\n\nWhile the exact details and timeline of this legend may vary between different versions, it serves as a reminder of the importance of perseverance, courage, and respect for nature in ancient stories from diverse cultures.",
+      "mode": "general",
+      "sources": [],
+      "metrics": {
+        "bleu": 0.1045,
+        "rouge_l_precision": 0.3774,
+        "rouge_l_recall": 0.25,
+        "rouge_l_f1": 0.3008,
+        "cosine_tfidf": 0.7404,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "totalTime": 4523,
+        "mode": "general"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q38",
+      "question": "Where Phu Dong Temple?",
+      "groundTruth": "Phu Dong Temple is located in commune Phu Dong, district Gia Lam, Hanoi, Vietnam. It is associated with the legend of Thanh Giong, one of The Four Immortals' folk beliefs in Vietnam and a hero who helped end the An Dynasty's rule by swiftly defeating enemies like blowing wind and riding iron horses. \n\nThe architectural complex of Phu Dong Giong Temple features traditional elements characteristic of the Northern Delta region, including ditties, ritual grounds, enclosures, beer houses, Upper Temple, Ha Temple, Mau Temple, and Kien Sister Pagoda. These structures are constructed using wood, brick, and stone, featuring curved tile roofs, curved blade heads, sculptures of mascots, and ancient designs. Although there is extensive documentation about this temple, the exact location remains unchanged based on the existing records.",
+      "generatedAnswer": "Phu Dong Temple is located in commune Phu Dong, district Gia Lam, Hanoi, Vietnam. It is associated with the legend of Thanh Giong, one of The Four Immortals' folk beliefs in Vietnam and a hero who defeated the An dynasty during the Sixth Hung King's reign. The architectural complex of Phu Dong Temple features traditional works characteristic of the Northern Delta region, including ditties, ritual grounds, enclosures, beer houses, Upper Temple, Ha Temple, Mau Temple, and Kien Sister Pagoda. These structures are made of wood, brick, and stone with curved tile roofs, curved blade heads, sculptures of mascots, and ancient designs. The temple colony was formed centuries ago by the people of Phu Dong to commemorate Thanh Giong and his mother, and although its structures have undergone remodeling over time, they still retain their traditional architectural style.",
+      "mode": "rag",
+      "sources": [
+        {
+          "content": "Heritage Name: Phu Dong Temple Description: Phu Dong Temple is a historic site in commune Phu Dong, district Gia Lam, Hanoi, associated with legend Thanh Giong - one of The Four Immortals's folk belie",
+          "vectorScore": 0.9905586,
+          "metadata": {
+            "chunkIndex": 0,
+            "heritageId": "67f3edb13834bd66e6e1c67e",
+            "name": "Phu Dong Temple",
+            "nameSlug": "den-phu-dong",
+            "location": "Gia Lam District, city Hanoi",
+            "locationSlug": "huyen-gia-lam-thanh-pho-ha-noi",
+            "latitude": "21°01′11″B",
+            "longitude": "105°56′14″Đ",
+            "tags": [
+              "Di tích lịch sử",
+              "kiến trúc nghệ thuật"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su",
+              "kien-truc-nghe-thuat"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "2",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:36:49.361Z",
+            "contentType": "overview"
+          }
+        },
+        {
+          "content": "Architecture of Phu Dong Temple: Phu Dong Giong Temple architectural complex includes traditional works characteristic of the Northern Delta such as ditties, ritual grounds, enclosures, beer houses, U",
+          "vectorScore": 0.99066526,
+          "metadata": {
+            "chunkIndex": 0,
+            "heritageId": "67f3edb13834bd66e6e1c67e",
+            "name": "Phu Dong Temple",
+            "nameSlug": "den-phu-dong",
+            "location": "Gia Lam District, city Hanoi",
+            "locationSlug": "huyen-gia-lam-thanh-pho-ha-noi",
+            "latitude": "21°01′11″B",
+            "longitude": "105°56′14″Đ",
+            "tags": [
+              "Di tích lịch sử",
+              "kiến trúc nghệ thuật"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su",
+              "kien-truc-nghe-thuat"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "2",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:36:49.361Z",
+            "contentType": "architecture"
+          }
+        },
+        {
+          "content": "Historical Event: Forming a temple colony Thanh Giong Centuries ago, people Phu Dong built a shrine system consisting of Upper Temple, Ha Temple, and Mau Temple to commemorate Thanh Giong and his moth",
+          "vectorScore": 0.9884951,
+          "metadata": {
+            "chunkIndex": 0,
+            "heritageId": "67f3edb13834bd66e6e1c67e",
+            "name": "Phu Dong Temple",
+            "nameSlug": "den-phu-dong",
+            "location": "Gia Lam District, city Hanoi",
+            "locationSlug": "huyen-gia-lam-thanh-pho-ha-noi",
+            "latitude": "21°01′11″B",
+            "longitude": "105°56′14″Đ",
+            "tags": [
+              "Di tích lịch sử",
+              "kiến trúc nghệ thuật"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su",
+              "kien-truc-nghe-thuat"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "2",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:36:49.361Z",
+            "contentType": "history"
+          }
+        }
+      ],
+      "metrics": {
+        "bleu": 0.5921,
+        "rouge_l_precision": 0.6739,
+        "rouge_l_recall": 0.7266,
+        "rouge_l_f1": 0.6992,
+        "cosine_tfidf": 0.9208,
+        "precision": 0.6666666666666666,
+        "recall": 1,
+        "f1": 0.8,
+        "totalTime": 10368,
+        "mode": "rag"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q39",
+      "question": "What is the historical significance of Phù Đổng Temple and who is it dedicated to?",
+      "groundTruth": "Phù Đổng Temple holds significant historical importance due to its association with the legend of Thanh Giong, one of The Four Immortals' folk beliefs in Vietnam. Thanh Giong is considered a hero who grew as fast as blowing and riding iron horses to chase away the An Dynasty's Sixth Hung King. As a result, this legend serves as the foundation for the formation of the temple's relic. Additionally, the temple complex consists of Upper Temple, Ha Temple, and Mau Temple, which were built centuries ago to commemorate Thanh Giong and his mother. These structures showcase the traditional architectural style while undergoing various remodels over time. Furthermore, the Phù Đổng Giong Festival, featuring performances reenacting Thanh Giong's journey to battle and other folk games, ceremonies, and community activities, has been recognized as Vietnam's Representative Intangible Cultural Heritage of Humanity by UNESCO, reflecting the nation's patriotic spirit and cultural identity.",
+      "generatedAnswer": "Phù Đổng Temple holds historical significance as a site associated with the legend of Thanh Giong, one of The Four Immortals' folk beliefs in Vietnam. Thanh Giong is considered a hero who swiftly defeated the An dynasty during the reign of The Sixth Hung King. \n\nThe temple complex itself consists of several structures, including the Upper Temple, Lower Temple, and the Kien Sister Pagoda. These temples together form a shrine system aimed at commemorating Thanh Giong and his mother. Despite various remodelings over time, these structures maintain their traditional architectural style.\n\nFurthermore, Phù Đổng Temple plays a significant role in Vietnam's intangible cultural heritage, being recognized as a Representative Intangible Cultural Heritage of Humanity by UNESCO. This recognition highlights the cultural value and national unity embodied within this sacred site. Its rich history and connection to legendary figures make Phù Đổng Temple an important part of Vietnam's cultural heritage.",
+      "mode": "rag",
+      "sources": [
+        {
+          "content": "Heritage Name: Phu Dong Temple Description: Phu Dong Temple is a historic site in commune Phu Dong, district Gia Lam, Hanoi, associated with legend Thanh Giong - one of The Four Immortals's folk belie",
+          "vectorScore": 0.9892845,
+          "metadata": {
+            "chunkIndex": 0,
+            "heritageId": "67f3edb13834bd66e6e1c67e",
+            "name": "Phu Dong Temple",
+            "nameSlug": "den-phu-dong",
+            "location": "Gia Lam District, city Hanoi",
+            "locationSlug": "huyen-gia-lam-thanh-pho-ha-noi",
+            "latitude": "21°01′11″B",
+            "longitude": "105°56′14″Đ",
+            "tags": [
+              "Di tích lịch sử",
+              "kiến trúc nghệ thuật"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su",
+              "kien-truc-nghe-thuat"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "2",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:36:49.361Z",
+            "contentType": "overview"
+          }
+        },
+        {
+          "content": "Historical Event: Forming a temple colony Thanh Giong Centuries ago, people Phu Dong built a shrine system consisting of Upper Temple, Ha Temple, and Mau Temple to commemorate Thanh Giong and his moth",
+          "vectorScore": 0.9875251,
+          "metadata": {
+            "chunkIndex": 0,
+            "heritageId": "67f3edb13834bd66e6e1c67e",
+            "name": "Phu Dong Temple",
+            "nameSlug": "den-phu-dong",
+            "location": "Gia Lam District, city Hanoi",
+            "locationSlug": "huyen-gia-lam-thanh-pho-ha-noi",
+            "latitude": "21°01′11″B",
+            "longitude": "105°56′14″Đ",
+            "tags": [
+              "Di tích lịch sử",
+              "kiến trúc nghệ thuật"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su",
+              "kien-truc-nghe-thuat"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "2",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:36:49.361Z",
+            "contentType": "history"
+          }
+        },
+        {
+          "content": "Vietnam and a hero who has grown as fast as blowing and riding iron horses away the An dynasty The Sixth Hung King. The relic site includes the construction system such as Thuong Temple (Upper Temple)",
+          "vectorScore": 0.98746866,
+          "metadata": {
+            "chunkIndex": 1,
+            "heritageId": "67f3edb13834bd66e6e1c67e",
+            "name": "Phu Dong Temple",
+            "nameSlug": "den-phu-dong",
+            "location": "Gia Lam District, city Hanoi",
+            "locationSlug": "huyen-gia-lam-thanh-pho-ha-noi",
+            "latitude": "21°01′11″B",
+            "longitude": "105°56′14″Đ",
+            "tags": [
+              "Di tích lịch sử",
+              "kiến trúc nghệ thuật"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su",
+              "kien-truc-nghe-thuat"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "2",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:36:49.361Z",
+            "contentType": "overview"
+          }
+        },
+        {
+          "content": "of the Hung Kings in Phu Tho' was officially recognized as Representative Intangible Cultural Heritage of Humanity. This is the pride of the nation Vietnam, affirming the cultural value and the spirit",
+          "vectorScore": 0.98825914,
+          "metadata": {
+            "chunkIndex": 1,
+            "heritageId": "67f3edb13834bd66e6e1c673",
+            "name": "Đền Hùng",
+            "nameSlug": "den-hung",
+            "location": "Viet Tri City, district Lam Thao, district Phu Ninh, province Phu Tho",
+            "locationSlug": "thanh-pho-viet-tri-phu-tho",
+            "latitude": "21.0307°B",
+            "longitude": "105.852°Đ",
+            "tags": [
+              "Di tích lịch sử"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su",
+              "le-hoi-van-hoa"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "0",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:19:25.653Z",
+            "contentType": "history"
+          }
+        },
+        {
+          "content": "dating back to the An Duong Vuong era (the 3rd century BC according to legend and layers of archaeological culture). The relics include the system of earthen ramparts, temples, and archaeological arti",
+          "vectorScore": 0.98829854,
+          "metadata": {
+            "chunkIndex": 1,
+            "heritageId": "67f3edb13834bd66e6e1c67b",
+            "name": "Co Loa",
+            "nameSlug": "co-loa",
+            "location": "District Dong Anh, city Hanoi",
+            "locationSlug": "huyen-dong-anh-thanh-pho-ha-noi",
+            "latitude": "21.113408°B",
+            "longitude": "105.873206°Đ",
+            "tags": [
+              "Di tích lịch sử",
+              "kiến trúc nghệ thuật",
+              "khảo cổ"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su",
+              "kien-truc-nghe-thuat",
+              "khao-co"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "1",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:32:50.730Z",
+            "contentType": "overview"
+          }
+        }
+      ],
+      "metrics": {
+        "bleu": 0.3025,
+        "rouge_l_precision": 0.457,
+        "rouge_l_recall": 0.451,
+        "rouge_l_f1": 0.4539,
+        "cosine_tfidf": 0.4511,
+        "precision": 0.4,
+        "recall": 0.6666666666666666,
+        "f1": 0.5,
+        "totalTime": 13708,
+        "mode": "rag"
+      },
+      "success": true
+    },
+    {
+      "testCaseId": "q40",
+      "question": "Where is Phù Đổng Temple located and how can visitors access it?",
+      "groundTruth": "Phù Đổng Temple is situated in commune Phu Dong, district Gia Lam, Hanoi, which is the capital city of Vietnam. To access this historic site, visitors can travel to Hanoi and then head towards district Gia Lam, following the directions for commune Phu Dong. Once you arrive there, you'll find the temple nestled within the local community, offering a glimpse into its rich cultural heritage and connection to the legend of Thanh Giong, one of The Four Immortals' folk beliefs in Vietnam.",
+      "generatedAnswer": "Phù Đổng Temple, also known as Phu Dong Temple, is situated in the commune of Phu Dong, within the district of Gia Lam, in Hanoi, Vietnam. To access this historic site, one would need to travel to the mentioned location within the district boundaries of Gia Lam. Though the specific directions might vary depending on where exactly in Hanoi the visitor is coming from, they should be able to find their way to the temple by following local maps or asking for directions from locals familiar with the area. As for detailed information about visiting hours, entrance fees, and other practical aspects, further research or inquiries would be required since the provided document does not contain such details.",
+      "mode": "rag",
+      "sources": [
+        {
+          "content": "Heritage Name: Phu Dong Temple Description: Phu Dong Temple is a historic site in commune Phu Dong, district Gia Lam, Hanoi, associated with legend Thanh Giong - one of The Four Immortals's folk belie",
+          "vectorScore": 0.9912454,
+          "metadata": {
+            "chunkIndex": 0,
+            "heritageId": "67f3edb13834bd66e6e1c67e",
+            "name": "Phu Dong Temple",
+            "nameSlug": "den-phu-dong",
+            "location": "Gia Lam District, city Hanoi",
+            "locationSlug": "huyen-gia-lam-thanh-pho-ha-noi",
+            "latitude": "21°01′11″B",
+            "longitude": "105°56′14″Đ",
+            "tags": [
+              "Di tích lịch sử",
+              "kiến trúc nghệ thuật"
+            ],
+            "tagsSlug": [
+              "di-tich-lich-su",
+              "kien-truc-nghe-thuat"
+            ],
+            "averageRating": "0",
+            "totalReviews": "0",
+            "totalVisits": "0",
+            "totalFavorites": "2",
+            "documentType": "heritage",
+            "uploadedAt": "2025-11-17T07:36:49.361Z",
+            "contentType": "overview"
+          }
+        }
+      ],
+      "metrics": {
+        "bleu": 0.1071,
+        "rouge_l_precision": 0.2712,
+        "rouge_l_recall": 0.3855,
+        "rouge_l_f1": 0.3184,
+        "cosine_tfidf": 0.5462,
+        "precision": 1,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "totalTime": 9696,
+        "mode": "rag"
+      },
+      "success": true
+    }
+  ]
+}
