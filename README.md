@@ -183,8 +183,8 @@ npm run benchmark:qdrant
 
 ## 🔗 Related Repositories
 
-- **Frontend**: [heritage-naver-fe](../heritage-naver-fe)
-- **ML Classifier**: [train-model-classifier](../train-model-classifier)
+- **Frontend**: [heritage-naver-fe](https://github.com/phanvanthuan06052004/heritage-naver-fe)
+- **ML Classifier**: [train-model-classifier](https://github.com/th4nh-phat09/Model_Classifier)
 
 ## 📚 API Documentation
 
