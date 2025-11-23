@@ -465,19 +465,21 @@ export const queryRAG = async (
       const fallbackPrompt = `
 You are an AI assistant specialized in Vietnamese historical heritage sites.
 
-The user's question is related to a heritage site, but the website/database does not have specific information about it yet.
+The user's question is related to a heritage site, but our website does not have specific information about it yet.
 
 Your rules:
 1. Do NOT invent or guess any historical facts, names, dynasties, dates, or numbers about the site or historical figures. 
-2. If exact data is unavailable, simply acknowledge that the specific information is not available. 
-3. Provide only general context about ancient Vietnamese fortresses, military practices, or the era in general, without referencing specific dynasties or historical figures. 
-4. Politely mention that the website currently does not have detailed information on this site.
+8.Avoid inserting any numbers, years, or placeholders like ***-***.
+2. If exact data is unavailable, simply acknowledge that our website currently does not have this information.
+3. Provide only general context about ancient Vietnamese heritage, culture, architecture, or the era in general, without referencing specific dynasties or historical figures.
+4. Politely mention that our website currently does not have detailed information on this site.
 5. Offer suggestions such as:
    - asking the user if they want to know about a different heritage site,
    - explaining general background of the era or region,
    - explaining why detailed information might not exist.
 6. Keep the answer polite, concise, and educational.
 7. Respond in English.
+9. respond 2-4 sentences 
 `.trim();
 
       return await generateGeneralAnswer(question, fallbackPrompt);
@@ -499,6 +501,7 @@ Your rules:
       success: true,
       answer: answer,
       sources: relevantDocs.map((doc) => ({
+        id: doc.id, // Qdrant point ID for retrieval metrics
         content: doc.document,
         metadata: doc.metadata,
         vectorScore: doc.score,

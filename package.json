@@ -23,7 +23,8 @@
     "create-qdrant-index": "babel-node -r dotenv/config ./src/scripts/create-qdrant-index.js",
     "prepare-heritage": "babel-node -r dotenv/config ./src/scripts/prepare-heritage-text.js",
     "benchmark": "babel-node -r dotenv/config src/benchmark/runBenchmark.js",
-    "benchmark:mock": "babel-node -r dotenv/config src/benchmark/runBenchmark.js --mock"
+    "benchmark:mock": "babel-node -r dotenv/config src/benchmark/runBenchmark.js --mock",
+    "benchmark:qdrant": "babel-node -r dotenv/config src/benchmark/runQdrantBenchmark.js"
   },
   "dependencies": {
     "@babel/runtime": "^7.22.10",

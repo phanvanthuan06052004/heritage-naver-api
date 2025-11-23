@@ -1,0 +1,946 @@
+
+🔍 Checking Qdrant collection: heritage_documents
+   ✅ Collection exists
+   📊 Vector count: 450
+   📏 Vector size: 1024
+📂 Loading benchmark data from: D:\heritage-naver-api\benchmark_data.json
+✅ Loaded 40 test cases
+
+
+🚀 Starting benchmark with 40 test cases
+   Collection: heritage_documents
+   Top-K: 5
+
+
+[1/40] Processing...
+
+📝 Test Case: q29
+   Question: Where is the Vinh Nghiem Pagoda located?
+   🤖 Mode: rag
+   ⏱️  Total time: 10340ms
+   🔍 Retrieved 5 sources
+   🔍 First source metadata: {
+  "chunkIndex": 0,
+  "heritageId": "67f3edb13834bd66e6e1c681",
+  "name": "The pagoda Vinh Nghiem",
+  "nameSlug": "chua-vinh-nghiem",
+  "location": "City Bac Giang, province Bac Giang",
+  "locationSlug": "thanh-pho-bac-giang-tinh-bac-giang",
+  "latitude": "21°12′53″B",
+  "longitude": "106°19′25″Đ",
+  "tags": [
+    "Di tích lịch sử",
+    "kiến trúc nghệ thuật"
+  ],
+  "tagsSlug": [
+    "di-tich-lich-su",
+    "kien-truc-nghe-thuat"
+  ],
+  "averageRating": "0",
+  "totalReviews": "0",
+  "totalVisits": "0",
+  "totalFavorites": "4",
+  "documentType": "heritage",
+  "uploadedAt": "2025-11-17T07:38:54.801Z",
+  "contentType": "overview"
+}
+   🔍 Expected related_docs: 02a4a5c3-f344-426f-ae6c-f8244d2096c6,5e1db45b-13d0-483c-844d-3c8d3888f62e,8e196a8b-abce-41a8-a061-67d9248a84d7,d01c62c8-2373-4498-9f2d-2c7579352899
+   🔍 Retrieved IDs: 5e1db45b-13d0-483c-844d-3c8d3888f62e,93e937ca-aeb2-452c-930b-c400c23c357a,d01c62c8-2373-4498-9f2d-2c7579352899,02a4a5c3-f344-426f-ae6c-f8244d2096c6,8e196a8b-abce-41a8-a061-67d9248a84d7
+   🔍 Expected IDs: 02a4a5c3-f344-426f-ae6c-f8244d2096c6,5e1db45b-13d0-483c-844d-3c8d3888f62e,8e196a8b-abce-41a8-a061-67d9248a84d7,d01c62c8-2373-4498-9f2d-2c7579352899
+   ✅ Matched 4 documents
+   📊 BLEU: 0.210 | ROUGE-L: 0.352 | Cosine: 0.695
+   📊 Retrieval - Precision: 0.800 | Recall: 1.000
+   ⏳ Waiting 2s before next test case...
+
+[2/40] Processing...
+
+📝 Test Case: q28
+   Question: What is the traditional architectural style of the Vinh Nghiem Pagoda?
+   🤖 Mode: rag
+   ⏱️  Total time: 11655ms
+   🔍 Retrieved 4 sources
+   🔍 First source metadata: {
+  "chunkIndex": 0,
+  "heritageId": "67f3edb13834bd66e6e1c681",
+  "name": "The pagoda Vinh Nghiem",
+  "nameSlug": "chua-vinh-nghiem",
+  "location": "City Bac Giang, province Bac Giang",
+  "locationSlug": "thanh-pho-bac-giang-tinh-bac-giang",
+  "latitude": "21°12′53″B",
+  "longitude": "106°19′25″Đ",
+  "tags": [
+    "Di tích lịch sử",
+    "kiến trúc nghệ thuật"
+  ],
+  "tagsSlug": [
+    "di-tich-lich-su",
+    "kien-truc-nghe-thuat"
+  ],
+  "averageRating": "0",
+  "totalReviews": "0",
+  "totalVisits": "0",
+  "totalFavorites": "4",
+  "documentType": "heritage",
+  "uploadedAt": "2025-11-17T07:38:54.801Z",
+  "contentType": "architecture"
+}
+   🔍 Expected related_docs: 1759f76c-dbd7-4536-90fa-2cc452595881,ba0fc89a-5d3e-49d3-986a-926995829b83
+   🔍 Retrieved IDs: ba0fc89a-5d3e-49d3-986a-926995829b83,1759f76c-dbd7-4536-90fa-2cc452595881,a09f14b3-65d9-48dc-adfe-0ed99325697d,93e937ca-aeb2-452c-930b-c400c23c357a
+   🔍 Expected IDs: 1759f76c-dbd7-4536-90fa-2cc452595881,ba0fc89a-5d3e-49d3-986a-926995829b83
+   ✅ Matched 2 documents
+   📊 BLEU: 0.170 | ROUGE-L: 0.335 | Cosine: 0.611
+   📊 Retrieval - Precision: 0.500 | Recall: 1.000
+   ⏳ Waiting 2s before next test case...
+
+[3/40] Processing...
+
+📝 Test Case: q27
+   Question: When is the Vinh Nghiem Pagoda Festival usually held?
+   🤖 Mode: rag
+   ⏱️  Total time: 9020ms
+   🔍 Retrieved 3 sources
+   🔍 First source metadata: {
+  "chunkIndex": 0,
+  "heritageId": "67f3edb13834bd66e6e1c681",
+  "name": "The pagoda Vinh Nghiem",
+  "nameSlug": "chua-vinh-nghiem",
+  "location": "City Bac Giang, province Bac Giang",
+  "locationSlug": "thanh-pho-bac-giang-tinh-bac-giang",
+  "latitude": "21°12′53″B",
+  "longitude": "106°19′25″Đ",
+  "tags": [
+    "Di tích lịch sử",
+    "kiến trúc nghệ thuật"
+  ],
+  "tagsSlug": [
+    "di-tich-lich-su",
+    "kien-truc-nghe-thuat"
+  ],
+  "averageRating": "0",
+  "totalReviews": "0",
+  "totalVisits": "0",
+  "totalFavorites": "4",
+  "documentType": "heritage",
+  "uploadedAt": "2025-11-17T07:38:54.801Z",
+  "contentType": "festival"
+}
+   🔍 Expected related_docs: 75c7ebbb-cf05-4990-b20c-a849b88228af
+   🔍 Retrieved IDs: 75c7ebbb-cf05-4990-b20c-a849b88228af,6a39fc04-a3af-4e4f-9cd4-bbefb427579c,86996772-c5b1-44c0-b9cc-6d60c17a4ee9
+   🔍 Expected IDs: 75c7ebbb-cf05-4990-b20c-a849b88228af
+   ✅ Matched 1 documents
+   📊 BLEU: 0.202 | ROUGE-L: 0.358 | Cosine: 0.899
+   📊 Retrieval - Precision: 0.333 | Recall: 1.000
+   ⏳ Waiting 2s before next test case...
+
+[4/40] Processing...
+
+📝 Test Case: q26
+   Question: Who was the first abbot of Vinh Nghiem Pagoda in Ho Chi Minh City?
+   🤖 Mode: general
+   ⏱️  Total time: 8839ms
+   ⚠️  No relevant docs provided for comparison
+   📊 BLEU: 0.051 | ROUGE-L: 0.165 | Cosine: 0.615
+   📊 Retrieval - Precision: 0.000 | Recall: 0.000
+   ⏳ Waiting 2s before next test case...
+
+[5/40] Processing...
+
+📝 Test Case: q25
+   Question: Hello
+   🤖 Mode: general
+   ⏱️  Total time: 3859ms
+   ⚠️  No relevant docs provided for comparison
+   📊 BLEU: 0.208 | ROUGE-L: 0.327 | Cosine: 0.495
+   📊 Retrieval - Precision: 0.000 | Recall: 0.000
+   ⏳ Waiting 2s before next test case...
+
+[6/40] Processing...
+
+📝 Test Case: q01
+   Question: hi
+   🤖 Mode: general
+   ⏱️  Total time: 2896ms
+   ⚠️  No relevant docs provided for comparison
+   📊 BLEU: 0.000 | ROUGE-L: 0.144 | Cosine: 0.288
+   📊 Retrieval - Precision: 0.000 | Recall: 0.000
+   ⏳ Waiting 2s before next test case...
+
+[7/40] Processing...
+
+📝 Test Case: q02
+   Question: How do I learn JavaScript quickly?
+   🤖 Mode: general
+   ⏱️  Total time: 9264ms
+   ⚠️  No relevant docs provided for comparison
+   📊 BLEU: 0.000 | ROUGE-L: 0.055 | Cosine: 0.209
+   📊 Retrieval - Precision: 0.000 | Recall: 0.000
+   ⏳ Waiting 2s before next test case...
+
+[8/40] Processing...
+
+📝 Test Case: q03
+   Question: What is the best way to lose weight?
+   🤖 Mode: general
+   ⏱️  Total time: 6875ms
+   ⚠️  No relevant docs provided for comparison
+   📊 BLEU: 0.000 | ROUGE-L: 0.062 | Cosine: 0.152
+   📊 Retrieval - Precision: 0.000 | Recall: 0.000
+   ⏳ Waiting 2s before next test case...
+
+[9/40] Processing...
+
+📝 Test Case: q04
+   Question: Why is the sky blue?
+   🤖 Mode: general
+   ⏱️  Total time: 4026ms
+   ⚠️  No relevant docs provided for comparison
+   📊 BLEU: 0.029 | ROUGE-L: 0.135 | Cosine: 0.257
+   📊 Retrieval - Precision: 0.000 | Recall: 0.000
+   ⏳ Waiting 2s before next test case...
+
+[10/40] Processing...
+
+📝 Test Case: q05
+   Question: How can I improve my English speaking skills?
+   🤖 Mode: general
+   ⏱️  Total time: 7860ms
+   ⚠️  No relevant docs provided for comparison
+   📊 BLEU: 0.000 | ROUGE-L: 0.070 | Cosine: 0.278
+   📊 Retrieval - Precision: 0.000 | Recall: 0.000
+   ⏳ Waiting 2s before next test case...
+
+[11/40] Processing...
+
+📝 Test Case: q06
+   Question: What's the capital of Japan?
+   🤖 Mode: general
+   ⏱️  Total time: 3750ms
+   ⚠️  No relevant docs provided for comparison
+   📊 BLEU: 0.033 | ROUGE-L: 0.144 | Cosine: 0.257
+   📊 Retrieval - Precision: 0.000 | Recall: 0.000
+   ⏳ Waiting 2s before next test case...
+
+[12/40] Processing...
+
+📝 Test Case: q07
+   Question: How do airplanes fly?
+   🤖 Mode: general
+   ⏱️  Total time: 7669ms
+   ⚠️  No relevant docs provided for comparison
+   📊 BLEU: 0.000 | ROUGE-L: 0.065 | Cosine: 0.222
+   📊 Retrieval - Precision: 0.000 | Recall: 0.000
+   ⏳ Waiting 2s before next test case...
+
+[13/40] Processing...
+
+📝 Test Case: q08
+   Question: What is AI?
+   🤖 Mode: general
+   ⏱️  Total time: 3087ms
+   ⚠️  No relevant docs provided for comparison
+   📊 BLEU: 0.030 | ROUGE-L: 0.127 | Cosine: 0.215
+   📊 Retrieval - Precision: 0.000 | Recall: 0.000
+   ⏳ Waiting 2s before next test case...
+
+[14/40] Processing...
+
+📝 Test Case: q09
+   Question: Should I buy a gaming laptop or a PC?
+   🤖 Mode: general
+   ⏱️  Total time: 5165ms
+   ⚠️  No relevant docs provided for comparison
+   📊 BLEU: 0.000 | ROUGE-L: 0.112 | Cosine: 0.185
+   📊 Retrieval - Precision: 0.000 | Recall: 0.000
+   ⏳ Waiting 2s before next test case...
+
+[15/40] Processing...
+
+📝 Test Case: q10
+   Question: What is the meaning of life?
+   🤖 Mode: general
+   ⏱️  Total time: 6454ms
+   ⚠️  No relevant docs provided for comparison
+   📊 BLEU: 0.000 | ROUGE-L: 0.077 | Cosine: 0.224
+   📊 Retrieval - Precision: 0.000 | Recall: 0.000
+   ⏳ Waiting 2s before next test case...
+
+[16/40] Processing...
+
+📝 Test Case: q11
+   Question: How do I cook fried rice?
+   🤖 Mode: general
+   ⏱️  Total time: 7776ms
+   ⚠️  No relevant docs provided for comparison
+   📊 BLEU: 0.000 | ROUGE-L: 0.066 | Cosine: 0.288
+   📊 Retrieval - Precision: 0.000 | Recall: 0.000
+   ⏳ Waiting 2s before next test case...
+
+[17/40] Processing...
+
+📝 Test Case: q12
+   Question: Why do we sleep?
+   🤖 Mode: general
+   ⏱️  Total time: 5266ms
+   ⚠️  No relevant docs provided for comparison
+   📊 BLEU: 0.000 | ROUGE-L: 0.102 | Cosine: 0.064
+   📊 Retrieval - Precision: 0.000 | Recall: 0.000
+   ⏳ Waiting 2s before next test case...
+
+[18/40] Processing...
+
+📝 Test Case: q13
+   Question: How can I study more efficiently?
+   🤖 Mode: general
+   ⏱️  Total time: 8151ms
+   ⚠️  No relevant docs provided for comparison
+   📊 BLEU: 0.000 | ROUGE-L: 0.043 | Cosine: 0.128
+   📊 Retrieval - Precision: 0.000 | Recall: 0.000
+   ⏳ Waiting 2s before next test case...
+
+[19/40] Processing...
+
+📝 Test Case: q14
+   Question: What are some good movies to watch?
+   🤖 Mode: general
+   ⏱️  Total time: 5911ms
+   ⚠️  No relevant docs provided for comparison
+   📊 BLEU: 0.000 | ROUGE-L: 0.102 | Cosine: 0.157
+   📊 Retrieval - Precision: 0.000 | Recall: 0.000
+   ⏳ Waiting 2s before next test case...
+
+[20/40] Processing...
+
+📝 Test Case: q15
+   Question: How long does it take to learn coding?
+   🤖 Mode: general
+   ⏱️  Total time: 4815ms
+   ⚠️  No relevant docs provided for comparison
+   📊 BLEU: 0.000 | ROUGE-L: 0.081 | Cosine: 0.238
+   📊 Retrieval - Precision: 0.000 | Recall: 0.000
+   ⏳ Waiting 2s before next test case...
+
+[21/40] Processing...
+
+📝 Test Case: q16
+   Question: What is blockchain?
+   🤖 Mode: general
+   ⏱️  Total time: 5293ms
+   ⚠️  No relevant docs provided for comparison
+   📊 BLEU: 0.000 | ROUGE-L: 0.062 | Cosine: 0.319
+   📊 Retrieval - Precision: 0.000 | Recall: 0.000
+   ⏳ Waiting 2s before next test case...
+
+[22/40] Processing...
+
+📝 Test Case: q17
+   Question: How do I take care of my mental health?
+   🤖 Mode: general
+   ⏱️  Total time: 7650ms
+   ⚠️  No relevant docs provided for comparison
+   📊 BLEU: 0.011 | ROUGE-L: 0.068 | Cosine: 0.221
+   📊 Retrieval - Precision: 0.000 | Recall: 0.000
+   ⏳ Waiting 2s before next test case...
+
+[23/40] Processing...
+
+📝 Test Case: q18
+   Question: What should I do when I'm bored?
+   🤖 Mode: general
+   ⏱️  Total time: 9818ms
+   ⚠️  No relevant docs provided for comparison
+   📊 BLEU: 0.000 | ROUGE-L: 0.034 | Cosine: 0.000
+   📊 Retrieval - Precision: 0.000 | Recall: 0.000
+   ⏳ Waiting 2s before next test case...
+
+[24/40] Processing...
+
+📝 Test Case: q19
+   Question: How do I clean my computer?
+   🤖 Mode: general
+   ⏱️  Total time: 10031ms
+   ⚠️  No relevant docs provided for comparison
+   📊 BLEU: 0.000 | ROUGE-L: 0.045 | Cosine: 0.180
+   📊 Retrieval - Precision: 0.000 | Recall: 0.000
+   ⏳ Waiting 2s before next test case...
+
+[25/40] Processing...
+
+📝 Test Case: q20
+   Question: What is the tallest mountain in the world?
+   🤖 Mode: general
+   ⏱️  Total time: 3205ms
+   ⚠️  No relevant docs provided for comparison
+   📊 BLEU: 0.095 | ROUGE-L: 0.170 | Cosine: 0.150
+   📊 Retrieval - Precision: 0.000 | Recall: 0.000
+   ⏳ Waiting 2s before next test case...
+
+[26/40] Processing...
+
+📝 Test Case: q21
+   Question: Why do people celebrate New Year?
+   🤖 Mode: general
+   ⏱️  Total time: 4869ms
+   ⚠️  No relevant docs provided for comparison
+   📊 BLEU: 0.000 | ROUGE-L: 0.114 | Cosine: 0.259
+   📊 Retrieval - Precision: 0.000 | Recall: 0.000
+   ⏳ Waiting 2s before next test case...
+
+[27/40] Processing...
+
+📝 Test Case: q22
+   Question: How do magnets work?
+   🤖 Mode: general
+   ⏱️  Total time: 4151ms
+   ⚠️  No relevant docs provided for comparison
+   📊 BLEU: 0.000 | ROUGE-L: 0.133 | Cosine: 0.267
+   📊 Retrieval - Precision: 0.000 | Recall: 0.000
+   ⏳ Waiting 2s before next test case...
+
+[28/40] Processing...
+
+📝 Test Case: q23
+   Question: What should I eat for breakfast?
+   🤖 Mode: general
+   ⏱️  Total time: 7400ms
+   ⚠️  No relevant docs provided for comparison
+   📊 BLEU: 0.000 | ROUGE-L: 0.107 | Cosine: 0.356
+   📊 Retrieval - Precision: 0.000 | Recall: 0.000
+   ⏳ Waiting 2s before next test case...
+
+[29/40] Processing...
+
+📝 Test Case: q24
+   Question: Is it better to study in the morning or at night?
+   🤖 Mode: general
+   ⏱️  Total time: 4499ms
+   ⚠️  No relevant docs provided for comparison
+   📊 BLEU: 0.000 | ROUGE-L: 0.092 | Cosine: 0.036
+   📊 Retrieval - Precision: 0.000 | Recall: 0.000
+   ⏳ Waiting 2s before next test case...
+
+[30/40] Processing...
+
+📝 Test Case: q30
+   Question: What is the architectural highlight of the Mausoleum and Temple of the Ly Dynasty Kings?
+   🤖 Mode: rag
+   ⏱️  Total time: 10692ms
+   🔍 Retrieved 3 sources
+   🔍 First source metadata: {
+  "chunkIndex": 0,
+  "heritageId": "67f3edb13834bd66e6e1c680",
+  "name": "Mausoleum and Temple of the Ly Dynasty Kings",
+  "nameSlug": "khu-lang-mo-va-den-tho-cac-vi-vua-trieu-ly",
+  "location": "City Tu Son, province Bac Ninh",
+  "locationSlug": "thanh-pho-tu-son-tinh-bac-ninh",
+  "latitude": "21°06′26″B",
+  "longitude": "105°57′37″Đ",
+  "tags": [
+    "Di tích lịch sử"
+  ],
+  "tagsSlug": [
+    "di-tich-lich-su"
+  ],
+  "averageRating": "0",
+  "totalReviews": "0",
+  "totalVisits": "0",
+  "totalFavorites": "1",
+  "documentType": "heritage",
+  "uploadedAt": "2025-11-17T07:37:59.345Z",
+  "contentType": "architecture"
+}
+   🔍 Expected related_docs: b6bb80cc-db3e-4932-b131-938fdc49507d,9b4ae7e5-0166-4be0-bce6-b6285067afd7,6d5e7fa9-ae7f-4a9c-b86c-38e0bbe71629
+   🔍 Retrieved IDs: b6bb80cc-db3e-4932-b131-938fdc49507d,9b4ae7e5-0166-4be0-bce6-b6285067afd7,5fcfa86a-8f0f-4c38-aea7-24879b995c77
+   🔍 Expected IDs: b6bb80cc-db3e-4932-b131-938fdc49507d,9b4ae7e5-0166-4be0-bce6-b6285067afd7,6d5e7fa9-ae7f-4a9c-b86c-38e0bbe71629
+   ✅ Matched 2 documents
+   📊 BLEU: 0.173 | ROUGE-L: 0.289 | Cosine: 0.107
+   📊 Retrieval - Precision: 0.667 | Recall: 0.667
+   ⏳ Waiting 2s before next test case...
+
+[31/40] Processing...
+
+📝 Test Case: q31
+   Question: What can visitors expect to see at Do Temple in Bac Ninh?
+   🤖 Mode: rag
+   ⏱️  Total time: 15416ms
+   🔍 Retrieved 4 sources
+   🔍 First source metadata: {
+  "chunkIndex": 3,
+  "heritageId": "67f3edb13834bd66e6e1c680",
+  "name": "Mausoleum and Temple of the Ly Dynasty Kings",
+  "nameSlug": "khu-lang-mo-va-den-tho-cac-vi-vua-trieu-ly",
+  "location": "City Tu Son, province Bac Ninh",
+  "locationSlug": "thanh-pho-tu-son-tinh-bac-ninh",
+  "latitude": "21°06′26″B",
+  "longitude": "105°57′37″Đ",
+  "tags": [
+    "Di tích lịch sử"
+  ],
+  "tagsSlug": [
+    "di-tich-lich-su"
+  ],
+  "averageRating": "0",
+  "totalReviews": "0",
+  "totalVisits": "0",
+  "totalFavorites": "1",
+  "documentType": "heritage",
+  "uploadedAt": "2025-11-17T07:37:59.345Z",
+  "contentType": "overview"
+}
+   🔍 Expected related_docs: 807a3dcd-8ecb-4572-92e7-ede8bf72b997,f39ec549-4714-4852-b7e3-05593283d4fc,6d5e7fa9-ae7f-4a9c-b86c-38e0bbe71629
+   🔍 Retrieved IDs: 807a3dcd-8ecb-4572-92e7-ede8bf72b997,f39ec549-4714-4852-b7e3-05593283d4fc,6d5e7fa9-ae7f-4a9c-b86c-38e0bbe71629,4c5ebdf2-0774-4d8f-bb3b-23c3189ec111
+   🔍 Expected IDs: 807a3dcd-8ecb-4572-92e7-ede8bf72b997,f39ec549-4714-4852-b7e3-05593283d4fc,6d5e7fa9-ae7f-4a9c-b86c-38e0bbe71629
+   ✅ Matched 3 documents
+   📊 BLEU: 0.000 | ROUGE-L: 0.150 | Cosine: 0.206
+   📊 Retrieval - Precision: 0.750 | Recall: 1.000
+   ⏳ Waiting 2s before next test case...
+
+[32/40] Processing...
+
+📝 Test Case: q32
+   Question: What cultural activities are held at the heritage site of the Ly Dynasty kings?
+   🤖 Mode: rag
+   ⏱️  Total time: 11039ms
+   🔍 Retrieved 3 sources
+   🔍 First source metadata: {
+  "chunkIndex": 0,
+  "heritageId": "67f3edb13834bd66e6e1c680",
+  "name": "Mausoleum and Temple of the Ly Dynasty Kings",
+  "nameSlug": "khu-lang-mo-va-den-tho-cac-vi-vua-trieu-ly",
+  "location": "City Tu Son, province Bac Ninh",
+  "locationSlug": "thanh-pho-tu-son-tinh-bac-ninh",
+  "latitude": "21°06′26″B",
+  "longitude": "105°57′37″Đ",
+  "tags": [
+    "Di tích lịch sử"
+  ],
+  "tagsSlug": [
+    "di-tich-lich-su"
+  ],
+  "averageRating": "0",
+  "totalReviews": "0",
+  "totalVisits": "0",
+  "totalFavorites": "1",
+  "documentType": "heritage",
+  "uploadedAt": "2025-11-17T07:37:59.345Z",
+  "contentType": "festival"
+}
+   🔍 Expected related_docs: d8c24f8f-5e7d-48a8-add0-a5ea3b9338f1,360c0680-eed6-422f-aab9-89ffde7ecc43,6d5e7fa9-ae7f-4a9c-b86c-38e0bbe71629
+   🔍 Retrieved IDs: d8c24f8f-5e7d-48a8-add0-a5ea3b9338f1,a25e8d59-7c2a-4907-b707-91f00c6ae860,6d5e7fa9-ae7f-4a9c-b86c-38e0bbe71629
+   🔍 Expected IDs: d8c24f8f-5e7d-48a8-add0-a5ea3b9338f1,360c0680-eed6-422f-aab9-89ffde7ecc43,6d5e7fa9-ae7f-4a9c-b86c-38e0bbe71629
+   ✅ Matched 2 documents
+   📊 BLEU: 0.226 | ROUGE-L: 0.369 | Cosine: 0.702
+   📊 Retrieval - Precision: 0.667 | Recall: 0.667
+   ⏳ Waiting 2s before next test case...
+
+[33/40] Processing...
+
+📝 Test Case: q33
+   Question: Are there any royal gardens preserved at the Mausoleum and Temple of the Ly Dynasty Kings?
+   🤖 Mode: general
+   ⏱️  Total time: 7287ms
+   ⚠️  No relevant docs provided for comparison
+   📊 BLEU: 0.429 | ROUGE-L: 0.540 | Cosine: 0.787
+   📊 Retrieval - Precision: 0.000 | Recall: 0.000
+   ⏳ Waiting 2s before next test case...
+
+[34/40] Processing...
+
+📝 Test Case: q34
+   Question: Why is Hoan Kiem Lake also called Sword Lake?
+   🤖 Mode: rag
+   ⏱️  Total time: 12471ms
+   🔍 Retrieved 2 sources
+   🔍 First source metadata: {
+  "chunkIndex": 0,
+  "heritageId": "67f3edb13834bd66e6e1c67f",
+  "name": "Hoan Kiem Lake and Ngoc Son Temple",
+  "nameSlug": "ho-hoan-kiem-va-den-ngoc-son",
+  "location": "District Hoan Kiem, city Hanoi",
+  "locationSlug": "quan-hoan-kiem-thanh-pho-ha-noi",
+  "latitude": "21.0307°B",
+  "longitude": "105.852°Đ",
+  "tags": [
+    "Di tích lịch sử",
+    "Danh lam thắng cảnh"
+  ],
+  "tagsSlug": [
+    "di-tich-lich-su",
+    "danh-lam-thang-canh"
+  ],
+  "averageRating": "0",
+  "totalReviews": "0",
+  "totalVisits": "0",
+  "totalFavorites": "0",
+  "documentType": "heritage",
+  "uploadedAt": "2025-11-17T07:37:22.969Z",
+  "contentType": "history"
+}
+   🔍 Expected related_docs: f60ec3a6-5dfc-4a5f-87b3-93d1c8c9e285,5d06b3ee-acfa-4288-ba5f-142563f9dacd
+   🔍 Retrieved IDs: 5d06b3ee-acfa-4288-ba5f-142563f9dacd,f60ec3a6-5dfc-4a5f-87b3-93d1c8c9e285
+   🔍 Expected IDs: f60ec3a6-5dfc-4a5f-87b3-93d1c8c9e285,5d06b3ee-acfa-4288-ba5f-142563f9dacd
+   ✅ Matched 2 documents
+   📊 BLEU: 0.491 | ROUGE-L: 0.653 | Cosine: 0.890
+   📊 Retrieval - Precision: 1.000 | Recall: 1.000
+   ⏳ Waiting 2s before next test case...
+
+[35/40] Processing...
+
+📝 Test Case: q35
+   Question: What is notable about The Huc Bridge that leads to Ngoc Son Temple?
+   🤖 Mode: rag
+   ⏱️  Total time: 12191ms
+   🔍 Retrieved 3 sources
+   🔍 First source metadata: {
+  "chunkIndex": 2,
+  "heritageId": "67f3edb13834bd66e6e1c67f",
+  "name": "Hoan Kiem Lake and Ngoc Son Temple",
+  "nameSlug": "ho-hoan-kiem-va-den-ngoc-son",
+  "location": "District Hoan Kiem, city Hanoi",
+  "locationSlug": "quan-hoan-kiem-thanh-pho-ha-noi",
+  "latitude": "21.0307°B",
+  "longitude": "105.852°Đ",
+  "tags": [
+    "Di tích lịch sử",
+    "Danh lam thắng cảnh"
+  ],
+  "tagsSlug": [
+    "di-tich-lich-su",
+    "danh-lam-thang-canh"
+  ],
+  "averageRating": "0",
+  "totalReviews": "0",
+  "totalVisits": "0",
+  "totalFavorites": "0",
+  "documentType": "heritage",
+  "uploadedAt": "2025-11-17T07:37:22.969Z",
+  "contentType": "overview"
+}
+   🔍 Expected related_docs: bc248449-ebaa-48fd-b5e0-27e1e2666d49,dfd1374c-4f06-428f-9117-f65ed4b133fb
+   🔍 Retrieved IDs: bc248449-ebaa-48fd-b5e0-27e1e2666d49,dfd1374c-4f06-428f-9117-f65ed4b133fb,3688bb3c-8e14-4080-88cf-d5b9bbd7049e
+   🔍 Expected IDs: bc248449-ebaa-48fd-b5e0-27e1e2666d49,dfd1374c-4f06-428f-9117-f65ed4b133fb
+   ✅ Matched 2 documents
+   📊 BLEU: 0.387 | ROUGE-L: 0.547 | Cosine: 0.759
+   📊 Retrieval - Precision: 0.667 | Recall: 1.000
+   ⏳ Waiting 2s before next test case...
+
+[36/40] Processing...
+
+📝 Test Case: q36
+   Question: Are there any royal ceremonies still performed at Ngoc Son Temple today?
+   🤖 Mode: general
+   ⏱️  Total time: 11750ms
+   ⚠️  No relevant docs provided for comparison
+   📊 BLEU: 0.135 | ROUGE-L: 0.300 | Cosine: 0.346
+   📊 Retrieval - Precision: 0.000 | Recall: 0.000
+   ⏳ Waiting 2s before next test case...
+
+[37/40] Processing...
+
+📝 Test Case: q37
+   Question: When did the legend of the king returning the sword to the turtle take place?
+   🤖 Mode: general
+   ⏱️  Total time: 4523ms
+   ⚠️  No relevant docs provided for comparison
+   📊 BLEU: 0.104 | ROUGE-L: 0.301 | Cosine: 0.740
+   📊 Retrieval - Precision: 0.000 | Recall: 0.000
+   ⏳ Waiting 2s before next test case...
+
+[38/40] Processing...
+
+📝 Test Case: q38
+   Question: Where Phu Dong Temple?
+   🤖 Mode: rag
+   ⏱️  Total time: 10368ms
+   🔍 Retrieved 3 sources
+   🔍 First source metadata: {
+  "chunkIndex": 0,
+  "heritageId": "67f3edb13834bd66e6e1c67e",
+  "name": "Phu Dong Temple",
+  "nameSlug": "den-phu-dong",
+  "location": "Gia Lam District, city Hanoi",
+  "locationSlug": "huyen-gia-lam-thanh-pho-ha-noi",
+  "latitude": "21°01′11″B",
+  "longitude": "105°56′14″Đ",
+  "tags": [
+    "Di tích lịch sử",
+    "kiến trúc nghệ thuật"
+  ],
+  "tagsSlug": [
+    "di-tich-lich-su",
+    "kien-truc-nghe-thuat"
+  ],
+  "averageRating": "0",
+  "totalReviews": "0",
+  "totalVisits": "0",
+  "totalFavorites": "2",
+  "documentType": "heritage",
+  "uploadedAt": "2025-11-17T07:36:49.361Z",
+  "contentType": "overview"
+}
+   🔍 Expected related_docs: ee14a468-51ef-4637-918c-c3c056895004,13e3a8d3-04f7-44bc-91c3-dc0d33c17d55
+   🔍 Retrieved IDs: ee14a468-51ef-4637-918c-c3c056895004,13e3a8d3-04f7-44bc-91c3-dc0d33c17d55,9c2840ad-5a99-4f97-8878-ac0f26d11998
+   🔍 Expected IDs: ee14a468-51ef-4637-918c-c3c056895004,13e3a8d3-04f7-44bc-91c3-dc0d33c17d55
+   ✅ Matched 2 documents
+   📊 BLEU: 0.592 | ROUGE-L: 0.699 | Cosine: 0.921
+   📊 Retrieval - Precision: 0.667 | Recall: 1.000
+   ⏳ Waiting 2s before next test case...
+
+[39/40] Processing...
+
+📝 Test Case: q39
+   Question: What is the historical significance of Phù Đổng Temple and who is it dedicated to?
+   🤖 Mode: rag
+   ⏱️  Total time: 13708ms
+   🔍 Retrieved 5 sources
+   🔍 First source metadata: {
+  "chunkIndex": 0,
+  "heritageId": "67f3edb13834bd66e6e1c67e",
+  "name": "Phu Dong Temple",
+  "nameSlug": "den-phu-dong",
+  "location": "Gia Lam District, city Hanoi",
+  "locationSlug": "huyen-gia-lam-thanh-pho-ha-noi",
+  "latitude": "21°01′11″B",
+  "longitude": "105°56′14″Đ",
+  "tags": [
+    "Di tích lịch sử",
+    "kiến trúc nghệ thuật"
+  ],
+  "tagsSlug": [
+    "di-tich-lich-su",
+    "kien-truc-nghe-thuat"
+  ],
+  "averageRating": "0",
+  "totalReviews": "0",
+  "totalVisits": "0",
+  "totalFavorites": "2",
+  "documentType": "heritage",
+  "uploadedAt": "2025-11-17T07:36:49.361Z",
+  "contentType": "overview"
+}
+   🔍 Expected related_docs: ee14a468-51ef-4637-918c-c3c056895004,b1e6bd9c-b11a-4606-b76c-a7b5f2e81c80,9c2840ad-5a99-4f97-8878-ac0f26d11998
+   🔍 Retrieved IDs: ee14a468-51ef-4637-918c-c3c056895004,9c2840ad-5a99-4f97-8878-ac0f26d11998,39a66664-2e22-49af-be37-9e23566d1ff5,32be4b65-44ec-49b8-a771-a046b37ab8e8,b07730da-b456-4900-8995-221bdeffb1e3
+   🔍 Expected IDs: ee14a468-51ef-4637-918c-c3c056895004,b1e6bd9c-b11a-4606-b76c-a7b5f2e81c80,9c2840ad-5a99-4f97-8878-ac0f26d11998
+   ✅ Matched 2 documents
+   📊 BLEU: 0.302 | ROUGE-L: 0.454 | Cosine: 0.451
+   📊 Retrieval - Precision: 0.400 | Recall: 0.667
+   ⏳ Waiting 2s before next test case...
+
+[40/40] Processing...
+
+📝 Test Case: q40
+   Question: Where is Phù Đổng Temple located and how can visitors access it?
+   🤖 Mode: rag
+   ⏱️  Total time: 9696ms
+   🔍 Retrieved 1 sources
+   🔍 First source metadata: {
+  "chunkIndex": 0,
+  "heritageId": "67f3edb13834bd66e6e1c67e",
+  "name": "Phu Dong Temple",
+  "nameSlug": "den-phu-dong",
+  "location": "Gia Lam District, city Hanoi",
+  "locationSlug": "huyen-gia-lam-thanh-pho-ha-noi",
+  "latitude": "21°01′11″B",
+  "longitude": "105°56′14″Đ",
+  "tags": [
+    "Di tích lịch sử",
+    "kiến trúc nghệ thuật"
+  ],
+  "tagsSlug": [
+    "di-tich-lich-su",
+    "kien-truc-nghe-thuat"
+  ],
+  "averageRating": "0",
+  "totalReviews": "0",
+  "totalVisits": "0",
+  "totalFavorites": "2",
+  "documentType": "heritage",
+  "uploadedAt": "2025-11-17T07:36:49.361Z",
+  "contentType": "overview"
+}
+   🔍 Expected related_docs: ee14a468-51ef-4637-918c-c3c056895004,39a66664-2e22-49af-be37-9e23566d1ff5,13e3a8d3-04f7-44bc-91c3-dc0d33c17d55
+   🔍 Retrieved IDs: ee14a468-51ef-4637-918c-c3c056895004
+   🔍 Expected IDs: ee14a468-51ef-4637-918c-c3c056895004,39a66664-2e22-49af-be37-9e23566d1ff5,13e3a8d3-04f7-44bc-91c3-dc0d33c17d55
+   ✅ Matched 1 documents
+   📊 BLEU: 0.107 | ROUGE-L: 0.318 | Cosine: 0.546
+   📊 Retrieval - Precision: 1.000 | Recall: 0.333
+
+✅ Benchmark completed!
+
+============================================================
+📊 GENERATING BENCHMARK REPORT
+============================================================
+
+
+================================================================================
+📊 BENCHMARK SUMMARY REPORT
+================================================================================
+
+🎯 Overall Statistics:
+   Total Questions: 40
+   Successful: 40 ✅
+   Failed: 0 ❌
+   Average Execution Time: 0.00ms
+   Average Sources Retrieved: 0.00
+
+📈 Average Metrics:
+   BLEU Score:            0.0997 🔴
+   ROUGE-L F1:            0.2092 🔴
+   Cosine (TF-IDF):       0.3680 🔴
+
+🏆 Quality Distribution:
+   Good           4 ( 10.0%) ███
+   Fair           6 ( 15.0%) ████
+   Poor           5 ( 12.5%) ███
+   Very Poor     25 ( 62.5%) ██████████████████
+
+================================================================================
+📋 DETAILED RESULTS
+================================================================================
+
++-----+---------------------------------------------+-------+---------+--------+-----------+----------+
+| ID  | Question                                    | BLEU  | ROUGE-L | Cosine | Quality   | Time(ms) |
++-----+---------------------------------------------+-------+---------+--------+-----------+----------+
+| q29 | Where is the Vinh Nghiem Pagoda located?    | 0.210 | 0.352   | 0.695  | Fair      | 10340    |
+| q28 | What is the traditional architectural st... | 0.170 | 0.335   | 0.611  | Fair      | 11655    |
+| q27 | When is the Vinh Nghiem Pagoda Festival ... | 0.202 | 0.358   | 0.899  | Fair      | 9020     |
+| q26 | Who was the first abbot of Vinh Nghiem P... | 0.051 | 0.165   | 0.615  | Poor      | 8839     |
+| q25 | Hello                                       | 0.208 | 0.327   | 0.495  | Poor      | 3859     |
+| q01 | hi                                          | 0.000 | 0.144   | 0.288  | Very Poor | 2896     |
+| q02 | How do I learn JavaScript quickly?          | 0.000 | 0.055   | 0.209  | Very Poor | 9264     |
+| q03 | What is the best way to lose weight?        | 0.000 | 0.062   | 0.152  | Very Poor | 6875     |
+| q04 | Why is the sky blue?                        | 0.029 | 0.135   | 0.257  | Very Poor | 4026     |
+| q05 | How can I improve my English speaking sk... | 0.000 | 0.070   | 0.278  | Very Poor | 7860     |
+| q06 | What's the capital of Japan?                | 0.033 | 0.144   | 0.257  | Very Poor | 3750     |
+| q07 | How do airplanes fly?                       | 0.000 | 0.065   | 0.222  | Very Poor | 7669     |
+| q08 | What is AI?                                 | 0.030 | 0.127   | 0.215  | Very Poor | 3087     |
+| q09 | Should I buy a gaming laptop or a PC?       | 0.000 | 0.112   | 0.185  | Very Poor | 5165     |
+| q10 | What is the meaning of life?                | 0.000 | 0.077   | 0.224  | Very Poor | 6454     |
+| q11 | How do I cook fried rice?                   | 0.000 | 0.066   | 0.288  | Very Poor | 7776     |
+| q12 | Why do we sleep?                            | 0.000 | 0.102   | 0.064  | Very Poor | 5266     |
+| q13 | How can I study more efficiently?           | 0.000 | 0.043   | 0.128  | Very Poor | 8151     |
+| q14 | What are some good movies to watch?         | 0.000 | 0.102   | 0.157  | Very Poor | 5911     |
+| q15 | How long does it take to learn coding?      | 0.000 | 0.081   | 0.238  | Very Poor | 4815     |
+| q16 | What is blockchain?                         | 0.000 | 0.062   | 0.319  | Very Poor | 5293     |
+| q17 | How do I take care of my mental health?     | 0.011 | 0.068   | 0.221  | Very Poor | 7650     |
+| q18 | What should I do when I'm bored?            | 0.000 | 0.034   | 0.000  | Very Poor | 9818     |
+| q19 | How do I clean my computer?                 | 0.000 | 0.045   | 0.180  | Very Poor | 10031    |
+| q20 | What is the tallest mountain in the worl... | 0.095 | 0.170   | 0.150  | Very Poor | 3205     |
+| q21 | Why do people celebrate New Year?           | 0.000 | 0.114   | 0.259  | Very Poor | 4869     |
+| q22 | How do magnets work?                        | 0.000 | 0.133   | 0.267  | Very Poor | 4151     |
+| q23 | What should I eat for breakfast?            | 0.000 | 0.107   | 0.356  | Poor      | 7400     |
+| q24 | Is it better to study in the morning or ... | 0.000 | 0.092   | 0.036  | Very Poor | 4499     |
+| q30 | What is the architectural highlight of t... | 0.173 | 0.289   | 0.107  | Very Poor | 10692    |
+| q31 | What can visitors expect to see at Do Te... | 0.000 | 0.150   | 0.206  | Very Poor | 15416    |
+| q32 | What cultural activities are held at the... | 0.226 | 0.369   | 0.702  | Fair      | 11039    |
+| q33 | Are there any royal gardens preserved at... | 0.429 | 0.540   | 0.787  | Good      | 7287     |
+| q34 | Why is Hoan Kiem Lake also called Sword ... | 0.491 | 0.653   | 0.890  | Good      | 12471    |
+| q35 | What is notable about The Huc Bridge tha... | 0.387 | 0.547   | 0.759  | Good      | 12191    |
+| q36 | Are there any royal ceremonies still per... | 0.135 | 0.300   | 0.346  | Poor      | 11750    |
+| q37 | When did the legend of the king returnin... | 0.104 | 0.301   | 0.740  | Fair      | 4523     |
+| q38 | Where Phu Dong Temple?                      | 0.592 | 0.699   | 0.921  | Good      | 10368    |
+| q39 | What is the historical significance of P... | 0.302 | 0.454   | 0.451  | Fair      | 13708    |
+| q40 | Where is Phù Đổng Temple located and how... | 0.107 | 0.318   | 0.546  | Poor      | 9696     |
++-----+---------------------------------------------+-------+---------+--------+-----------+----------+
+
+================================================================================
+⚠️  WORST PERFORMING QUESTIONS
+================================================================================
+
+1. Question ID q18 (Score: 0.0085)
+   ❓ Question: What should I do when I'm bored?
+   ✅ Ground Truth: I'm a heritage assistant and this question is outside my domain, but common suggestions include read...
+   🤖 Generated: When you're bored, there are several activities you can engage in to alleviate your boredom and impr...
+   📊 Metrics:
+      - BLEU: 0.0001
+      - ROUGE-L F1: 0.0337
+      - Cosine: 0.0000
+   🔍 Potential Issues:
+      - No context retrieved - retriever may be failing
+      - No sources found in collection
+      - All metrics are low - fundamental mismatch between generated and expected
+
+2. Question ID q24 (Score: 0.0412)
+   ❓ Question: Is it better to study in the morning or at night?
+   ✅ Ground Truth: I'm a heritage assistant and this is outside my expertise, but the best study time varies by person—...
+   🤖 Generated: While I am primarily focused on providing information related to Vietnamese heritage sites, I can of...
+   📊 Metrics:
+      - BLEU: 0.0000
+      - ROUGE-L F1: 0.0922
+      - Cosine: 0.0362
+   🔍 Potential Issues:
+      - No context retrieved - retriever may be failing
+      - No sources found in collection
+      - All metrics are low - fundamental mismatch between generated and expected
+
+3. Question ID q12 (Score: 0.0574)
+   ❓ Question: Why do we sleep?
+   ✅ Ground Truth: I'm a heritage assistant and this falls outside my expertise, but sleep allows the body and brain to...
+   🤖 Generated: While I am a specialist in Vietnamese historical heritage, I can provide some general knowledge on t...
+   📊 Metrics:
+      - BLEU: 0.0000
+      - ROUGE-L F1: 0.1019
+      - Cosine: 0.0638
+   🔍 Potential Issues:
+      - No context retrieved - retriever may be failing
+      - No sources found in collection
+      - All metrics are low - fundamental mismatch between generated and expected
+
+4. Question ID q13 (Score: 0.0748)
+   ❓ Question: How can I study more efficiently?
+   ✅ Ground Truth: I'm a heritage assistant and this is outside my focus, but effective study methods include spaced re...
+   🤖 Generated: Studying efficiently requires a combination of effective time management, focus, organization, and p...
+   📊 Metrics:
+      - BLEU: 0.0000
+      - ROUGE-L F1: 0.0435
+      - Cosine: 0.1278
+   🔍 Potential Issues:
+      - No context retrieved - retriever may be failing
+      - No sources found in collection
+      - All metrics are low - fundamental mismatch between generated and expected
+
+5. Question ID q03 (Score: 0.0915)
+   ❓ Question: What is the best way to lose weight?
+   ✅ Ground Truth: I'm a heritage assistant and this topic is outside my specialty, but healthy weight loss usually inv...
+   🤖 Generated: Dear user,
+
+While I am primarily focused on providing information about Vietnamese heritage sites, I...
+   📊 Metrics:
+      - BLEU: 0.0001
+      - ROUGE-L F1: 0.0619
+      - Cosine: 0.1519
+   🔍 Potential Issues:
+      - No context retrieved - retriever may be failing
+      - No sources found in collection
+      - All metrics are low - fundamental mismatch between generated and expected
+
+================================================================================
+💡 IMPROVEMENT SUGGESTIONS
+================================================================================
+
+1. [Retrieval]
+   ⚠️  Issue: Very few documents retrieved on average
+   💡 Suggestion: Consider increasing topK parameter or improving document indexing
+
+2. [Generation]
+   ⚠️  Issue: Low BLEU scores indicate poor word-level matching
+   💡 Suggestion: Review prompt engineering or consider fine-tuning the generation model
+
+3. [Generation]
+   ⚠️  Issue: Low ROUGE-L scores indicate poor sequence matching
+   💡 Suggestion: Generated answers may be too different from expected format. Review context quality.
+
+4. [Semantic]
+   ⚠️  Issue: Low cosine similarity indicates semantic mismatch
+   💡 Suggestion: Retrieved context may not be relevant. Improve embedding quality or document preprocessing.
+
+5. [Overall Quality]
+   ⚠️  Issue: 75.0% of answers are of poor quality
+   💡 Suggestion: Consider comprehensive review of RAG pipeline: document quality, retrieval strategy, and generation prompts
+
+================================================================================
+
+✅ Report generation completed!
+
+
+💾 Saving results to: D:\heritage-naver-api\benchmark_results\benchmark_qdrant_2025-11-23T03-02-22-486Z.json
+✅ Results saved successfully!
