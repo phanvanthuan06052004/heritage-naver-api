@@ -194,6 +194,4 @@ Postman collection available: `Heritage_RAG_API.postman_collection.json`
 
 MIT
 
-## 👥 Contributors
 
-- Phan Van Thuan (@phanvanthuan06052004)
